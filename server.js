@@ -592,6 +592,14 @@ tip
 const server=http.createServer(async(req,res)=>{
   const u=new URL(req.url,`http://${req.headers.host}`);
   console.log('REQUEST:', req.method, u.pathname);
+  // Default homepage
+if (u.pathname === '/') {
+  res.writeHead(302, {
+    Location: '/fergusfalls'
+  });
+  res.end();
+  return;
+}
   // Track restaurant-specific QR scans
 if (
   req.method === 'POST' &&
