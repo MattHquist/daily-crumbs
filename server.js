@@ -616,45 +616,81 @@ if (
       });
     }
 
-    const { data: location, error: locationError } = await supabase
-      .from('locations')
-      .select('id, edition_id, qr_slug, active')
-      .eq('qr_slug', qrSlug)
-      .eq('active', true)
-      .maybeSingle();
+    const secretKey = process.env.SUPABASE_SECRET_KEY;
+const supabaseUrl = process.env.SUPABASE_URL;
 
-    if (locationError) {
-      console.error('QR location lookup failed:', locationError.message);
-
-      return send(res, 500, {
-        success: false,
-        error: 'Could not record scan'
-      });
+// Look up the participating location using the REST API.
+// The new sb_secret_ key is sent only as an API key.
+const locationResponse = await fetch(
+  `${supabaseUrl}/rest/v1/locations` +
+  `?select=id,edition_id,qr_slug,active` +
+  `&qr_slug=eq.${encodeURIComponent(qrSlug)}` +
+  `&active=eq.true` +
+  `&limit=1`,
+  {
+    headers: {
+      apikey: secretKey
     }
+  }
+);
 
-    if (!location) {
-      return send(res, 404, {
-        success: false,
-        error: 'Participating location not found'
-      });
-    }
+if (!locationResponse.ok) {
+  const errorText = await locationResponse.text();
 
-    const { error: scanError } = await supabase
-      .from('qr_scans')
-      .insert({
-        location_id: location.id,
-        edition_id: location.edition_id,
-        qr_slug: location.qr_slug
-      });
+  console.error(
+    'QR location lookup failed:',
+    locationResponse.status,
+    errorText
+  );
 
-    if (scanError) {
-      console.error('QR scan insert failed:', scanError.message);
+  return send(res, 500, {
+    success: false,
+    error: 'Could not record scan'
+  });
+}
 
-      return send(res, 500, {
-        success: false,
-        error: 'Could not record scan'
-      });
-    }
+const locations = await locationResponse.json();
+const location = locations[0];
+
+if (!location) {
+  return send(res, 404, {
+    success: false,
+    error: 'Participating location not found'
+  });
+}
+
+// Record the scan.
+const scanResponse = await fetch(
+  `${supabaseUrl}/rest/v1/qr_scans`,
+  {
+    method: 'POST',
+    headers: {
+      apikey: secretKey,
+      'Content-Type': 'application/json',
+      Prefer: 'return=minimal'
+    },
+    body: JSON.stringify({
+      location_id: location.id,
+      edition_id: location.edition_id,
+      qr_slug: location.qr_slug
+    })
+  }
+);
+
+if (!scanResponse.ok) {
+  const errorText = await scanResponse.text();
+
+  console.error(
+    'QR scan insert failed:',
+    scanResponse.status,
+    errorText
+  );
+
+  return send(res, 500, {
+    success: false,
+    error: 'Could not record scan'
+  });
+}
 
     return send(res, 201, {
       success: true
