@@ -1,0 +1,14 @@
+{
+  "name": "tidbits-daily-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daily local entertainment publication with city-specific advertising",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.4",
+    "dotenv": "^17.4.2",
+    "nodemailer": "^9.0.5"
+  }
+}

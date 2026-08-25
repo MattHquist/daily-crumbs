@@ -1,0 +1,106 @@
+{
+  "ads": [
+    {
+      "id": "sample-1",
+      "city": "fergusfalls",
+      "business": "Sample Realtor",
+      "headline": "Find your next home",
+      "url": "https://example.com",
+      "startDate": "2026-01-01",
+      "endDate": "2027-12-31",
+      "spots": 2,
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "sample-2",
+      "city": "fergusfalls",
+      "business": "Sample Cafe",
+      "headline": "Lunch made local",
+      "url": "https://example.com",
+      "startDate": "2026-01-01",
+      "endDate": "2027-12-31",
+      "spots": 1,
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "sample-3",
+      "city": "fergusfalls",
+      "business": "Sample Auto",
+      "headline": "Service you can trust",
+      "url": "https://example.com",
+      "startDate": "2026-01-01",
+      "endDate": "2027-12-31",
+      "spots": 4,
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "1f70a362-777d-4cc4-98d4-9460db52416b",
+      "city": "fergusfalls",
+      "business": "Test business",
+      "headline": "Click here to learn more",
+      "url": "https://www.google.com",
+      "startDate": "2026-08-21",
+      "endDate": "2027-08-21",
+      "spots": 1,
+      "active": true,
+      "image": ""
+    },
+    {
+      "id": "d07883b5-e515-4b58-b8ee-dc3adee479f4",
+      "city": "fergusfalls",
+      "business": "Realtor.com",
+      "headline": "Find your next home",
+      "url": "https://www.realtor.com/realestateandhomes-search/Fergus-Falls_MN",
+      "startDate": "2026-08-21",
+      "endDate": "2027-08-21",
+      "spots": 1,
+      "active": true,
+      "image": "data:image/png;base64,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"
+    }
+  ],
+  "votes": {
+    "2026-08-21": {
+      "a": 1,
+      "b": 0
+    },
+    "2026-08-22": {
+      "a": 1,
+      "b": 0
+    }
+  },
+  "locations": [
+    {
+      "id": "e4d00a42-d604-4440-9bbb-9b8ef32165b2",
+      "name": "Test Restaurant",
+      "edition": "Fergus Falls",
+      "address": "",
+      "url": "",
+      "contact": "",
+      "contactInfo": "",
+      "qrPlacement": "",
+      "logo": "",
+      "notes": "",
+      "active": true,
+      "dateJoined": "2026-08-24",
+      "lastChecked": "2026-08-24"
+    },
+    {
+      "id": "57500eb3-e4e0-49d7-80cd-98281676fd81",
+      "name": "Test Restaurant 2",
+      "edition": "Fergus Falls",
+      "address": "",
+      "url": "",
+      "contact": "",
+      "contactInfo": "",
+      "qrPlacement": "",
+      "logo": "",
+      "notes": "",
+      "active": true,
+      "dateJoined": "2026-08-24",
+      "lastChecked": ""
+    }
+  ]
+}

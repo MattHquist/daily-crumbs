@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact Daily Crumbs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="contact-page">
+
+<main class="contact-shell">
+  <section class="contact-paper">
+    <article class="contact-card">
+      <div class="kicker">DAILY CRUMBS</div>
+      <h1>Contact Us</h1>
+
+      <p>
+        Interested in advertising with Daily Crumbs or becoming a Participating Location?
+        Send us your information and we'll follow up.
+      </p>
+
+      <form id="contactForm">
+
+        <label>
+          I'm interested in
+          <select id="contactType" required>
+            <option value="advertising" selected>Advertise With Us</option>
+<option value="participant">Become a Participating Location</option>
+          </select>
+        </label>
+
+        <label>
+          Business Name
+          <input id="contactBusiness" type="text" required>
+        </label>
+
+        <label>
+          Contact Name
+          <input id="contactName" type="text" required>
+        </label>
+
+        <label>
+          Email
+          <input id="contactEmail" type="email" required>
+        </label>
+
+        <label>
+          Phone
+          <input id="contactPhone" type="text">
+        </label>
+
+        <label>
+          City / Area
+          <input id="contactArea" type="text" placeholder="Fergus Falls, Fargo, etc.">
+        </label>
+
+        <label>
+          Website / Facebook
+          <input id="contactWebsite" type="url">
+        </label>
+
+        <label>
+          Message
+          <textarea id="contactMessage" rows="5"></textarea>
+        </label>
+
+        <button type="submit">Send Request</button>
+
+        <p id="contactStatus"></p>
+      </form>
+    </article>
+  </section>
+</main>
+
+<script src="contact.js"></script>
+</body>
+</html>

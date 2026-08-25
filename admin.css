@@ -1,0 +1,140 @@
+*{box-sizing:border-box}body{margin:0;background:#f1eee7;color:#222;font-family:Arial,Helvetica,sans-serif}header{background:#211f1a;color:white;padding:24px max(24px,calc((100% - 1100px)/2));display:flex;justify-content:space-between;align-items:end}header h1{margin:4px 0 0;font-size:34px}header a{color:white}main{max-width:1100px;margin:24px auto;padding:0 20px;display:grid;gap:18px}.panel{background:white;border:1px solid #d6d0c3;padding:22px;border-radius:10px}h2{margin-top:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{font-weight:700;font-size:13px;display:grid;gap:6px}input,select{padding:11px;border:1px solid #aaa;border-radius:6px;font:inherit}.check{display:flex;align-items:center;margin:16px 0;gap:8px}.actions{display:flex;gap:8px}button{background:#a73e2b;color:white;border:0;padding:11px 15px;border-radius:6px;font-weight:700;cursor:pointer}.ghost{background:#e7e3da;color:#222}.note{font-size:12px;color:#666}.listhead{display:flex;justify-content:space-between;gap:10px;align-items:start}.adrow{display:grid;grid-template-columns:70px 1fr auto;gap:14px;padding:14px 0;border-top:1px solid #ddd;align-items:center}.thumb{width:70px;height:55px;border:1px solid #ccc;object-fit:contain;background:#fafafa}.meta strong{display:block}.meta small{color:#666}.rowactions{display:flex;gap:6px}.danger{background:#77251a}@media(max-width:700px){.grid{grid-template-columns:1fr}.listhead,.adrow{grid-template-columns:1fr;display:grid}.rowactions{justify-content:start}}
+/* Participating Locations */
+
+.admin-section {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #d8d2c6;
+  border-radius: 10px;
+}
+
+.admin-section h2,
+.admin-section h3 {
+  margin-top: 0;
+}
+
+#locationForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 18px;
+}
+
+#locationForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 700;
+}
+
+#locationForm input,
+#locationForm textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #bfb8aa;
+  border-radius: 6px;
+  font: inherit;
+}
+
+#locationForm textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+#locationForm label:has(#locationNotes) {
+  grid-column: 1 / -1;
+}
+
+#locationForm label:has(#locationActive) {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+#locationForm button[type="submit"] {
+  width: fit-content;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #b63a27;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.locations-report-wrap {
+  margin-top: 28px;
+  overflow-x: auto;
+}
+
+#locationsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#locationsTable th,
+#locationsTable td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #ddd5c8;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#locationsTable th {
+  font-size: 13px;
+}
+
+#locationsTable button {
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 5px;
+  background: #b63a27;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .admin-section {
+    margin: 14px;
+    padding: 18px;
+  }
+
+  #locationForm {
+    grid-template-columns: 1fr;
+  }
+
+  #locationForm label:has(#locationNotes),
+  #locationForm label:has(#locationActive) {
+    grid-column: auto;
+  }
+}
+#leadsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#leadsTable th,
+#leadsTable td {
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+}
+
+#leadsTable th {
+  white-space: nowrap;
+}
+
+.lead-details {
+  padding: 8px 0 12px;
+}
+
+.lead-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}

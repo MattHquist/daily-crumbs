@@ -1,0 +1,156 @@
+<!doctype html><html><head><style>html{visibility:hidden}</style><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tidbits Daily Admin</title><link rel="stylesheet" href="admin.css"></head><body>
+<header><div><small>TIDBITS DAILY</small><h1>Advertiser Manager</h1></div><a href="/fergusfalls">View publication →</a></header>
+<main><section class="panel"><h2>Add advertiser</h2><form id="form"><input type="hidden" id="editId"><div class="grid"><label>City slug<input id="city" value="fergusfalls" required></label><label>Business name<input id="business" required></label><label>Headline / CTA<input id="headline" placeholder="Find your next home"></label><label>Destination URL<input id="url" type="url" placeholder="https://..."></label><label>Start date<input id="startDate" type="date" required></label><label>End date<input id="endDate" type="date" required></label><label>Ad size / weight<select id="spots"><option value="1">1 spot</option><option value="2">2 spots</option><option value="4">4 spots</option><option value="8">8 spots</option></select></label><label>Logo / ad image<input id="image" type="file" accept="image/*"></label></div><label class="check"><input id="active" type="checkbox" checked> Active</label><div class="actions"><button type="submit">Save advertiser</button><button type="button" class="ghost" id="cancelEdit">Cancel edit</button></div><p class="note">Dates are enforced automatically. Larger weights receive proportionally more appearances in the rotation. Placement is randomized by the site.</p></form></section>
+<section class="panel"><div class="listhead"><h2>Advertisers</h2><div><input id="filterCity" value="fergusfalls"><button id="refresh">Load city</button></div></div><div id="ads"></div></section></main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="admin-auth.js"></script>
+<script src="admin.js"></script>
+<section class="admin-section">
+  <h2>Participating Locations</h2>
+
+  <form id="locationForm">
+    <label>
+      Business Name
+      <input id="locationName" type="text" required>
+    </label>
+
+   <label>
+  Edition
+  <input id="locationEdition" type="text" value="Fergus Falls">
+</label>
+
+    <label>
+      Address
+      <input id="locationAddress" type="text">
+    </label>
+
+    <label>
+      Website / Facebook
+      <input id="locationUrl" type="url">
+    </label>
+
+    <label>
+      Contact Name
+      <input id="locationContact" type="text">
+    </label>
+
+    <label>
+      Phone / Email
+      <input id="locationContactInfo" type="text">
+    </label>
+
+    <label>
+      QR Placement
+      <input
+        id="locationQrPlacement"
+        type="text"
+        placeholder="Table tents, counter, waiting area, etc."
+      >
+    </label>
+
+    <label>
+      Logo
+      <input id="locationLogo" type="file" accept="image/*">
+    </label>
+
+    <label>
+      Notes
+      <textarea id="locationNotes"></textarea>
+    </label>
+
+    <label>
+      <input id="locationActive" type="checkbox" checked>
+      Active
+    </label>
+
+    <button type="submit">Add Participating Location</button>
+  </form>
+
+  <div id="locationsReport"></div>
+</section>
+<h3>Participating Locations Report</h3>
+<div class="location-report-controls">
+  <input
+    id="locationSearch"
+    type="text"
+    placeholder="Search locations..."
+  >
+
+  <select id="locationStatusFilter">
+    <option value="all">All Statuses</option>
+    <option value="active">Active</option>
+    <option value="inactive">Inactive</option>
+  </select>
+
+  <select id="locationCheckedFilter">
+    <option value="all">All Check-ins</option>
+    <option value="checked">Checked</option>
+    <option value="notchecked">Not Yet Checked</option>
+  </select>
+
+  <button type="button" id="exportLocations">
+    Download Spreadsheet
+  </button>
+</div>
+<div class="locations-report-wrap">
+  <table id="locationsTable">
+    <thead>
+      <tr>
+        <th data-sort="0">Business</th>
+<th data-sort="1">Edition</th>
+<th data-sort="2">QR Placement</th>
+<th data-sort="3">Date Joined</th>
+<th data-sort="4">Last Checked</th>
+<th data-sort="5">Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="locationsTableBody"></tbody>
+  </table>
+</div>
+<section class="panel" style="margin-top:24px;">
+  <div class="listhead">
+    <h2>Advertising & Participating Location Leads</h2>
+  </div>
+
+  <div class="location-report-controls">
+    <input
+      id="leadSearch"
+      type="text"
+      placeholder="Search leads..."
+    >
+
+    <select id="leadTypeFilter">
+      <option value="all">All Types</option>
+      <option value="advertising">Advertising</option>
+      <option value="participant">Participating Location</option>
+    </select>
+
+    <select id="leadStatusFilter">
+      <option value="all">All Statuses</option>
+      <option value="new">New</option>
+      <option value="contacted">Contacted</option>
+      <option value="closed">Closed</option>
+    </select>
+  </div>
+
+  <div class="locations-report-wrap">
+    <table id="leadsTable">
+      <thead>
+        <tr>
+          <th>Date / Time Submitted</th>
+          <th>Type</th>
+          <th>Business</th>
+          <th>Contact</th>
+          <th>Area</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody id="leadsTableBody"></tbody>
+    </table>
+  </div>
+</section>
+</body>
+</html>

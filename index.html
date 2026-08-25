@@ -1,0 +1,126 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tidbits Daily</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="masthead"><div><div class="eyebrow">A LITTLE SOMETHING FUN FOR YOUR TABLE</div><h1>DAILY CRUMBS</h1><p id="edition">Fergus Falls Edition</p></div><div class="datebox"><strong id="today"></strong><small>Fresh every day</small></div></header>
+<div class="ticker"><span>A LITTLE SOMETHING GOOD FOR TODAY</span></div>
+<main class="shell">
+  <aside class="adrail" id="leftAds"></aside>
+  <section class="paper">
+    <div class="hero-grid">
+      <article class="feature card interactive"><div class="kicker">DAD JOKE OF THE DAY</div><h2 id="jokeSetup"></h2><button class="reveal" id="jokeBtn">Reveal punchline</button></article>
+      <div id="mobileAd" class="mobile-ad"></div>
+      <article class="verse card"><div class="kicker">A GOOD WORD FOR TODAY</div><blockquote id="verseText"></blockquote><strong id="verseRef"></strong><a id="devotionalLink" class="devotional-link" href="#" target="_blank" rel="noopener">
+  Read Today’s Devotional
+</a></article>
+    </div>
+    <div class="grid3">
+      <article class="card">
+  <div class="kicker">NATIONAL DAY</div>
+  <ul id="national"></ul>
+<a href="https://nationaldaycalendar.com/august/24"
+   target="_blank"
+   rel="noopener">
+  View Today’s Details
+</a>
+  <div class="national-links">
+    <a href="https://www.nationaldaycalendar.com/what-day-is-it"
+       target="_blank"
+       rel="noopener">
+      View Weekly
+    </a>
+    <a href="https://www.nationaldaycalendar.com/"
+       target="_blank"
+       rel="noopener">
+      View Monthly
+    </a>
+  </div>
+</article>
+  <article class="card">
+  <div class="kicker">FAMOUS BIRTHDAYS</div>
+  <div id="famousBirthdays"></div>
+</article>
+<article class="card">
+  <div class="kicker">THIS DAY IN U.S. HISTORY</div>
+  <p class="bigcopy" id="usHistory"></p>
+</article>
+<div id="mobileAd3" class="mobile-ad"></div>
+      <article class="card"><div class="kicker">RANDOM FACT</div><p class="bigcopy" id="fact"></p></article>
+      <article class="card interactive">
+  <div class="kicker">RIDDLE OF THE DAY</div>
+  <p class="bigcopy" id="riddleQuestion"></p>
+  <button class="reveal" id="riddleBtn">Reveal answer</button>
+  
+</article>
+      <article class="card"><div class="kicker">TABLE TALK</div><p class="bigcopy" id="icebreaker"></p></article>
+      <div id="mobileAd4" class="mobile-ad"></div>
+      <article class="card interactive">
+  <div class="kicker">WOULD YOU RATHER?</div>
+  <p class="bigcopy" id="wyrQuestion">Would you rather give up pizza for a year or desserts for a year?</p>
+
+  <div class="wyr-options">
+    <button id="wyrA">Pizza</button>
+    <button id="wyrB">Desserts</button>
+  </div>
+
+  <p id="wyrResult" class="wyr-result"></p>
+</article>
+    </div>
+    <div id="mobileAdCta" class="mobile-ad"></div>
+    <article class="topic card">
+  <div class="kicker">THIS WEEK'S CURIOSITY</div>
+
+  <h2 id="topicName"></h2>
+
+  <p class="bigcopy" id="topicArticle"></p>
+
+  <hr>
+
+  <p class="topic-teaser" id="topicTeaser"></p>
+</article>
+<div id="mobileAd5" class="mobile-ad"></div>
+    <article class="quiz card interactive"><div><div class="kicker">60-SECOND TABLE QUIZ</div><h2 id="quizQ"></h2></div><div id="quizOptions" class="quiz-options"></div><p id="quizResult" class="quiz-result"></p></article>
+    <div id="mobileAd2" class="mobile-ad"></div>
+    <section class="sponsor-strip"><div class="kicker">TODAY'S LOCAL SPONSORS</div><div id="centerAds" class="center-ads"></div></section>
+   <section id="todayAnswers" class="answers-section">
+  <div class="kicker">TODAY'S ANSWERS — NO PEEKING!</div>
+
+  <div id="jokeAnswerBox" class="answer-box hidden">
+    <strong>Dad Joke Answer</strong>
+    <p id="jokeAnswer"></p>
+  </div>
+
+  <div id="riddleAnswerBox" class="answer-box hidden">
+    <strong>Riddle Answer</strong>
+    <p id="riddleAnswer"></p>
+  </div>
+</section>
+<div id="mobileAd6" class="mobile-ad"></div>
+<article class="card tip-card">
+  <div class="kicker">TIP OF THE DAY</div>
+
+  <div class="generosity-reminder">
+  <div class="reminder-label">A LITTLE GENEROSITY GOES A LONG WAY</div>
+  <p>
+    Good service deserves good generosity.
+    <span>A generous person will prosper. — Proverbs 11:25</span>
+  </p>
+</div>
+
+<p class="bigcopy" id="dailyTip"></p>
+</article>
+<section class="participating-locations">
+  <div class="participating-locations-header">
+    <h2>Enjoy Daily Crumbs at These Participating Locations</h2>
+    <p>Support the local businesses that help bring Daily Crumbs to you.</p>
+  </div>
+
+  <div class="locations-marquee">
+    <div id="participatingLocationsTrack" class="locations-track">
+      <!-- Participating locations load here automatically -->
+    </div>
+  </div>
+</section>
+    <footer><strong>Daily Crumbs</strong> • Scan tomorrow for an entirely new edition. <span id="cityFooter"></span></footer>
+  </section>
+  <aside class="adrail" id="rightAds"></aside>
+</main>
+<script src="app.js"></script></body></html>
