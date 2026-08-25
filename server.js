@@ -777,7 +777,12 @@ if (
         error: 'Business name is required'
       });
     }
-
+const qrSlug = location.name
+  .trim()
+  .toLowerCase()
+  .replace(/['’]/g, '')
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/^-+|-+$/g, '');
     // Find the edition by its name or slug.
     const editionValue = (location.edition || 'Fergus Falls').trim();
 
@@ -810,6 +815,7 @@ if (
       .insert({
         edition_id: edition.id,
         business_name: location.name.trim(),
+        qr_slug: qrSlug,
         address: location.address || null,
         website_url: location.url || null,
         contact_name: location.contact || null,
