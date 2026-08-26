@@ -101,12 +101,6 @@ async function loadLocationsReport() {
         <td>${location.lastChecked || 'Not yet'}</td>
         <td>${location.active ? 'Active' : 'Inactive'}</td>
         <td>
-          <button
-  type="button"
-  class="check-location-btn"
-  data-id="${location.id}"
->
-  <td>
   <button
     type="button"
     class="edit-location-btn"
@@ -123,8 +117,6 @@ async function loadLocationsReport() {
     Checked Today
   </button>
 </td>
-</button>
-        </td>
       `;
 row.querySelector('.edit-location-btn')?.addEventListener('click', () => {
   editingLocationId = location.id;
