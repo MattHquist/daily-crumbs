@@ -792,3 +792,100 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadLeads();
 });
+async function loadEditionSettings() {
+  const select = document.getElementById('editionSettingsSelect');
+  if (!select) return;
+
+  const slug = select.value || 'fergusfalls';
+
+  try {
+    const response = await fetch(`/api/editions/${slug}`);
+    const edition = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        edition.error || 'Could not load Edition settings'
+      );
+    }
+
+    document.getElementById('editionTerritory').value =
+      edition.territory || '';
+
+    document.getElementById('editionMaxSpots').value =
+      edition.max_ad_spots ?? 24;
+
+    document.getElementById('editionSuggestedRate').value =
+      edition.suggested_annual_ad_rate ?? 600;
+
+    document.getElementById('editionAnnualFee').value =
+      edition.annual_edition_fee ?? '';
+
+    document.getElementById('editionRenewalDate').value =
+      edition.renewal_date || '';
+
+    document.getElementById('editionActive').checked =
+      edition.active !== false;
+
+    updateEditionCalculations();
+
+  } catch (error) {
+    console.error(error);
+
+    const status = document.getElementById('editionSettingsStatus');
+
+    if (status) {
+      status.textContent = 'Could not load Edition settings.';
+    }
+  }
+}
+
+function updateEditionCalculations() {
+  const maxSpots =
+    Number(document.getElementById('editionMaxSpots')?.value || 0);
+
+  const suggestedRate =
+    Number(document.getElementById('editionSuggestedRate')?.value || 0);
+
+  const benchmark = maxSpots * suggestedRate;
+  const guideline = benchmark * 0.10;
+
+  const benchmarkEl =
+    document.getElementById('editionRevenueBenchmark');
+
+  const guidelineEl =
+    document.getElementById('editionFeeGuideline');
+
+  if (benchmarkEl) {
+    benchmarkEl.textContent =
+      benchmark.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        maximumFractionDigits: 0
+      });
+  }
+
+  if (guidelineEl) {
+    guidelineEl.textContent =
+      guideline.toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        maximumFractionDigits: 0
+      });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document
+    .getElementById('editionSettingsSelect')
+    ?.addEventListener('change', loadEditionSettings);
+
+  document
+    .getElementById('editionMaxSpots')
+    ?.addEventListener('input', updateEditionCalculations);
+
+  document
+    .getElementById('editionSuggestedRate')
+    ?.addEventListener('input', updateEditionCalculations);
+
+  loadEditionSettings();
+});

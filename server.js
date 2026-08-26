@@ -1127,7 +1127,65 @@ if (u.pathname === '/api/leads' && req.method === 'GET') {
   const m=u.pathname.match(/^\/api\/ads\/([^/]+)$/);
   if(m && req.method==='PUT'){ try{ const p=await body(req); const d=readData(); const i=d.ads.findIndex(a=>a.id===m[1]); if(i<0)return send(res,404,{error:'Not found'}); d.ads[i]={...d.ads[i],...p,id:d.ads[i].id,spots:Number(p.spots||d.ads[i].spots)}; writeData(d); return send(res,200,d.ads[i]); }catch(e){return send(res,400,{error:e.message});} }
   if(m && req.method==='DELETE'){ const d=readData(); const before=d.ads.length; d.ads=d.ads.filter(a=>a.id!==m[1]); writeData(d); return send(res,before===d.ads.length?404:200,{ok:true}); }
-if (u.pathname === '/api/leads' && req.method === 'POST') {
+if (
+  u.pathname.startsWith('/api/editions/') &&
+  req.method === 'GET'
+) {
+  try {
+    const slug = u.pathname.split('/')[3];
+
+    const secretKey = process.env.SUPABASE_SECRET_KEY;
+    const supabaseUrl = process.env.SUPABASE_URL;
+
+    const response = await fetch(
+      `${supabaseUrl}/rest/v1/editions` +
+      `?select=id,name,slug,territory,max_ad_spots,suggested_annual_ad_rate,annual_edition_fee,renewal_date,active,operator_id` +
+      `&slug=eq.${encodeURIComponent(slug)}` +
+      `&limit=1`,
+      {
+        headers: {
+          apikey: secretKey
+        }
+      }
+    );
+
+    if (!response.ok) {
+      const errorText = await response.text();
+
+      console.error(
+        'Edition settings load failed:',
+        response.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load Edition settings'
+      });
+    }
+
+    const editions = await response.json();
+    const edition = editions[0];
+
+    if (!edition) {
+      return send(res, 404, {
+        success: false,
+        error: 'Edition not found'
+      });
+    }
+
+    return send(res, 200, edition);
+
+  } catch (error) {
+    console.error('Edition settings load failed:', error);
+
+    return send(res, 500, {
+      success: false,
+      error: 'Could not load Edition settings'
+    });
+  }
+}
+  if (u.pathname === '/api/leads' && req.method === 'POST') {
   try {
     const lead = await body(req);
 
