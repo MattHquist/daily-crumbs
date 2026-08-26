@@ -68,5 +68,10 @@ async function protectAdminPage() {
     })
   );
 }
-
+document
+  .getElementById('logoutButton')
+  ?.addEventListener('click', async () => {
+    await adminSupabaseClient.auth.signOut();
+    window.location.replace('/login');
+  });
 protectAdminPage();
