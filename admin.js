@@ -91,78 +91,108 @@ async function loadLocationsReport() {
     }
 
     locations.forEach(location => {
-      const row = document.createElement('tr');
+  const row = document.createElement('tr');
 
-      row.innerHTML = `
-        <td><strong>${location.name || ''}</strong></td>
-        <td>${location.edition || ''}</td>
-        <td>${location.qrPlacement || ''}</td>
-        <td>${location.dateJoined || ''}</td>
-        <td>${location.lastChecked || 'Not yet'}</td>
-        <td>${location.active ? 'Active' : 'Inactive'}</td>
-        <td>
-  <button
-    type="button"
-    class="edit-location-btn"
-    data-id="${location.id}"
-  >
-    Edit
-  </button>
+  row.innerHTML = `
+    <td><strong>${location.name || ''}</strong></td>
+    <td>${location.edition || ''}</td>
+    <td>${location.qrPlacement || ''}</td>
+    <td>${location.dateJoined || ''}</td>
+    <td>${location.lastChecked || 'Not yet'}</td>
+    <td>${location.active ? 'Active' : 'Inactive'}</td>
+    <td>
+      <button
+        type="button"
+        class="edit-location-btn"
+        data-id="${location.id}"
+      >
+        Edit
+      </button>
 
-  <button
-    type="button"
-    class="check-location-btn"
-    data-id="${location.id}"
-  >
-    Checked Today
-  </button>
-</td>
-      `;
-row.querySelector('.edit-location-btn')?.addEventListener('click', () => {
-  editingLocationId = location.id;
+      <button
+        type="button"
+        class="check-location-btn"
+        data-id="${location.id}"
+      >
+        Checked Today
+      </button>
+    </td>
+  `;
 
-  document.getElementById('locationName').value = location.name || '';
-  document.getElementById('locationEdition').value = location.edition || 'Fergus Falls';
-  document.getElementById('locationAddress').value = location.address || '';
-  document.getElementById('locationUrl').value = location.url || '';
-  document.getElementById('locationContact').value = location.contact || '';
-  document.getElementById('locationContactInfo').value = location.contactInfo || '';
-  document.getElementById('locationQrPlacement').value = location.qrPlacement || '';
-  document.getElementById('locationNotes').value = location.notes || '';
-  document.getElementById('locationActive').checked = location.active !== false;
+  tbody.appendChild(row);
 
-  const submitButton = document.querySelector(
-    '#locationForm button[type="submit"]'
-  );
+  row
+    .querySelector('.edit-location-btn')
+    ?.addEventListener('click', () => {
+      editingLocationId = location.id;
 
-  if (submitButton) {
-    submitButton.textContent = 'Save Changes';
-  }
+      document.getElementById('locationName').value =
+        location.name || '';
 
-  document
-    .getElementById('locationForm')
-    ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-});
-      tbody.appendChild(row);
-      row.querySelector('.check-location-btn').addEventListener('click', async () => {
-  try {
-    const response = await fetch(
-      `/api/locations/${location.id}/checked`,
-      { method: 'POST' }
-    );
+      document.getElementById('locationEdition').value =
+        location.edition || 'Fergus Falls';
 
-    const result = await response.json();
+      document.getElementById('locationAddress').value =
+        location.address || '';
 
-    if (!response.ok || !result.success) {
-      throw new Error(result.error || 'Could not update location');
-    }
+      document.getElementById('locationUrl').value =
+        location.url || '';
 
-    await loadLocationsReport();
+      document.getElementById('locationContact').value =
+        location.contact || '';
 
-  } catch (error) {
-    console.error(error);
-    alert('Could not update the check date.');
-  }
+      document.getElementById('locationContactInfo').value =
+        location.contactInfo || '';
+
+      document.getElementById('locationQrPlacement').value =
+        location.qrPlacement || '';
+
+      document.getElementById('locationNotes').value =
+        location.notes || '';
+
+      document.getElementById('locationActive').checked =
+        location.active !== false;
+
+      const submitButton = document.querySelector(
+        '#locationForm button[type="submit"]'
+      );
+
+      if (submitButton) {
+        submitButton.textContent = 'Save Changes';
+      }
+
+      document
+        .getElementById('locationForm')
+        ?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+    });
+
+  row
+    .querySelector('.check-location-btn')
+    ?.addEventListener('click', async () => {
+      try {
+        const response = await fetch(
+          `/api/locations/${location.id}/checked`,
+          { method: 'POST' }
+        );
+
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(
+            result.error || 'Could not update location'
+          );
+        }
+
+        await loadLocationsReport();
+
+      } catch (error) {
+        console.error(error);
+        alert('Could not update the check date.');
+      }
+    });
 });
     });
 
