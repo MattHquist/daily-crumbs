@@ -204,10 +204,10 @@ async function loadLocationsReport() {
       const action = nextActive ? 'reactivate' : 'deactivate';
 
       if (!confirm(
-        `Are you sure you want to ${action} ${location.name}?`
-      )) {
-        return;
-      }
+  `Are you sure you want to ${action} ${location.name}?`
+)) {
+  return;
+}
 
       try {
         const response = await fetch(
