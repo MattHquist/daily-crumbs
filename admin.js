@@ -178,10 +178,17 @@ async function loadLocationsReport() {
   try {
     const response = await fetch('/api/locations');
     const locations = await response.json();
+const selectedEditionName =
+  document.getElementById('editionName')?.value || '';
 
+const filteredLocations = selectedEditionName
+  ? locations.filter(
+      location => location.edition === selectedEditionName
+    )
+  : locations;
     tbody.innerHTML = '';
 
-    if (!locations.length) {
+    if (!filteredLocations.length) {
       tbody.innerHTML = `
         <tr>
           <td colspan="7">No participating locations yet.</td>
@@ -190,7 +197,7 @@ async function loadLocationsReport() {
       return;
     }
 
-    locations.forEach(location => {
+    filteredLocations.forEach(location => {
   const row = document.createElement('tr');
 
   row.innerHTML = `
@@ -1050,7 +1057,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (cityField) {
       cityField.value = slug;
     }
+const locationEdition =
+  document.getElementById('locationEdition');
 
+if (locationEdition) {
+  const editionName =
+    document.getElementById('editionName')?.value || '';
+
+  locationEdition.value = editionName;
+}
+
+await loadLocationsReport();
     await load();
   });
 
