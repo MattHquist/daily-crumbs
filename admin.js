@@ -797,7 +797,7 @@ async function loadEditionSettings() {
   if (!select) return;
 
   const slug = select.value || 'fergusfalls';
-
+creatingNewEdition = false;
   try {
     const response = await fetch(`/api/editions/${slug}`);
     const edition = await response.json();
@@ -838,7 +838,115 @@ async function loadEditionSettings() {
     }
   }
 }
+document.getElementById('editionName').value =
+  edition.name || '';
 
+document.getElementById('editionSlug').value =
+  edition.slug || '';
+
+const saveButton =
+  document.getElementById('saveEditionSettings');
+
+if (saveButton) {
+  saveButton.textContent = 'Save Edition Settings';
+}
+document
+  .getElementById('saveEditionSettings')
+  ?.addEventListener('click', async () => {
+    const name =
+      document.getElementById('editionName').value.trim();
+
+    const slug =
+      document.getElementById('editionSlug').value
+        .trim()
+        .toLowerCase();
+
+    if (creatingNewEdition && (!name || !slug)) {
+      alert('Edition name and slug are required.');
+      return;
+    }
+
+    const payload = {
+      name,
+      slug,
+      territory:
+        document.getElementById('editionTerritory').value.trim(),
+
+      maxAdSpots:
+        Number(document.getElementById('editionMaxSpots').value || 24),
+
+      suggestedAnnualAdRate:
+        Number(document.getElementById('editionSuggestedRate').value || 0),
+
+      annualEditionFee:
+        Number(document.getElementById('editionAnnualFee').value || 0),
+
+      renewalDate:
+        document.getElementById('editionRenewalDate').value || null,
+
+      active:
+        document.getElementById('editionActive').checked
+    };
+
+    try {
+      if (creatingNewEdition) {
+        const response = await fetch('/api/editions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(
+            result.error || 'Could not create Edition'
+          );
+        }
+
+        creatingNewEdition = false;
+
+        const newEdition = result.edition;
+
+        const select =
+          document.getElementById('editionSettingsSelect');
+
+        const option = document.createElement('option');
+
+        option.value = newEdition.slug;
+        option.textContent = newEdition.name;
+
+        select.appendChild(option);
+        select.value = newEdition.slug;
+
+        document.getElementById(
+          'saveEditionSettings'
+        ).textContent = 'Save Edition Settings';
+
+        document.getElementById(
+          'editionSettingsStatus'
+        ).textContent = `${newEdition.name} was created.`;
+
+        await loadEditionSettings();
+
+      } else {
+        alert(
+          'Existing Edition updates will be enabled in the next step.'
+        );
+      }
+
+    } catch (error) {
+      console.error(error);
+
+      alert(
+        creatingNewEdition
+          ? 'Could not create Edition.'
+          : 'Could not save Edition settings.'
+      );
+    }
+  });
 function updateEditionCalculations() {
   const maxSpots =
     Number(document.getElementById('editionMaxSpots')?.value || 0);
@@ -889,3 +997,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadEditionSettings();
 });
+let creatingNewEdition = false;
+
+document
+  .getElementById('newEditionButton')
+  ?.addEventListener('click', () => {
+    creatingNewEdition = true;
+
+    document.getElementById('editionName').value = '';
+    document.getElementById('editionSlug').value = '';
+    document.getElementById('editionTerritory').value = '';
+    document.getElementById('editionMaxSpots').value = 24;
+    document.getElementById('editionSuggestedRate').value = 600;
+    document.getElementById('editionAnnualFee').value = 1440;
+    document.getElementById('editionRenewalDate').value = '';
+    document.getElementById('editionActive').checked = true;
+
+    updateEditionCalculations();
+
+    const saveButton =
+      document.getElementById('saveEditionSettings');
+
+    if (saveButton) {
+      saveButton.textContent = 'Create Edition';
+    }
+
+    const status =
+      document.getElementById('editionSettingsStatus');
+
+    if (status) {
+      status.textContent = 'Creating a new Edition';
+    }
+  });

@@ -1185,6 +1185,80 @@ if (
     });
   }
 }
+if (
+  u.pathname === '/api/editions' &&
+  req.method === 'POST'
+) {
+  try {
+    const edition = await body(req);
+
+    if (!edition.name?.trim() || !edition.slug?.trim()) {
+      return send(res, 400, {
+        success: false,
+        error: 'Edition name and slug are required'
+      });
+    }
+
+    const secretKey = process.env.SUPABASE_SECRET_KEY;
+    const supabaseUrl = process.env.SUPABASE_URL;
+
+    const payload = {
+      name: edition.name.trim(),
+      slug: edition.slug.trim().toLowerCase(),
+      territory: edition.territory || null,
+      max_ad_spots: Number(edition.maxAdSpots || 24),
+      suggested_annual_ad_rate:
+        Number(edition.suggestedAnnualAdRate || 0),
+      annual_edition_fee:
+        Number(edition.annualEditionFee || 0),
+      renewal_date: edition.renewalDate || null,
+      active: edition.active !== false
+    };
+
+    const response = await fetch(
+      `${supabaseUrl}/rest/v1/editions`,
+      {
+        method: 'POST',
+        headers: {
+          apikey: secretKey,
+          'Content-Type': 'application/json',
+          Prefer: 'return=representation'
+        },
+        body: JSON.stringify(payload)
+      }
+    );
+
+    if (!response.ok) {
+      const errorText = await response.text();
+
+      console.error(
+        'Edition creation failed:',
+        response.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not create Edition'
+      });
+    }
+
+    const created = await response.json();
+
+    return send(res, 201, {
+      success: true,
+      edition: created[0] || null
+    });
+
+  } catch (error) {
+    console.error('Edition creation failed:', error);
+
+    return send(res, 500, {
+      success: false,
+      error: 'Could not create Edition'
+    });
+  }
+}
   if (u.pathname === '/api/leads' && req.method === 'POST') {
   try {
     const lead = await body(req);
