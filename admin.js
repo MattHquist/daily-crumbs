@@ -1,7 +1,7 @@
 const $=id=>document.getElementById(id); let cached=[], currentImage='';
 const today=new Date(); const iso=d=>d.toISOString().slice(0,10); $('startDate').value=iso(today); const end=new Date(today);end.setFullYear(end.getFullYear()+1);$('endDate').value=iso(end);
 function fileData(file){return new Promise((resolve,reject)=>{if(!file)return resolve('');const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file)})}
-async function load(){const city=$('filterCity').value.trim().toLowerCase();cached=await fetch(`/api/ads?city=${city}`).then(r=>r.json());const maxSpots = 24;
+async function load(){const city=$('filterCity').value.trim().toLowerCase();cached=await fetch(`/api/ads?city=${city}`).then(r=>r.json());const maxSpots = await getSelectedEditionMaxSpots();
 
 const soldSpots = cached
   .filter(ad => ad.active !== false)
@@ -48,7 +48,7 @@ window.toggleAd = async (id, isActive) => {
   load();
 };
 window.removeAd=async id=>{if(!confirm('Delete this advertiser?'))return;await fetch(`/api/ads/${id}`,{method:'DELETE'});load()}
-$('form').onsubmit=async e=>{e.preventDefault();const f=$('image').files[0];const image=f?await fileData(f):currentImage;const payload={city:$('city').value.trim().toLowerCase(),business:$('business').value.trim(),headline:$('headline').value.trim(),url:$('url').value.trim(),startDate:$('startDate').value,endDate:$('endDate').value,spots:Number($('spots').value),creativePlan:$('creativePlan').value,active:$('active').checked,image};const maxSpots = 24;
+$('form').onsubmit=async e=>{e.preventDefault();const f=$('image').files[0];const image=f?await fileData(f):currentImage;const payload={city:$('city').value.trim().toLowerCase(),business:$('business').value.trim(),headline:$('headline').value.trim(),url:$('url').value.trim(),startDate:$('startDate').value,endDate:$('endDate').value,spots:Number($('spots').value),creativePlan:$('creativePlan').value,active:$('active').checked,image};const maxSpots = await getSelectedEditionMaxSpots();
 
 const otherActiveSpots = cached
   .filter(ad => ad.active !== false && ad.id !== $('editId').value)
@@ -150,6 +150,27 @@ await loadLocationsReport();
   });
 }
 });
+async function getSelectedEditionMaxSpots() {
+  const select = document.getElementById('editionSettingsSelect');
+  const slug = select?.value || 'fergusfalls';
+
+  try {
+    const response = await fetch(`/api/editions/${slug}`);
+    const edition = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        edition.error || 'Could not load Edition settings'
+      );
+    }
+
+    return Number(edition.max_ad_spots || 24);
+
+  } catch (error) {
+    console.error('Could not load Edition max spots:', error);
+    return 24;
+  }
+}
 async function loadLocationsReport() {
   const tbody = document.getElementById('locationsTableBody');
   if (!tbody) return;
