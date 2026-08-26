@@ -825,19 +825,9 @@ creatingNewEdition = false;
 
     document.getElementById('editionActive').checked =
       edition.active !== false;
+document.getElementById('editionActive').checked =
+  edition.active !== false;
 
-    updateEditionCalculations();
-
-  } catch (error) {
-    console.error(error);
-
-    const status = document.getElementById('editionSettingsStatus');
-
-    if (status) {
-      status.textContent = 'Could not load Edition settings.';
-    }
-  }
-}
 document.getElementById('editionName').value =
   edition.name || '';
 
@@ -850,6 +840,21 @@ const saveButton =
 if (saveButton) {
   saveButton.textContent = 'Save Edition Settings';
 }
+
+updateEditionCalculations();
+    updateEditionCalculations();
+
+  } catch (error) {
+    console.error(error);
+
+    const status = document.getElementById('editionSettingsStatus');
+
+    if (status) {
+      status.textContent = 'Could not load Edition settings.';
+    }
+  }
+}
+
 document
   .getElementById('saveEditionSettings')
   ?.addEventListener('click', async () => {
