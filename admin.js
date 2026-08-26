@@ -178,14 +178,23 @@ async function loadLocationsReport() {
   try {
     const response = await fetch('/api/locations');
     const locations = await response.json();
-const selectedEditionName =
-  document.getElementById('editionName')?.value || '';
+const normalizeEdition = value =>
+  (value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '');
 
-const filteredLocations = selectedEditionName
+const selectedEditionSlug =
+  document.getElementById('editionSettingsSelect')?.value || '';
+
+const filteredLocations = selectedEditionSlug
   ? locations.filter(
-      location => location.edition === selectedEditionName
+      location =>
+        normalizeEdition(location.edition) ===
+        normalizeEdition(selectedEditionSlug)
     )
   : locations;
+
+
     tbody.innerHTML = '';
 
     if (!filteredLocations.length) {
@@ -1061,14 +1070,11 @@ const locationEdition =
   document.getElementById('locationEdition');
 
 if (locationEdition) {
-  const editionName =
-    document.getElementById('editionName')?.value || '';
-
-  locationEdition.value = editionName;
+  locationEdition.value = slug;
 }
 
+await load();
 await loadLocationsReport();
-    await load();
   });
 
   document
