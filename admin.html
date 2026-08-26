@@ -1,13 +1,15 @@
 <!doctype html><html><head><style>html{visibility:hidden}</style><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tidbits Daily Admin</title><link rel="stylesheet" href="admin.css"></head><body>
 <header><div><small>TIDBITS DAILY</small><h1>Advertiser Manager</h1></div><a href="/fergusfalls">View publication →</a></header>
-<main><section class="panel"><h2>Add advertiser</h2><form id="form"><input type="hidden" id="editId"><div class="grid"><label>City slug<input id="city" value="fergusfalls" required></label><label>Business name<input id="business" required></label><label>Headline / CTA<input id="headline" placeholder="Find your next home"></label><label>Destination URL<input id="url" type="url" placeholder="https://..."></label><label>Start date<input id="startDate" type="date" required></label><label>End date<input id="endDate" type="date" required></label><label>Ad size / weight<select id="spots"><label>
+<main><section class="panel"><h2>Add advertiser</h2><form id="form"><input type="hidden" id="editId"><div class="grid"><label>City slug<input id="city" value="fergusfalls" required></label><label>Business name<input id="business" required></label><label>Headline / CTA<input id="headline" placeholder="Find your next home"></label><label>Destination URL<input id="url" type="url" placeholder="https://..."></label><label>Start date<input id="startDate" type="date" required></label><label>End date<input id="endDate" type="date" required></label><label>Ad size / weight<select id="spots">
+    <label>
   Ad spots
   <select id="spots">
     <option value="1">1 spot</option>
     <option value="2">2 spots</option>
     <option value="3">3 spots</option>
   </select>
-</label></select></label><label>Logo / ad image<input id="image" type="file" accept="image/*"></label></div><label class="check"><input id="active" type="checkbox" checked> Active</label><div class="actions"><button type="submit">Save advertiser</button><button type="button" class="ghost" id="cancelEdit">Cancel edit</button></div><p class="note">Dates are enforced automatically. Larger weights receive proportionally more appearances in the rotation. Placement is randomized by the site.</p></form></section>
+</label>
+</select></label><label>Logo / ad image<input id="image" type="file" accept="image/*"></label></div><label class="check"><input id="active" type="checkbox" checked> Active</label><div class="actions"><button type="submit">Save advertiser</button><button type="button" class="ghost" id="cancelEdit">Cancel edit</button></div><p class="note">Dates are enforced automatically. Larger weights receive proportionally more appearances in the rotation. Placement is randomized by the site.</p></form></section>
 <section class="panel"><div class="listhead"><h2>Advertisers</h2><div><input id="filterCity" value="fergusfalls"><button id="refresh">Load city</button></div></div><div id="ads"></div></section></main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="admin-auth.js"></script>
