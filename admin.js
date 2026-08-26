@@ -1013,6 +1013,52 @@ document
       );
     }
   });
+  function applyAdminRoleUI() {
+  const context = window.adminUserContext || {};
+  const isOwner = context.isOwner === true;
+
+  const newEditionButton =
+    document.getElementById('newEditionButton');
+
+  if (newEditionButton) {
+    newEditionButton.style.display = isOwner ? '' : 'none';
+  }
+
+  const editionName =
+    document.getElementById('editionName');
+
+  const editionSlug =
+    document.getElementById('editionSlug');
+
+  const editionTerritory =
+    document.getElementById('editionTerritory');
+
+  const editionMaxSpots =
+    document.getElementById('editionMaxSpots');
+
+  const editionSuggestedRate =
+    document.getElementById('editionSuggestedRate');
+
+  const editionAnnualFee =
+    document.getElementById('editionAnnualFee');
+
+  const editionRenewalDate =
+    document.getElementById('editionRenewalDate');
+
+  const editionActive =
+    document.getElementById('editionActive');
+
+  if (!isOwner) {
+    if (editionName) editionName.readOnly = true;
+    if (editionSlug) editionSlug.readOnly = true;
+    if (editionTerritory) editionTerritory.readOnly = true;
+    if (editionMaxSpots) editionMaxSpots.readOnly = true;
+    if (editionSuggestedRate) editionSuggestedRate.readOnly = true;
+    if (editionAnnualFee) editionAnnualFee.readOnly = true;
+    if (editionRenewalDate) editionRenewalDate.disabled = true;
+    if (editionActive) editionActive.disabled = true;
+  }
+}
 function updateEditionCalculations() {
   const maxSpots =
     Number(document.getElementById('editionMaxSpots')?.value || 0);
@@ -1141,7 +1187,27 @@ document
 
   try {
     const response = await fetch('/api/editions');
-    const editions = await response.json();
+const allEditions = await response.json();
+
+if (!response.ok) {
+  throw new Error(
+    allEditions.error || 'Could not load Editions'
+  );
+}
+
+const context = window.adminUserContext || {};
+let editions = allEditions;
+
+if (!context.isOwner) {
+  const allowedIds = new Set(
+    (context.editions || [])
+      .map(item => item.edition_id)
+  );
+
+  editions = allEditions.filter(
+    edition => allowedIds.has(edition.id)
+  );
+}
 
     if (!response.ok) {
       throw new Error(
@@ -1178,6 +1244,8 @@ document
     console.error('Could not load Edition list:', error);
   }
 }
-loadEditionOptions().then(() => {
-  loadEditionSettings();
+document.addEventListener('adminContextReady', async () => {
+  applyAdminRoleUI();
+  await loadEditionOptions();
+  await loadEditionSettings();
 });
