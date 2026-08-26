@@ -1,7 +1,7 @@
 <!doctype html><html><head><style>html{visibility:hidden}</style><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tidbits Daily Admin</title><link rel="stylesheet" href="admin.css"></head><body>
-<header><div><small>TIDBITS DAILY</small><h1>Advertiser Manager</h1><section id="editionSettings">
+<header><div><small>TIDBITS DAILY</small><h1>Advertiser Manager</h1><section id="editionSettings" class="panel"></section>
   <h2>Edition Settings</h2>
-
+<div class="edition-settings-grid"></div>
   <label>
     Edition
     <select id="editionSettingsSelect">
@@ -56,11 +56,11 @@
     <input id="editionRenewalDate" type="date">
   </label>
 
-  <label>
-    <input id="editionActive" type="checkbox" checked>
-    Edition Active
-  </label>
-
+  <label style="display:flex; align-items:center; gap:8px;">
+  <input id="editionActive" type="checkbox" checked>
+  <span>Edition Active</span>
+</label>
+</div>
   <button type="button" id="saveEditionSettings">
     Save Edition Settings
   </button>
