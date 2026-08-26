@@ -1334,6 +1334,53 @@ if (
     });
   }
 }
+if (
+  u.pathname === '/api/editions' &&
+  req.method === 'GET'
+) {
+  try {
+    const secretKey = process.env.SUPABASE_SECRET_KEY;
+    const supabaseUrl = process.env.SUPABASE_URL;
+
+    const response = await fetch(
+      `${supabaseUrl}/rest/v1/editions` +
+      `?select=id,name,slug,active` +
+      `&order=name.asc`,
+      {
+        headers: {
+          apikey: secretKey
+        }
+      }
+    );
+
+    if (!response.ok) {
+      const errorText = await response.text();
+
+      console.error(
+        'Edition list load failed:',
+        response.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load Editions'
+      });
+    }
+
+    const editions = await response.json();
+
+    return send(res, 200, editions);
+
+  } catch (error) {
+    console.error('Edition list load failed:', error);
+
+    return send(res, 500, {
+      success: false,
+      error: 'Could not load Editions'
+    });
+  }
+}
   if (u.pathname === '/api/leads' && req.method === 'POST') {
   try {
     const lead = await body(req);

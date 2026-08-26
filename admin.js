@@ -1011,7 +1011,7 @@ function updateEditionCalculations() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   document
     .getElementById('editionSettingsSelect')
     ?.addEventListener('change', loadEditionSettings);
@@ -1024,7 +1024,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .getElementById('editionSuggestedRate')
     ?.addEventListener('input', updateEditionCalculations);
 
-  loadEditionSettings();
+  await loadEditionOptions();
+  await loadEditionSettings();
 });
 let creatingNewEdition = false;
 
@@ -1058,3 +1059,46 @@ document
       status.textContent = 'Creating a new Edition';
     }
   });
+  async function loadEditionOptions() {
+  const select = document.getElementById('editionSettingsSelect');
+  if (!select) return;
+
+  try {
+    const response = await fetch('/api/editions');
+    const editions = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        editions.error || 'Could not load Editions'
+      );
+    }
+
+    const currentValue = select.value;
+
+    select.innerHTML = '';
+
+    editions.forEach(edition => {
+      const option = document.createElement('option');
+
+      option.value = edition.slug;
+      option.textContent =
+        edition.active === false
+          ? `${edition.name} (Inactive)`
+          : edition.name;
+
+      select.appendChild(option);
+    });
+
+    if (
+      currentValue &&
+      editions.some(edition => edition.slug === currentValue)
+    ) {
+      select.value = currentValue;
+    } else if (editions.length) {
+      select.value = editions[0].slug;
+    }
+
+  } catch (error) {
+    console.error('Could not load Edition list:', error);
+  }
+}
