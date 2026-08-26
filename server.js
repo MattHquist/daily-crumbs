@@ -1044,6 +1044,240 @@ const emailByUserId = new Map(
     });
   }
 }
+if (
+  u.pathname === '/api/edition-managers' &&
+  req.method === 'POST'
+) {
+  try {
+    const authHeader = req.headers.authorization || '';
+
+    if (!authHeader.startsWith('Bearer ')) {
+      return send(res, 401, {
+        success: false,
+        error: 'Authentication required'
+      });
+    }
+
+    const accessToken = authHeader.slice(7);
+
+    const secretKey = process.env.SUPABASE_SECRET_KEY;
+    const supabaseUrl = process.env.SUPABASE_URL;
+
+    const userResponse = await fetch(
+      `${supabaseUrl}/auth/v1/user`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${accessToken}`
+        }
+      }
+    );
+
+    if (!userResponse.ok) {
+      return send(res, 401, {
+        success: false,
+        error: 'Invalid login'
+      });
+    }
+
+    const ownerUser = await userResponse.json();
+
+    const ownerProfileResponse = await fetch(
+      `${supabaseUrl}/rest/v1/profiles` +
+      `?id=eq.${encodeURIComponent(ownerUser.id)}` +
+      `&select=id,role,active`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    const ownerProfiles = await ownerProfileResponse.json();
+    const ownerProfile = ownerProfiles[0];
+
+    if (
+      !ownerProfile ||
+      ownerProfile.active === false ||
+      ownerProfile.role !== 'owner'
+    ) {
+      return send(res, 403, {
+        success: false,
+        error: 'Owner access required'
+      });
+    }
+
+    const payload = await body(req);
+
+    const name = payload.name?.trim();
+    const email = payload.email?.trim().toLowerCase();
+    const editionSlug = payload.editionSlug?.trim();
+    const active = payload.active !== false;
+
+    if (!name || !email || !editionSlug) {
+      return send(res, 400, {
+        success: false,
+        error: 'Name, email, and Edition are required'
+      });
+    }
+
+    const editionResponse = await fetch(
+      `${supabaseUrl}/rest/v1/editions` +
+      `?slug=eq.${encodeURIComponent(editionSlug)}` +
+      `&select=id,name`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    const editionRows = await editionResponse.json();
+    const edition = editionRows[0];
+
+    if (!edition) {
+      return send(res, 404, {
+        success: false,
+        error: 'Edition not found'
+      });
+    }
+
+    const createUserResponse = await fetch(
+      `${supabaseUrl}/auth/v1/admin/users`,
+      {
+        method: 'POST',
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email,
+          email_confirm: true,
+          user_metadata: {
+            full_name: name
+          }
+        })
+      }
+    );
+
+    const createdUser = await createUserResponse.json();
+
+    if (!createUserResponse.ok) {
+      return send(res, createUserResponse.status, {
+        success: false,
+        error:
+          createdUser.msg ||
+          createdUser.message ||
+          'Could not create manager login'
+      });
+    }
+
+    const profileResponse = await fetch(
+      `${supabaseUrl}/rest/v1/profiles`,
+      {
+        method: 'POST',
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`,
+          'Content-Type': 'application/json',
+          Prefer: 'return=representation'
+        },
+        body: JSON.stringify({
+          id: createdUser.id,
+          full_name: name,
+          role: 'edition_admin',
+          active
+        })
+      }
+    );
+
+    if (!profileResponse.ok) {
+      const errorText = await profileResponse.text();
+
+      console.error(
+        'Edition manager profile create failed:',
+        errorText
+      );
+await fetch(
+  `${supabaseUrl}/auth/v1/admin/users/${createdUser.id}`,
+  {
+    method: 'DELETE',
+    headers: {
+      apikey: secretKey,
+      Authorization: `Bearer ${secretKey}`
+    }
+  }
+);
+      return send(res, 500, {
+        success: false,
+        error: 'Manager login was created, but profile setup failed'
+      });
+    }
+
+    const assignmentResponse = await fetch(
+      `${supabaseUrl}/rest/v1/user_editions`,
+      {
+        method: 'POST',
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`,
+          'Content-Type': 'application/json',
+          Prefer: 'return=representation'
+        },
+        body: JSON.stringify({
+          user_id: createdUser.id,
+          edition_id: edition.id
+        })
+      }
+    );
+
+    if (!assignmentResponse.ok) {
+      const errorText = await assignmentResponse.text();
+
+      console.error(
+        'Edition manager assignment create failed:',
+        errorText
+      );
+await fetch(
+  `${supabaseUrl}/auth/v1/admin/users/${createdUser.id}`,
+  {
+    method: 'DELETE',
+    headers: {
+      apikey: secretKey,
+      Authorization: `Bearer ${secretKey}`
+    }
+  }
+);
+      return send(res, 500, {
+        success: false,
+        error:
+          'Manager was created, but Edition assignment failed'
+      });
+    }
+
+    return send(res, 201, {
+      success: true,
+      manager: {
+        id: createdUser.id,
+        full_name: name,
+        email,
+        edition_name: edition.name,
+        active
+      }
+    });
+
+  } catch (error) {
+    console.error('Edition manager create failed:', error);
+
+    return send(res, 500, {
+      success: false,
+      error: 'Could not add Edition Manager'
+    });
+  }
+}
  if (u.pathname === '/api/locations' && req.method === 'POST') {
   try {
     const location = await body(req);

@@ -241,6 +241,78 @@ const response = await fetch('/api/edition-managers', {
     `;
   }
 }
+document
+  .getElementById('addEditionManagerButton')
+  ?.addEventListener('click', async () => {
+    const name =
+      document.getElementById('managerName')?.value.trim();
+
+    const email =
+      document.getElementById('managerEmail')?.value.trim();
+
+    const editionSlug =
+      document.getElementById('managerEdition')?.value;
+
+    const active =
+      document.getElementById('managerActive')?.checked !== false;
+
+    const status =
+      document.getElementById('editionManagerStatus');
+
+    if (!name || !email || !editionSlug) {
+      if (status) {
+        status.textContent =
+          'Name, email, and Edition are required.';
+      }
+      return;
+    }
+
+    const token =
+      window.adminUserContext?.accessToken || '';
+
+    try {
+      const response = await fetch('/api/edition-managers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          editionSlug,
+          active
+        })
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          result.error || 'Could not add Edition Manager'
+        );
+      }
+
+      if (status) {
+        status.textContent =
+          `${name} was added as an Edition Manager.`;
+      }
+
+      document.getElementById('managerName').value = '';
+      document.getElementById('managerEmail').value = '';
+      document.getElementById('managerEdition').value = '';
+      document.getElementById('managerActive').checked = true;
+
+      await loadEditionManagers();
+
+    } catch (error) {
+      console.error(error);
+
+      if (status) {
+        status.textContent = error.message;
+      }
+    }
+  });
 async function loadLocationsReport() {
   const tbody = document.getElementById('locationsTableBody');
   if (!tbody) return;
