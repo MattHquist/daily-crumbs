@@ -1016,7 +1016,12 @@ document
   function applyAdminRoleUI() {
   const context = window.adminUserContext || {};
   const isOwner = context.isOwner === true;
+const saveEditionButton =
+  document.getElementById('saveEditionSettings');
 
+if (saveEditionButton) {
+  saveEditionButton.style.display = isOwner ? '' : 'none';
+}
   const newEditionButton =
     document.getElementById('newEditionButton');
 
@@ -1057,7 +1062,36 @@ document
     if (editionAnnualFee) editionAnnualFee.readOnly = true;
     if (editionRenewalDate) editionRenewalDate.disabled = true;
     if (editionActive) editionActive.disabled = true;
+    const ownerOnlyFields = [
+  editionName,
+  editionSlug,
+  editionTerritory,
+  editionMaxSpots,
+  editionSuggestedRate,
+  editionAnnualFee,
+  editionRenewalDate,
+  editionActive
+];
+
+ownerOnlyFields.forEach(field => {
+  const wrapper = field?.closest('label');
+  if (wrapper) wrapper.style.display = 'none';
+});
+const editionSettingsGrid =
+  document.querySelector('.edition-settings-grid');
+
+if (editionSettingsGrid) {
+  Array.from(editionSettingsGrid.children).forEach(child => {
+    const containsEditionSelect =
+      child.querySelector?.('#editionSettingsSelect');
+
+    if (!containsEditionSelect) {
+      child.style.display = 'none';
+    }
+  });
+}
   }
+  
 }
 function updateEditionCalculations() {
   const maxSpots =
