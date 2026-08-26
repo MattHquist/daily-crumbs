@@ -194,7 +194,6 @@ async function loadLocationsReport() {
       }
     });
 });
-    });
 
   } catch (error) {
     console.error('Could not load participating locations:', error);
