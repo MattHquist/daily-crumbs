@@ -1,13 +1,23 @@
 const $=id=>document.getElementById(id); let cached=[], currentImage='';
 const today=new Date(); const iso=d=>d.toISOString().slice(0,10); $('startDate').value=iso(today); const end=new Date(today);end.setFullYear(end.getFullYear()+1);$('endDate').value=iso(end);
 function fileData(file){return new Promise((resolve,reject)=>{if(!file)return resolve('');const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file)})}
-async function load(){const city=$('filterCity').value.trim().toLowerCase();cached=await fetch(`/api/ads?city=${city}`).then(r=>r.json());$('ads').innerHTML=cached.length?cached.map(a=>`<div class="adrow"><div>${a.image?`<img class="thumb" src="${a.image}">`:`<div class="thumb"></div>`}</div><div class="meta"><strong>${a.business}</strong><small>${a.startDate||'No start'} → ${a.endDate||'No end'} • ${a.spots} spot weight • ${a.active?'Active':'Paused'}${a.url?' • Clickable':''}</small><div>${a.headline||''}</div></div><div class="rowactions"><button onclick="editAd('${a.id}')">Edit</button><button
+async function load(){const city=$('filterCity').value.trim().toLowerCase();cached=await fetch(`/api/ads?city=${city}`).then(r=>r.json());const maxSpots = 24;
+
+const soldSpots = cached
+  .filter(ad => ad.active !== false)
+  .reduce((total, ad) => total + Number(ad.spots || 0), 0);
+
+const capacity = document.getElementById('adCapacity');
+
+if (capacity) {
+  capacity.textContent = `${soldSpots} of ${maxSpots} spots sold`;
+}$('ads').innerHTML=cached.length?cached.map(a=>`<div class="adrow"><div>${a.image?`<img class="thumb" src="${a.image}">`:`<div class="thumb"></div>`}</div><div class="meta"><strong>${a.business}</strong><small>${a.startDate||'No start'} → ${a.endDate||'No end'} • ${a.spots} spot weight • ${a.active?'Active':'Paused'}${a.url?' • Clickable':''}</small><div>${a.headline||''}</div></div><div class="rowactions"><button onclick="editAd('${a.id}')">Edit</button><button
   class="danger"
   onclick="toggleAd('${a.id}', ${a.active})"
 >
   ${a.active ? 'Deactivate' : 'Reactivate'}
 </button></div></div>`).join(''):'<p>No advertisers found for this city.</p>'}
-window.editAd=id=>{const a=cached.find(x=>x.id===id);if(!a)return;$('editId').value=a.id;$('city').value=a.city;$('business').value=a.business;$('headline').value=a.headline||'';$('url').value=a.url||'';$('startDate').value=a.startDate;$('endDate').value=a.endDate;$('spots').value=a.spots;$('active').checked=a.active!==false;currentImage=a.image||'';scrollTo({top:0,behavior:'smooth'})}
+window.editAd=id=>{const a=cached.find(x=>x.id===id);if(!a)return;$('editId').value=a.id;$('city').value=a.city;$('business').value=a.business;$('headline').value=a.headline||'';$('url').value=a.url||'';$('startDate').value=a.startDate;$('endDate').value=a.endDate;$('spots').value=a.spots;$('creativePlan').value=a.creativePlan||'standard';$('active').checked=a.active!==false;currentImage=a.image||'';scrollTo({top:0,behavior:'smooth'})}
 window.toggleAd = async (id, isActive) => {
   const ad = cached.find(x => x.id === id);
   if (!ad) return;
@@ -38,8 +48,25 @@ window.toggleAd = async (id, isActive) => {
   load();
 };
 window.removeAd=async id=>{if(!confirm('Delete this advertiser?'))return;await fetch(`/api/ads/${id}`,{method:'DELETE'});load()}
-$('form').onsubmit=async e=>{e.preventDefault();const f=$('image').files[0];const image=f?await fileData(f):currentImage;const payload={city:$('city').value.trim().toLowerCase(),business:$('business').value.trim(),headline:$('headline').value.trim(),url:$('url').value.trim(),startDate:$('startDate').value,endDate:$('endDate').value,spots:Number($('spots').value),active:$('active').checked,image};const id=$('editId').value;await fetch(id?`/api/ads/${id}`:'/api/ads',{method:id?'PUT':'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});reset();$('filterCity').value=payload.city;load()}
-function reset(){$('form').reset();$('editId').value='';$('city').value=$('filterCity').value||'fergusfalls';$('startDate').value=iso(today);$('endDate').value=iso(end);$('active').checked=true;currentImage=''}
+$('form').onsubmit=async e=>{e.preventDefault();const f=$('image').files[0];const image=f?await fileData(f):currentImage;const payload={city:$('city').value.trim().toLowerCase(),business:$('business').value.trim(),headline:$('headline').value.trim(),url:$('url').value.trim(),startDate:$('startDate').value,endDate:$('endDate').value,spots:Number($('spots').value),creativePlan:$('creativePlan').value,active:$('active').checked,image};const maxSpots = 24;
+
+const otherActiveSpots = cached
+  .filter(ad => ad.active !== false && ad.id !== $('editId').value)
+  .reduce((total, ad) => total + Number(ad.spots || 0), 0);
+
+const requestedSpots = Number($('spots').value || 0);
+
+if (
+  $('active').checked &&
+  otherActiveSpots + requestedSpots > maxSpots
+) {
+  alert(
+    `This would exceed the ${maxSpots}-spot limit. ` +
+    `There are only ${Math.max(0, maxSpots - otherActiveSpots)} spots available.`
+  );
+  return;
+}const id=$('editId').value;await fetch(id?`/api/ads/${id}`:'/api/ads',{method:id?'PUT':'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});reset();$('filterCity').value=payload.city;load()}
+function reset(){$('form').reset();$('creativePlan').value='standard';$('editId').value='';$('city').value=$('filterCity').value||'fergusfalls';$('startDate').value=iso(today);$('endDate').value=iso(end);$('active').checked=true;currentImage=''}
 $('cancelEdit').onclick=reset;$('refresh').onclick=load;load();
 let editingLocationId = null;
 document.addEventListener('DOMContentLoaded', () => {

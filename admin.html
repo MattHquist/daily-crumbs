@@ -9,8 +9,19 @@
     <option value="3">3 spots</option>
   </select>
 </label>
+<label>
+  Creative change plan
+  <select id="creativePlan">
+    <option value="standard">Standard - no scheduled changes</option>
+    <option value="monthly">Monthly change - up to 1x/month</option>
+    <option value="custom">Custom</option>
+  </select>
+</label>
 <label>Logo / ad image<input id="image" type="file" accept="image/*"></label></div><label class="check"><input id="active" type="checkbox" checked> Active</label><div class="actions"><button type="submit">Save advertiser</button><button type="button" class="ghost" id="cancelEdit">Cancel edit</button></div><p class="note">Dates are enforced automatically. Larger weights receive proportionally more appearances in the rotation. Placement is randomized by the site.</p></form></section>
-<section class="panel"><div class="listhead"><h2>Advertisers</h2><div><input id="filterCity" value="fergusfalls"><button id="refresh">Load city</button></div></div><div id="ads"></div></section></main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<section class="panel"><div class="listhead"><h2>
+  Advertisers
+  <span id="adCapacity" style="font-size:0.8em; font-weight:normal; margin-left:12px;"></span>
+</h2><div><input id="filterCity" value="fergusfalls"><button id="refresh">Load city</button></div></div><div id="ads"></div></section></main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="admin-auth.js"></script>
 <script src="admin.js"></script>
