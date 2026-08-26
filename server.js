@@ -720,52 +720,64 @@ if (!scanResponse.ok) {
   return;
 }
   if (u.pathname === '/api/locations' && req.method === 'GET') {
-  const { data, error } = await supabase
-    .from('locations')
-    .select(`
-  id,
-  business_name,
-  address,
-  website_url,
-  contact_name,
-  contact_info,
-  qr_placement,
-  logo_ url,
-  notes,
-  date_joined,
-  last_checked,
-  active,
-  editions (
-    name
-  )
-`)
-    .order('business_name', { ascending: true });
+  try {
+    const secretKey = process.env.SUPABASE_SECRET_KEY;
+    const supabaseUrl = process.env.SUPABASE_URL;
 
-  if (error) {
-    console.error('Supabase locations load failed:', error.message);
+    const response = await fetch(
+      `${supabaseUrl}/rest/v1/locations` +
+      `?select=id,business_name,address,website_url,contact_name,contact_info,qr_placement,logo_url,notes,date_joined,last_checked,active,editions(name)` +
+      `&order=business_name.asc`,
+      {
+        headers: {
+          apikey: secretKey
+        }
+      }
+    );
+
+    if (!response.ok) {
+      const errorText = await response.text();
+
+      console.error(
+        'Supabase locations load failed:',
+        response.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load participating locations'
+      });
+    }
+
+    const data = await response.json();
+
+    const locations = (data || []).map(location => ({
+      id: location.id,
+      name: location.business_name,
+      edition: location.editions?.name || '',
+      address: location.address || '',
+      url: location.website_url || '',
+      contact: location.contact_name || '',
+      contactInfo: location.contact_info || '',
+      qrPlacement: location.qr_placement || '',
+      logo: location.logo_url || '',
+      notes: location.notes || '',
+      dateJoined: location.date_joined || '',
+      lastChecked: location.last_checked || '',
+      active: location.active
+    }));
+
+    return send(res, 200, locations);
+
+  } catch (error) {
+    console.error('Locations load failed:', error);
+
     return send(res, 500, {
       success: false,
       error: 'Could not load participating locations'
     });
   }
-
-  const locations = (data || []).map(location => ({
-  id: location.id,
-  name: location.business_name,
-  edition: location.editions?.name || '',
-  address: location.address || '',
-  url: location.website_url || '',
-  contact: location.contact_name || '',
-  contactInfo: location.contact_info || '',
-  qrPlacement: location.qr_placement || '',
-  logo: location.logo_url || '',
-  notes: location.notes || '',
-  dateJoined: location.date_joined || '',
-  lastChecked: location.last_checked || '',
-  active: location.active
-}));
-
-  return send(res, 200, locations);
 }
 if (
   u.pathname.startsWith('/api/locations/') &&
@@ -859,7 +871,7 @@ const qrSlug = location.name
         contact_name: location.contact || null,
         contact_info: location.contactInfo || null,
         qr_placement: location.qrPlacement || null,
-        logo: location.logo || null,
+        logo_url: location.logo || null,
         notes: location.notes || null,
         active: location.active !== false,
         date_joined: new Date().toISOString().slice(0, 10)

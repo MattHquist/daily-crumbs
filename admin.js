@@ -7,6 +7,7 @@ window.removeAd=async id=>{if(!confirm('Delete this advertiser?'))return;await f
 $('form').onsubmit=async e=>{e.preventDefault();const f=$('image').files[0];const image=f?await fileData(f):currentImage;const payload={city:$('city').value.trim().toLowerCase(),business:$('business').value.trim(),headline:$('headline').value.trim(),url:$('url').value.trim(),startDate:$('startDate').value,endDate:$('endDate').value,spots:Number($('spots').value),active:$('active').checked,image};const id=$('editId').value;await fetch(id?`/api/ads/${id}`:'/api/ads',{method:id?'PUT':'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});reset();$('filterCity').value=payload.city;load()}
 function reset(){$('form').reset();$('editId').value='';$('city').value=$('filterCity').value||'fergusfalls';$('startDate').value=iso(today);$('endDate').value=iso(end);$('active').checked=true;currentImage=''}
 $('cancelEdit').onclick=reset;$('refresh').onclick=load;load();
+let editingLocationId = null;
 document.addEventListener('DOMContentLoaded', () => {
 const locationForm = document.getElementById('locationForm');
 
@@ -105,11 +106,51 @@ async function loadLocationsReport() {
   class="check-location-btn"
   data-id="${location.id}"
 >
-  Checked Today
+  <td>
+  <button
+    type="button"
+    class="edit-location-btn"
+    data-id="${location.id}"
+  >
+    Edit
+  </button>
+
+  <button
+    type="button"
+    class="check-location-btn"
+    data-id="${location.id}"
+  >
+    Checked Today
+  </button>
+</td>
 </button>
         </td>
       `;
+row.querySelector('.edit-location-btn')?.addEventListener('click', () => {
+  editingLocationId = location.id;
 
+  document.getElementById('locationName').value = location.name || '';
+  document.getElementById('locationEdition').value = location.edition || 'Fergus Falls';
+  document.getElementById('locationAddress').value = location.address || '';
+  document.getElementById('locationUrl').value = location.url || '';
+  document.getElementById('locationContact').value = location.contact || '';
+  document.getElementById('locationContactInfo').value = location.contactInfo || '';
+  document.getElementById('locationQrPlacement').value = location.qrPlacement || '';
+  document.getElementById('locationNotes').value = location.notes || '';
+  document.getElementById('locationActive').checked = location.active !== false;
+
+  const submitButton = document.querySelector(
+    '#locationForm button[type="submit"]'
+  );
+
+  if (submitButton) {
+    submitButton.textContent = 'Save Changes';
+  }
+
+  document
+    .getElementById('locationForm')
+    ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
       tbody.appendChild(row);
       row.querySelector('.check-location-btn').addEventListener('click', async () => {
   try {
