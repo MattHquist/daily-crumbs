@@ -904,6 +904,86 @@ const qrSlug = location.name
     });
   }
 }
+if (
+  u.pathname.startsWith('/api/locations/') &&
+  req.method === 'PUT'
+) {
+  try {
+    const parts = u.pathname.split('/');
+    const id = parts[3];
+
+    const update = await body(req);
+
+    if (!id) {
+      return send(res, 400, {
+        success: false,
+        error: 'Location id is required'
+      });
+    }
+
+    const secretKey = process.env.SUPABASE_SECRET_KEY;
+    const supabaseUrl = process.env.SUPABASE_URL;
+
+    const payload = {
+      business_name: update.name?.trim() || '',
+      address: update.address || null,
+      website_url: update.url || null,
+      contact_name: update.contact || null,
+      contact_info: update.contactInfo || null,
+      qr_placement: update.qrPlacement || null,
+      notes: update.notes || null,
+      active: update.active !== false
+    };
+
+    // Only replace the logo when a new one was actually uploaded.
+    if (update.logo) {
+      payload.logo_url = update.logo;
+    }
+
+    const response = await fetch(
+      `${supabaseUrl}/rest/v1/locations?id=eq.${encodeURIComponent(id)}`,
+      {
+        method: 'PATCH',
+        headers: {
+          apikey: secretKey,
+          'Content-Type': 'application/json',
+          Prefer: 'return=representation'
+        },
+        body: JSON.stringify(payload)
+      }
+    );
+
+    if (!response.ok) {
+      const errorText = await response.text();
+
+      console.error(
+        'Location update failed:',
+        response.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not update location'
+      });
+    }
+
+    const updated = await response.json();
+
+    return send(res, 200, {
+      success: true,
+      location: updated[0] || null
+    });
+
+  } catch (error) {
+    console.error('Location update failed:', error);
+
+    return send(res, 500, {
+      success: false,
+      error: 'Could not update location'
+    });
+  }
+}
  if (u.pathname === '/contact') {
   const file = safeFile('contact.html');
 

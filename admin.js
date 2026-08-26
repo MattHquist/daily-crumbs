@@ -44,13 +44,19 @@ if (locationForm) {
     };
 
     try {
-      const response = await fetch('/api/locations', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(location)
-      });
+      const url = editingLocationId
+  ? `/api/locations/${editingLocationId}`
+  : '/api/locations';
+
+const method = editingLocationId ? 'PUT' : 'POST';
+
+const response = await fetch(url, {
+  method,
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(location)
+});
 
       const result = await response.json();
 
@@ -58,12 +64,24 @@ if (locationForm) {
         throw new Error(result.error || 'Could not save location');
       }
 
-      alert(`${location.name} was added as a participating location.`);
+      alert(
+  editingLocationId
+    ? `${location.name} was updated.`
+    : `${location.name} was added as a participating location.`
+);
+editingLocationId = null;
 
+const submitButton = document.querySelector(
+  '#locationForm button[type="submit"]'
+);
+
+if (submitButton) {
+  submitButton.textContent = 'Add Participating Location';
+}
       locationForm.reset();
       document.getElementById('locationEdition').value = 'Fergus Falls';
       document.getElementById('locationActive').checked = true;
-
+await loadLocationsReport();
     } catch (error) {
       console.error(error);
       alert('The location could not be saved.');
