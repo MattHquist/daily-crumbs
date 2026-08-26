@@ -857,6 +857,7 @@ const qrSlug = location.name
         contact_name: location.contact || null,
         contact_info: location.contactInfo || null,
         qr_placement: location.qrPlacement || null,
+        logo: location.logo || null,
         notes: location.notes || null,
         active: location.active !== false,
         date_joined: new Date().toISOString().slice(0, 10)
