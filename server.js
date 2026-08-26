@@ -816,7 +816,234 @@ if (
     }
   });
 }
+if (
+  u.pathname === '/api/edition-managers' &&
+  req.method === 'GET'
+) {
+  try {
+    const authHeader = req.headers.authorization || '';
 
+if (!authHeader.startsWith('Bearer ')) {
+  return send(res, 401, {
+    success: false,
+    error: 'Authentication required'
+  });
+}
+
+const accessToken = authHeader.slice(7);
+
+const secretKey = process.env.SUPABASE_SECRET_KEY;
+const supabaseUrl = process.env.SUPABASE_URL;
+
+const userResponse = await fetch(
+  `${supabaseUrl}/auth/v1/user`,
+  {
+    headers: {
+      apikey: secretKey,
+      Authorization: `Bearer ${accessToken}`
+    }
+  }
+);
+
+if (!userResponse.ok) {
+  return send(res, 401, {
+    success: false,
+    error: 'Invalid login'
+  });
+}
+
+const user = await userResponse.json();
+
+const profileResponse = await fetch(
+  `${supabaseUrl}/rest/v1/profiles` +
+  `?id=eq.${encodeURIComponent(user.id)}` +
+  `&select=id,role,active`,
+  {
+    headers: {
+      apikey: secretKey,
+      Authorization: `Bearer ${secretKey}`
+    }
+  }
+);
+
+if (!profileResponse.ok) {
+  return send(res, 403, {
+    success: false,
+    error: 'Could not verify account access'
+  });
+}
+
+const profileRows = await profileResponse.json();
+const profile = profileRows[0];
+
+if (
+  !profile ||
+  profile.active === false ||
+  profile.role !== 'owner'
+) {
+  return send(res, 403, {
+    success: false,
+    error: 'Owner access required'
+  });
+}
+
+    const profilesResponse = await fetch(
+      `${supabaseUrl}/rest/v1/profiles` +
+      `?select=id,full_name,role,active` +
+      `&role=eq.edition_admin`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    if (!profilesResponse.ok) {
+      const errorText = await profilesResponse.text();
+
+      console.error(
+        'Edition manager profiles load failed:',
+        profilesResponse.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load Edition Managers'
+      });
+    }
+
+    const profiles = await profilesResponse.json();
+const authUsersResponse = await fetch(
+  `${supabaseUrl}/auth/v1/admin/users`,
+  {
+    headers: {
+      apikey: secretKey,
+      Authorization: `Bearer ${secretKey}`
+    }
+  }
+);
+
+if (!authUsersResponse.ok) {
+  const errorText = await authUsersResponse.text();
+
+  console.error(
+    'Edition manager auth users load failed:',
+    authUsersResponse.status,
+    errorText
+  );
+
+  return send(res, 500, {
+    success: false,
+    error: 'Could not load Edition Manager emails'
+  });
+}
+
+const authUsersData = await authUsersResponse.json();
+
+const emailByUserId = new Map(
+  (authUsersData.users || []).map(user => [
+    user.id,
+    user.email || ''
+  ])
+);
+    const assignmentsResponse = await fetch(
+      `${supabaseUrl}/rest/v1/user_editions` +
+      `?select=user_id,edition_id`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    if (!assignmentsResponse.ok) {
+      const errorText = await assignmentsResponse.text();
+
+      console.error(
+        'Edition manager assignments load failed:',
+        assignmentsResponse.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load Edition assignments'
+      });
+    }
+
+    const assignments = await assignmentsResponse.json();
+
+    const editionsResponse = await fetch(
+      `${supabaseUrl}/rest/v1/editions` +
+      `?select=id,name`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    if (!editionsResponse.ok) {
+      const errorText = await editionsResponse.text();
+
+      console.error(
+        'Edition names load failed:',
+        editionsResponse.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load Edition names'
+      });
+    }
+
+    const editions = await editionsResponse.json();
+
+    const editionById = new Map(
+      editions.map(edition => [edition.id, edition.name])
+    );
+
+    const managers = profiles.flatMap(profile => {
+      const userAssignments = assignments.filter(
+        assignment => assignment.user_id === profile.id
+      );
+
+      if (!userAssignments.length) {
+        return [{
+          id: profile.id,
+          full_name: profile.full_name,
+          email: emailByUserId.get(profile.id) || '',
+          edition_name: '',
+          active: profile.active
+        }];
+      }
+
+      return userAssignments.map(assignment => ({
+        id: profile.id,
+        full_name: profile.full_name,
+        email: emailByUserId.get(profile.id) || '',
+        edition_name:
+          editionById.get(assignment.edition_id) || '',
+        active: profile.active
+      }));
+    });
+
+    return send(res, 200, managers);
+
+  } catch (error) {
+    console.error('Edition manager load failed:', error);
+
+    return send(res, 500, {
+      success: false,
+      error: 'Could not load Edition Managers'
+    });
+  }
+}
  if (u.pathname === '/api/locations' && req.method === 'POST') {
   try {
     const location = await body(req);

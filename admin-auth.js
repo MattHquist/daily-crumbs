@@ -46,11 +46,12 @@ async function protectAdminPage() {
   }
 
   window.adminUserContext = {
-    user,
-    profile,
-    editions: userEditions || [],
-    isOwner: profile.role === 'owner'
-  };
+  user,
+  profile,
+  editions: userEditions || [],
+  isOwner: profile.role === 'owner',
+  accessToken: data.session.access_token
+};
 
   document.documentElement.style.visibility = 'visible';
 

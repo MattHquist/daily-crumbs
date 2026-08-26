@@ -239,5 +239,60 @@
     </table>
   </div>
 </section>
+<section id="editionManagersSection" class="panel" style="margin-top:24px; display:none;">
+  <div class="listhead">
+    <h2>Edition Managers</h2>
+  </div>
+
+  <p>
+    Add and manage the people who operate individual Daily Crumbs editions.
+  </p>
+
+  <div class="edition-settings-grid">
+    <label>
+      Name
+      <input id="managerName" type="text" placeholder="Manager name">
+    </label>
+
+    <label>
+      Email
+      <input id="managerEmail" type="email" placeholder="manager@example.com">
+    </label>
+
+    <label>
+      Assign to Edition
+      <select id="managerEdition">
+        <option value="">Select an edition</option>
+      </select>
+    </label>
+
+    <label style="display:flex; align-items:center; gap:8px;">
+      <input id="managerActive" type="checkbox" checked>
+      <span>Active</span>
+    </label>
+  </div>
+
+  <button type="button" id="addEditionManagerButton">
+    + Add Edition Manager
+  </button>
+
+  <div id="editionManagerStatus"></div>
+
+  <div class="locations-report-wrap" style="margin-top:20px;">
+    <table id="editionManagersTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Edition</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody id="editionManagersTableBody"></tbody>
+    </table>
+  </div>
+</section>
 </body>
 </html>

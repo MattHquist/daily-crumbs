@@ -175,6 +175,72 @@ async function getSelectedEditionMaxSpots() {
     return 24;
   }
 }
+async function loadEditionManagers() {
+  const tbody =
+    document.getElementById('editionManagersTableBody');
+
+  if (!tbody) return;
+
+  try {
+    const token =
+  window.adminUserContext?.accessToken || '';
+
+const response = await fetch('/api/edition-managers', {
+  headers: {
+    Authorization: `Bearer ${token}`
+  }
+});
+    const managers = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        managers.error || 'Could not load Edition Managers'
+      );
+    }
+
+    tbody.innerHTML = '';
+
+    if (!managers.length) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="5">No Edition Managers yet.</td>
+        </tr>
+      `;
+      return;
+    }
+
+    managers.forEach(manager => {
+      const row = document.createElement('tr');
+
+      row.innerHTML = `
+        <td>${manager.full_name || ''}</td>
+        <td>${manager.email || ''}</td>
+        <td>${manager.edition_name || ''}</td>
+        <td>${manager.active === false ? 'Inactive' : 'Active'}</td>
+        <td>
+          <button
+            type="button"
+            class="toggle-manager-btn"
+            data-user-id="${manager.id}"
+          >
+            ${manager.active === false ? 'Reactivate' : 'Deactivate'}
+          </button>
+        </td>
+      `;
+
+      tbody.appendChild(row);
+    });
+
+  } catch (error) {
+    console.error('Could not load Edition Managers:', error);
+
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="5">Could not load Edition Managers.</td>
+      </tr>
+    `;
+  }
+}
 async function loadLocationsReport() {
   const tbody = document.getElementById('locationsTableBody');
   if (!tbody) return;
@@ -1020,6 +1086,12 @@ document
   function applyAdminRoleUI() {
   const context = window.adminUserContext || {};
   const isOwner = context.isOwner === true;
+  const editionManagersSection =
+  document.getElementById('editionManagersSection');
+
+if (editionManagersSection) {
+  editionManagersSection.style.display = isOwner ? '' : 'none';
+}
 const saveEditionButton =
   document.getElementById('saveEditionSettings');
 
@@ -1287,6 +1359,23 @@ document.addEventListener('adminContextReady', async () => {
 
   await loadEditionOptions();
   await loadEditionSettings();
+  const managerEditionSelect =
+  document.getElementById('managerEdition');
+
+const editionSettingsSelect =
+  document.getElementById('editionSettingsSelect');
+
+if (managerEditionSelect && editionSettingsSelect) {
+  managerEditionSelect.innerHTML =
+    '<option value="">Select an edition</option>';
+
+  Array.from(editionSettingsSelect.options).forEach(option => {
+    const clone = option.cloneNode(true);
+    managerEditionSelect.appendChild(clone);
+  });
+
+  managerEditionSelect.value = '';
+}
 
   const select =
     document.getElementById('editionSettingsSelect');
@@ -1321,4 +1410,7 @@ document.addEventListener('adminContextReady', async () => {
     await load();
     await loadLocationsReport();
   }
+  if (window.adminUserContext?.isOwner) {
+  await loadEditionManagers();
+}
 });
