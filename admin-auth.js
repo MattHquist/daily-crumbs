@@ -36,18 +36,10 @@ async function protectAdminPage() {
   }
 
   const { data: userEditions, error: editionsError } =
-    await adminSupabaseClient
-      .from('user_editions')
-      .select(`
-        edition_id,
-        editions (
-          id,
-          name,
-          slug,
-          active
-        )
-      `)
-      .eq('user_id', user.id);
+  await adminSupabaseClient
+    .from('user_editions')
+    .select('edition_id')
+    .eq('user_id', user.id);
 
   if (editionsError) {
     console.error('Could not load user Editions:', editionsError);
