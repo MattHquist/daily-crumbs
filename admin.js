@@ -1034,8 +1034,25 @@ function updateEditionCalculations() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   document
-    .getElementById('editionSettingsSelect')
-    ?.addEventListener('change', loadEditionSettings);
+  .getElementById('editionSettingsSelect')
+  ?.addEventListener('change', async () => {
+    const slug =
+      document.getElementById('editionSettingsSelect').value;
+
+    await loadEditionSettings();
+
+    const filterCity = document.getElementById('filterCity');
+    if (filterCity) {
+      filterCity.value = slug;
+    }
+
+    const cityField = document.getElementById('city');
+    if (cityField) {
+      cityField.value = slug;
+    }
+
+    await load();
+  });
 
   document
     .getElementById('editionMaxSpots')
