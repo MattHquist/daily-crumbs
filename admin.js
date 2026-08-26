@@ -936,11 +936,35 @@ document
 
         await loadEditionSettings();
 
-      } else {
-        alert(
-          'Existing Edition updates will be enabled in the next step.'
-        );
-      }
+} else {
+  const currentSlug =
+    document.getElementById('editionSettingsSelect').value;
+
+  const response = await fetch(
+    `/api/editions/${currentSlug}`,
+    {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    }
+  );
+
+  const result = await response.json();
+
+  if (!response.ok || !result.success) {
+    throw new Error(
+      result.error || 'Could not update Edition'
+    );
+  }
+
+  document.getElementById(
+    'editionSettingsStatus'
+  ).textContent = `${result.edition.name} was updated.`;
+
+  await loadEditionSettings();
+}
 
     } catch (error) {
       console.error(error);
