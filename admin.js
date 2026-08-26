@@ -66,7 +66,7 @@ if (
   );
   return;
 }const id=$('editId').value;await fetch(id?`/api/ads/${id}`:'/api/ads',{method:id?'PUT':'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});reset();$('filterCity').value=payload.city;load()}
-function reset(){$('form').reset();$('creativePlan').value='standard';$('editId').value='';$('city').value=$('filterCity').value||'fergusfalls';$('startDate').value=iso(today);$('endDate').value=iso(end);$('active').checked=true;currentImage=''}
+function reset(){$('form').reset();$('creativePlan').value='standard';$('editId').value='';$('city').value = $('filterCity').value || '';$('startDate').value=iso(today);$('endDate').value=iso(end);$('active').checked=true;currentImage=''}
 $('cancelEdit').onclick=reset;$('refresh').onclick=load;load();
 let editingLocationId = null;
 document.addEventListener('DOMContentLoaded', () => {
@@ -140,7 +140,11 @@ if (submitButton) {
   submitButton.textContent = 'Add Participating Location';
 }
       locationForm.reset();
-      document.getElementById('locationEdition').value = 'Fergus Falls';
+      const currentEditionName =
+  document.getElementById('editionName')?.value || '';
+
+document.getElementById('locationEdition').value =
+  currentEditionName;
       document.getElementById('locationActive').checked = true;
 await loadLocationsReport();
     } catch (error) {
@@ -152,7 +156,7 @@ await loadLocationsReport();
 });
 async function getSelectedEditionMaxSpots() {
   const select = document.getElementById('editionSettingsSelect');
-  const slug = select?.value || 'fergusfalls';
+  const slug = select?.value || '';
 
   try {
     const response = await fetch(`/api/editions/${slug}`);
@@ -833,7 +837,7 @@ async function loadEditionSettings() {
   const select = document.getElementById('editionSettingsSelect');
   if (!select) return;
 
-  const slug = select.value || 'fergusfalls';
+  const slug = select.value;
 creatingNewEdition = false;
   try {
     const response = await fetch(`/api/editions/${slug}`);
@@ -1280,6 +1284,41 @@ if (!context.isOwner) {
 }
 document.addEventListener('adminContextReady', async () => {
   applyAdminRoleUI();
+
   await loadEditionOptions();
   await loadEditionSettings();
+
+  const select =
+    document.getElementById('editionSettingsSelect');
+
+  const slug = select?.value || '';
+
+  if (slug) {
+    const filterCity =
+      document.getElementById('filterCity');
+
+    if (filterCity) {
+      filterCity.value = slug;
+    }
+
+    const cityField =
+      document.getElementById('city');
+
+    if (cityField) {
+      cityField.value = slug;
+    }
+
+    const locationEdition =
+      document.getElementById('locationEdition');
+
+    if (locationEdition) {
+      const editionName =
+        document.getElementById('editionName')?.value || '';
+
+      locationEdition.value = editionName;
+    }
+
+    await load();
+    await loadLocationsReport();
+  }
 });
