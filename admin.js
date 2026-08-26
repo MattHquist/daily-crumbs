@@ -241,9 +241,8 @@ const response = await fetch('/api/edition-managers', {
     `;
   }
 }
-document
-  .getElementById('addEditionManagerButton')
-  ?.addEventListener('click', async () => {
+document.addEventListener('click', async (event) => {
+  if (event.target.id !== 'addEditionManagerButton') return;
     const name =
       document.getElementById('managerName')?.value.trim();
 
