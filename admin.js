@@ -1118,6 +1118,23 @@ document
       status.textContent = 'Creating a new Edition';
     }
   });
+  document
+  .getElementById('editionName')
+  ?.addEventListener('input', () => {
+    if (!creatingNewEdition) return;
+
+    const name =
+      document.getElementById('editionName').value;
+
+    const slug = name
+      .toLowerCase()
+      .trim()
+      .replace(/&/g, 'and')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+
+    document.getElementById('editionSlug').value = slug;
+  });
   async function loadEditionOptions() {
   const select = document.getElementById('editionSettingsSelect');
   if (!select) return;
