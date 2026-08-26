@@ -1024,8 +1024,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     .getElementById('editionSuggestedRate')
     ?.addEventListener('input', updateEditionCalculations);
 
-  await loadEditionOptions();
-  await loadEditionSettings();
 });
 let creatingNewEdition = false;
 
@@ -1102,3 +1100,6 @@ document
     console.error('Could not load Edition list:', error);
   }
 }
+loadEditionOptions().then(() => {
+  loadEditionSettings();
+});
