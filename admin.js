@@ -119,80 +119,35 @@ async function loadLocationsReport() {
     <td>${location.lastChecked || 'Not yet'}</td>
     <td>${location.active ? 'Active' : 'Inactive'}</td>
     <td>
-  <button
-    type="button"
-    class="edit-location-btn"
-    data-id="${location.id}"
-  >
-    Edit
-  </button>
+      <button
+        type="button"
+        class="edit-location-btn"
+        data-id="${location.id}"
+      >
+        Edit
+      </button>
 
-  <button
-    type="button"
-    class="toggle-location-btn"
-    data-id="${location.id}"
-    data-active="${location.active ? 'true' : 'false'}"
-  >
-    ${location.active ? 'Deactivate' : 'Reactivate'}
-  </button>
-row
-  .querySelector('.toggle-location-btn')
-  ?.addEventListener('click', async () => {
-    const nextActive = !location.active;
-    const action = nextActive ? 'reactivate' : 'deactivate';
+      <button
+        type="button"
+        class="toggle-location-btn"
+        data-id="${location.id}"
+      >
+        ${location.active ? 'Deactivate' : 'Reactivate'}
+      </button>
 
-    if (!confirm(`Are you sure you want to ${action} ${location.name}?`)) {
-      return;
-    }
-
-    try {
-      const response = await fetch(
-        `/api/locations/${location.id}`,
-        {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            name: location.name,
-            address: location.address || '',
-            url: location.url || '',
-            contact: location.contact || '',
-            contactInfo: location.contactInfo || '',
-            qrPlacement: location.qrPlacement || '',
-            notes: location.notes || '',
-            active: nextActive
-          })
-        }
-      );
-
-      const result = await response.json();
-
-      if (!response.ok || !result.success) {
-        throw new Error(
-          result.error || `Could not ${action} location`
-        );
-      }
-
-      await loadLocationsReport();
-
-    } catch (error) {
-      console.error(error);
-      alert(`Could not ${action} ${location.name}.`);
-    }
-  });
-  <button
-    type="button"
-    class="check-location-btn"
-    data-id="${location.id}"
-  >
-    Checked Today
-  </button>
-</td>
+      <button
+        type="button"
+        class="check-location-btn"
+        data-id="${location.id}"
+      >
+        Checked Today
+      </button>
+    </td>
   `;
 
   tbody.appendChild(row);
 
+  // EDIT
   row
     .querySelector('.edit-location-btn')
     ?.addEventListener('click', () => {
@@ -241,6 +196,57 @@ row
         });
     });
 
+  // DEACTIVATE / REACTIVATE
+  row
+    .querySelector('.toggle-location-btn')
+    ?.addEventListener('click', async () => {
+      const nextActive = !location.active;
+      const action = nextActive ? 'reactivate' : 'deactivate';
+
+      if (!confirm(
+        `Are you sure you want to ${action} ${location.name}?`
+      )) {
+        return;
+      }
+
+      try {
+        const response = await fetch(
+          `/api/locations/${location.id}`,
+          {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              name: location.name,
+              address: location.address || '',
+              url: location.url || '',
+              contact: location.contact || '',
+              contactInfo: location.contactInfo || '',
+              qrPlacement: location.qrPlacement || '',
+              notes: location.notes || '',
+              active: nextActive
+            })
+          }
+        );
+
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(
+            result.error || `Could not ${action} location`
+          );
+        }
+
+        await loadLocationsReport();
+
+      } catch (error) {
+        console.error(error);
+        alert(`Could not ${action} ${location.name}.`);
+      }
+    });
+
+  // CHECKED TODAY
   row
     .querySelector('.check-location-btn')
     ?.addEventListener('click', async () => {
@@ -266,10 +272,9 @@ row
       }
     });
 });
-
-  } catch (error) {
-    console.error('Could not load participating locations:', error);
-  }
+} catch (error) {
+  console.error('Could not load participating locations:', error);
+}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
