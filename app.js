@@ -418,11 +418,6 @@ loadParticipatingLocations();
 setInterval(() => {
   renderAds();
   renderMobileAd();
-wyrQuestion.textContent = c.wyr.q;
-wyrA.textContent = c.wyr.a;
-wyrB.textContent = c.wyr.b;
-
-
 }, 12000);
 // Refresh shortly after midnight without requiring a reload.
 function scheduleMidnight(){const n=new Date(), next=new Date(n); next.setHours(24,0,1,0); setTimeout(()=>{location.reload()},next-n)} scheduleMidnight();
