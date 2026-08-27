@@ -4,6 +4,9 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { createClient } = require('@supabase/supabase-js');
+const {
+  wouldYouRather
+} = require('./content/daily-content');
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SECRET_KEY
@@ -53,43 +56,7 @@ const questions = [
   'Would you rather have a cabin by a lake or a condo by the ocean?',
   'What is one local place you think everyone should try once?'
 ];
-const wouldYouRather = [
-  {
-    q: 'Would you rather give up pizza for a year or desserts for a year?',
-    a: 'Pizza',
-    b: 'Desserts'
-  },
-  {
-    q: 'Would you rather always be 10 minutes early or 20 minutes late?',
-    a: '10 minutes early',
-    b: '20 minutes late'
-  },
-  {
-    q: 'Would you rather have unlimited tacos or unlimited ice cream?',
-    a: 'Tacos',
-    b: 'Ice cream'
-  },
-  {
-    q: 'Would you rather be able to pause time or rewind it?',
-    a: 'Pause time',
-    b: 'Rewind time'
-  },
-  {
-    q: 'Would you rather eat breakfast for dinner or dinner for breakfast?',
-    a: 'Breakfast for dinner',
-    b: 'Dinner for breakfast'
-  },
-  {
-    q: 'Would you rather explore space or the deepest part of the ocean?',
-    a: 'Space',
-    b: 'Deep ocean'
-  },
-  {
-    q: 'Would you rather never wait in line again or never sit in traffic again?',
-    a: 'No more lines',
-    b: 'No more traffic'
-  }
-];
+
 const riddles = [
   {
     q: 'What has keys but cannot open locks?',
