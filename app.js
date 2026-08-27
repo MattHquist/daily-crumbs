@@ -36,6 +36,29 @@ trackQrScan();
 async function loadContent(){
  const d=new Date(); const key=[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');
  const c=await fetch(`/api/content?date=${key}`).then(r=>r.json());
+ const nationalTodayLink = document.getElementById('nationalTodayLink');
+
+if (nationalTodayLink) {
+    const monthName = d.toLocaleString('en-US', { month: 'long' }).toLowerCase();
+    const dayNumber = d.getDate();
+    nationalTodayLink.href = `https://nationaldaycalendar.com/${monthName}/${dayNumber}/`;
+}
+const nationalWeeklyLink = document.getElementById('nationalWeeklyLink');
+const nationalMonthlyLink = document.getElementById('nationalMonthlyLink');
+
+if (nationalWeeklyLink) {
+    const monthName = d
+        .toLocaleString('en-US', { month: 'long' })
+        .toLowerCase();
+
+    nationalWeeklyLink.href =
+        `https://nationaldaycalendar.com/${monthName}/days?view=calendar`;
+}
+
+if (nationalMonthlyLink) {
+    nationalMonthlyLink.href =
+        'https://nationaldaycalendar.com/month';
+}
  jokeSetup.textContent=c.joke.setup; jokeAnswer.textContent=c.joke.punchline; verseText.textContent=`“${c.verse.text}”`; verseRef.textContent=c.verse.reference;devotionalLink.href = c.verse.url;
  devotionalLink.href = c.verse.url;
 
@@ -228,23 +251,18 @@ async function showWyrResult(choice) {
   wyrA.disabled = true;
   wyrB.disabled = true;
   wyrResult.textContent = 'Recording vote...';
-  const voteKey = `tidbits-wyr-${[
-  new Date().getFullYear(),
-  String(new Date().getMonth() + 1).padStart(2, '0'),
-  String(new Date().getDate()).padStart(2, '0')
-].join('-')}`;
-
-if (localStorage.getItem(voteKey)) {
-  wyrResult.textContent = 'You already voted on today’s question.';
-  return;
-}
-
   const today = new Date();
-  const dateKey = [
-    today.getFullYear(),
-    String(today.getMonth() + 1).padStart(2, '0'),
-    String(today.getDate()).padStart(2, '0')
-  ].join('-');
+
+const dateKey = [
+  today.getFullYear(),
+  String(today.getMonth() + 1).padStart(2, '0'),
+  String(today.getDate()).padStart(2, '0')
+].join('-');
+
+const questionKey = wyrQuestion.textContent.trim();
+
+const voteId = `${dateKey}::${questionKey}`;
+const voteKey = `daily-crumbs-wyr-${voteId}`;
 
   try {
     const response = await fetch('/api/vote', {
@@ -253,9 +271,9 @@ if (localStorage.getItem(voteKey)) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        date: dateKey,
-        choice
-      })
+  date: voteId,
+  choice
+})
     });
 
     const result = await response.json();
@@ -296,14 +314,16 @@ if (wyrA && wyrB && wyrResult) {
   String(new Date().getMonth() + 1).padStart(2, '0'),
   String(new Date().getDate()).padStart(2, '0')
 ].join('-');
-  const todayKey = `tidbits-wyr-${dateKey}`;
+  const questionKey = wyrQuestion.textContent.trim();
+const voteId = `${dateKey}::${questionKey}`;
+const todayKey = `daily-crumbs-wyr-${voteId}`;
   const previousVote = localStorage.getItem(todayKey);
 
   if (previousVote) {
     wyrA.disabled = true;
     wyrB.disabled = true;
 
-    fetch(`/api/vote?date=${dateKey}`)
+    fetch(`/api/vote?date=${encodeURIComponent(voteId)}`)
       .then(r => r.json())
       .then(result => {
         const aPct = result.total
