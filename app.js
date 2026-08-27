@@ -67,7 +67,7 @@ topicArticle.textContent = c.topic.text;
 topicTeaser.textContent = c.topic.teaser;
 dailyTip.textContent =
   c.tip || 'Keep learning one small useful thing every day.';
- quizQuestion.textContent = c.quiz.q;
+ document.getElementById('quizQ').textContent = c.quiz.q;
   quizOptions.innerHTML=c.quiz.options.map(o=>`<button data-answer="${o.replace(/"/g,'&quot;')}">${o}</button>`).join('');
  quizOptions.querySelectorAll('button').forEach(b=>b.onclick=()=>{quizResult.textContent=b.dataset.answer===c.quiz.a?'Correct! Nice work.':`Good guess — the answer is ${c.quiz.a}.`;});
 riddleQuestion.textContent = c.riddle.q;
