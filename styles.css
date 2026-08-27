@@ -5,29 +5,32 @@
 @media(max-width:980px){.shell{grid-template-columns:1fr}.adrail{grid-template-columns:repeat(2,1fr)}#leftAds{order:2}.paper{order:1}#rightAds{order:3}.hero-grid,.grid3,.quiz{grid-template-columns:1fr}.center-ads{grid-template-columns:repeat(2,1fr)}}
 @media (max-width: 580px) {
   .masthead {
-    align-items: flex-start;
-    padding: 14px 16px 10px;
+    position: relative;
+    padding-bottom: 34px;
   }
 
   .datebox {
-  display: block;
-  width: 100%;
-  text-align: center;
-  border-left: 0;
-  padding-left: 0;
-  margin-top: 4px;
-  font-size: 12px;
-  line-height: 1.2;
-}
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    border-left: 0;
+    padding: 0;
+    margin: 0;
+  }
 
-.datebox strong {
-  display: inline;
-  font-size: 12px;
-  font-weight: 700;
-}
+  .datebox strong {
+    display: inline;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
 
-.datebox small {
-  display: none;
+  .datebox small {
+    display: none;
+  }
 }
 
   .shell {
@@ -256,7 +259,6 @@ footer {
   transform: scale(0.98);
 }
 
-}
 .generosity-reminder {
   border-left: 4px solid #b63a27;
   padding: 10px 12px;
@@ -311,25 +313,26 @@ footer {
 }
 /* PARTICIPATING LOCATIONS */
 
-.participating-location-card {
-  width: 145px;
-  min-width: 145px;
-  height: 82px;
-  padding: 8px;
-  overflow: hidden;
-}
+@media (max-width: 580px) {
+  .participating-location-card {
+    width: 150px;
+    min-width: 150px;
+    height: 88px;
+    padding: 8px;
+    overflow: hidden;
+  }
 
-.participant-cta {
-  padding: 6px;
-}
+  .participant-cta {
+    padding: 5px 7px;
+  }
 
-.participant-cta strong {
-  display: block;
-  max-width: 100%;
-  font-size: 12px;
-  line-height: 1.1;
-  overflow-wrap: anywhere;
-  word-break: normal;
+  .participant-cta strong {
+    display: block;
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+  }
 }
 .participating-locations {
   margin-top: 28px;
