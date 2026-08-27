@@ -91,8 +91,152 @@ topicTeaser.textContent = c.topic.teaser;
 dailyTip.textContent =
   c.tip || 'Keep learning one small useful thing every day.';
  document.getElementById('quizQ').textContent = c.quiz.q;
-  quizOptions.innerHTML=c.quiz.options.map(o=>`<button data-answer="${o.replace(/"/g,'&quot;')}">${o}</button>`).join('');
- quizOptions.querySelectorAll('button').forEach(b=>b.onclick=()=>{quizResult.textContent=b.dataset.answer===c.quiz.a?'Correct! Nice work.':`Good guess — the answer is ${c.quiz.a}.`;});
+quizOptions.innerHTML = c.quiz.options
+  .map((option, index) => {
+    const letter = ['A', 'B', 'C', 'D'][index];
+
+    return `
+      <button
+        data-choice="${letter.toLowerCase()}"
+        data-answer="${option.replace(/"/g, '&quot;')}"
+      >
+        ${option}
+      </button>
+    `;
+  })
+  .join('');
+quizOptions.querySelectorAll('button').forEach(button => {
+  button.onclick = async () => {
+    const selectedChoice = button.dataset.choice;
+    const selectedAnswer = button.dataset.answer;
+
+    const correctIndex = c.quiz.options.indexOf(c.quiz.answer);
+    const correctChoice = ['A', 'B', 'C', 'D'][correctIndex];
+
+    const dateKey = key;
+    const quizId = `${dateKey}::${c.quiz.q}`;
+    const localVoteKey = `daily-crumbs-quiz-${quizId}`;
+
+    if (localStorage.getItem(localVoteKey)) {
+      quizResult.textContent =
+        'You already answered today’s quiz.';
+      return;
+    }
+
+    quizOptions
+      .querySelectorAll('button')
+      .forEach(btn => {
+        btn.disabled = true;
+      });
+
+    try {
+      const response = await fetch('/api/quiz-vote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          quizId,
+          choice: selectedChoice
+        })
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          result.error || 'Could not record quiz answer'
+        );
+      }
+
+      localStorage.setItem(
+        localVoteKey,
+        selectedChoice
+      );
+
+      const total = result.total || 0;
+
+      const pct = value =>
+        total
+          ? Math.round((value / total) * 100)
+          : 0;
+
+      quizResult.innerHTML = `
+        <strong>
+          You selected ${selectedChoice.toUpperCase()}.
+          The correct answer is ${correctChoice}.
+        </strong>
+        <br><br>
+        A — ${pct(result.a)}%<br>
+        B — ${pct(result.b)}%<br>
+        C — ${pct(result.c)}%<br>
+        D — ${pct(result.d)}%
+      `;
+
+    } catch (error) {
+      console.error(error);
+
+      quizResult.textContent =
+        'Sorry, your quiz answer could not be recorded.';
+
+      quizOptions
+        .querySelectorAll('button')
+        .forEach(btn => {
+          btn.disabled = false;
+        });
+    }
+  };
+});
+{
+  const correctIndex = c.quiz.options.indexOf(c.quiz.answer);
+  const correctChoice = ['A', 'B', 'C', 'D'][correctIndex];
+
+  const quizId = `${key}::${c.quiz.q}`;
+  const localVoteKey = `daily-crumbs-quiz-${quizId}`;
+  const previousChoice = localStorage.getItem(localVoteKey);
+
+  if (previousChoice) {
+    quizOptions
+      .querySelectorAll('button')
+      .forEach(btn => {
+        btn.disabled = true;
+      });
+
+    try {
+      const response = await fetch(
+        `/api/quiz-vote?quizId=${encodeURIComponent(quizId)}`
+      );
+
+      const result = await response.json();
+
+      if (response.ok) {
+        const total = result.total || 0;
+
+        const pct = value =>
+          total
+            ? Math.round((value / total) * 100)
+            : 0;
+
+        quizResult.innerHTML = `
+          <strong>
+            You selected ${previousChoice.toUpperCase()}.
+            The correct answer is ${correctChoice}.
+          </strong>
+          <br><br>
+          A — ${pct(result.a)}%<br>
+          B — ${pct(result.b)}%<br>
+          C — ${pct(result.c)}%<br>
+          D — ${pct(result.d)}%
+        `;
+      }
+    } catch (error) {
+      console.error(
+        'Could not load quiz voting results:',
+        error
+      );
+    }
+  }
+}
 riddleQuestion.textContent = c.riddle.q;
 riddleAnswer.textContent = c.riddle.a;
 }

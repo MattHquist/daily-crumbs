@@ -1472,6 +1472,82 @@ if (
     return send(res, 500, { error: 'Vote failed' });
   }
 }
+// Get voting results for a 60-Second Table Quiz question
+if (u.pathname === '/api/quiz-vote' && req.method === 'GET') {
+  const d = readData();
+  const quizId = u.searchParams.get('quizId');
+
+  const totals = (d.quizVotes && d.quizVotes[quizId])
+    ? d.quizVotes[quizId]
+    : { a: 0, b: 0, c: 0, d: 0 };
+
+  return send(res, 200, {
+    a: totals.a || 0,
+    b: totals.b || 0,
+    c: totals.c || 0,
+    d: totals.d || 0,
+    total:
+      (totals.a || 0) +
+      (totals.b || 0) +
+      (totals.c || 0) +
+      (totals.d || 0)
+  });
+}
+// Record a vote for a 60-Second Table Quiz question
+if (u.pathname === '/api/quiz-vote' && req.method === 'POST') {
+  try {
+    const p = await body(req);
+    const d = readData();
+
+    if (!d.quizVotes) d.quizVotes = {};
+
+    const quizId = p.quizId;
+    const choice = p.choice;
+
+    if (
+      !quizId ||
+      !['a', 'b', 'c', 'd'].includes(choice)
+    ) {
+      return send(res, 400, {
+        error: 'Invalid quiz vote'
+      });
+    }
+
+    if (!d.quizVotes[quizId]) {
+      d.quizVotes[quizId] = {
+        a: 0,
+        b: 0,
+        c: 0,
+        d: 0
+      };
+    }
+
+    d.quizVotes[quizId][choice] += 1;
+
+    writeData(d);
+
+    const totals = d.quizVotes[quizId];
+
+    return send(res, 200, {
+      a: totals.a,
+      b: totals.b,
+      c: totals.c,
+      d: totals.d,
+      total:
+        totals.a +
+        totals.b +
+        totals.c +
+        totals.d
+    });
+
+  } catch (error) {
+    console.error('Quiz vote failed:', error);
+
+    return send(res, 500, {
+      error: 'Could not record quiz vote'
+    });
+  }
+}
 if (
   u.pathname.startsWith('/api/leads/') &&
   req.method === 'PUT'
