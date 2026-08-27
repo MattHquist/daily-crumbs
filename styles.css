@@ -10,8 +10,12 @@
   }
 
   .datebox {
-    display: none;
-  }
+  display: block;
+  text-align: left;
+  border-left: 0;
+  padding-left: 0;
+  margin-top: 6px;
+}
 
   .shell {
     display: block;

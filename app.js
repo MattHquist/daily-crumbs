@@ -399,7 +399,7 @@ function startLocationsMarquee() {
 
   function scroll() {
     if (!paused) {
-      marquee.scrollLeft += 0.5;
+      marquee.scrollLeft += 1;
 
       const groupWidth = firstGroup.offsetWidth;
 
