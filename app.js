@@ -397,19 +397,23 @@ function startLocationsMarquee() {
     paused = false;
   });
 
-  function scroll() {
+  let position = 0;
+
+function scroll() {
     if (!paused) {
-      marquee.scrollLeft += 1;
+        position += 0.75;
 
-      const groupWidth = firstGroup.offsetWidth;
+        const groupWidth = firstGroup.offsetWidth;
 
-      if (marquee.scrollLeft >= groupWidth) {
-        marquee.scrollLeft -= groupWidth;
-      }
+        if (position >= groupWidth) {
+            position -= groupWidth;
+        }
+
+        track.style.transform = `translateX(-${position}px)`;
     }
 
     requestAnimationFrame(scroll);
-  }
+}
 
   requestAnimationFrame(scroll);
 }
