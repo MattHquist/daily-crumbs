@@ -245,10 +245,12 @@ footer {
 }
 
 .answer-box {
-  margin-top: 12px;
-  padding: 16px;
-  border: 2px solid var(--ink);
+  margin-top: 16px;
+  padding: 18px 20px;
+  border: 3px solid var(--ink);
+  border-left: 8px solid var(--accent);
   background: #fffaf0;
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 .answer-box strong {
