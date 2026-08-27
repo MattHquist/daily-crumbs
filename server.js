@@ -1427,79 +1427,148 @@ if (
   return;
 }
   if(u.pathname==='/api/content'){ const date=u.searchParams.get('date')||new Date().toISOString().slice(0,10); return send(res,200,await daily(date)); }
-  if (u.pathname === '/api/vote' && req.method === 'GET') {
-  const d = readData();
-  const date = u.searchParams.get('date');
-
-  const totals = (d.votes && d.votes[date])
-    ? d.votes[date]
-    : { a: 0, b: 0 };
-
-  return send(res, 200, {
-    a: totals.a,
-    b: totals.b,
-    total: totals.a + totals.b
-  });
-}
-  if (u.pathname === '/api/vote' && req.method === 'POST') {
+ if (u.pathname === '/api/vote' && req.method === 'GET') {
   try {
-    const p = await body(req);
-    const d = readData();
+    const contentId = u.searchParams.get('date');
 
-    if (!d.votes) d.votes = {};
-
-    const key = p.date;
-    if (!key || !['a', 'b'].includes(p.choice)) {
-      return send(res, 400, { error: 'Invalid vote' });
+    if (!contentId) {
+      return send(res, 400, { error: 'Missing vote ID' });
     }
 
-    if (!d.votes[key]) {
-      d.votes[key] = { a: 0, b: 0 };
+    const { data, error } = await supabase
+      .from('content_votes')
+      .select('choice')
+      .eq('vote_type', 'wyr')
+      .eq('content_id', contentId);
+
+    if (error) throw error;
+
+    let a = 0;
+    let b = 0;
+
+    for (const vote of data || []) {
+      if (vote.choice === 'a') a++;
+      if (vote.choice === 'b') b++;
     }
-
-    d.votes[key][p.choice] += 1;
-    writeData(d);
-
-    const totals = d.votes[key];
-    const total = totals.a + totals.b;
 
     return send(res, 200, {
-      a: totals.a,
-      b: totals.b,
-      total
+      a,
+      b,
+      total: a + b
     });
-  } catch (e) {
-    return send(res, 500, { error: 'Vote failed' });
+
+  } catch (error) {
+    console.error('Would You Rather vote lookup failed:', error);
+
+    return send(res, 500, {
+      error: 'Could not load voting results'
+    });
+  }
+}
+ if (u.pathname === '/api/vote' && req.method === 'POST') {
+  try {
+    const p = await body(req);
+
+    const contentId = p.date;
+    const choice = p.choice;
+
+    if (!contentId || !['a', 'b'].includes(choice)) {
+      return send(res, 400, {
+        error: 'Invalid vote'
+      });
+    }
+
+    const { error: insertError } = await supabase
+      .from('content_votes')
+      .insert({
+        vote_type: 'wyr',
+        content_id: contentId,
+        choice
+      });
+
+    if (insertError) throw insertError;
+
+    const { data, error: selectError } = await supabase
+      .from('content_votes')
+      .select('choice')
+      .eq('vote_type', 'wyr')
+      .eq('content_id', contentId);
+
+    if (selectError) throw selectError;
+
+    let a = 0;
+    let b = 0;
+
+    for (const vote of data || []) {
+      if (vote.choice === 'a') a++;
+      if (vote.choice === 'b') b++;
+    }
+
+    return send(res, 200, {
+      a,
+      b,
+      total: a + b
+    });
+
+  } catch (error) {
+    console.error('Would You Rather vote failed:', error);
+
+    return send(res, 500, {
+      error: 'Could not record vote'
+    });
   }
 }
 // Get voting results for a 60-Second Table Quiz question
 if (u.pathname === '/api/quiz-vote' && req.method === 'GET') {
-  const d = readData();
-  const quizId = u.searchParams.get('quizId');
+  try {
+    const quizId = u.searchParams.get('quizId');
 
-  const totals = (d.quizVotes && d.quizVotes[quizId])
-    ? d.quizVotes[quizId]
-    : { a: 0, b: 0, c: 0, d: 0 };
+    if (!quizId) {
+      return send(res, 400, {
+        error: 'Missing quiz ID'
+      });
+    }
 
-  return send(res, 200, {
-    a: totals.a || 0,
-    b: totals.b || 0,
-    c: totals.c || 0,
-    d: totals.d || 0,
-    total:
-      (totals.a || 0) +
-      (totals.b || 0) +
-      (totals.c || 0) +
-      (totals.d || 0)
-  });
+    const { data, error } = await supabase
+      .from('content_votes')
+      .select('choice')
+      .eq('vote_type', 'quiz')
+      .eq('content_id', quizId);
+
+    if (error) throw error;
+
+    let a = 0;
+    let b = 0;
+    let c = 0;
+    let d = 0;
+
+    for (const vote of data || []) {
+      if (vote.choice === 'a') a++;
+      if (vote.choice === 'b') b++;
+      if (vote.choice === 'c') c++;
+      if (vote.choice === 'd') d++;
+    }
+
+    return send(res, 200, {
+      a,
+      b,
+      c,
+      d,
+      total: a + b + c + d
+    });
+
+  } catch (error) {
+    console.error('Quiz vote lookup failed:', error);
+
+    return send(res, 500, {
+      error: 'Could not load quiz results'
+    });
+  }
 }
 // Record a vote for a 60-Second Table Quiz question
 if (u.pathname === '/api/quiz-vote' && req.method === 'POST') {
   try {
     const p = await body(req);
-    const d = readData();
-
-    if (!d.quizVotes) d.quizVotes = {};
 
     const quizId = p.quizId;
     const choice = p.choice;
@@ -1513,31 +1582,42 @@ if (u.pathname === '/api/quiz-vote' && req.method === 'POST') {
       });
     }
 
-    if (!d.quizVotes[quizId]) {
-      d.quizVotes[quizId] = {
-        a: 0,
-        b: 0,
-        c: 0,
-        d: 0
-      };
+    const { error: insertError } = await supabase
+      .from('content_votes')
+      .insert({
+        vote_type: 'quiz',
+        content_id: quizId,
+        choice
+      });
+
+    if (insertError) throw insertError;
+
+    const { data, error: selectError } = await supabase
+      .from('content_votes')
+      .select('choice')
+      .eq('vote_type', 'quiz')
+      .eq('content_id', quizId);
+
+    if (selectError) throw selectError;
+
+    let a = 0;
+    let b = 0;
+    let c = 0;
+    let d = 0;
+
+    for (const vote of data || []) {
+      if (vote.choice === 'a') a++;
+      if (vote.choice === 'b') b++;
+      if (vote.choice === 'c') c++;
+      if (vote.choice === 'd') d++;
     }
 
-    d.quizVotes[quizId][choice] += 1;
-
-    writeData(d);
-
-    const totals = d.quizVotes[quizId];
-
     return send(res, 200, {
-      a: totals.a,
-      b: totals.b,
-      c: totals.c,
-      d: totals.d,
-      total:
-        totals.a +
-        totals.b +
-        totals.c +
-        totals.d
+      a,
+      b,
+      c,
+      d,
+      total: a + b + c + d
     });
 
   } catch (error) {
