@@ -548,26 +548,26 @@ if (!scanResponse.ok) {
 }
   if (u.pathname === '/api/locations' && req.method === 'GET') {
   try {
-    const { data, error } = await supabase
-      .from('locations')
-      .select(`
-        id,
-        business_name,
-        address,
-        website_url,
-        contact_name,
-        contact_info,
-        qr_placement,
-        logo_url,
-        notes,
-        date_joined,
-        last_checked,
-        active,
-        editions(name)
-      `)
-      .order('business_name', { ascending: true });
+    const secretKey = process.env.SUPABASE_SECRET_KEY;
+const supabaseUrl = process.env.SUPABASE_URL;
 
-    if (error) throw error;
+const response = await fetch(
+  `${supabaseUrl}/rest/v1/locations?select=id,business_name,address,website_url,contact_name,contact_info,qr_placement,logo_url,notes,date_joined,last_checked,active,editions(name)&order=business_name.asc`,
+  {
+    headers: {
+      apikey: secretKey
+    }
+  }
+);
+
+if (!response.ok) {
+  const errorText = await response.text();
+  throw new Error(
+    `Locations REST request failed: ${response.status} ${errorText}`
+  );
+}
+
+const data = await response.json();
 
     const locations = (data || []).map(location => ({
       id: location.id,
