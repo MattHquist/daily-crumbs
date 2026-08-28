@@ -688,36 +688,26 @@ if (!scanResponse.ok) {
 }
   if (u.pathname === '/api/locations' && req.method === 'GET') {
   try {
-    const secretKey = process.env.SUPABASE_SECRET_KEY;
-    const supabaseUrl = process.env.SUPABASE_URL;
+    const { data, error } = await supabase
+      .from('locations')
+      .select(`
+        id,
+        business_name,
+        address,
+        website_url,
+        contact_name,
+        contact_info,
+        qr_placement,
+        logo_url,
+        notes,
+        date_joined,
+        last_checked,
+        active,
+        editions(name)
+      `)
+      .order('business_name', { ascending: true });
 
-    const response = await fetch(
-      `${supabaseUrl}/rest/v1/locations` +
-      `?select=id,business_name,address,website_url,contact_name,contact_info,qr_placement,logo_url,notes,date_joined,last_checked,active,editions(name)` +
-      `&order=business_name.asc`,
-      {
-        headers: {
-          apikey: secretKey
-        }
-      }
-    );
-
-    if (!response.ok) {
-      const errorText = await response.text();
-
-      console.error(
-        'Supabase locations load failed:',
-        response.status,
-        errorText
-      );
-
-      return send(res, 500, {
-        success: false,
-        error: 'Could not load participating locations'
-      });
-    }
-
-    const data = await response.json();
+    if (error) throw error;
 
     const locations = (data || []).map(location => ({
       id: location.id,
@@ -1825,6 +1815,46 @@ if (adMatch && req.method === 'DELETE') {
   } catch (error) {
     console.error('Ad delete failed:', error);
     return send(res, 400, { error: error.message || 'Could not delete ad' });
+  }
+}
+if (
+  u.pathname.startsWith('/api/editions/') &&
+  req.method === 'GET'
+) {
+  try {
+    const slug = u.pathname.split('/')[3];
+
+    if (!slug) {
+      return send(res, 400, {
+        success: false,
+        error: 'Edition slug is required'
+      });
+    }
+
+    const { data, error } = await supabase
+      .from('editions')
+      .select('*')
+      .eq('slug', slug)
+      .maybeSingle();
+
+    if (error) throw error;
+
+    if (!data) {
+      return send(res, 404, {
+        success: false,
+        error: 'Edition not found'
+      });
+    }
+
+    return send(res, 200, data);
+
+  } catch (error) {
+    console.error('Edition lookup failed:', error);
+
+    return send(res, 500, {
+      success: false,
+      error: 'Could not load Edition settings'
+    });
   }
 }
 if (
