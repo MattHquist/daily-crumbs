@@ -5,9 +5,14 @@ const path = require('path');
 const crypto = require('crypto');
 const { createClient } = require('@supabase/supabase-js');
 const dailyContent = require('./content/daily-content');
-
 const {
   jokes,
+  facts,
+  questions,
+  riddles,
+  dailyTips,
+  quizzes,
+  curiosityWeeks,
   wouldYouRather
 } = dailyContent;
 const supabase = createClient(
@@ -32,155 +37,13 @@ const verses = [
     'https://www.pastorrick.com/'
   ]
 ];
-const facts = [
-  'Octopuses have three hearts.',
-  'Bananas are berries, botanically speaking, but strawberries are not.',
-  'A group of flamingos is called a flamboyance.',
-  'Honey can remain edible for an extremely long time when sealed properly.',
-  'The Eiffel Tower can grow slightly taller in hot weather as the metal expands.',
-  'Sea otters often hold hands while resting so they do not drift apart.',
-  'A day on Venus is longer than a year on Venus.'
-];
-const questions = [
-  'If you could instantly master one hobby, what would it be?',
-  'What is the best meal you have ever had on a road trip?',
-  'Which song can always improve your mood?',
-  'If you could revisit one age for a day, which would you choose?',
-  'What is a small thing that made you smile this week?',
-  'Would you rather have a cabin by a lake or a condo by the ocean?',
-  'What is one local place you think everyone should try once?'
-];
 
-const riddles = [
-  {
-    q: 'What has keys but cannot open locks?',
-    a: 'A piano.'
-  },
-  {
-    q: 'What gets wetter the more it dries?',
-    a: 'A towel.'
-  },
-  {
-    q: 'What has a face and two hands but no arms or legs?',
-    a: 'A clock.'
-  },
-  {
-    q: 'What has many teeth but cannot bite?',
-    a: 'A comb.'
-  },
-  {
-    q: 'What can travel around the world while staying in one corner?',
-    a: 'A stamp.'
-  },
-  {
-    q: 'What has one eye but cannot see?',
-    a: 'A needle.'
-  },
-  {
-    q: 'What goes up but never comes back down?',
-    a: 'Your age.'
-  }
-];
-const dailyTips = [
-  'When meeting someone new, use their name once during the conversation. You are much more likely to remember it later.',
-  'Take a photo of where you parked before walking away in an unfamiliar parking lot.',
-  'If you need to remember to bring something with you tomorrow, put it directly in front of the door you will leave through.',
-  'When reheating leftovers in the microwave, arrange the food in a ring around the edge of the plate for more even heating.',
-  'Before buying something online, leave it in your cart for a day. You may discover you did not really want it.',
-  'If you cannot find your phone at home, ask your smart speaker or another device to call it.',
-  'Take a photo of your luggage before a flight. It can make describing a lost bag much easier.',
-  'If a zipper keeps sliding down, loop a small key ring through the zipper pull and around the button.',
-  'When someone gives you directions or instructions, repeat the important part back to them. It catches misunderstandings immediately.',
-  'Store important emergency contacts in your phone under both their name and relationship, such as "Jane - Sister."',
-  'If you are struggling to start a task, commit to doing it for just five minutes. Starting is often the hardest part.',
-  'Before leaving a hotel room, check the outlets. Phone chargers are among the easiest things to leave behind.',
-  'Keep a permanent marker near your freezer and write the date on leftovers before freezing them.',
-  'When you think of something you need to do later, either do it immediately if it takes less than two minutes or write it down.',
-  'If you lend something to someone, take a quick photo of them holding it. You will remember exactly who has it.',
-  'Put your keys in the same place every time you come home. Small routines eliminate a surprising amount of searching.',
-  'When taking a picture of important paperwork, make sure all four corners are visible before putting the original away.',
-  'If you are trying to cool a drink quickly, wrap it in a wet paper towel before putting it in the freezer for a few minutes.',
-  'Before a road trip, download your route or map area for offline use in case you lose cell service.',
-  'If you are unsure whether you locked the door, say "I locked the door" out loud when you do it. The unusual action makes the memory easier to recall.'
-];
-const quizzes = [
-  {q:'Which planet is known as the Red Planet?', a:'Mars', options:['Venus','Mars','Jupiter','Mercury']},
-  {q:'How many sides does a dodecagon have?', a:'12', options:['8','10','12','14']},
-  {q:'Which animal is the largest mammal on Earth?', a:'Blue whale', options:['Elephant','Blue whale','Giraffe','Hippo']},
-  {q:'What is the capital of Canada?', a:'Ottawa', options:['Toronto','Vancouver','Ottawa','Montreal']},
-  {q:'Which instrument has 88 keys on a standard version?', a:'Piano', options:['Organ','Piano','Accordion','Harpsichord']},
-  {q:'What gas do plants absorb from the atmosphere?', a:'Carbon dioxide', options:['Oxygen','Nitrogen','Carbon dioxide','Hydrogen']},
-  {q:'Which ocean is the largest?', a:'Pacific Ocean', options:['Atlantic Ocean','Indian Ocean','Arctic Ocean','Pacific Ocean']}
-];
-const curiosityWeeks = [
-  {
-    theme: 'Everyday Science',
-    days: [
-      {
-        text: 'Popcorn pops because a tiny amount of water is trapped inside each kernel. When heated, the water turns to steam until the pressure finally bursts the shell.',
-        teaser: 'Tomorrow: Why does cutting an onion make you cry?'
-      },
-      {
-        text: 'Cutting an onion breaks open its cells and releases chemicals into the air. When they reach your eyes, they create a mild irritant that causes your eyes to make tears.',
-        teaser: 'Tomorrow: Why does ice float instead of sink?'
-      },
-      {
-        text: 'Most substances become denser when they freeze, but water is unusual. Frozen water expands into a structure that is less dense than liquid water — which is why ice floats.',
-        teaser: 'Tomorrow: Why can a smell instantly bring back an old memory?'
-      },
-      {
-        text: 'Your sense of smell has unusually direct connections to parts of the brain involved with memory and emotion. That is why one familiar scent can suddenly transport you years into the past.',
-        teaser: 'Tomorrow: Why do your fingers wrinkle in water?'
-      },
-      {
-        text: 'Wrinkled fingers are not simply skin soaking up water. Your nervous system actually causes blood vessels in your fingertips to constrict, creating wrinkles that may help you grip wet objects.',
-        teaser: 'Tomorrow: Why do we get brain freeze?'
-      },
-      {
-        text: 'Brain freeze happens when something very cold quickly cools the roof of your mouth. Nearby blood vessels rapidly change size, triggering nerves that your brain interprets as pain in your forehead.',
-        teaser: 'Tomorrow: Why is the sky blue?'
-      },
-      {
-        text: 'Sunlight contains many colors, but Earth’s atmosphere scatters shorter blue wavelengths more strongly than most other visible colors. That scattered blue light reaches our eyes from all across the sky.',
-        teaser: 'Tomorrow: A completely new curiosity begins!'
-      }
-    ]
-  },
 
-  {
-    theme: 'Hidden History',
-    days: [
-      {
-        text: 'Bubble wrap was originally invented in 1957 as textured wallpaper. The decorating idea failed, but the inventors later discovered it made excellent protective packaging.',
-        teaser: 'Tomorrow: The surprising original purpose of Play-Doh.'
-      },
-      {
-        text: 'Before it became a children’s toy, the material that became Play-Doh was sold as a cleaner for removing soot from wallpaper.',
-        teaser: 'Tomorrow: How an accidental discovery changed breakfast.'
-      },
-      {
-        text: 'Corn flakes grew from experiments by the Kellogg brothers while searching for simple foods for patients at a sanitarium in Michigan.',
-        teaser: 'Tomorrow: Why pencils are often painted yellow.'
-      },
-      {
-        text: 'Yellow pencils became popular in the late 1800s when manufacturers used the color to suggest that their pencils contained high-quality graphite associated with China.',
-        teaser: 'Tomorrow: The invention inspired by burrs stuck to clothing.'
-      },
-      {
-        text: 'Velcro was inspired when Swiss engineer George de Mestral examined burrs that kept sticking to his clothes and his dog’s fur and noticed their tiny natural hooks.',
-        teaser: 'Tomorrow: How a melted candy bar helped inspire an invention.'
-      },
-      {
-        text: 'Engineer Percy Spencer noticed a candy bar melting in his pocket while working near microwave-producing equipment. His experiments helped lead to the microwave oven.',
-        teaser: 'Tomorrow: The accidental invention found inside a laboratory.'
-      },
-      {
-        text: 'Many everyday inventions began as accidents, failed ideas, or solutions to completely different problems — a reminder that a mistake can sometimes become the beginning of something useful.',
-        teaser: 'Tomorrow: A completely new curiosity begins!'
-      }
-    ]
-  }
-];
+
+
+
+
+
 const nationalDays = {
   '2026-08-23': [
     'Find Your Inner Nerd Day',
@@ -497,33 +360,36 @@ async function getUSHistory(date) {
   }
 }
 async function daily(date){
-  const joke = jokes[idx(date,'j',jokes.length)];
+  const d = new Date(date + 'T12:00:00');
+
+const startOfYear = new Date(d.getFullYear(), 0, 0);
+
+const dayOfYear = Math.floor(
+  (d - startOfYear) / 86400000
+);
+
+const dailyIndex = (dayOfYear - 1) % 365;
+  const joke = jokes[dailyIndex];
   const verse = verses[idx(date,'v',verses.length)];
   const devotionalVerse = await getDailyDevotional(date, verse);
   const national = await getNationalDays(date);
   const famousBirthdays = await getFamousBirthdays(date);
   const usHistory = await getUSHistory(date);
-  const quiz = quizzes[idx(date,'q',quizzes.length)];
-  const dayNumber = Math.floor(
-  new Date(date + 'T12:00:00').getTime() / 86400000
-);
+  const quiz = quizzes[dailyIndex];
+  const wyr = wouldYouRather[dailyIndex];
+const riddle = riddles[dailyIndex];
+const tip = dailyTips[dailyIndex];
 
-const wyr = wouldYouRather[
-  dayNumber % wouldYouRather.length
-];
-  const riddle = riddles[idx(date,'r',riddles.length)];
-const tip = dailyTips[idx(date,'tip',dailyTips.length)];
-  const d = new Date(date + 'T12:00:00');
-const jsDay = d.getDay();
-const dayOfWeek = jsDay === 0 ? 6 : jsDay - 1;
+const curiosityWeekIndex =
+  Math.floor(dailyIndex / 7) % curiosityWeeks.length;
 
-const epochDay = Math.floor(d.getTime() / 86400000);
-const weekNumber = Math.floor(epochDay / 7);
+const curiosityDayIndex = dailyIndex % 7;
 
 const curiosityWeek =
-  curiosityWeeks[weekNumber % curiosityWeeks.length];
+  curiosityWeeks[curiosityWeekIndex];
 
-const curiosityDay = curiosityWeek.days[dayOfWeek];
+const curiosityDay =
+  curiosityWeek.days[curiosityDayIndex];
 
 const topic = {
   theme: curiosityWeek.theme,
@@ -537,8 +403,8 @@ const topic = {
       punchline: joke[1]
     },
    verse: devotionalVerse,
-fact: facts[idx(date,'f',facts.length)],
-icebreaker: questions[idx(date,'i',questions.length)],
+fact: facts[dailyIndex],
+icebreaker: questions[dailyIndex],
 topic,
 national,
 famousBirthdays,
