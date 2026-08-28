@@ -1318,7 +1318,65 @@ for (const riddle of curatedRiddleAdditions) {
   if (riddles.length >= 365) break;
   if (!riddles.some(existing => existing.q === riddle.q)) riddles.push(riddle);
 }
+const finalRiddleAdditions = [
+  {q:'What has a neck and two arms but no head?', a:'A shirt.'},
+  {q:'What has many keys but cannot type a letter?', a:'A piano.'},
+  {q:'What can you break even if you never touch it?', a:'A promise.'},
+  {q:'What has a bottom at the top?', a:'Your legs.'},
+  {q:'What has lots of rings but no fingers?', a:'A tree.'},
+  {q:'What can you hold without ever touching it?', a:'A conversation.'},
+  {q:'What has one foot but never walks?', a:'A ruler.'},
+  {q:'What goes up when the rain comes down?', a:'An umbrella.'},
+  {q:'What kind of coat is best put on wet?', a:'A coat of paint.'},
+  {q:'What has many pages but no words?', a:'A photo album.'},
+  {q:'What gets smaller every time it takes a bath?', a:'A bar of soap.'},
+  {q:'What has a head and a foot but no body?', a:'A bed.'},
+  {q:'What comes at night without being called and leaves in the morning without being chased?', a:'Darkness.'},
+  {q:'What can jump higher than a building?', a:'Anything that can jump. Buildings cannot jump.'},
+  {q:'What has four legs in the morning but never goes anywhere?', a:'A table at breakfast.'},
+  {q:'What can you make disappear simply by turning on a light?', a:'Darkness.'},
+  {q:'What has no feet but can run all day?', a:'A river.'},
+  {q:'What can be cracked but is meant to make people laugh?', a:'A joke.'},
+  {q:'What can you see with your eyes closed?', a:'A dream.'},
+  {q:'What has no voice but can tell you thousands of stories?', a:'A book.'},
+  {q:'What can be drawn without using a pencil?', a:'A curtain.'},
+  {q:'What has a face that never smiles?', a:'A clock.'},
+  {q:'What is bought by the yard and worn by the foot?', a:'Carpet.'},
+  {q:'What begins with an E but contains only one letter?', a:'An envelope.'},
+  {q:'What goes up and down but stays in the same place?', a:'A staircase.'},
+  {q:'What can be opened every morning but cannot be closed at night?', a:'Your eyes.'},
+  {q:'What has dozens of teeth but never eats?', a:'A zipper.'},
+  {q:'What is easy to get into but difficult to get out of?', a:'Trouble.'},
+  {q:'What has many holes but can keep you warm?', a:'A knitted blanket.'},
+  {q:'What travels fastest when standing still?', a:'Your imagination.'},
+  {q:'What has a tongue but never talks?', a:'A shoe.'},
+  {q:'What can be heard but cannot be seen or held?', a:'An echo.'},
+  {q:'What gets longer when pulled but shorter when released?', a:'A rubber band.'},
+  {q:'What has a handle but is not a door?', a:'A mug.'},
+  {q:'What has a lid but never blinks?', a:'A jar.'},
+  {q:'What has numbers all around it but cannot count?', a:'A clock.'},
+  {q:'What has four legs and a back but cannot sit down?', a:'A chair.'},
+  {q:'What gets filled every morning and emptied every night?', a:'A mailbox.'},
+  {q:'What can you spend, save, waste, and never get back?', a:'Time.'},
+  {q:'What has a mouth at one end and a bed at the other?', a:'A river.'},
+  {q:'What gets passed around a table but is never eaten?', a:'Conversation.'},
+  {q:'What can go through a door without opening it?', a:'Sound.'},
+  {q:'What has a head but never has a headache?', a:'A nail.'},
+  {q:'What grows when fed but dies when given water?', a:'Fire.'},
+  {q:'What has a foot on each side and one in the middle?', a:'A yardstick.'},
+  {q:'What comes in through a keyhole but fills an entire room?', a:'Light.'},
+  {q:'What can you give someone without losing any of your own?', a:'A compliment.'},
+  {q:'What has a beginning and an end but nothing in the middle?', a:'The word "end".'},
+  {q:'What can run around a backyard without moving?', a:'A fence.'},
+  {q:'What gets more useful the more you sharpen it?', a:'A pencil.'}
+];
 
+for (const riddle of finalRiddleAdditions) {
+  if (riddles.length >= 365) break;
+  if (!riddles.some(existing => existing.q === riddle.q)) {
+    riddles.push(riddle);
+  }
+}
 if (riddles.length < 365) {
   throw new Error(`Not enough curated riddles: ${riddles.length}/365`);
 }
@@ -2250,7 +2308,145 @@ for (const quiz of curatedQuizAdditions) {
   if (quizzes.length >= 365) break;
   if (!quizzes.some(existing => existing.q === quiz.q)) quizzes.push(quiz);
 }
+const finalQuizAdditions = [
+  {q:'Which planet is known as the Red Planet?', a:'Mars', options:['Mars','Venus','Jupiter','Mercury']},
+  {q:'What is the largest mammal on Earth?', a:'Blue whale', options:['Blue whale','Elephant','Giraffe','Orca']},
+  {q:'What is the capital of Australia?', a:'Canberra', options:['Canberra','Sydney','Melbourne','Perth']},
+  {q:'Which animal is the fastest land animal?', a:'Cheetah', options:['Cheetah','Lion','Horse','Greyhound']},
+  {q:'How many continents are there?', a:'7', options:['7','5','6','8']},
+  {q:'What is the largest ocean?', a:'Pacific Ocean', options:['Pacific Ocean','Atlantic Ocean','Indian Ocean','Arctic Ocean']},
+  {q:'Which gas do humans need to breathe?', a:'Oxygen', options:['Oxygen','Nitrogen','Helium','Carbon dioxide']},
+  {q:'What is H2O commonly called?', a:'Water', options:['Water','Salt','Hydrogen','Oxygen']},
+  {q:'Which instrument has 88 keys?', a:'Piano', options:['Piano','Violin','Trumpet','Guitar']},
+  {q:'How many sides does a hexagon have?', a:'6', options:['6','5','7','8']},
+  {q:'Which bird is known for being unable to fly and living in Antarctica?', a:'Penguin', options:['Penguin','Eagle','Parrot','Swan']},
+  {q:'Which fruit is used to make guacamole?', a:'Avocado', options:['Avocado','Lime','Tomato','Cucumber']},
+  {q:'Which animal has three hearts?', a:'Octopus', options:['Octopus','Shark','Dolphin','Crab']},
+  {q:'What is the smallest prime number?', a:'2', options:['2','1','3','5']},
+  {q:'Which U.S. state is known as the Aloha State?', a:'Hawaii', options:['Hawaii','Florida','California','Alaska']},
+  {q:'Which U.S. state is known as the Lone Star State?', a:'Texas', options:['Texas','Arizona','Oklahoma','Nevada']},
+  {q:'Which Great Lake is largest by surface area?', a:'Lake Superior', options:['Lake Superior','Lake Michigan','Lake Huron','Lake Erie']},
+  {q:'What is Minnesota’s state bird?', a:'Common loon', options:['Common loon','Bald eagle','Robin','Mallard']},
+  {q:'What is the capital of Minnesota?', a:'Saint Paul', options:['Saint Paul','Minneapolis','Duluth','Rochester']},
+  {q:'Which river begins in Minnesota?', a:'Mississippi River', options:['Mississippi River','Missouri River','Ohio River','Colorado River']},
+  {q:'Which planet is closest to the Sun?', a:'Mercury', options:['Mercury','Venus','Earth','Mars']},
+  {q:'Which planet has the Great Red Spot?', a:'Jupiter', options:['Jupiter','Saturn','Mars','Neptune']},
+  {q:'Which planet is famous for its rings?', a:'Saturn', options:['Saturn','Mars','Venus','Mercury']},
+  {q:'What is Earth’s natural satellite?', a:'The Moon', options:['The Moon','Mars','Venus','The Sun']},
+  {q:'How many bones are in the adult human body?', a:'206', options:['206','186','216','196']},
+  {q:'Which organ pumps blood through the body?', a:'Heart', options:['Heart','Liver','Lungs','Kidneys']},
+  {q:'What is the largest organ of the human body?', a:'Skin', options:['Skin','Heart','Liver','Brain']},
+  {q:'Which blood cells carry oxygen?', a:'Red blood cells', options:['Red blood cells','White blood cells','Platelets','Plasma']},
+  {q:'What force keeps us on the ground?', a:'Gravity', options:['Gravity','Magnetism','Friction','Electricity']},
+  {q:'What is frozen water called?', a:'Ice', options:['Ice','Steam','Mist','Dew']},
+  {q:'What process turns liquid water into vapor?', a:'Evaporation', options:['Evaporation','Condensation','Freezing','Melting']},
+  {q:'What process turns water vapor into liquid?', a:'Condensation', options:['Condensation','Evaporation','Freezing','Sublimation']},
+  {q:'What is the chemical symbol for gold?', a:'Au', options:['Au','Ag','Fe','Go']},
+  {q:'What is the chemical symbol for iron?', a:'Fe', options:['Fe','Ir','In','I']},
+  {q:'What is the hardest natural substance?', a:'Diamond', options:['Diamond','Quartz','Steel','Granite']},
+  {q:'Which plant part usually performs most photosynthesis?', a:'Leaves', options:['Leaves','Roots','Flowers','Seeds']},
+  {q:'What pigment makes most leaves green?', a:'Chlorophyll', options:['Chlorophyll','Melanin','Hemoglobin','Keratin']},
+  {q:'Which animal is known for black-and-white stripes?', a:'Zebra', options:['Zebra','Tiger','Skunk','Leopard']},
+  {q:'Which animal carries its young in a pouch?', a:'Kangaroo', options:['Kangaroo','Giraffe','Elephant','Zebra']},
+  {q:'Which animal is the tallest living land animal?', a:'Giraffe', options:['Giraffe','Elephant','Camel','Moose']},
+  {q:'Which bird can fly backward?', a:'Hummingbird', options:['Hummingbird','Robin','Eagle','Crow']},
+  {q:'Which insect tastes with its feet?', a:'Butterfly', options:['Butterfly','Bee','Ant','Beetle']},
+  {q:'Which food is made from cacao beans?', a:'Chocolate', options:['Chocolate','Coffee','Vanilla','Tea']},
+  {q:'Which spice comes from tree bark?', a:'Cinnamon', options:['Cinnamon','Nutmeg','Paprika','Clove']},
+  {q:'Which food is a legume rather than a true nut?', a:'Peanut', options:['Peanut','Walnut','Almond','Pecan']},
+  {q:'Which ingredient makes traditional bread dough rise?', a:'Yeast', options:['Yeast','Salt','Oil','Sugar']},
+  {q:'Which fruit has seeds on its outside?', a:'Strawberry', options:['Strawberry','Apple','Peach','Pear']},
+  {q:'Which country is shaped like a boot?', a:'Italy', options:['Italy','Spain','France','Greece']},
+  {q:'Which country contains Machu Picchu?', a:'Peru', options:['Peru','Chile','Brazil','Mexico']},
+  {q:'Which country is home to Kyoto?', a:'Japan', options:['Japan','China','Thailand','South Korea']},
+  {q:'Which city is home to the Eiffel Tower?', a:'Paris', options:['Paris','Rome','London','Madrid']},
+  {q:'Which city is home to the Colosseum?', a:'Rome', options:['Rome','Athens','Paris','Venice']},
+  {q:'Which country is home to Sydney?', a:'Australia', options:['Australia','Canada','New Zealand','South Africa']},
+  {q:'Who painted the Mona Lisa?', a:'Leonardo da Vinci', options:['Leonardo da Vinci','Michelangelo','Vincent van Gogh','Pablo Picasso']},
+  {q:'Who painted Starry Night?', a:'Vincent van Gogh', options:['Vincent van Gogh','Claude Monet','Pablo Picasso','Rembrandt']},
+  {q:'Who wrote Romeo and Juliet?', a:'William Shakespeare', options:['William Shakespeare','Charles Dickens','Mark Twain','Jane Austen']},
+  {q:'Who wrote The Hobbit?', a:'J.R.R. Tolkien', options:['J.R.R. Tolkien','C.S. Lewis','J.K. Rowling','George Orwell']},
+  {q:'Who wrote The Adventures of Tom Sawyer?', a:'Mark Twain', options:['Mark Twain','Ernest Hemingway','John Steinbeck','Charles Dickens']},
+  {q:'How many players from one team are on a basketball court?', a:'5', options:['5','6','7','8']},
+  {q:'How many points is a touchdown worth before the extra point?', a:'6', options:['6','3','7','8']},
+  {q:'How many bases are on a baseball field?', a:'4', options:['4','3','5','6']},
+  {q:'How many strikes make an out in baseball?', a:'3', options:['3','2','4','5']},
+  {q:'How many holes are in a standard round of golf?', a:'18', options:['18','9','12','21']},
+  {q:'Which sport uses a shuttlecock?', a:'Badminton', options:['Badminton','Tennis','Squash','Pickleball']},
+  {q:'Which sport uses a puck?', a:'Hockey', options:['Hockey','Soccer','Baseball','Basketball']},
+  {q:'Which sport uses the terms birdie and bogey?', a:'Golf', options:['Golf','Tennis','Bowling','Baseball']},
+  {q:'How many pins are set up in bowling?', a:'10', options:['10','8','9','12']},
+  {q:'What does GPS stand for?', a:'Global Positioning System', options:['Global Positioning System','General Positioning Signal','Ground Path System','Global Phone Service']},
+  {q:'What does PDF stand for?', a:'Portable Document Format', options:['Portable Document Format','Personal Data File','Printed Document Form','Public Data Format']},
+  {q:'What does URL stand for?', a:'Uniform Resource Locator', options:['Uniform Resource Locator','Universal Routing Link','User Reference Location','Unified Resource List']},
+  {q:'What does LED stand for?', a:'Light-Emitting Diode', options:['Light-Emitting Diode','Low Energy Display','Light Energy Device','Linear Electric Diode']},
+  {q:'How many stars are on the U.S. flag?', a:'50', options:['50','48','49','52']},
+  {q:'How many stripes are on the U.S. flag?', a:'13', options:['13','10','12','15']},
+  {q:'Which direction does the Sun rise from?', a:'East', options:['East','West','North','South']},
+  {q:'Which direction does the Sun set toward?', a:'West', options:['West','East','North','South']},
+  {q:'How many days are in a leap year?', a:'366', options:['366','365','364','367']},
+  {q:'Which month has the fewest days?', a:'February', options:['February','April','June','September']},
+  {q:'How many hours are in a day?', a:'24', options:['24','12','18','36']},
+  {q:'How many minutes are in an hour?', a:'60', options:['60','30','45','90']},
+  {q:'Which holiday is celebrated in the U.S. on July 4?', a:'Independence Day', options:['Independence Day','Memorial Day','Labor Day','Veterans Day']},
+  {q:'Which holiday falls on December 25?', a:'Christmas Day', options:['Christmas Day','Thanksgiving','New Year’s Day','Easter']},
+  {q:'What was the first computer mouse made from?', a:'Wood', options:['Wood','Plastic','Steel','Rubber']},
+  {q:'What was bubble wrap originally intended to be?', a:'Textured wallpaper', options:['Textured wallpaper','Packing material','Floor padding','Roof insulation']},
+  {q:'What was Play-Doh originally used for?', a:'Cleaning wallpaper', options:['Cleaning wallpaper','Making toys','Sealing windows','Polishing floors']},
+  {q:'Which invention was inspired by burrs sticking to clothing?', a:'Velcro', options:['Velcro','Teflon','Nylon','Rubber']},
+  {q:'What did the first text message say?', a:'Merry Christmas', options:['Merry Christmas','Hello World','Call Me','Test Message']}
+];
 
+for (const quiz of finalQuizAdditions) {
+  if (quizzes.length >= 365) break;
+  if (!quizzes.some(existing => existing.q === quiz.q)) {
+    quizzes.push(quiz);
+  }
+}
+const lastQuizAdditions = [
+  {q:'Which continent is the Sahara Desert located on?', a:'Africa', options:['Africa','Asia','Australia','South America']},
+  {q:'Which country is famous for the city of Venice?', a:'Italy', options:['Italy','Spain','France','Greece']},
+  {q:'Which country is home to the city of Toronto?', a:'Canada', options:['Canada','United States','Australia','United Kingdom']},
+  {q:'Which country is home to the city of Dublin?', a:'Ireland', options:['Ireland','Scotland','Wales','Iceland']},
+  {q:'Which country is home to the city of Oslo?', a:'Norway', options:['Norway','Sweden','Finland','Denmark']},
+  {q:'Which country is home to the city of Stockholm?', a:'Sweden', options:['Sweden','Norway','Finland','Denmark']},
+  {q:'Which country is home to the city of Helsinki?', a:'Finland', options:['Finland','Sweden','Norway','Iceland']},
+  {q:'Which country is home to the city of Lisbon?', a:'Portugal', options:['Portugal','Spain','Italy','France']},
+  {q:'Which country is home to the city of Athens?', a:'Greece', options:['Greece','Italy','Turkey','Croatia']},
+  {q:'Which country is home to the city of Cairo?', a:'Egypt', options:['Egypt','Morocco','Kenya','Jordan']},
+  {q:'Which country is home to the city of Buenos Aires?', a:'Argentina', options:['Argentina','Chile','Brazil','Peru']},
+  {q:'Which country is home to the city of Santiago?', a:'Chile', options:['Chile','Peru','Argentina','Ecuador']},
+  {q:'Which country is home to the city of Lima?', a:'Peru', options:['Peru','Chile','Colombia','Bolivia']},
+  {q:'Which ocean lies between Africa and Australia?', a:'Indian Ocean', options:['Indian Ocean','Atlantic Ocean','Pacific Ocean','Arctic Ocean']},
+  {q:'Which ocean surrounds the North Pole?', a:'Arctic Ocean', options:['Arctic Ocean','Atlantic Ocean','Pacific Ocean','Indian Ocean']},
+  {q:'Which animal is known as the king of the jungle?', a:'Lion', options:['Lion','Tiger','Elephant','Leopard']},
+  {q:'Which animal is famous for building dams?', a:'Beaver', options:['Beaver','Otter','Muskrat','Raccoon']},
+  {q:'Which animal is known for carrying its home on its back?', a:'Snail', options:['Snail','Frog','Rabbit','Mouse']},
+  {q:'Which animal is famous for changing color to blend in?', a:'Chameleon', options:['Chameleon','Gecko','Iguana','Salamander']},
+  {q:'Which animal is the largest living land animal?', a:'African elephant', options:['African elephant','Giraffe','Hippo','Rhino']},
+  {q:'Which metal is liquid at room temperature?', a:'Mercury', options:['Mercury','Iron','Copper','Aluminum']},
+  {q:'What temperature does water freeze at on the Celsius scale?', a:'0°C', options:['0°C','10°C','32°C','100°C']},
+  {q:'What temperature does water boil at sea level on the Celsius scale?', a:'100°C', options:['100°C','90°C','80°C','120°C']},
+  {q:'Which vitamin is commonly associated with citrus fruits?', a:'Vitamin C', options:['Vitamin C','Vitamin A','Vitamin D','Vitamin K']},
+  {q:'Which gas gives soda its fizz?', a:'Carbon dioxide', options:['Carbon dioxide','Oxygen','Nitrogen','Hydrogen']},
+  {q:'Which simple machine is a seesaw an example of?', a:'Lever', options:['Lever','Pulley','Wedge','Screw']},
+  {q:'Which instrument measures temperature?', a:'Thermometer', options:['Thermometer','Barometer','Compass','Altimeter']},
+  {q:'Which instrument measures air pressure?', a:'Barometer', options:['Barometer','Thermometer','Speedometer','Hygrometer']},
+  {q:'Which instrument tells direction using magnetic north?', a:'Compass', options:['Compass','Barometer','Thermometer','Altimeter']},
+  {q:'What is the name for a word that means the opposite of another word?', a:'Antonym', options:['Antonym','Synonym','Acronym','Palindrome']},
+  {q:'What is the name for a word that has the same meaning as another word?', a:'Synonym', options:['Synonym','Antonym','Homonym','Acronym']},
+  {q:'What do we call a word that reads the same forward and backward?', a:'Palindrome', options:['Palindrome','Acronym','Synonym','Idiom']},
+  {q:'Which musical instrument has strings and is played with a bow?', a:'Violin', options:['Violin','Trumpet','Flute','Drums']},
+  {q:'Which instrument belongs to the brass family?', a:'Trumpet', options:['Trumpet','Violin','Clarinet','Flute']},
+  {q:'Which instrument is played by striking keys and hammers inside?', a:'Piano', options:['Piano','Guitar','Violin','Flute']}
+];
+
+for (const quiz of lastQuizAdditions) {
+  if (quizzes.length >= 365) break;
+  if (!quizzes.some(existing => existing.q === quiz.q)) {
+    quizzes.push(quiz);
+  }
+}
 if (quizzes.length < 365) {
   throw new Error(`Not enough curated quizzes: ${quizzes.length}/365`);
 }
