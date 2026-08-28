@@ -3050,16 +3050,145 @@ const curiosityThemeSpecs = [
   ['Travel Curiosities',['jet lag','airport codes','luggage tags','road signs','hotel keys','passports','maps']]
 ];
 
-const curiosityWeeks = curiosityThemeSpecs.map(([theme, topics]) => ({
-  theme,
-  days: topics.map((topic, index) => ({
-    text: `${topic.charAt(0).toUpperCase() + topic.slice(1)} has an everyday story behind it. What seems ordinary often depends on a surprising blend of science, history, design, and human behavior.`,
-    teaser: index < topics.length - 1
-      ? `Tomorrow: ${topics[index + 1].charAt(0).toUpperCase() + topics[index + 1].slice(1)}.`
-      : 'Tomorrow: A completely new curiosity begins!'
-  }))
-}));
+const curiosityPreview = [
+  {
+    headline: 'How Can Solid Glass Be See-Through?',
+    text: `Glass starts with something surprisingly ordinary: sand. Most everyday glass is made from silica, which is found in sand, mixed with other ingredients and heated to around 3,000°F until it melts. When it cools, something unusual happens.
 
+In many solids, the tiny building blocks line up in neat, repeating patterns called crystals. In glass, they become frozen in a jumbled arrangement instead.
+
+But here's the amazing part: visible light can pass through ordinary glass because its light particles don't have the right amount of energy to be easily absorbed by the material. Most of the visible light simply travels through.
+
+Change the ingredients, though, and glass can become colored, stronger, heat-resistant, or even able to block certain kinds of light.
+
+So the window you're looking through is basically melted sand, cooled into a solid that light can pass through.`,
+    teaser: `Tomorrow: Rubber can stretch several times its size. Why doesn't it stay stretched?`
+  },
+
+  {
+    headline: `Rubber's Incredible Snap-Back Secret`,
+    text: `Rubber seems simple until you think about what it's doing. Stretch a rubber band to several times its normal length, let go, and it races right back to almost exactly where it started.
+
+The secret is hidden inside.
+
+Rubber is made from extremely long molecules called polymers. Imagine a bowl full of cooked spaghetti, except the noodles are curled, tangled, and connected in places. When you stretch rubber, many of those curled-up molecular chains straighten and line up.
+
+Let go, and the molecules naturally want to return to their more tangled, relaxed arrangement. The rubber snaps back with them.
+
+Here's an experiment you can actually feel: hold a thick rubber band against your upper lip, quickly stretch it, and then let it shrink again. Its temperature changes slightly as the molecules rearrange.
+
+A rubber band isn't just stretching. You're reorganizing millions upon millions of microscopic molecular chains—and then watching them put themselves back.`,
+    teaser: `Tomorrow: Why does your bathroom mirror fog up when you shower?`
+  },
+
+  {
+    headline: 'Where Does the Fog on Your Mirror Come From?',
+    text: `Take a hot shower and a perfectly clear mirror can turn cloudy in minutes. But that fog didn't come from inside the glass.
+
+It's actually thousands of tiny drops of water sitting on the surface.
+
+Hot shower water fills the bathroom air with invisible water vapor. When that warm, moist air touches the cooler mirror, some of the vapor cools enough to turn back into liquid water. This is called condensation.
+
+The droplets are so tiny that instead of running down the mirror immediately, they scatter light in many directions. That's what creates the cloudy appearance.
+
+Here's the neat part: it's the same basic process that creates dew on grass, water on the outside of a cold drink, and even clouds in the sky.
+
+And if the mirror is warm enough? It won't fog nearly as easily.
+
+Your steamy bathroom is basically running a tiny version of the water cycle right in front of you.`,
+    teaser: 'Tomorrow: Why does popcorn explode?'
+  }
+];
+const curiosityWeeks = [
+  {
+    theme: 'Everyday Science',
+    days: [
+      {
+        headline: 'Why Does Popcorn Explode?',
+        text: `Every popcorn kernel has something hidden inside it: a tiny drop of water. When the kernel gets hot, that water turns into steam. But the kernel's hard outer shell won't let the steam escape, so pressure keeps building inside.
+
+Eventually, the pressure becomes so strong that the shell bursts. In a split second, the soft starch inside expands to many times its original size, cools, and becomes the fluffy white popcorn we eat.
+
+Here's the really neat part: popcorn is one of the only types of corn with a shell strong enough to build the pressure needed to pop. If the kernel is too dry, cracked, or damaged, the steam escapes and you get one of those disappointing hard kernels at the bottom of the bowl.`,
+        teaser: 'Tomorrow: Why does cutting an onion make you cry?'
+      },
+
+      {
+        headline: `An Onion's Tiny Chemical Alarm`,
+        text: `An onion isn't trying to make you cry. It's actually trying to protect itself.
+
+When you cut into an onion, your knife breaks thousands of tiny cells. Chemicals that were safely stored apart suddenly mix together and create an irritating gas. That gas floats upward and reaches your eyes.
+
+Your eyes detect the irritation and immediately start making tears to wash it away—which is why your vision gets blurry just when you're holding a sharp knife.
+
+But here's something most people don't know: chilling an onion before cutting it can help. Lower temperatures slow the chemical reactions and movement of the irritating gas. A sharp knife can help too because it crushes fewer cells than a dull one.`,
+        teaser: 'Tomorrow: Why does ice float when most solids sink?'
+      },
+
+      {
+        headline: `Ice Breaks One of Nature's Usual Rules`,
+        text: `Usually, when something freezes into a solid, its molecules pack closer together. Water does something strange: it spreads out.
+
+As water freezes, its molecules arrange themselves into an open crystal pattern with extra space between them. That makes ice less dense—or, put simply, lighter for its size—than liquid water. So ice floats.
+
+That little oddity is incredibly important. Because ice floats, lakes freeze from the top down. The floating ice becomes an insulating blanket that slows further freezing, leaving liquid water underneath where fish and other creatures can survive the winter.
+
+If ice sank, lakes in cold climates could freeze much more deeply. So that ice cube floating in your drink is demonstrating one of water's strangest—and most important—tricks.`,
+        teaser: 'Tomorrow: Why can one smell bring back a memory from decades ago?'
+      },
+
+      {
+        headline: 'The Sense With a Shortcut to Your Memories',
+        text: `Have you ever smelled a certain perfume, food, campfire, or freshly cut grass and suddenly remembered something you hadn't thought about in years?
+
+There's a reason. Smell has unusually direct connections to parts of the brain involved in emotion and memory.
+
+That's why a smell doesn't always make you simply remember something. Sometimes it almost feels as though you've been transported back there. You might remember the room, the people, or even how you felt.
+
+And because smells are often present in the background without us deliberately paying attention to them, your brain may store a scent alongside an experience without you realizing it. Years later, one whiff can find that memory again.`,
+        teaser: 'Tomorrow: Why do your fingers turn into prunes in the bathtub?'
+      },
+
+      {
+        headline: `Your Wrinkly Fingers Are Doing It on Purpose`,
+        text: `For years, people commonly thought fingers wrinkled in water because skin simply soaked up water and swelled. But there's more going on.
+
+After your hands or feet stay wet for several minutes, your nervous system tells tiny blood vessels beneath the skin to tighten. That causes the skin above them to form the familiar wrinkles.
+
+Scientists have found an interesting clue about why: wrinkled fingers may give us a better grip on wet objects, somewhat like the tread on a tire helps move water away from the surface.
+
+Even stranger, people with certain types of nerve damage may not develop normal water wrinkles at all. So those bathtub fingers aren't just soggy skin. Your nervous system is actively changing them.`,
+        teaser: 'Tomorrow: What is actually happening during brain freeze?'
+      },
+
+      {
+        headline: 'Why Ice Cream Can Make Your Forehead Hurt',
+        text: `You take a huge bite of ice cream and suddenly your forehead feels like someone flipped a pain switch. But the ice cream never went anywhere near your forehead.
+
+Brain freeze begins when something extremely cold quickly cools the roof of your mouth. Blood vessels and nerves in that area react to the sudden temperature change. Your brain receives those pain signals—but it can get confused about exactly where they're coming from.
+
+The result is referred pain: you feel the pain in your forehead even though the cold spot is inside your mouth.
+
+If brain freeze strikes, press your tongue against the roof of your mouth. Your warm tongue helps heat the area back up. Your brain isn't freezing at all—it's basically getting the address of the pain wrong.`,
+        teaser: 'Tomorrow: If sunlight looks white, why is the sky blue?'
+      },
+
+      {
+        headline: 'The Real Reason the Sky Is Blue',
+        text: `Sunlight may look white, but it's actually made of many colors—the same colors you see in a rainbow.
+
+When sunlight enters Earth's atmosphere, it runs into tiny molecules in the air. Shorter wavelengths of visible light, especially blue, get scattered around the sky much more strongly than longer red wavelengths.
+
+So when you look away from the Sun, much of the light reaching your eyes from all directions is scattered blue light. That's why the whole sky appears blue.
+
+Near sunset, sunlight has to travel through much more atmosphere before reaching you. Much of the blue light gets scattered away along that longer trip, leaving more reds and oranges to reach your eyes.
+
+A blue afternoon sky and a fiery red sunset are actually two versions of the same trick.`,
+        teaser: 'Tomorrow: Hidden History begins!'
+      }
+    ]
+  }
+];
 module.exports = {
   jokes,
   facts,
@@ -3068,5 +3197,6 @@ module.exports = {
   dailyTips,
   quizzes,
   curiosityWeeks,
+  curiosityPreview,
   wouldYouRather
 };

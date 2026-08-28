@@ -13,6 +13,7 @@ const {
   dailyTips,
   quizzes,
   curiosityWeeks,
+  curiosityPreview,
   wouldYouRather
 } = dailyContent;
 const supabase = createClient(
@@ -380,19 +381,41 @@ const dailyIndex = (dayOfYear - 1) % 365;
 const riddle = riddles[dailyIndex];
 const tip = dailyTips[dailyIndex];
 
-const curiosityWeekIndex =
-  Math.floor(dailyIndex / 7) % curiosityWeeks.length;
+const previewCuriosity = {
+  '2026-08-28': curiosityPreview[0], // Friday - Glass
+  '2026-08-29': curiosityPreview[1], // Saturday - Rubber
+  '2026-08-30': curiosityPreview[2]  // Sunday - Mirror
+};
 
-const curiosityDayIndex = dailyIndex % 7;
+let curiosityWeek;
+let curiosityDay;
 
-const curiosityWeek =
-  curiosityWeeks[curiosityWeekIndex];
+if (previewCuriosity[date]) {
+  curiosityWeek = { theme: 'Everyday Mysteries' };
+  curiosityDay = previewCuriosity[date];
+} else {
+  const curiosityStartDate = new Date('2026-08-31T12:00:00');
 
-const curiosityDay =
-  curiosityWeek.days[curiosityDayIndex];
+  const curiosityDaysSinceStart = Math.floor(
+    (d.getTime() - curiosityStartDate.getTime()) / 86400000
+  );
+
+  const safeCuriosityDay =
+    ((curiosityDaysSinceStart % 364) + 364) % 364;
+
+  const curiosityWeekIndex =
+    Math.floor(safeCuriosityDay / 7) % curiosityWeeks.length;
+
+  const curiosityDayIndex =
+    safeCuriosityDay % 7;
+
+  curiosityWeek = curiosityWeeks[curiosityWeekIndex];
+  curiosityDay = curiosityWeek.days[curiosityDayIndex];
+}
 
 const topic = {
   theme: curiosityWeek.theme,
+  headline: curiosityDay.headline || '',
   text: curiosityDay.text,
   teaser: curiosityDay.teaser
 };

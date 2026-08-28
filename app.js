@@ -31,7 +31,10 @@ async function trackQrScan() {
     console.error('QR scan tracking failed:', error);
   }
 }
-
+const topicName = document.getElementById('topicName');
+const topicHeadline = document.getElementById('topicHeadline');
+const topicArticle = document.getElementById('topicArticle');
+const topicTeaser = document.getElementById('topicTeaser');
 trackQrScan();
 async function loadContent(){
  const d=new Date(); const key=[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');
@@ -86,6 +89,7 @@ icebreaker.textContent =
 wyrA.textContent = c.wyr.a;
 wyrB.textContent = c.wyr.b;
 topicName.textContent = c.topic.theme;
+topicHeadline.textContent = c.topic.headline || '';
 topicArticle.textContent = c.topic.text;
 topicTeaser.textContent = c.topic.teaser;
 dailyTip.textContent =
