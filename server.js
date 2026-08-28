@@ -1706,216 +1706,125 @@ if (u.pathname === '/api/leads' && req.method === 'GET') {
 
   return send(res, 200, data || []);
 }
-  if(u.pathname==='/api/ads' && req.method==='GET'){ const city=(u.searchParams.get('city')||'fergusfalls').toLowerCase(); const d=readData(); return send(res,200,d.ads.filter(a=>a.city===city)); }
-  if(u.pathname==='/api/ads' && req.method==='POST'){ try{ const p=await body(req); const d=readData(); const ad={id:crypto.randomUUID(),city:(p.city||'fergusfalls').toLowerCase(),business:p.business||'Advertiser',headline:p.headline||'',url:p.url||'',startDate:p.startDate||'',endDate:p.endDate||'',spots:Number(p.spots)||1,active:p.active!==false,image:p.image||''}; d.ads.push(ad); writeData(d); return send(res,201,ad);}catch(e){return send(res,400,{error:e.message});} }
-  const m=u.pathname.match(/^\/api\/ads\/([^/]+)$/);
-  if(m && req.method==='PUT'){ try{ const p=await body(req); const d=readData(); const i=d.ads.findIndex(a=>a.id===m[1]); if(i<0)return send(res,404,{error:'Not found'}); d.ads[i]={...d.ads[i],...p,id:d.ads[i].id,spots:Number(p.spots||d.ads[i].spots)}; writeData(d); return send(res,200,d.ads[i]); }catch(e){return send(res,400,{error:e.message});} }
-  if(m && req.method==='DELETE'){ const d=readData(); const before=d.ads.length; d.ads=d.ads.filter(a=>a.id!==m[1]); writeData(d); return send(res,before===d.ads.length?404:200,{ok:true}); }
-if (
-  u.pathname.startsWith('/api/editions/') &&
-  req.method === 'GET'
-) {
+  
+if (u.pathname === '/api/ads' && req.method === 'GET') {
   try {
-    const slug = u.pathname.split('/')[3];
+    const city = (u.searchParams.get('city') || 'fergusfalls').toLowerCase();
 
-    const secretKey = process.env.SUPABASE_SECRET_KEY;
-    const supabaseUrl = process.env.SUPABASE_URL;
+    const { data, error } = await supabase
+      .from('ads')
+      .select('*')
+      .eq('city', city)
+      .order('created_at', { ascending: true });
 
-    const response = await fetch(
-      `${supabaseUrl}/rest/v1/editions` +
-      `?select=id,name,slug,territory,max_ad_spots,suggested_annual_ad_rate,annual_edition_fee,renewal_date,active,operator_id` +
-      `&slug=eq.${encodeURIComponent(slug)}` +
-      `&limit=1`,
-      {
-        headers: {
-          apikey: secretKey
-        }
-      }
-    );
+    if (error) throw error;
 
-    if (!response.ok) {
-      const errorText = await response.text();
+    const ads = (data || []).map(ad => ({
+  id: ad.id,
+  city: ad.city,
+  business: ad.business,
+  headline: ad.headline || '',
+  url: ad.url || '',
+  startDate: ad.start_date || '',
+  endDate: ad.end_date || '',
+  spots: ad.spots || 1,
+  active: ad.active !== false,
+  image: ad.image || '',
+  creativePlan: ad.creative_plan || 'standard'
+}));
 
-      console.error(
-        'Edition settings load failed:',
-        response.status,
-        errorText
-      );
-
-      return send(res, 500, {
-        success: false,
-        error: 'Could not load Edition settings'
-      });
-    }
-
-    const editions = await response.json();
-    const edition = editions[0];
-
-    if (!edition) {
-      return send(res, 404, {
-        success: false,
-        error: 'Edition not found'
-      });
-    }
-
-    return send(res, 200, edition);
-
+return send(res, 200, ads);
   } catch (error) {
-    console.error('Edition settings load failed:', error);
-
-    return send(res, 500, {
-      success: false,
-      error: 'Could not load Edition settings'
-    });
+    console.error('Ads load failed:', error);
+    return send(res, 500, { error: 'Could not load ads' });
   }
 }
-if (
-  u.pathname === '/api/editions' &&
-  req.method === 'POST'
-) {
+
+if (u.pathname === '/api/ads' && req.method === 'POST') {
   try {
-    const edition = await body(req);
+    const p = await body(req);
 
-    if (!edition.name?.trim() || !edition.slug?.trim()) {
-      return send(res, 400, {
-        success: false,
-        error: 'Edition name and slug are required'
-      });
-    }
-
-    const secretKey = process.env.SUPABASE_SECRET_KEY;
-    const supabaseUrl = process.env.SUPABASE_URL;
-
-    const payload = {
-      name: edition.name.trim(),
-      slug: edition.slug.trim().toLowerCase(),
-      territory: edition.territory || null,
-      max_ad_spots: Number(edition.maxAdSpots || 24),
-      suggested_annual_ad_rate:
-        Number(edition.suggestedAnnualAdRate || 0),
-      annual_edition_fee:
-        Number(edition.annualEditionFee || 0),
-      renewal_date: edition.renewalDate || null,
-      active: edition.active !== false
+    const ad = {
+      id: crypto.randomUUID(),
+      city: (p.city || 'fergusfalls').toLowerCase(),
+      business: p.business || 'Advertiser',
+      headline: p.headline || '',
+      url: p.url || '',
+      start_date: p.startDate || null,
+      end_date: p.endDate || null,
+      spots: Number(p.spots) || 1,
+      active: p.active !== false,
+      image: p.image || '',
+      creative_plan: p.creativePlan || null
     };
 
-    const response = await fetch(
-      `${supabaseUrl}/rest/v1/editions`,
-      {
-        method: 'POST',
-        headers: {
-          apikey: secretKey,
-          'Content-Type': 'application/json',
-          Prefer: 'return=representation'
-        },
-        body: JSON.stringify(payload)
-      }
-    );
+    const { data, error } = await supabase
+      .from('ads')
+      .insert(ad)
+      .select()
+      .single();
 
-    if (!response.ok) {
-      const errorText = await response.text();
+    if (error) throw error;
 
-      console.error(
-        'Edition creation failed:',
-        response.status,
-        errorText
-      );
-
-      return send(res, 500, {
-        success: false,
-        error: 'Could not create Edition'
-      });
-    }
-
-    const created = await response.json();
-
-    return send(res, 201, {
-      success: true,
-      edition: created[0] || null
-    });
-
+    return send(res, 201, data);
   } catch (error) {
-    console.error('Edition creation failed:', error);
-
-    return send(res, 500, {
-      success: false,
-      error: 'Could not create Edition'
-    });
+    console.error('Ad creation failed:', error);
+    return send(res, 400, { error: error.message || 'Could not create ad' });
   }
 }
-if (
-  u.pathname.startsWith('/api/editions/') &&
-  req.method === 'PUT'
-) {
+
+const adMatch = u.pathname.match(/^\/api\/ads\/([^/]+)$/);
+
+if (adMatch && req.method === 'PUT') {
   try {
-    const slug = u.pathname.split('/')[3];
-    const edition = await body(req);
+    const p = await body(req);
+    const id = adMatch[1];
 
-    if (!slug) {
-      return send(res, 400, {
-        success: false,
-        error: 'Edition slug is required'
-      });
-    }
-
-    const secretKey = process.env.SUPABASE_SECRET_KEY;
-    const supabaseUrl = process.env.SUPABASE_URL;
-
-    const payload = {
-      name: edition.name?.trim() || '',
-      slug: edition.slug?.trim().toLowerCase() || slug,
-      territory: edition.territory || null,
-      max_ad_spots: Number(edition.maxAdSpots || 24),
-      suggested_annual_ad_rate:
-        Number(edition.suggestedAnnualAdRate || 0),
-      annual_edition_fee:
-        Number(edition.annualEditionFee || 0),
-      renewal_date: edition.renewalDate || null,
-      active: edition.active !== false
+    const updates = {
+      city: (p.city || 'fergusfalls').toLowerCase(),
+      business: p.business || 'Advertiser',
+      headline: p.headline || '',
+      url: p.url || '',
+      start_date: p.startDate || null,
+      end_date: p.endDate || null,
+      spots: Number(p.spots) || 1,
+      active: p.active !== false,
+      image: p.image || '',
+      creative_plan: p.creativePlan || null,
+      updated_at: new Date().toISOString()
     };
 
-    const response = await fetch(
-      `${supabaseUrl}/rest/v1/editions?slug=eq.${encodeURIComponent(slug)}`,
-      {
-        method: 'PATCH',
-        headers: {
-          apikey: secretKey,
-          'Content-Type': 'application/json',
-          Prefer: 'return=representation'
-        },
-        body: JSON.stringify(payload)
-      }
-    );
+    const { data, error } = await supabase
+      .from('ads')
+      .update(updates)
+      .eq('id', id)
+      .select()
+      .single();
 
-    if (!response.ok) {
-      const errorText = await response.text();
+    if (error) throw error;
 
-      console.error(
-        'Edition update failed:',
-        response.status,
-        errorText
-      );
-
-      return send(res, 500, {
-        success: false,
-        error: 'Could not update Edition'
-      });
-    }
-
-    const updated = await response.json();
-
-    return send(res, 200, {
-      success: true,
-      edition: updated[0] || null
-    });
-
+    return send(res, 200, data);
   } catch (error) {
-    console.error('Edition update failed:', error);
+    console.error('Ad update failed:', error);
+    return send(res, 400, { error: error.message || 'Could not update ad' });
+  }
+}
 
-    return send(res, 500, {
-      success: false,
-      error: 'Could not update Edition'
-    });
+if (adMatch && req.method === 'DELETE') {
+  try {
+    const id = adMatch[1];
+
+    const { error } = await supabase
+      .from('ads')
+      .delete()
+      .eq('id', id);
+
+    if (error) throw error;
+
+    return send(res, 200, { ok: true });
+  } catch (error) {
+    console.error('Ad delete failed:', error);
+    return send(res, 400, { error: error.message || 'Could not delete ad' });
   }
 }
 if (

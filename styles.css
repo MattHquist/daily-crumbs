@@ -612,3 +612,36 @@ footer {
     max-height: 125px;
   }
 }
+/* LANDSCAPE IMAGE ADS IN SPONSOR GRID */
+
+.center-ads .ad-card.image-ad {
+  min-height: 0;
+  height: auto;
+  aspect-ratio: 1.8 / 1;
+  padding: 5px;
+  align-self: start;
+}
+
+.center-ads .ad-card.image-ad img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+  margin: 0;
+}
+
+@media (max-width: 580px) {
+  .center-ads .ad-card.image-ad {
+    min-height: 0;
+    aspect-ratio: 1.75 / 1;
+    padding: 4px;
+  }
+
+  .center-ads .ad-card.image-ad img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: contain;
+    margin: 0;
+  }
+}
