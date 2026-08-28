@@ -1608,13 +1608,26 @@ if (u.pathname === '/api/ads' && req.method === 'POST') {
       creative_plan: p.creativePlan || null
     };
 
-    const { data, error } = await supabase
-      .from('ads')
-      .insert(ad)
-      .select()
-      .single();
+    const secretKey = process.env.SUPABASE_SECRET_KEY;
+const supabaseUrl = process.env.SUPABASE_URL;
 
-    if (error) throw error;
+const response = await fetch(
+  `${supabaseUrl}/rest/v1/ads?city=eq.${encodeURIComponent(city)}&select=*&order=created_at.asc`,
+  {
+    headers: {
+      apikey: secretKey
+    }
+  }
+);
+
+if (!response.ok) {
+  const errorText = await response.text();
+  throw new Error(
+    `Ads REST request failed: ${response.status} ${errorText}`
+  );
+}
+
+const data = await response.json();
 
     return send(res, 201, data);
   } catch (error) {
