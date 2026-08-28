@@ -573,3 +573,42 @@ footer {
     grid-column: auto;
   }
 }
+/* FULL AD ARTWORK */
+
+.ad-card:has(img) {
+  padding: 6px;
+  overflow: hidden;
+}
+
+.ad-card:has(img) img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  margin: 0 auto 6px;
+}
+
+.center-ads .ad-card:has(img) img {
+  max-height: 135px;
+}
+
+@media (max-width: 580px) {
+  .ad-card:has(img) {
+    padding: 5px;
+  }
+
+  .ad-card:has(img) img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 145px;
+    object-fit: contain;
+    margin: 0 auto 4px;
+  }
+
+  .center-ads .ad-card:has(img) img {
+    max-height: 125px;
+  }
+}

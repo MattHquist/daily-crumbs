@@ -110,7 +110,7 @@ quizOptions.querySelectorAll('button').forEach(button => {
     const selectedChoice = button.dataset.choice;
     const selectedAnswer = button.dataset.answer;
 
-    const correctIndex = c.quiz.options.indexOf(c.quiz.a);
+    const correctIndex = c.quiz.options.indexOf(c.quiz.answe);
     const correctChoice = ['A', 'B', 'C', 'D'][correctIndex];
 
     const dateKey = key;
@@ -188,7 +188,7 @@ quizOptions.querySelectorAll('button').forEach(button => {
   };
 });
 {
-  const correctIndex = c.quiz.options.indexOf(c.quiz.a);
+  const correctIndex = c.quiz.options.indexOf(c.quiz.answer);
   const correctChoice = ['A', 'B', 'C', 'D'][correctIndex];
 
   const quizId = `${key}::${c.quiz.q}`;
@@ -261,7 +261,27 @@ riddleBtn.onclick = () => {
 let activeAds=[]; let rotation=0;
 function eligible(ad){const t=new Date(); t.setHours(0,0,0,0); const s=ad.startDate?new Date(ad.startDate+'T00:00:00'):null,e=ad.endDate?new Date(ad.endDate+'T23:59:59'):null; return ad.active!==false && (!s||t>=s)&&(!e||t<=e)}
 function weighted(ads){return ads.flatMap(a=>Array.from({length:Math.max(1,Number(a.spots)||1)},()=>a))}
-function adHtml(a){const clickable=a.url?`href="${a.url}" target="_blank" rel="noopener"`:'href="#" onclick="return false"';const img=a.image?`<img src="${a.image}" alt="${a.business}">`:''; return `<a class="ad-card size-${a.spots||1}" ${clickable}>${img}<div class="ad-placeholder">LOCAL SPONSOR</div><strong>${a.business}</strong><small>${a.headline||'Tap to learn more'}</small></a>`}
+function adHtml(a) {
+  const clickable = a.url
+    ? `href="${a.url}" target="_blank" rel="noopener"`
+    : `href="#" onclick="return false;"`;
+
+  if (a.image) {
+    return `
+      <a class="ad-card size-${a.spots || 1} image-ad" ${clickable}>
+        <img src="${a.image}" alt="${a.business || 'Local sponsor'}">
+      </a>
+    `;
+  }
+
+  return `
+    <a class="ad-card size-${a.spots || 1}" ${clickable}>
+      <div class="ad-placeholder">LOCAL SPONSOR</div>
+      <strong>${a.business}</strong>
+      <small>${a.headline || 'Tap to learn more'}</small>
+    </a>
+  `;
+}
 function filler() {
   return `
     <a
