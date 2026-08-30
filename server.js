@@ -441,6 +441,15 @@ tip
 
 const server=http.createServer(async(req,res)=>{
   const u=new URL(req.url,`http://${req.headers.host}`);
+  const requestHost = (req.headers.host || '').toLowerCase();
+
+if (requestHost === 'daily-crumbs.onrender.com') {
+  res.writeHead(301, {
+    Location: `https://getdailycrumbs.com${u.pathname}${u.search}`
+  });
+  res.end();
+  return;
+}
   console.log('REQUEST:', req.method, u.pathname);
   // Default homepage
 if (u.pathname === '/') {

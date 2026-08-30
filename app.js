@@ -192,7 +192,7 @@ quizOptions.querySelectorAll('button').forEach(button => {
   };
 });
 {
-  const correctIndex = c.quiz.options.indexOf(c.quiz.answer);
+  const correctIndex = c.quiz.options.indexOf(c.quiz.a);
   const correctChoice = ['A', 'B', 'C', 'D'][correctIndex];
 
   const quizId = `${key}::${c.quiz.q}`;
