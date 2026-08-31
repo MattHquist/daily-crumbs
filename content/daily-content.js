@@ -3184,10 +3184,2391 @@ So when you look away from the Sun, much of the light reaching your eyes from al
 Near sunset, sunlight has to travel through much more atmosphere before reaching you. Much of the blue light gets scattered away along that longer trip, leaving more reds and oranges to reach your eyes.
 
 A blue afternoon sky and a fiery red sunset are actually two versions of the same trick.`,
-        teaser: 'Tomorrow: Hidden History begins!'
+        teaser: `Tomorrow: A failed glue experiment becomes one of the world's most useful little office supplies.`
       }
     ]
-  }
+  },
+    {
+    theme: 'Happy Accidents',
+    days: [
+      {
+        headline: `The Glue That Wasn't Sticky Enough`,
+        text: `In 1968, 3M scientist Spencer Silver was trying to create a strong adhesive.
+
+Instead, he made one that seemed almost useless.
+
+His new glue would stick to something, but it could also peel away easily without leaving much behind. Silver knew the unusual adhesive might be useful, but for years nobody could figure out what to do with it.
+
+Then another 3M employee, Art Fry, had an annoying little problem. He sang in a church choir and used scraps of paper to mark pages in his hymnal. They kept falling out.
+
+Fry remembered Silver's strange glue.
+
+He put some along the edge of a piece of paper, creating a bookmark that would stay put but could still be removed.
+
+That eventually became the Post-it Note.
+
+Sometimes a failed invention isn't a failure. It may just be waiting for the right problem.`,
+        teaser: 'Tomorrow: A ship engineer drops a spring—and sees something unexpected.'
+      },
+
+      {
+        headline: 'The Spring That Walked Away',
+        text: `The Slinky didn't begin in a toy workshop.
+
+It began with an engineer named Richard James, who was working with springs aboard ships during World War II.
+
+One day, a spring was accidentally knocked from a shelf.
+
+Instead of simply falling to the floor, it seemed to "walk" downward in a series of flips.
+
+James was fascinated.
+
+He went home and told his wife, Betty, that he thought the strange movement could become a toy. After experimenting with different types of steel and coils, he developed the spring toy we now know as the Slinky.
+
+Betty came up with its famous name.
+
+Millions were eventually sold, all because an engineer noticed something most of us probably wouldn't have thought twice about:
+
+A spring fell off a shelf in a really interesting way.`,
+        teaser: 'Tomorrow: A melted candy bar helps change kitchens forever.'
+      },
+
+      {
+        headline: 'The Candy Bar That Led to the Microwave',
+        text: `Percy Spencer wasn't trying to invent a new way to cook dinner.
+
+He was working with radar equipment.
+
+While working near equipment that produced microwaves, Spencer noticed something strange: a candy bar in his pocket had melted.
+
+Instead of simply being annoyed about the mess, he wondered what had caused it.
+
+Spencer began experimenting with food, including popcorn kernels.
+
+They popped.
+
+He realized microwave energy could be used to heat food. Raytheon soon developed the idea into an oven.
+
+The early machines were enormous and expensive, nothing like the microwave sitting on a kitchen counter today.
+
+And it all began because someone paid attention when something unexpected happened near his laboratory equipment.
+
+A melted snack became a clue—and that clue eventually helped change the way millions of people cook.`,
+        teaser: 'Tomorrow: A gas seems to disappear from a container—but it has not actually gone anywhere.'
+      },
+
+      {
+        headline: 'The Gas That Turned Into Something Slippery',
+        text: `In 1938, chemist Roy Plunkett was experimenting with gases while searching for new refrigerants.
+
+One morning, he opened a cylinder.
+
+Nothing came out.
+
+That was strange because the cylinder still weighed enough to contain something.
+
+So Plunkett investigated.
+
+Inside, he discovered that the gas had unexpectedly changed into a white solid. Instead of tossing it aside, he tested the mysterious material.
+
+It had some remarkable properties. It resisted heat and chemicals, and other materials had a hard time sticking to it.
+
+The substance became known as Teflon.
+
+Years later, Teflon became famous for nonstick cookware, although it had important industrial uses first.
+
+The empty-looking cylinder wasn't empty after all.
+
+An experiment that appeared to have gone wrong had actually produced an entirely new material.`,
+        teaser: 'Tomorrow: An unwanted patch of mold leads to one of medicine’s most important discoveries.'
+      },
+
+      {
+        headline: 'The Mold That Changed Medicine',
+        text: `In 1928, Alexander Fleming was studying bacteria when he noticed something odd on one of his laboratory plates.
+
+Mold had accidentally started growing there.
+
+Normally, contamination like that could ruin an experiment.
+
+But Fleming noticed something more important.
+
+Around the mold was a clear area where the bacteria weren't growing.
+
+Something produced by that mold seemed able to stop the bacteria.
+
+Fleming investigated and eventually named the substance penicillin.
+
+Other scientists later did the difficult work needed to turn penicillin into a practical medicine, and antibiotics went on to save millions of lives.
+
+The mold appearing was an accident.
+
+Noticing what it was doing was not.
+
+A laboratory plate that could easily have been thrown away instead became an important clue in the history of medicine.`,
+        teaser: 'Tomorrow: Scientists reject a substance because it sticks to practically everything.'
+      },
+
+      {
+        headline: 'The Glue That Worked Too Well',
+        text: `Imagine trying to develop a useful material and ending up with a substance that sticks to practically everything.
+
+That's what chemist Harry Coover encountered while working with chemicals called cyanoacrylates.
+
+The material was incredibly sticky.
+
+At first, that was a problem rather than a solution. Coover's team wasn't looking for glue, so the troublesome material was set aside.
+
+Years later, Coover encountered cyanoacrylates again and recognized what had been missed:
+
+Being incredibly sticky wasn't a flaw.
+
+That was the useful part.
+
+The discovery eventually led to the powerful instant adhesives we know as Super Glue.
+
+It's a wonderfully backwards invention story.
+
+The scientists didn't need to figure out how to make their material work better.
+
+They needed to realize that the thing making it difficult to work with was exactly what could make it valuable.`,
+        teaser: 'Tomorrow: A glass flask shatters—but strangely stays together.'
+      },
+
+      {
+        headline: `The Shattered Glass That Wouldn't Fall Apart`,
+        text: `In 1903, French chemist Édouard Bénédictus accidentally knocked a glass flask onto the floor.
+
+It broke—but something strange happened.
+
+Instead of scattering into dangerous pieces, the cracked glass mostly stayed together.
+
+Bénédictus discovered that the flask had once contained a solution that left a thin coating inside. That layer helped hold the broken pieces in place.
+
+He remembered the accident later when thinking about injuries caused by shattered glass in automobile crashes.
+
+That gave him an idea: what if glass could be made to crack without flying apart?
+
+His experiments helped lead to laminated safety glass, which uses a layer between sheets of glass to help hold broken pieces together.
+
+Today, the same basic principle helps make windshields safer.
+
+Sometimes dropping something isn't the end of an experiment.
+
+It can be the beginning of one.`,
+        teaser: 'Tomorrow: A burr stuck to a dog gives an inventor a surprisingly useful idea.'
+      }
+    ]
+  },
+    {
+    theme: 'Nature Had the Idea First',
+    days: [
+      {
+        headline: 'The Burr That Inspired a Better Fastener',
+        text: `In 1941, Swiss engineer George de Mestral returned from a walk and noticed burrs stubbornly clinging to his clothes and his dog's fur.
+
+Instead of just pulling them off and forgetting about them, he looked at the burrs under a microscope.
+
+He discovered tiny hooks that grabbed onto loops in fabric and hair.
+
+That natural design gave him an idea: create two materials, one covered with small hooks and another with soft loops. Press them together and they would hold. Pull them apart and they could be used again.
+
+Developing the idea took years, but it eventually became the hook-and-loop fastener best known by the VELCRO brand name.
+
+A plant wasn't trying to invent anything. Its hooks simply helped its seeds hitch a ride.
+
+An engineer noticed—and borrowed the trick.`,
+        teaser: 'Tomorrow: A bird helps engineers solve a very noisy train problem.'
+      },
+
+      {
+        headline: 'The Bird That Helped Quiet a Bullet Train',
+        text: `Japan's high-speed trains had an unusual problem.
+
+When some early bullet trains raced through tunnels, they pushed a wave of air ahead of them. As the train burst out the other end, that compressed air could create a loud boom.
+
+Engineer Eiji Nakatsu was also a birdwatcher.
+
+He thought about the kingfisher, a bird that can dive from air into water with remarkably little splash. Its long, pointed beak helps it move smoothly between those two very different environments.
+
+That shape inspired engineers working on the train's nose.
+
+Newer designs became longer and more streamlined, helping reduce the sudden pressure changes that caused the troublesome noise. The changes also improved efficiency.
+
+One of the world's fastest machines found part of its solution in a bird that had been diving into ponds long before trains existed.`,
+        teaser: 'Tomorrow: A lizard walks across walls without using glue.'
+      },
+
+      {
+        headline: `A Gecko's Feet Don't Need Glue`,
+        text: `Geckos can scamper across walls and even hang upside down from ceilings.
+
+But their feet aren't coated with glue.
+
+The secret is an enormous number of microscopic hair-like structures on their toes. These split into even tinier tips that get extremely close to a surface. At that tiny scale, weak molecular attractions can add up to produce impressive grip.
+
+The gecko can release its foot quickly by changing the angle of those structures.
+
+Scientists and engineers have studied this ability while developing dry adhesives and gripping systems that don't depend on sticky liquids. NASA researchers, for example, have explored gecko-inspired grippers for handling objects in space.
+
+The gecko's trick is especially clever because its feet can stick, release and stick again.
+
+Nature built a reusable gripping system long before humans started trying to copy one.`,
+        teaser: 'Tomorrow: A leaf stays remarkably clean without anyone washing it.'
+      },
+
+      {
+        headline: `The Leaf That Doesn't Like Getting Dirty`,
+        text: `Lotus plants often grow in muddy water, yet their leaves can stay surprisingly clean.
+
+The trick is hidden on the leaf's surface.
+
+It may look smooth to us, but under magnification it has tiny structures covered by a water-repelling waxy material. Water beads up instead of spreading flat.
+
+As those droplets roll away, they can pick up dust and dirt with them.
+
+Scientists call this the lotus effect.
+
+Researchers have studied the effect while designing water-repellent and self-cleaning materials, including coatings, paints, glass and fabrics.
+
+The goal isn't always to copy a lotus leaf exactly. Instead, engineers study the useful principle behind what the plant is already doing.
+
+So when rain rolls off a leaf and carries dirt along with it, you're watching a tiny cleaning system that has inspired human technology.`,
+        teaser: 'Tomorrow: Shark skin is smoother—and stranger—than it looks.'
+      },
+
+      {
+        headline: `Shark Skin Isn't Actually Smooth`,
+        text: `A shark may look sleek and smooth as it glides through the water.
+
+Up close, its skin tells a different story.
+
+Sharks are covered with tiny tooth-like scales called dermal denticles. Their shape and arrangement can help control how water moves across the shark's body.
+
+That has caught the attention of engineers looking for ways to reduce drag.
+
+Researchers have created surfaces with tiny rib-like patterns inspired by shark skin and tested them on things that move through water or air. Similar ideas have appeared in specialized swimsuits, coatings and other designs.
+
+The lesson isn't simply that "rough is faster." The size, shape and direction of those tiny structures matter.
+
+A shark's skin is a good reminder that something can look simple from across the room while hiding an impressive piece of engineering when you zoom in.`,
+        teaser: 'Tomorrow: Bumps on a whale flipper turn out to be surprisingly useful.'
+      },
+
+      {
+        headline: `Why Would a Whale's Flipper Need Bumps?`,
+        text: `Look at the front edge of a humpback whale's flipper and you'll notice something unusual: large rounded bumps.
+
+They are called tubercles.
+
+For years, engineers were used to designing many wings and blades with smooth leading edges. But studies of humpback flippers showed that those bumps can influence how water flows around the surface.
+
+Under certain conditions, tubercle-inspired designs can help a wing or blade keep working effectively at steeper angles before it loses lift.
+
+That discovery has inspired experiments with fan blades, turbine blades and other equipment.
+
+Humpback whales didn't evolve their flippers to teach engineers about fluid dynamics, of course. The shape helps the whales maneuver their enormous bodies through water.
+
+But once humans noticed the design, an odd-looking row of bumps became an engineering lesson worth studying.`,
+        teaser: 'Tomorrow: A termite mound offers ideas for keeping buildings comfortable.'
+      },
+
+      {
+        headline: 'The Building Idea Hidden in a Termite Mound',
+        text: `Termite mounds can rise dramatically above the ground, but the most interesting part may be what happens inside them.
+
+Some mound-building termites create complicated networks of tunnels and openings that interact with changing temperatures, wind and gases inside the colony.
+
+That natural ventilation has fascinated architects and engineers.
+
+Buildings have been designed using passive-airflow ideas inspired in part by termite mounds, with the goal of reducing how much mechanical heating or cooling they need.
+
+The comparison isn't as simple as copying a mound and turning it into an office building. Scientists have learned that termite nests are complicated systems, and different species manage their environments in different ways.
+
+Still, the inspiration is powerful.
+
+A colony of tiny insects can build a structure that manages airflow without electric fans—giving human designers another reason to study how nature solves difficult problems.`,
+        teaser: 'Tomorrow: Play-Doh begins its story somewhere you would never expect—a wallpaper-cleaning business.'
+      }
+    ]
+  },
+    {
+    theme: 'That Was Supposed to Be WHAT?',
+    days: [
+      {
+        headline: 'Play-Doh Was Originally Made to Clean Wallpaper',
+        text: `Before Play-Doh became a colorful toy, a very similar squishy material had a completely different job.
+
+It was made to clean wallpaper.
+
+In homes heated by coal, soot could collect on walls. A soft, dough-like cleaning compound could be rolled across wallpaper to lift away the grime without damaging the paper.
+
+Then home heating changed. Cleaner fuels became common, washable wallpaper improved, and demand for wallpaper cleaner dropped.
+
+But the strange putty found a second life.
+
+Children were already using the material for craft projects, and the company behind it realized that was a much better market. The cleaner was reworked and sold as a children's modeling compound.
+
+Play-Doh became a hugely popular toy.
+
+So one of the most recognizable toys in the world began as something meant to remove dirty marks from walls.`,
+        teaser: 'Tomorrow: Bubble Wrap was supposed to go on your walls.'
+      },
+
+      {
+        headline: 'Bubble Wrap Was Supposed to Be Wallpaper',
+        text: `Bubble Wrap seems perfectly designed for protecting packages.
+
+That's not what its inventors originally had in mind.
+
+In 1957, engineers Alfred Fielding and Marc Chavannes were experimenting with plastic sheets. They sealed two shower curtains together in a way that trapped bubbles of air between them.
+
+Their idea was to sell the bubbly material as textured wallpaper.
+
+It didn't catch on.
+
+They later tried marketing it as greenhouse insulation, but that wasn't the big breakthrough either.
+
+Then they realized the air-filled material was excellent for protecting fragile objects during shipping. When computers and other delicate products needed safe packaging, Bubble Wrap finally found the job it was suited for.
+
+The bubbles didn't change much.
+
+What changed was the question.
+
+Instead of asking, "Who wants this on a wall?" someone eventually asked, "What is this actually good at doing?"`,
+        teaser: 'Tomorrow: A disposable tissue begins with a very different beauty job.'
+      },
+
+      {
+        headline: `Kleenex Wasn't Originally Meant for Blowing Your Nose`,
+        text: `Today, many people use the word Kleenex almost automatically when they need a facial tissue.
+
+But the product wasn't originally promoted for runny noses.
+
+Kleenex tissues were introduced in the 1920s as a disposable way to remove cold cream and makeup. Advertisements focused heavily on beauty routines.
+
+Then the company began hearing that customers were using the tissues as disposable handkerchiefs.
+
+That was interesting enough to investigate.
+
+Kimberly-Clark tested advertisements showing the two different uses and found that nose-blowing was the stronger idea.
+
+The company changed its marketing, and the tissue's identity changed with it.
+
+Nothing magical happened to the sheet of tissue itself. People simply discovered a use that turned out to be more popular than the one originally emphasized.
+
+Sometimes customers figure out what a product is for before the company selling it does.`,
+        teaser: 'Tomorrow: A familiar mouthwash starts with a much more medical purpose.'
+      },
+
+      {
+        headline: `Listerine Didn't Start as Mouthwash`,
+        text: `Listerine is famous as a mouthwash, but that wasn't its original purpose.
+
+It was developed in the late 1800s as an antiseptic and named after surgeon Joseph Lister, whose work helped demonstrate the importance of controlling germs during surgery.
+
+The product was promoted for medical and cleaning uses before mouth rinsing became its most famous role.
+
+Later, clever advertising helped transform Listerine into a household product by focusing on bad breath.
+
+The company even popularized the medical-sounding term "halitosis" in its advertising, making ordinary bad breath seem like a problem that urgently needed solving.
+
+The liquid hadn't suddenly been invented for mouths. Its role had evolved.
+
+It's a great example of how a product can survive for generations while its most familiar purpose changes completely.
+
+What we think something was "made for" isn't always where its story actually began.`,
+        teaser: 'Tomorrow: One of the world’s most famous drinks begins at a pharmacy counter.'
+      },
+
+      {
+        headline: 'Coca-Cola Began at a Pharmacy',
+        text: `Coca-Cola is now one of the world's most recognizable soft drinks, but its story began in a pharmacy.
+
+In 1886, pharmacist John Pemberton created the syrup in Atlanta, Georgia.
+
+It was taken to Jacobs' Pharmacy, where it was mixed with carbonated water and sold by the glass at the soda fountain.
+
+At the time, pharmacy soda fountains were popular gathering places, and drinks were often advertised with claims about refreshment, energy or health.
+
+Coca-Cola eventually grew far beyond that pharmacy counter and became a bottled beverage sold around the world.
+
+The recipe, business and advertising changed dramatically along the way.
+
+Today, buying a Coke from a vending machine or restaurant feels completely ordinary.
+
+But the first customers didn't grab one from a cooler.
+
+They went to a pharmacy and had someone mix the syrup with fizzy water for them.`,
+        teaser: 'Tomorrow: The treadmill had a life long before fitness clubs.'
+      },
+
+      {
+        headline: `The Treadmill Wasn't Invented for the Gym`,
+        text: `Modern treadmills are associated with exercise, running shoes and fitness centers.
+
+Earlier treadmills had a much less cheerful reputation.
+
+For centuries, treadwheel-style machines used human or animal power to operate equipment such as mills, pumps and cranes.
+
+In 19th-century Britain, treadmills were also used in prisons.
+
+Prisoners could be required to spend long periods stepping on rotating machinery as punishment and, in some cases, to provide useful power.
+
+The work was exhausting and monotonous.
+
+Eventually, prison treadmills fell out of favor.
+
+Much later, treadmill technology found a very different purpose in medical testing and physical fitness. Electric treadmills became exercise machines instead of punishment devices.
+
+So when someone complains that running indoors feels like punishment, history provides an awkward little twist:
+
+For some people in the past, a treadmill literally was.`,
+        teaser: 'Tomorrow: An early ancestor of the chainsaw was made for surgery.'
+      },
+
+      {
+        headline: 'An Early Chainsaw-Like Tool Was Made for Surgery',
+        text: `The word "chainsaw" probably makes you picture trees and lumberjacks.
+
+Its early history is much stranger.
+
+In the late 1700s, doctors developed a small hand-powered cutting instrument that used a chain with tiny teeth. It was designed for surgical work involving bone.
+
+Later versions of chain-cutting tools were also used in medicine before the idea evolved into machines built for cutting wood.
+
+These early surgical devices were much smaller than a modern gasoline chainsaw, so imagining a lumberjack's saw in an operating room would be misleading.
+
+But the basic idea of a toothed chain moving around a guide existed in medicine before powered chainsaws became familiar forestry tools.
+
+Technology often travels in unexpected directions.
+
+A mechanism can begin by solving one very specialized problem, then be adapted until its most famous use looks almost completely unrelated to where it started.`,
+        teaser: 'Tomorrow: Tiny holes in crackers are doing an important job.'
+      }
+    ]
+  },
+        {
+        theme: `Why Does Food Do That?`,
+        days: [
+          {
+            headline: `Why Do Crackers Have Tiny Holes?`,
+            text: `Those neat little holes in crackers are not just decoration. They are called docking holes, and they help control what happens while the dough bakes. As cracker dough heats up, water turns to steam and gases expand. Without places for some of that pressure to escape, the dough can puff into big bubbles instead of staying thin and crisp. Small pins or rollers poke holes through the dough before baking, giving steam easier paths out. The number and spacing of the holes can vary with the kind of cracker being made. So the next time you see rows of tiny dots on a cracker, you are looking at part of the baking equipment's work. Those little holes help turn soft dough into the flat, crunchy snack you expect.`,
+            teaser: `Tomorrow: The holes in Swiss cheese have a completely different story.`
+          },
+          {
+            headline: `Where Do the Holes in Swiss Cheese Come From?`,
+            text: `The holes in some Swiss-style cheeses are called eyes, and they form while the cheese is aging. Certain bacteria used in making the cheese consume compounds left behind by other bacteria and release carbon dioxide gas. Because the gas cannot easily escape from the firm cheese, it collects in pockets. Those pockets become the round holes you see when the cheese is sliced. Researchers have also found that tiny particles, such as bits of hay dust in traditional milk handling, can help provide spots where gas bubbles begin forming. Modern milk processing became cleaner, and cheesemakers noticed that the eyes could become smaller or less common. So those famous holes are not missing cheese punched out later. They are bubbles that grew inside the cheese while microbes were busy changing its flavor and texture.`,
+            teaser: `Tomorrow: A banana changes color even while sitting untouched on the counter.`
+          },
+          {
+            headline: `Why Do Bananas Turn Brown?`,
+            text: `A banana can go from green to yellow to spotted brown without anyone doing anything to it. That color change is part of ripening. Bananas produce ethylene, a natural plant hormone that helps trigger changes inside the fruit. Starches turn into sugars, the flesh softens, aromas develop, and the peel changes color. As the banana becomes very ripe, cell structures in the peel break down and brown pigments become more noticeable. Bruising can speed browning in damaged spots because it breaks cells open and allows chemical reactions to happen more easily. Cold temperatures can also darken a banana peel even when the fruit inside is still usable. So brown spots are not simply a countdown clock for spoilage. They are visible clues that a surprisingly busy series of chemical changes has been happening inside the fruit.`,
+            teaser: `Tomorrow: Bread can become stale even when it has not simply dried out.`
+          },
+          {
+            headline: `Why Does Bread Go Stale?`,
+            text: `It seems obvious that stale bread must just be bread that lost its water. Drying matters, but the bigger story is stranger. After bread cools, starch molecules that were changed during baking gradually begin arranging themselves into more ordered structures again. This process, called starch retrogradation, helps make the crumb firmer and less pleasant to chew. Water also moves around inside the bread instead of simply disappearing. That is why bread can become stale even while sealed in a package. Refrigeration can actually speed some of these starch changes, which is one reason bread often stales faster in the refrigerator than at room temperature. Freezing works much better for longer storage. A stale slice, then, is not merely old, dry bread. Its microscopic starch structure has been quietly rearranging itself.`,
+            teaser: `Tomorrow: That pale coating on chocolate may look alarming, but it has an explanation.`
+          },
+          {
+            headline: `What Is That White Stuff on Chocolate?`,
+            text: `Open an old chocolate bar and you may find a dusty white or gray coating on the surface. It can look like mold, but often it is something called chocolate bloom. Fat bloom happens when cocoa butter moves through the chocolate and forms crystals on the surface, sometimes after the chocolate gets too warm and cools again. Sugar bloom happens when moisture dissolves sugar at the surface and then evaporates, leaving tiny sugar crystals behind. Either kind can make chocolate look strange and change its texture, but bloom itself is not mold. Proper temperature control during manufacturing and storage helps prevent it. Chocolate is a carefully organized mixture of fat, sugar and cocoa solids, and when that organization changes, you can sometimes see the evidence. The pale coating is chemistry showing up where your eyes can catch it.`,
+            teaser: `Tomorrow: Apples have a built-in reason they can bob in water.`
+          },
+          {
+            headline: `Why Do Apples Float?`,
+            text: `Drop an apple into water and it usually floats, which is exactly why bobbing for apples works. The reason is density. An object floats when its average density is lower than the liquid around it. Apples are not solid blocks of fruit tissue. A surprising portion of their volume is made up of tiny air spaces between cells. Those pockets lower the apple's overall density enough for water to support it. Different apple varieties can contain different amounts of air, but the basic effect is the same. This also helps explain why an apple feels fairly light for its size compared with something much denser. You cannot see most of those air spaces when you bite into one, yet they affect how the entire fruit behaves in water. An ordinary apple is partly a network of microscopic pockets.`,
+            teaser: `Tomorrow: Cutting an apple starts a chemical reaction you can watch.`
+          },
+          {
+            headline: `Why Does a Cut Apple Turn Brown?`,
+            text: `Slice an apple and its pale flesh can begin turning brown within minutes. The knife did not add anything brown. Instead, cutting damaged the apple's cells and allowed substances that were previously separated to mix with oxygen from the air. An enzyme called polyphenol oxidase helps drive reactions that eventually produce brown-colored compounds. This kind of enzymatic browning also happens in foods such as bananas, pears and avocados. You can slow it by reducing oxygen or changing the conditions the enzyme likes. Lemon juice helps because its acidity interferes with the reaction, and its vitamin C can also slow oxidation. Refrigeration slows many chemical reactions too. So the browning surface of a sliced apple is not just fruit getting old. It is a visible chemical reaction that begins almost as soon as the cells are broken open.`,
+            teaser: `Tomorrow: An empty stomach can make a surprisingly noisy sound.`
+          }
+        ]
+      },
+      {
+        theme: `Your Body Is Weird`,
+        days: [
+          {
+            headline: `Why Does Your Stomach Growl?`,
+            text: `Your digestive tract keeps making waves of muscle contractions even when it is mostly empty. With less food to muffle the movement, gas and liquid can slosh around and make the rumbling sounds called borborygmi. Hunger can make the pattern more noticeable, but a growl does not mean your stomach is completely empty. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why Do Hiccups Make That Sound?`
+          },
+          {
+            headline: `Why Do Hiccups Make That Sound?`,
+            text: `A hiccup starts with an involuntary spasm of the diaphragm and other breathing muscles. Air rushes inward, then the opening between the vocal cords closes suddenly. That quick closure creates the familiar hic sound. Most bouts are harmless and short; the exact reason humans have the hiccup reflex is still not fully settled. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why Can’t You Tickle Yourself?`
+          },
+          {
+            headline: `Why Can’t You Tickle Yourself?`,
+            text: `Your brain predicts many of the sensations caused by your own movements. When you move a finger toward your own ribs, the brain can anticipate where and when the touch will happen, so the sensation is dampened. An unexpected touch from another person is much harder to predict, which is one reason it can feel far more ticklish. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why Does Your Foot “Fall Asleep”?`
+          },
+          {
+            headline: `Why Does Your Foot “Fall Asleep”?`,
+            text: `Sitting or leaning in one position can temporarily compress a nerve and sometimes reduce its blood supply. The nerve signals become disrupted, producing numbness, tingling, or pins and needles. Changing position usually removes the pressure and normal signaling returns, sometimes with an especially prickly burst as the nerve recovers. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: What Makes Your Stomach Feel Butterflies?`
+          },
+          {
+            headline: `What Makes Your Stomach Feel Butterflies?`,
+            text: `Stress and excitement activate the autonomic nervous system, which changes heart rate, breathing, and digestion. The gut has an enormous network of nerves and communicates constantly with the brain. When your body shifts into an alert state, those digestive changes can be felt as fluttering, tightness, or the famous butterflies. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why Do Your Joints Sometimes Crack?`
+          },
+          {
+            headline: `Why Do Your Joints Sometimes Crack?`,
+            text: `A joint contains lubricating synovial fluid with dissolved gases. When joint surfaces move apart quickly, pressure inside the joint drops and a gas-filled cavity can form suddenly, producing a pop. Other clicks can come from tendons or ligaments moving. Ordinary painless cracking is not the same thing as bones grinding together. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why Does an Eyelid Start Twitching?`
+          },
+          {
+            headline: `Why Does an Eyelid Start Twitching?`,
+            text: `A common eyelid twitch, called myokymia, is a small involuntary muscle contraction. Fatigue, stress, caffeine, and eye strain are frequent triggers. It usually disappears on its own. The strange part is how enormous the movement can feel to you even when another person may barely be able to see it. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: How Do Octopuses Disappear in Plain Sight?`
+          }
+        ]
+      },
+      {
+        theme: `Animal Superpowers`,
+        days: [
+          {
+            headline: `How Do Octopuses Disappear in Plain Sight?`,
+            text: `Octopuses can change their appearance using pigment-filled skin cells called chromatophores, along with other reflective cells and tiny muscles that alter skin texture. Their nervous system can coordinate color, pattern, and bumps astonishingly quickly, helping them blend with rocks, sand, and coral even though their own color vision appears limited. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: How Can a Cat Land on Its Feet?`
+          },
+          {
+            headline: `How Can a Cat Land on Its Feet?`,
+            text: `A falling cat can use its flexible spine and inner-ear sense of balance to perform a righting reflex. It twists the front and rear parts of its body in different directions, repositions its legs, and prepares for landing. Cats still can be injured by falls, but the midair maneuver is a remarkable piece of body control. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: How Does an Electric Eel Make Electricity?`
+          },
+          {
+            headline: `How Does an Electric Eel Make Electricity?`,
+            text: `Electric eels have specialized cells called electrocytes stacked in large electric organs. Each cell produces only a small voltage, but thousands can discharge together, like tiny biological batteries connected in series. The fish uses weaker electrical signals for sensing and communication and powerful bursts for defense and stunning prey. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: The Animal With an Incredible View of Color`
+          },
+          {
+            headline: `The Animal With an Incredible View of Color`,
+            text: `Mantis shrimp have unusually complex eyes with many types of light-sensitive cells, including receptors sensitive to ultraviolet light. Their visual system is very different from ours, so it is misleading to say they simply see “more colors” exactly as humans would. What is certain is that their eyes analyze light in ways no human eye can. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why Can Geckos Run Up Walls?`
+          },
+          {
+            headline: `Why Can Geckos Run Up Walls?`,
+            text: `Millions of microscopic hairlike structures cover the pads of gecko toes. Their extremely fine branches get close enough to surfaces for weak molecular attractions called van der Waals forces to add up to a strong grip. By changing the angle of their toes, geckos can attach and release those contacts rapidly without ordinary glue. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: The Salamander That Can Regrow Body Parts`
+          },
+          {
+            headline: `The Salamander That Can Regrow Body Parts`,
+            text: `Axolotls can regenerate lost limbs and repair parts of several organs with far less scarring than humans. Cells near an injury help form a mass of regenerative tissue that rebuilds the missing structures. Scientists study axolotls because understanding that process may reveal principles useful for human regenerative medicine, although humans cannot simply copy the trick. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: The Frog That Freezes and Wakes Up Again`
+          },
+          {
+            headline: `The Frog That Freezes and Wakes Up Again`,
+            text: `Wood frogs survive northern winters by allowing much of the water outside their cells to freeze. Their bodies flood tissues with glucose and other protective substances that help limit damage while heartbeat and breathing can stop. When temperatures rise, the frog thaws and resumes activity—a survival strategy that sounds much more like science fiction. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why Do Jeans Have That Tiny Pocket?`
+          }
+        ]
+      },
+      {
+        theme: `Things You Use but Never Question`,
+        days: [
+          {
+            headline: `Why Do Jeans Have That Tiny Pocket?`,
+            text: `The tiny pocket inside the front pocket of many jeans is a descendant of the watch pocket on early waist overalls. In the late 1800s, workers often carried pocket watches, and the small compartment helped protect them. Watches moved to wrists, but the little pocket survived as a design tradition long after its original job faded. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why Is There a Hole in Some Pen Caps?`
+          },
+          {
+            headline: `Why Is There a Hole in Some Pen Caps?`,
+            text: `Many modern pen caps include openings as a safety feature. If a cap is accidentally swallowed and becomes lodged in the airway, a hole may allow some air to pass. Designs differ by manufacturer, so the hole is not a guarantee of safety—but it is an example of a tiny feature most people never notice until someone explains it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why Do Some Coins Have Ridges?`
+          },
+          {
+            headline: `Why Do Some Coins Have Ridges?`,
+            text: `Milled or reeded edges became useful when coins were made from valuable metals. A person could shave tiny amounts from a smooth-edged coin and keep the metal. A patterned edge made tampering easier to spot. Modern coins are not usually worth their face value in precious metal, but the old anti-cheating feature remains. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why Do F and J Have Little Bumps?`
+          },
+          {
+            headline: `Why Do F and J Have Little Bumps?`,
+            text: `The raised marks on the F and J keys help touch typists find the home row without looking down. Place your index fingers on those bumps and the rest of your fingers naturally line up with nearby keys. It is a tiny piece of tactile navigation built into almost every standard computer keyboard. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why Does a Tape Measure Have a Loose Hook?`
+          },
+          {
+            headline: `Why Does a Tape Measure Have a Loose Hook?`,
+            text: `The metal hook at the end of many tape measures is designed to slide by about its own thickness. When you hook it over an outside edge it pulls outward; when you push it against an inside surface it slides inward. That movement compensates for the hook’s thickness so both kinds of measurements can start at zero. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why Do Sneakers Have Extra Lace Holes at the Top?`
+          },
+          {
+            headline: `Why Do Sneakers Have Extra Lace Holes at the Top?`,
+            text: `Those extra eyelets near the ankle can be used for a runner’s loop, sometimes called a heel lock. A special lacing pattern creates small loops that help hold the heel more securely without simply cranking every lace tighter. The holes look redundant until you know the alternate way they can be used. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: What Does the Little Arrow by the Fuel Pump Mean?`
+          },
+          {
+            headline: `What Does the Little Arrow by the Fuel Pump Mean?`,
+            text: `On many cars, a small triangle beside the fuel-pump icon points toward the side where the fuel door is located. It is especially handy in a rental car or any vehicle you do not drive often. One glance at the dashboard can save the awkward moment of pulling up to a gas pump on the wrong side. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Bluetooth Is Named After a Viking King`
+          }
+        ]
+      },
+      {
+        theme: `How Did THAT Get Its Name?`,
+        days: [
+          {
+            headline: `Bluetooth Is Named After a Viking King`,
+            text: `Bluetooth technology takes its name from Harald “Bluetooth” Gormsson, a tenth-century Danish king associated with uniting parts of Denmark and Norway. Engineers liked the idea of a technology that could unite different devices. Even the Bluetooth logo combines runic characters representing the initials H and B. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Wi-Fi Does Not Actually Stand for “Wireless Fidelity”`
+          },
+          {
+            headline: `Wi-Fi Does Not Actually Stand for “Wireless Fidelity”`,
+            text: `Wi-Fi was created as a brand name for wireless networking, chosen because it was short and memorable. The phrase “Wireless Fidelity” appeared later in some marketing, which helped create the belief that Wi-Fi was an acronym. It is a good reminder that a familiar tech name can sound technical even when it was designed mainly to be catchy. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: LEGO’s Name Hides a Danish Phrase`
+          },
+          {
+            headline: `LEGO’s Name Hides a Danish Phrase`,
+            text: `The name LEGO comes from the Danish words “leg godt,” meaning “play well.” Carpenter Ole Kirk Kristiansen chose the name for his company in the 1930s, years before the modern plastic brick became its signature product. By coincidence, the word lego also has meanings in Latin, but that was not the source of the company name. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: How Did Google Get Its Strange Name?`
+          },
+          {
+            headline: `How Did Google Get Its Strange Name?`,
+            text: `Google’s name grew from the mathematical word “googol,” meaning the number 1 followed by 100 zeros. The huge number suited the founders’ ambition to organize enormous amounts of information. The spelling Google emerged during the naming process and stuck, turning a playful variation on a math term into an everyday verb. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: What Does ZIP in ZIP Code Mean?`
+          },
+          {
+            headline: `What Does ZIP in ZIP Code Mean?`,
+            text: `ZIP in ZIP Code stands for Zone Improvement Plan. The U.S. Postal Service introduced the five-digit system in 1963 to help sort growing volumes of mail more efficiently. The word ZIP was also perfect advertising: it suggested that mail would move quickly when senders included the new code. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why Is It Called WD-40?`
+          },
+          {
+            headline: `Why Is It Called WD-40?`,
+            text: `WD-40’s name comes from “Water Displacement, 40th formula.” The product was developed in the 1950s by a small company trying to make a compound that would prevent corrosion by displacing water. According to the company history, the successful recipe was the fortieth attempt—a laboratory notebook number that became a household brand. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why Is Canned Spam Called SPAM?`
+          },
+          {
+            headline: `Why Is Canned Spam Called SPAM?`,
+            text: `Hormel introduced SPAM in 1937. The company says the name was suggested in a contest by Kenneth Daigneau, whose brother was a Hormel executive; he won $100. Hormel has long guarded the exact meaning of the name, though “spiced ham” is a common interpretation. The mystery is part of the brand’s history. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why Can You Smell Rain Before It Arrives?`
+          }
+        ]
+      },
+      {
+        theme: `Weather Gets Weird`,
+        days: [
+          {
+            headline: `Why Can You Smell Rain Before It Arrives?`,
+            text: `One famous rain smell is petrichor. Dry soil and plants leave compounds on the ground, and raindrops can trap tiny air bubbles that burst and launch microscopic droplets into the air. One compound, geosmin, has an earthy smell humans can detect at very low concentrations. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why Does Thunder Rumble Instead of Just Boom?`
+          },
+          {
+            headline: `Why Does Thunder Rumble Instead of Just Boom?`,
+            text: `Lightning heats a narrow channel of air extremely fast, making the air expand and create a shock wave. A long lightning bolt produces sound along many points at different distances from you. Those sounds arrive at slightly different times, turning one electrical event into a rolling rumble. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: How Can Fog Float?`
+          },
+          {
+            headline: `How Can Fog Float?`,
+            text: `Fog is essentially a cloud touching the ground. It consists of extremely tiny water droplets suspended in air. Each droplet falls very slowly, while tiny air movements keep droplets mixed and suspended. Fog looks like a floating blanket even though gravity is still tugging on every drop. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why Does Hail Have Layers?`
+          },
+          {
+            headline: `Why Does Hail Have Layers?`,
+            text: `Inside a thunderstorm, strong updrafts can carry small ice particles through regions containing supercooled water. Liquid droplets freeze onto the growing hailstone. Different trips through wetter or colder parts of the cloud can produce clearer or cloudier ice, leaving rings that record part of the stone’s stormy journey. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why Does Snow Sometimes Squeak?`
+          },
+          {
+            headline: `Why Does Snow Sometimes Squeak?`,
+            text: `Very cold snow can squeak under boots because its ice crystals are hard and brittle, with little liquid water coating them. Stepping compresses and breaks the crystals, producing tiny vibrations and sounds. Warmer snow has more surface melting and tends to slide and pack more quietly. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why Does Wind Come in Gusts?`
+          },
+          {
+            headline: `Why Does Wind Come in Gusts?`,
+            text: `Wind near the ground is rarely a perfectly smooth stream. Buildings, trees, hills, temperature differences, and turbulence constantly mix faster-moving air with slower air. When a faster pocket reaches you, you feel a gust. The atmosphere is more like a churning river than a giant steady fan. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why Does Lightning Seem to Flicker?`
+          },
+          {
+            headline: `Why Does Lightning Seem to Flicker?`,
+            text: `A lightning flash can contain several rapid electrical strokes traveling along the same or nearby channels. Each stroke may last only a tiny fraction of a second, but together they can make the bolt appear to pulse or flicker. A camera with a fast shutter can reveal the separate events more clearly. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why Can a Wooden Spoon Calm a Boiling Pot?`
+          }
+        ]
+      },
+      {
+        theme: `The Secret Life of Your Kitchen`,
+        days: [
+          {
+            headline: `Why Can a Wooden Spoon Calm a Boiling Pot?`,
+            text: `A dry wooden spoon laid across a pot can pop some rising foam bubbles and briefly interfere with a boilover. Wood is also a poor conductor of heat, so it stays cooler than metal for a while. It is not foolproof: once the spoon gets hot and wet, the trick becomes much less effective. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why Does Pasta Stick Together?`
+          },
+          {
+            headline: `Why Does Pasta Stick Together?`,
+            text: `Freshly cooked pasta releases starch into the water and onto its surface. When pieces sit against each other—especially after draining—the sticky starch can act like paste. Plenty of boiling water and stirring early in cooking help keep pieces moving; sauce soon after draining helps too. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why Does an Egg Turn Solid When Heated?`
+          },
+          {
+            headline: `Why Does an Egg Turn Solid When Heated?`,
+            text: `Egg whites are packed with folded proteins. Heat makes many of those proteins unfold and link with one another, forming a network that traps water. The clear, slippery white becomes opaque and firm. You are watching invisible molecules rearrange into a structure strong enough to hold its shape. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why Can You See Through a Microwave Door?`
+          },
+          {
+            headline: `Why Can You See Through a Microwave Door?`,
+            text: `The dark screen in a microwave door is a metal mesh filled with tiny holes. Visible light has wavelengths small enough to pass through those openings, so you can see the food. Microwave wavelengths are much larger, so the conductive mesh helps keep that energy inside the oven. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why Does a Pressure Cooker Cook Faster?`
+          },
+          {
+            headline: `Why Does a Pressure Cooker Cook Faster?`,
+            text: `A pressure cooker traps steam, raising the pressure inside. Higher pressure lets liquid water reach a temperature above its normal boiling point before it boils vigorously. Hotter water and steam transfer energy to food faster, which is why beans, stews, and tough cuts can cook in less time. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why Does Cast Iron Need “Seasoning”?`
+          },
+          {
+            headline: `Why Does Cast Iron Need “Seasoning”?`,
+            text: `Seasoning is not just flavor left from old meals. A very thin layer of cooking oil is heated until its molecules react and form a hard polymerized coating bonded to the iron. Repeated thin layers help protect against rust and create a smoother cooking surface. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: What Does the Crisper Drawer Actually Do?`
+          },
+          {
+            headline: `What Does the Crisper Drawer Actually Do?`,
+            text: `A refrigerator’s crisper drawer changes the little climate around produce. Adjustable vents can control how quickly moisture escapes. Leafy vegetables often last better with higher humidity, while some fruits benefit from more airflow. The drawer is not simply storage—it is a humidity-management box. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Crows Can Remember Human Faces`
+          }
+        ]
+      },
+      {
+        theme: `Animals With Surprisingly Human Talents`,
+        days: [
+          {
+            headline: `Crows Can Remember Human Faces`,
+            text: `Experiments with wild crows have shown that they can learn and remember particular human faces associated with danger. Other crows can also pick up the warning socially. To a crow, the people walking through a park may not be interchangeable background scenery. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Elephants Pay Special Attention to Their Dead`
+          },
+          {
+            headline: `Elephants Pay Special Attention to Their Dead`,
+            text: `Elephants have repeatedly been observed touching, investigating, and lingering around the bodies and bones of dead elephants. Scientists are cautious about assigning human emotions to the behavior, but the attention is unusual and suggests that death has strong social importance for them. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Rats Make Ultrasonic Sounds During Play`
+          },
+          {
+            headline: `Rats Make Ultrasonic Sounds During Play`,
+            text: `Young rats produce very high-pitched ultrasonic calls during rough-and-tumble play and when tickled by familiar researchers. Humans cannot hear the calls without special equipment. Scientists often compare them with positive social vocalizations rather than claiming they are exactly the same thing as human laughter. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Some Parrots Can Use Words as Labels`
+          },
+          {
+            headline: `Some Parrots Can Use Words as Labels`,
+            text: `Parrots are excellent mimics, but research with African grey parrots has shown that some can learn to use spoken labels for colors, shapes, materials, and quantities in structured tasks. That does not mean they speak language exactly like humans, but their vocal learning can be remarkably flexible. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Orca Families Have Their Own Dialects`
+          },
+          {
+            headline: `Orca Families Have Their Own Dialects`,
+            text: `Groups of killer whales use distinctive collections of calls that can be passed through families and social groups. Researchers can sometimes identify a group from its vocal patterns. Young whales learn the sounds around them, making an orca pod partly a community with its own acoustic traditions. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Chimpanzees Have Local Tool Traditions`
+          },
+          {
+            headline: `Chimpanzees Have Local Tool Traditions`,
+            text: `Different chimpanzee communities use different tools and techniques, such as sticks for gathering termites or stones for cracking nuts. Some behaviors cannot be explained simply by what materials are available. Young chimps learn by watching others, creating traditions that can persist within a group. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Goats Can Read More of Your Face Than You Think`
+          },
+          {
+            headline: `Goats Can Read More of Your Face Than You Think`,
+            text: `Experiments suggest goats can distinguish some human facial expressions and may prefer to approach images of positive expressions in certain testing conditions. The details are still studied, but goats are socially attentive animals—not the oblivious barnyard machines people sometimes imagine. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why Did Drinking Straws Bend?`
+          }
+        ]
+      },
+      {
+        theme: `Who Thought of THAT?`,
+        days: [
+          {
+            headline: `Why Did Drinking Straws Bend?`,
+            text: `Early paper drinking straws were straight. In the 1930s, Joseph Friedman watched his young daughter struggle to drink through one at a soda fountain. He inserted a screw into a straw, wrapped dental floss around the ridges, and created corrugations that allowed the straw to bend without collapsing. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: The Can Came Before the Can Opener`
+          },
+          {
+            headline: `The Can Came Before the Can Opener`,
+            text: `Food was being sealed in metal cans decades before a convenient household can opener existed. Early cans were thick and instructions could involve knives, chisels, or other tools. As cans became thinner, dedicated openers appeared. Packaging technology had outrun the simple question of how ordinary people would open it. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why Is a Paper Clip Such a Good Shape?`
+          },
+          {
+            headline: `Why Is a Paper Clip Such a Good Shape?`,
+            text: `A paper clip works because springy wire bends slightly as papers slide between its loops, then pushes back to grip them. Many clip designs have existed; the familiar Gem pattern became dominant because it is simple, cheap, reusable, and needs no moving parts. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: How Did the Zipper Learn to Zip?`
+          },
+          {
+            headline: `How Did the Zipper Learn to Zip?`,
+            text: `Early “clasp lockers” and hook systems were awkward. Engineer Gideon Sundback improved the idea in the early 1900s with interlocking teeth and a slider that joins or separates them. The word zipper became popular later, after the fastener was used on boots and other products. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why Did the Ballpoint Pen Beat the Fountain Pen?`
+          },
+          {
+            headline: `Why Did the Ballpoint Pen Beat the Fountain Pen?`,
+            text: `A ballpoint uses a tiny rolling ball at its tip. As the ball turns, it picks up thick ink from inside the pen and transfers a controlled layer to paper. László Bíró helped develop a practical version after noticing that quick-drying printing ink avoided the smudging common with fountain pens. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: The Supermarket Beep Began With Lines`
+          },
+          {
+            headline: `The Supermarket Beep Began With Lines`,
+            text: `A barcode stores information in patterns of dark bars and light spaces that a scanner can read. The familiar UPC system was adopted by U.S. grocery retailers in the 1970s, allowing checkout systems to identify products quickly and connect them with prices stored in a computer. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why Does a QR Code Have Three Big Squares?`
+          },
+          {
+            headline: `Why Does a QR Code Have Three Big Squares?`,
+            text: `The large square patterns in three corners of a QR code are position markers. They help a scanner find the code and determine its orientation quickly, even if the code is rotated. QR codes were developed in Japan for tracking automotive parts before phones turned them into everyday links. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why Are Airplane Windows Rounded?`
+          }
+        ]
+      },
+      {
+        theme: `Why Is It Made That Way?`,
+        days: [
+          {
+            headline: `Why Are Airplane Windows Rounded?`,
+            text: `Early pressurized airliners helped reveal that sharp corners concentrate stress. Repeated pressurization can make cracks grow from those high-stress points. Rounded windows spread the stress more smoothly through the aircraft skin, which is why modern passenger windows have curved corners rather than square ones. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why Are Manhole Covers Usually Round?`
+          },
+          {
+            headline: `Why Are Manhole Covers Usually Round?`,
+            text: `A round cover cannot fall through a circular opening of the same size, no matter how it is turned. Round covers are also easy to roll and do not need to be aligned with corners. Other shapes exist, but the circle solves several practical problems at once. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why Is the Bottom of a Soda Can Curved Inward?`
+          },
+          {
+            headline: `Why Is the Bottom of a Soda Can Curved Inward?`,
+            text: `Carbonated drinks push outward on their containers. A flat sheet of thin aluminum would flex more easily under that pressure. The inward dome at the bottom, together with the can’s cylindrical shape, helps the lightweight container resist pressure while using surprisingly little metal. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why Do Golf Balls Have Dimples?`
+          },
+          {
+            headline: `Why Do Golf Balls Have Dimples?`,
+            text: `A smooth golf ball creates a large turbulent wake that slows it dramatically. Dimples help the thin layer of air near the ball stay attached longer, shrinking that wake and reducing pressure drag. With spin, airflow also helps create lift, letting a dimpled ball travel much farther. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why Do Tires Need Tread?`
+          },
+          {
+            headline: `Why Do Tires Need Tread?`,
+            text: `Tire grooves give water pathways to escape from beneath the tire. Without enough drainage, a layer of water can separate rubber from pavement and cause hydroplaning. Racing tires can be smooth on dry tracks for maximum contact, but ordinary road tires must handle rain and changing conditions. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why Do Bridges Have Gaps?`
+          },
+          {
+            headline: `Why Do Bridges Have Gaps?`,
+            text: `Bridge materials expand when they warm and contract when they cool. Expansion joints give sections room to move without building damaging stress. The gaps and flexible connections you cross are deliberate; a completely rigid bridge would have to fight temperature changes every day. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why Is Toilet Paper Perforated?`
+          },
+          {
+            headline: `Why Is Toilet Paper Perforated?`,
+            text: `Perforations create a controlled weak line so a sheet tears where the maker intends instead of ripping unpredictably. Tiny cuts leave enough fibers connected to keep the roll together while making separation easy. It is a simple bit of engineering repeated billions of times. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: There Are “Lakes” Under the Ocean`
+          }
+        ]
+      },
+      {
+        theme: `Ocean Things That Sound Made Up`,
+        days: [
+          {
+            headline: `There Are “Lakes” Under the Ocean`,
+            text: `In some deep-sea places, extremely salty water collects in depressions on the seafloor. Because the brine is denser than surrounding seawater, it can form a distinct pool with a visible boundary, almost like an underwater lake. The chemistry can be deadly to many animals that enter it. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: A Jellyfish Can Reset Its Life Cycle`
+          },
+          {
+            headline: `A Jellyfish Can Reset Its Life Cycle`,
+            text: `The tiny jellyfish Turritopsis dohrnii can, under certain stresses, transform mature cells and return from its jellyfish stage to an earlier polyp stage. That is why it is nicknamed the “immortal jellyfish.” It can still be eaten or die from disease, so immortal is catchy rather than literal. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: The Fish With a See-Through Head`
+          },
+          {
+            headline: `The Fish With a See-Through Head`,
+            text: `The barreleye fish Macropinna microstoma has a transparent, fluid-filled shield over the top of its head. Inside are unusual tubular eyes that can rotate, helping the fish look upward for prey and then forward as it feeds. Photographs make it look like a creature designed for a science-fiction movie. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: What Happens When a Whale Sinks?`
+          },
+          {
+            headline: `What Happens When a Whale Sinks?`,
+            text: `A dead whale that reaches the deep seafloor can become a “whale fall,” feeding a succession of scavengers and microbes for years. Large animals arrive first, then smaller organisms use the enriched bones and sediments. One body can become a temporary deep-sea ecosystem. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Can There Really Be an Underwater Waterfall?`
+          },
+          {
+            headline: `Can There Really Be an Underwater Waterfall?`,
+            text: `Near Mauritius, sand and sediment are carried off a shallow ocean shelf into deeper water. Seen from above, the streaking sediment creates a spectacular illusion of a waterfall pouring beneath the sea. The water is not falling into a giant hole—the seafloor and moving sediment create the effect. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why Can Ocean Waves Glow at Night?`
+          },
+          {
+            headline: `Why Can Ocean Waves Glow at Night?`,
+            text: `Some plankton, especially dinoflagellates, produce light through chemical reactions when the water around them is disturbed. Breaking waves, a paddle, or even a hand can trigger blue flashes. Bioluminescence may help startle predators or attract larger animals that attack those predators. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why Would a Sea Cucumber Throw Out Its Own Organs?`
+          },
+          {
+            headline: `Why Would a Sea Cucumber Throw Out Its Own Organs?`,
+            text: `Some sea cucumbers can eject sticky tubes or portions of internal organs when threatened. The dramatic sacrifice may distract or entangle a predator. Even stranger, the animal can regenerate lost tissues afterward. It is an emergency defense strategy few animals could survive. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why Does Déjà Vu Feel So Convincing?`
+          }
+        ]
+      },
+      {
+        theme: `Your Brain Plays Tricks on You`,
+        days: [
+          {
+            headline: `Why Does Déjà Vu Feel So Convincing?`,
+            text: `Déjà vu is the eerie feeling that a new situation has happened before. Researchers think it may involve memory and familiarity systems briefly getting out of sync, producing a strong sense of recognition without a matching memory. The feeling is real even when the “previous event” is not. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why Does a Song Get Stuck in Your Head?`
+          },
+          {
+            headline: `Why Does a Song Get Stuck in Your Head?`,
+            text: `A short piece of music that repeats in your mind is often called an involuntary musical image, or earworm. Catchy, familiar, recently heard tunes are common triggers. Trying desperately not to think about the song can sometimes keep attention locked on it; engaging with another task may work better. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why Do You Sometimes Feel a Phone Vibrate When It Didn’t?`
+          },
+          {
+            headline: `Why Do You Sometimes Feel a Phone Vibrate When It Didn’t?`,
+            text: `People who frequently expect phone alerts can occasionally interpret ordinary sensations—clothing movement, muscle twitches, pressure—as a vibration. The brain is constantly guessing what sensory signals mean, and strong expectations can tilt that guess toward “my phone buzzed.” That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why Can Years Seem to Pass Faster as You Get Older?`
+          },
+          {
+            headline: `Why Can Years Seem to Pass Faster as You Get Older?`,
+            text: `There is no single clock in the brain that explains the feeling, but novelty and attention matter. New experiences create many distinctive memories, while routine periods can leave fewer landmarks when remembered later. A busy, repetitive year can therefore seem surprisingly compressed in hindsight. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why Do You Forget What You Wanted After Walking Into a Room?`
+          },
+          {
+            headline: `Why Do You Forget What You Wanted After Walking Into a Room?`,
+            text: `Researchers call one version of this the doorway effect. Moving into a new context can cause the brain to update what it is actively keeping in mind. The effect is not absolute, but boundaries between situations can make a fragile intention easier to lose. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why Is Yawning Contagious?`
+          },
+          {
+            headline: `Why Is Yawning Contagious?`,
+            text: `Seeing, hearing, reading about, or even thinking about yawning can trigger one. Scientists have linked contagious yawning with social and attention processes, but there is no single settled explanation. The fact that this paragraph may make you yawn is part of what makes the mystery fun. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why Does a Familiar Word Suddenly Look Wrong?`
+          },
+          {
+            headline: `Why Does a Familiar Word Suddenly Look Wrong?`,
+            text: `Repeat or stare at a word long enough and it can briefly lose its familiar feel. A related effect called semantic satiation occurs when repetition temporarily weakens the immediate connection between a word and its meaning. Nothing changed about the spelling; your processing of it did. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why forks were once controversial`
+          }
+        ]
+      },
+      {
+        theme: `Hidden History at the Dinner Table`,
+        days: [
+          {
+            headline: `Why forks were once controversial`,
+            text: `Forks spread slowly through Europe. Some diners saw the small table fork as unnecessary, overly fancy, or foreign; knives, spoons, and fingers already handled most food. As dining customs changed, the fork became ordinary. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: How ketchup existed before tomato ketchup`
+          },
+          {
+            headline: `How ketchup existed before tomato ketchup`,
+            text: `The word ketchup is linked to Asian fermented sauces. Early English-language recipes used ingredients such as mushrooms, walnuts, or anchovies. Tomato ketchup became dominant later, so ketchup existed as an idea before the familiar red version. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why salt and pepper became a pair`
+          },
+          {
+            headline: `Why salt and pepper became a pair`,
+            text: `Salt has long been essential for flavor and preservation, while black pepper became a prized seasoning through ancient trade. European dining customs eventually placed the two together so often that the pairing became a table standard rather than a law of cooking. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How restaurant menus changed dining`
+          },
+          {
+            headline: `How restaurant menus changed dining`,
+            text: `Early inns and communal tables often served whatever meal was prepared. Restaurants helped popularize choosing individual dishes from a written list, allowing diners to order different foods and prices instead of accepting one shared meal. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why Chinese takeout boxes fold the way they do`
+          },
+          {
+            headline: `Why Chinese takeout boxes fold the way they do`,
+            text: `The familiar folded paper pail used by many American Chinese restaurants was originally patented as an oyster container. Its single folded piece can hold food with few seams, and the wire handle makes it portable. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why people clink glasses`
+          },
+          {
+            headline: `Why people clink glasses`,
+            text: `The exact origin of glass-clinking is not settled. Explanations about splashing poison between cups are popular but poorly supported. What is clear is that raising and touching glasses became part of communal toasting rituals and celebration. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: How the sandwich got its name`
+          },
+          {
+            headline: `How the sandwich got its name`,
+            text: `The sandwich is named for John Montagu, the fourth Earl of Sandwich. The famous gambling-table story may be embellished, but eighteenth-century records connect his name with meat served between slices of bread. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why padlocks have tiny holes`
+          }
+        ]
+      },
+      {
+        theme: `Tiny Designs With Big Jobs`,
+        days: [
+          {
+            headline: `Why padlocks have tiny holes`,
+            text: `A small hole near the bottom of many outdoor padlocks can let water drain and can provide access for lubricant. It helps a lock cope with weather, though not every padlock uses the same design. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: The sharp edge hidden on plastic-wrap boxes`
+          },
+          {
+            headline: `The sharp edge hidden on plastic-wrap boxes`,
+            text: `Many wrap and foil boxes include a serrated cutting edge so the thin sheet can be pulled tight and torn cleanly. The box itself becomes part dispenser and part cutting tool. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why screws have different head shapes`
+          },
+          {
+            headline: `Why screws have different head shapes`,
+            text: `Screw heads are designed for different tools, torque levels, manufacturing needs, and resistance to slipping. Phillips heads were designed to work well with powered assembly; other patterns trade ease, grip, security, and cost differently. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: The tiny hole in an airplane window`
+          },
+          {
+            headline: `The tiny hole in an airplane window`,
+            text: `Passenger windows often have a tiny breather hole in the inner or middle pane. It helps manage pressure between layers and can reduce condensation, while the stronger outer pane carries the main cabin-pressure load. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why jeans have metal rivets`
+          },
+          {
+            headline: `Why jeans have metal rivets`,
+            text: `Jacob Davis used copper rivets to reinforce stress points on work pants, then partnered with Levi Strauss to patent the idea in 1873. The little metal fasteners helped pockets and seams survive hard use. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why sidewalks have bumpy warning tiles`
+          },
+          {
+            headline: `Why sidewalks have bumpy warning tiles`,
+            text: `Raised truncated domes on curb ramps and platform edges provide tactile warnings that can be felt underfoot or with a cane. They help people with low vision detect a transition toward traffic or another hazard. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why bottle caps have ridges`
+          },
+          {
+            headline: `Why bottle caps have ridges`,
+            text: `Ridges around many screw caps give fingers more edges to push against, improving grip and torque. A small texture change makes a tight cap easier to twist without making the whole cap larger. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Plants can warn neighbors with chemicals`
+          }
+        ]
+      },
+      {
+        theme: `Plants Are Doing WHAT?`,
+        days: [
+          {
+            headline: `Plants can warn neighbors with chemicals`,
+            text: `When insects damage some plants, the plants release airborne chemicals. Nearby plants can detect certain compounds and change their own defenses. Scientists avoid calling it language in the human sense, but plants do respond to chemical information around them. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: A Venus flytrap can count touches`
+          },
+          {
+            headline: `A Venus flytrap can count touches`,
+            text: `A Venus flytrap does not snap shut after every tiny disturbance. Sensitive trigger hairs usually must be stimulated more than once within a short period, helping the plant avoid wasting energy on raindrops or debris. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Young sunflowers follow the Sun`
+          },
+          {
+            headline: `Young sunflowers follow the Sun`,
+            text: `Young sunflower stems grow in a daily pattern that makes the flower heads track east to west during the day and reorient east overnight. Mature flowers usually stop tracking and tend to face east. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Trees and fungi trade underground`
+          },
+          {
+            headline: `Trees and fungi trade underground`,
+            text: `Mycorrhizal fungi grow around or into plant roots and trade soil nutrients and water for sugars made by plants. Networks can connect multiple plants, though popular claims that forests operate as a single cooperative “internet” often go beyond what evidence can prove. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Some seed pods explode`
+          },
+          {
+            headline: `Some seed pods explode`,
+            text: `Plants such as touch-me-nots store elastic energy in their seed pods as tissues dry or grow under tension. A touch can trigger the pod to split and curl rapidly, flinging seeds away from the parent plant. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How plants know which way is down`
+          },
+          {
+            headline: `How plants know which way is down`,
+            text: `Plants sense gravity using specialized cells containing dense starch-filled structures that settle toward the lower side. Roots and shoots respond differently to that signal, helping roots grow down and shoots grow up even in darkness. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Some flowers make their own heat`
+          },
+          {
+            headline: `Some flowers make their own heat`,
+            text: `A few plants, including skunk cabbage and some arums, can generate noticeable heat by running cellular respiration unusually fast. The warmth can help spread scents and may protect delicate tissues in cold conditions. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: How the Caesar salad got its name`
+          }
+        ]
+      },
+      {
+        theme: `The Strange Story Behind Familiar Foods`,
+        days: [
+          {
+            headline: `How the Caesar salad got its name`,
+            text: `Caesar salad is generally credited to restaurateur Caesar Cardini in Tijuana, Mexico, in the 1920s. It was named for Caesar the restaurateur, not Julius Caesar, and early versions were prepared tableside. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Who invented nachos`
+          },
+          {
+            headline: `Who invented nachos`,
+            text: `Nachos trace to Ignacio “Nacho” Anaya in Piedras Negras, Mexico, in 1943. Faced with hungry guests and a closed kitchen, he assembled fried tortilla pieces, cheese, and jalapeños into a quick snack. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why ice-cream cones became famous`
+          },
+          {
+            headline: `Why ice-cream cones became famous`,
+            text: `Edible cones existed before the 1904 St. Louis World’s Fair, but the fair helped popularize ice cream served in crisp rolled wafers. The tidy handheld combination was perfect for crowds and soon spread widely. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why pretzels have that shape`
+          },
+          {
+            headline: `Why pretzels have that shape`,
+            text: `Pretzels have been made in looped forms for centuries, but the exact origin of the shape is uncertain. Stories about monks and folded arms are charming but not firmly documented; the practical twisted form also creates thin, crisp sections and a recognizable silhouette. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: How cotton candy came from a dentist and a candy maker`
+          },
+          {
+            headline: `How cotton candy came from a dentist and a candy maker`,
+            text: `Dentist William Morrison and confectioner John C. Wharton patented an electric machine that spun melted sugar into fine strands. Their “fairy floss” became a sensation at the 1904 St. Louis World’s Fair. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why Worcestershire sauce is fermented`
+          },
+          {
+            headline: `Why Worcestershire sauce is fermented`,
+            text: `Worcestershire sauce develops its complex savory flavor from ingredients that are blended and aged, traditionally including vinegar, molasses, tamarind, spices, and anchovies. Fermentation and aging transform sharp individual ingredients into a deeper sauce. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: How instant noodles changed convenience food`
+          },
+          {
+            headline: `How instant noodles changed convenience food`,
+            text: `Momofuku Ando introduced Chicken Ramen in Japan in 1958 after developing a way to dry cooked noodles so hot water could rehydrate them quickly. Cup Noodles later put the noodles and serving container into one portable package. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why fireflies flash`
+          }
+        ]
+      },
+      {
+        theme: `Things That Glow`,
+        days: [
+          {
+            headline: `Why fireflies flash`,
+            text: `Fireflies make light in specialized organs using luciferin, oxygen, and enzymes. The reaction is extremely efficient and produces little heat. Flash patterns help many species find mates, with different species using different timing. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: The caves that look like starry skies`
+          },
+          {
+            headline: `The caves that look like starry skies`,
+            text: `New Zealand glowworms are fungus-gnat larvae that produce blue-green light. In dark caves, thousands hang sticky silk threads to catch small insects, turning cave ceilings into what looks like a field of stars. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why anglerfish carry lights`
+          },
+          {
+            headline: `Why anglerfish carry lights`,
+            text: `Many deep-sea anglerfish host light-producing bacteria in a lure extending from the head. In darkness where sunlight never reaches, the glowing lure can attract curious prey close enough to be swallowed. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Mushrooms that glow`
+          },
+          {
+            headline: `Mushrooms that glow`,
+            text: `Dozens of fungi produce bioluminescent light through chemical reactions. Scientists are still studying why different species glow; in some mushrooms the light may attract insects that help spread spores. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why scorpions fluoresce under UV`
+          },
+          {
+            headline: `Why scorpions fluoresce under UV`,
+            text: `Compounds in a scorpion’s hard outer cuticle fluoresce strongly under ultraviolet light, often glowing blue-green. Scientists know how useful that is for finding scorpions at night, but the biological reason scorpions evolved the fluorescence remains debated. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why plankton can make beaches sparkle`
+          },
+          {
+            headline: `Why plankton can make beaches sparkle`,
+            text: `Some dinoflagellates flash blue when water movement disturbs them. Waves, footsteps, or a paddle can trigger chemical light inside the cells, turning dark water into a field of brief sparks. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why tonic water glows under black light`
+          },
+          {
+            headline: `Why tonic water glows under black light`,
+            text: `Tonic water contains quinine. Quinine absorbs ultraviolet light and releases part of that energy as visible blue light, so tonic water can glow brightly under a black light even though it looks clear in normal light. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why arches can hold enormous weight`
+          }
+        ]
+      },
+      {
+        theme: `How Does THAT Stay Up?`,
+        days: [
+          {
+            headline: `Why arches can hold enormous weight`,
+            text: `An arch redirects much of the load above it into compression along its curved blocks and outward into supports. Stone handles compression well, which is why masonry arches can carry heavy loads without a beam spanning the opening. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: How suspension bridges carry a roadway`
+          },
+          {
+            headline: `How suspension bridges carry a roadway`,
+            text: `The roadway hangs from vertical suspenders connected to huge main cables. Those cables carry tension toward towers and anchorages, while the towers carry compression downward. The structure spreads a long span’s load among parts specialized for different forces. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why skyscrapers are allowed to sway`
+          },
+          {
+            headline: `Why skyscrapers are allowed to sway`,
+            text: `Tall buildings are designed to move slightly in wind. Making them perfectly rigid would create enormous stresses. Engineers control the motion with structural bracing, tuned mass dampers, and aerodynamic shaping so movement stays within safe and comfortable limits. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why the Leaning Tower of Pisa is still standing`
+          },
+          {
+            headline: `Why the Leaning Tower of Pisa is still standing`,
+            text: `The tower began leaning because its foundation sat on soft, uneven ground. Modern stabilization work removed small amounts of soil and used counterweights and cables to reduce the tilt, leaving the famous lean while making collapse far less likely. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: How domes spread weight`
+          },
+          {
+            headline: `How domes spread weight`,
+            text: `A dome carries loads through curved compression paths around and downward toward its supports. The shape can cover a wide area without interior columns, but the base must resist the outward thrust created by the curved structure. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: How cantilevers hang out with no support underneath`
+          },
+          {
+            headline: `How cantilevers hang out with no support underneath`,
+            text: `A cantilever is anchored at one end while the other end projects outward. The fixed end resists bending and transfers forces into a larger structure, allowing balconies, signs, wings, and bridge sections to appear to hang in space. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: How dry-stone walls stand without mortar`
+          },
+          {
+            headline: `How dry-stone walls stand without mortar`,
+            text: `Carefully fitted stones rely on gravity, friction, weight, and interlocking shapes. Good builders place stones so forces move inward and downward, and the wall can flex slightly as ground shifts instead of cracking like a rigid mortared wall. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Where Devil's Kettle water really goes`
+          }
+        ]
+      },
+      {
+        theme: `Minnesota Is Stranger Than You Think`,
+        days: [
+          {
+            headline: `Where Devil's Kettle water really goes`,
+            text: `At Minnesota’s Devil’s Kettle, part of the Brule River plunges into a pothole and seems to vanish. Minnesota DNR flow measurements found essentially the same amount of water downstream, showing the “missing” water rejoins the river rather than taking a secret route to Lake Superior. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why Minnesota has so many agates`
+          },
+          {
+            headline: `Why Minnesota has so many agates`,
+            text: `Lake Superior agates formed when mineral-rich fluids filled gas pockets in ancient volcanic rock. Later glaciers broke and carried the hard agates across Minnesota, which is why the state gemstone can turn up far from Lake Superior. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why Minnesota has so many lakes`
+          },
+          {
+            headline: `Why Minnesota has so many lakes`,
+            text: `Repeated Ice Age glaciers scraped basins, moved sediment, and left buried blocks of ice. When the ice melted, depressions filled with water. Minnesota’s landscape is essentially covered with fingerprints left by glaciers. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: The enormous lake that once covered the Red River Valley`
+          },
+          {
+            headline: `The enormous lake that once covered the Red River Valley`,
+            text: `Glacial Lake Agassiz formed when melting ice was trapped along the retreating ice sheet. At times it covered an area larger than all the modern Great Lakes combined, and its flat lakebed helped create today’s remarkably level Red River Valley. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why part of Minnesota sits above the 49th parallel`
+          },
+          {
+            headline: `Why part of Minnesota sits above the 49th parallel`,
+            text: `The Northwest Angle exists because eighteenth-century treaty writers used an inaccurate understanding of Lake of the Woods. Later surveys had to honor the treaty language, leaving a piece of Minnesota that can be reached by land from the rest of the United States only through Canada. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: How Duluth connects to the Atlantic Ocean`
+          },
+          {
+            headline: `How Duluth connects to the Atlantic Ocean`,
+            text: `Ships can travel from western Lake Superior through the other Great Lakes, canals, locks, and the St. Lawrence River to the Atlantic. That makes Duluth-Superior an inland port with an ocean connection more than a thousand miles away. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why wild rice is far more than a Minnesota food`
+          },
+          {
+            headline: `Why wild rice is far more than a Minnesota food`,
+            text: `Wild rice, or manoomin, is deeply important to Ojibwe history, culture, foodways, and treaty rights. It is an aquatic grass rather than the same species as ordinary white rice, and traditional harvesting from canoes remains culturally significant. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why a seashell sounds like the ocean`
+          }
+        ]
+      },
+      {
+        theme: `Sounds With Secret Stories`,
+        days: [
+          {
+            headline: `Why a seashell sounds like the ocean`,
+            text: `A shell does not store ocean sound. Its hollow shape emphasizes some frequencies from the background noise around you, including room sound and sounds produced near your ear. Similar rushing noise can be heard from other hollow objects. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why your recorded voice sounds wrong`
+          },
+          {
+            headline: `Why your recorded voice sounds wrong`,
+            text: `When you speak, you hear sound through the air and vibrations conducted through bones and tissues in your head. A recording gives you mostly the air-conducted version, so it often sounds thinner or higher than the voice you are used to hearing. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why rubbing a balloon can squeak`
+          },
+          {
+            headline: `Why rubbing a balloon can squeak`,
+            text: `When rubber drags across skin or another surface, friction alternates between sticking and slipping. Those rapid tiny motions make the balloon vibrate and push sound waves into the air, producing a squeak. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why chalk sometimes squeals`
+          },
+          {
+            headline: `Why chalk sometimes squeals`,
+            text: `Chalk can repeatedly stick and slip against a board as it moves. That vibration can fall in a frequency range our ears find especially sharp. Changing the angle, pressure, or chalk can stop the stick-slip cycle. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why mosquitoes buzz`
+          },
+          {
+            headline: `Why mosquitoes buzz`,
+            text: `The buzz comes mainly from rapid wingbeats. Male and female mosquitoes can detect wingbeat frequencies, and some species adjust their flight tones during courtship. The sound that annoys us is part of the mechanics—and sometimes the social life—of flying. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why humming changes when you plug your nose`
+          },
+          {
+            headline: `Why humming changes when you plug your nose`,
+            text: `Humming sends much of its sound through the nasal passages. Pinching the nose changes the resonating air spaces and blocks airflow through the nostrils, so the tone becomes muffled or changes pitch and quality. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why empty rooms echo`
+          },
+          {
+            headline: `Why empty rooms echo`,
+            text: `Hard bare surfaces reflect sound instead of absorbing much of it. In an empty room, reflected waves can reach your ears after the direct sound, creating reverberation or distinct echoes. Rugs, curtains, furniture, and people absorb and scatter more sound. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why Moon footprints can last so long`
+          }
+        ]
+      },
+      {
+        theme: `Space Is Ridiculous`,
+        days: [
+          {
+            headline: `Why Moon footprints can last so long`,
+            text: `The Moon has essentially no weather like Earth’s wind or rain to erase tracks. Micrometeorite impacts slowly disturb the surface, so footprints are not literally eternal, but they can remain recognizable for an extremely long time. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why sunsets on Mars can look blue`
+          },
+          {
+            headline: `Why sunsets on Mars can look blue`,
+            text: `Fine Martian dust scatters light differently from Earth’s atmosphere. Near the Sun at sunset, the dust can leave more bluish light traveling toward an observer while the wider sky looks reddish—the opposite color arrangement from a typical Earth sunset. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Would Saturn really float?`
+          },
+          {
+            headline: `Would Saturn really float?`,
+            text: `Saturn’s average density is lower than liquid water, so in a purely imaginary ocean large enough to hold the planet, it would be buoyant. Real physics makes the scenario impossible—the required ocean and Saturn itself would not behave like ordinary objects—but the density comparison is true. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: A day on Venus is longer than its year`
+          },
+          {
+            headline: `A day on Venus is longer than its year`,
+            text: `Venus rotates extremely slowly. One rotation relative to distant stars takes about 243 Earth days, while Venus orbits the Sun in about 225 Earth days. Its rotation is also backward compared with most planets. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why astronauts get taller in space`
+          },
+          {
+            headline: `Why astronauts get taller in space`,
+            text: `Without Earth’s gravity compressing the spine in the usual way, the discs between vertebrae can expand and the spine can lengthen. Astronauts may temporarily become a few centimeters taller, then return toward normal height after coming home. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why astronauts say space has a smell`
+          },
+          {
+            headline: `Why astronauts say space has a smell`,
+            text: `Astronauts cannot sniff the vacuum directly, but after spacewalks they have described odors on suits and equipment brought into the airlock—often compared with metal, welding fumes, or burnt material. Chemical reactions on exposed surfaces may contribute. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why the Moon is slowly moving away`
+          },
+          {
+            headline: `Why the Moon is slowly moving away`,
+            text: `The Moon’s gravity raises tides on Earth. Because Earth rotates faster than the Moon orbits, tidal interactions transfer a little rotational energy to the Moon’s orbit. Laser measurements show the Moon receding by about 3.8 centimeters per year. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Where “break the ice” came from`
+          }
+        ]
+      },
+      {
+        theme: `Why Do We Say That?`,
+        days: [
+          {
+            headline: `Where “break the ice” came from`,
+            text: `“Break the ice” has been used for centuries to mean making a beginning or opening a way. Literal icebreaking by ships offers an obvious image, but pinning the figurative phrase to one specific historical event is difficult. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Where “spill the beans” may have come from`
+          },
+          {
+            headline: `Where “spill the beans” may have come from`,
+            text: `“Spill the beans” means reveal a secret, but its exact origin is uncertain. A popular story about ancient voting with beans lacks strong evidence. The safer—and more interesting—fact is that familiar phrases can survive even after their beginnings are lost. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why we say “under the weather”`
+          },
+          {
+            headline: `Why we say “under the weather”`,
+            text: `The phrase has been used since at least the nineteenth century for feeling ill or unwell. Nautical origin stories are often repeated, but the documentary trail does not prove one neat explanation. Language frequently keeps the phrase while losing the original logic. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Where “bite the bullet” came from`
+          },
+          {
+            headline: `Where “bite the bullet” came from`,
+            text: `The phrase means endure something painful or difficult. Stories about patients literally biting bullets during surgery are famous, but evidence for that as the direct source is weak. Written uses of the figurative phrase appear in the nineteenth century. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why an easy task is a “piece of cake”`
+          },
+          {
+            headline: `Why an easy task is a “piece of cake”`,
+            text: `“Piece of cake” became American slang for something easy in the twentieth century. Cake already carried associations with pleasure and reward, making it a natural image for an easy or enjoyable task. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why we say “kick the bucket”`
+          },
+          {
+            headline: `Why we say “kick the bucket”`,
+            text: `“Kick the bucket” has meant die for centuries, but the exact origin is uncertain. One theory connects bucket to a beam or yoke used in slaughterhouses; other explanations compete. It is a case where the mystery is more honest than a tidy legend. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why something almost right is “close but no cigar”`
+          },
+          {
+            headline: `Why something almost right is “close but no cigar”`,
+            text: `The phrase is associated with old carnival games where cigars could be prizes. A player who nearly succeeded might be close—but receive no cigar. The expression became a colorful way to say “almost, but not quite.” The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why metal feels colder than wood`
+          }
+        ]
+      },
+      {
+        theme: `Cold Does Strange Things`,
+        days: [
+          {
+            headline: `Why metal feels colder than wood`,
+            text: `Metal and wood in the same room can be at the same temperature. Metal feels colder because it conducts heat away from your skin much faster. Your temperature-sensing nerves respond strongly to that rapid heat flow. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why salt helps melt road ice`
+          },
+          {
+            headline: `Why salt helps melt road ice`,
+            text: `Salt dissolves in the thin liquid layer that exists on ice and lowers water’s freezing point. That makes it harder for liquid water to refreeze at the same temperature. Ordinary road salt becomes less effective in very severe cold. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How frost draws patterns on windows`
+          },
+          {
+            headline: `How frost draws patterns on windows`,
+            text: `When moist air meets glass cold enough for water vapor to freeze, ice crystals grow on the surface. Tiny scratches, dust, temperature differences, and changing humidity guide the branching patterns, creating fernlike designs. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why frozen lakes boom and crack`
+          },
+          {
+            headline: `Why frozen lakes boom and crack`,
+            text: `Ice expands and contracts as temperature changes. A rapid cold snap can create stress until the ice fractures, sending vibrations across the sheet. The lake can boom, pop, or make eerie laser-like sounds even when the ice remains thick. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why you can see your breath`
+          },
+          {
+            headline: `Why you can see your breath`,
+            text: `Warm breath contains water vapor. In cold air, that vapor cools and condenses into tiny liquid droplets or ice crystals that scatter light. You are not seeing water vapor itself—you are seeing the miniature cloud it becomes. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why bridges freeze before roads`
+          },
+          {
+            headline: `Why bridges freeze before roads`,
+            text: `A bridge deck is exposed to cold air above and below, while an ordinary road receives some heat from the ground. Bridges can therefore lose heat faster and reach freezing temperature sooner. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: How snow can keep things warm`
+          },
+          {
+            headline: `How snow can keep things warm`,
+            text: `Fresh snow traps lots of air between ice crystals, and air is a poor conductor of heat. A snow layer can slow heat loss from soil, plants, and animal shelters even though the snow itself is cold. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: The woodpecker tongue that wraps around its head`
+          }
+        ]
+      },
+      {
+        theme: `Built-In Animal Tools`,
+        days: [
+          {
+            headline: `The woodpecker tongue that wraps around its head`,
+            text: `Woodpecker tongue-support structures called the hyoid apparatus can extend far around the skull in some species. The unusual anatomy helps support an extremely long tongue used to reach insects deep inside holes. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: How an elephant trunk does delicate work`
+          },
+          {
+            headline: `How an elephant trunk does delicate work`,
+            text: `An elephant trunk contains tens of thousands of muscles but no bones. It can lift heavy objects, draw up water, smell, trumpet, and use the sensitive tip to pick up surprisingly small items. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: What a narwhal tusk really is`
+          },
+          {
+            headline: `What a narwhal tusk really is`,
+            text: `A narwhal tusk is an elongated tooth, usually the left canine of a male, that grows through the upper lip in a spiral. It contains sensory structures and is also used in social behavior. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why a toucan has such a giant bill`
+          },
+          {
+            headline: `Why a toucan has such a giant bill`,
+            text: `A toucan’s bill looks heavy but is built from a lightweight internal framework covered by keratin. Besides reaching food, the large bill contains blood vessels and can help the bird release excess body heat. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: How a chameleon fires its tongue`
+          },
+          {
+            headline: `How a chameleon fires its tongue`,
+            text: `A chameleon stores elastic energy in tissues around a specialized tongue structure. When released, that energy launches the tongue at prey with acceleration muscles alone could not easily produce. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: The star-nosed mole’s incredible nose`
+          },
+          {
+            headline: `The star-nosed mole’s incredible nose`,
+            text: `Twenty-two fleshy rays surround the star-nosed mole’s nostrils. Packed with touch receptors, they let the mole identify tiny prey with extraordinary speed while hunting in dark soil and water. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why flamingos eat with their heads upside down`
+          },
+          {
+            headline: `Why flamingos eat with their heads upside down`,
+            text: `A flamingo bends its neck so the bill works upside down in the water. Comb-like structures called lamellae and movements of the tongue help filter small food particles from water and mud. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: The long history of the toothbrush`
+          }
+        ]
+      },
+      {
+        theme: `Everyday Things With Ancient Roots`,
+        days: [
+          {
+            headline: `The long history of the toothbrush`,
+            text: `People cleaned teeth with chew sticks and cloth long before modern brushes. Bristle toothbrushes appeared in China centuries ago, and mass-produced nylon-bristle brushes arrived in the twentieth century. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Umbrellas before rainy-day commutes`
+          },
+          {
+            headline: `Umbrellas before rainy-day commutes`,
+            text: `Umbrella-like sunshades are ancient and were often symbols of status. Protection from sun came before the folding rain umbrella became an ordinary personal accessory in many places. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Ancient socks were stranger than ours`
+          },
+          {
+            headline: `Ancient socks were stranger than ours`,
+            text: `Ancient Egyptian socks survive with a split between the big toe and the others, allowing them to be worn with sandals. The design looks unusual today but makes perfect sense with the footwear. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Locks and keys are thousands of years old`
+          },
+          {
+            headline: `Locks and keys are thousands of years old`,
+            text: `Ancient Egyptian wooden pin locks used movable pins that had to be lifted into position with a key. The materials changed, but the basic idea—moving internal parts into the right alignment—still appears in modern locks. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why dice are ancient`
+          },
+          {
+            headline: `Why dice are ancient`,
+            text: `Cube-like dice and other randomizing objects have been found at ancient sites across several civilizations. Humans have been using chance for games, divination, and decisions for thousands of years. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: What mirrors were made from before glass`
+          },
+          {
+            headline: `What mirrors were made from before glass`,
+            text: `Before silvered glass mirrors, people used polished stone and polished metals such as bronze. A smooth surface can reflect an image without being glass; modern mirrors simply make the reflection brighter and easier to produce. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: How people woke up before alarm clocks`
+          },
+          {
+            headline: `How people woke up before alarm clocks`,
+            text: `People used bells, household routines, roosters, servants, and even paid “knocker-uppers” who tapped on windows in industrial-era Britain. Mechanical alarm clocks eventually made waking on schedule a personal machine’s job. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why spider silk is remarkable`
+          }
+        ]
+      },
+      {
+        theme: `How Can THAT Be So Strong?`,
+        days: [
+          {
+            headline: `Why spider silk is remarkable`,
+            text: `Spider silk combines low weight with impressive tensile strength and toughness. Different silk glands make different kinds for draglines, prey capture, egg cases, and wrapping, so “spider silk” is really a family of specialized materials. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How an eggshell carries weight`
+          },
+          {
+            headline: `How an eggshell carries weight`,
+            text: `An eggshell is thin, but its curved shape spreads compressive forces around the shell. Pressure distributed over a broad area can be surprisingly well supported, while a sharp point concentrates stress and cracks it easily. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why honeycomb is efficient`
+          },
+          {
+            headline: `Why honeycomb is efficient`,
+            text: `Hexagonal cells tile a flat surface without gaps. For a given cell area, the geometry uses relatively little wall material while sharing walls with neighbors, helping bees build lots of storage from limited wax. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why corrugated cardboard is surprisingly strong`
+          },
+          {
+            headline: `Why corrugated cardboard is surprisingly strong`,
+            text: `A wavy fluted sheet glued between flat liners acts like a series of tiny arches and beams. The spacing gives the board thickness and stiffness without requiring a solid slab of paper. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why plywood layers run in different directions`
+          },
+          {
+            headline: `Why plywood layers run in different directions`,
+            text: `Wood is strongest along its grain and moves differently across the grain. Plywood stacks thin veneers with grain directions alternating, making the sheet more stable and strong in more than one direction. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why carbon fiber is strong for its weight`
+          },
+          {
+            headline: `Why carbon fiber is strong for its weight`,
+            text: `Carbon-fiber composites embed extremely strong, thin carbon filaments in a resin. Engineers can orient fibers along expected loads, creating parts that are stiff and strong without the weight of solid metal. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why bones are strong without being solid`
+          },
+          {
+            headline: `Why bones are strong without being solid`,
+            text: `Many bones have a dense outer shell and a lighter internal lattice called trabecular bone. The architecture places material where it handles loads efficiently, producing strength without making the skeleton impossibly heavy. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: How water can hold up a paper clip`
+          }
+        ]
+      },
+      {
+        theme: `Water Breaks the Rules`,
+        days: [
+          {
+            headline: `How water can hold up a paper clip`,
+            text: `Water molecules attract one another strongly at the surface, creating surface tension. If a paper clip is placed gently enough, the surface can deform without breaking and support the clip even though steel itself is denser than water. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How water climbs a paper towel`
+          },
+          {
+            headline: `How water climbs a paper towel`,
+            text: `Water sticks to cellulose fibers while water molecules also pull on one another. In tiny spaces between fibers, those forces draw water upward and sideways by capillary action, even against gravity. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why water drops become round`
+          },
+          {
+            headline: `Why water drops become round`,
+            text: `Surface tension pulls a free droplet toward the shape with the smallest surface area for its volume: a sphere. Gravity flattens large drops, but tiny droplets can become nearly round. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why water dances on a very hot pan`
+          },
+          {
+            headline: `Why water dances on a very hot pan`,
+            text: `On a surface far above water’s boiling point, the bottom of a droplet can vaporize so quickly that the drop rides on a cushion of its own steam. This Leidenfrost effect lets it skitter around instead of boiling away immediately. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: How supercooled water can freeze in a flash`
+          },
+          {
+            headline: `How supercooled water can freeze in a flash`,
+            text: `Very pure water can sometimes cool below its normal freezing point without forming ice because no crystal has started. A jolt or seed crystal can suddenly provide a starting point, and ice spreads rapidly through the liquid. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why flat stones skip`
+          },
+          {
+            headline: `Why flat stones skip`,
+            text: `A fast spinning stone hitting water at a shallow angle pushes water downward and receives an upward force in return. Spin helps keep the stone’s orientation stable long enough for repeated bounces. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why wet pavement looks darker`
+          },
+          {
+            headline: `Why wet pavement looks darker`,
+            text: `Water fills rough gaps on the surface and changes how light is reflected and scattered. More light can enter the material instead of bouncing diffusely toward your eyes, making the wet surface look darker and often shinier. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: The blind spot you never notice`
+          }
+        ]
+      },
+      {
+        theme: `Things Your Eyes Get Wrong`,
+        days: [
+          {
+            headline: `The blind spot you never notice`,
+            text: `Where the optic nerve leaves each retina there are no light-detecting cells. Your brain usually fills in the missing patch using surrounding information, and the other eye often covers it, so you walk around with a literal hole in vision you rarely notice. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why you see colors after staring at an image`
+          },
+          {
+            headline: `Why you see colors after staring at an image`,
+            text: `Staring at a strong color adapts some cone cells more than others. When you switch to a neutral background, the less-adapted channels temporarily dominate, creating an afterimage in roughly complementary colors. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why the Moon looks huge near the horizon`
+          },
+          {
+            headline: `Why the Moon looks huge near the horizon`,
+            text: `The Moon’s image on the retina is nearly the same size at the horizon and high in the sky. The “Moon illusion” is a perception effect, probably involving how the brain judges distance and compares the Moon with familiar objects near the horizon. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why wheels can look like they spin backward`
+          },
+          {
+            headline: `Why wheels can look like they spin backward`,
+            text: `Under flashing lights, film frames, or some visual conditions, you see a rotating wheel only at separated moments. If each glimpse catches the spokes just short of their previous positions, the brain can interpret the sequence as backward motion. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: How shadows fool your judgment of brightness`
+          },
+          {
+            headline: `How shadows fool your judgment of brightness`,
+            text: `The brain judges brightness using context, not raw light alone. In classic illusions, two patches sending similar light to your eyes can look different because the brain interprets one as being in shadow. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why peripheral vision is bad at detail`
+          },
+          {
+            headline: `Why peripheral vision is bad at detail`,
+            text: `The center of the retina has a dense concentration of cone cells and receives lots of brain processing. Peripheral retina is excellent at detecting motion and broad patterns but has much lower fine-detail resolution. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why faint stars can vanish when you stare at them`
+          },
+          {
+            headline: `Why faint stars can vanish when you stare at them`,
+            text: `For very dim objects, rod cells away from the center of the retina can be more sensitive than the cone-rich center. Looking slightly to the side can place a faint star on more sensitive night-vision cells. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why water towers are so tall`
+          }
+        ]
+      },
+      {
+        theme: `Small-Town Secrets Hiding in Plain Sight`,
+        days: [
+          {
+            headline: `Why water towers are so tall`,
+            text: `Height creates water pressure through gravity. A raised tank stores water and keeps pressure available even when pumps are not matching moment-to-moment demand, giving a town both storage and a pressure buffer. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why grain elevators grew beside railroads`
+          },
+          {
+            headline: `Why grain elevators grew beside railroads`,
+            text: `Elevators let farmers bring grain to a central place where it could be stored, graded, and loaded efficiently into railcars. Rail lines and grain handling reinforced each other, shaping the skylines of farming towns. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why so many towns have a Main Street`
+          },
+          {
+            headline: `Why so many towns have a Main Street`,
+            text: `Main Street often grew along the most important commercial route—near a railroad depot, river crossing, courthouse, or major road. Businesses clustered where people already passed, turning one street into the town’s shared front door. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why courthouse squares shaped towns`
+          },
+          {
+            headline: `Why courthouse squares shaped towns`,
+            text: `In many county seats, planners placed the courthouse on a central square and arranged streets and businesses around it. Government business brought regular traffic, making the square both civic center and commercial anchor. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: The faded advertisements called ghost signs`
+          },
+          {
+            headline: `The faded advertisements called ghost signs`,
+            text: `Old brick buildings often carry hand-painted advertisements from businesses or products long gone. Paint weathers while later buildings may shield parts of it, leaving “ghost signs” that act like accidental history exhibits. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why town names were once painted on roofs`
+          },
+          {
+            headline: `Why town names were once painted on roofs`,
+            text: `In the early days of aviation, pilots had few electronic navigation aids. Communities and organizations painted town names on roofs or other large surfaces so pilots could identify where they were from the air. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: How railroad tracks decided where towns grew`
+          },
+          {
+            headline: `How railroad tracks decided where towns grew`,
+            text: `Railroads needed stations, water stops, freight points, and places to load farm products. Businesses and residents clustered around those stops, while communities bypassed by a line could lose traffic and growth. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why sleep paralysis feels so strange`
+          }
+        ]
+      },
+      {
+        theme: `What Happens While You Sleep?`,
+        days: [
+          {
+            headline: `Why sleep paralysis feels so strange`,
+            text: `During REM sleep, the brain normally suppresses most skeletal-muscle movement. In sleep paralysis, awareness returns before that REM muscle inhibition has fully ended, leaving a person briefly awake but unable to move; dreamlike hallucinations can accompany it. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why you sometimes jerk awake while falling asleep`
+          },
+          {
+            headline: `Why you sometimes jerk awake while falling asleep`,
+            text: `A hypnic jerk is a sudden muscle contraction during the transition into sleep. It is common and usually harmless. Stress, caffeine, or sleep deprivation may make the jolts more noticeable. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why dreams disappear so quickly`
+          },
+          {
+            headline: `Why dreams disappear so quickly`,
+            text: `Dream memories are often fragile because the brain state during sleep differs from ordinary waking memory formation. Unless you wake and rehearse the dream, new thoughts and sensory input can quickly overwrite access to it. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why body temperature falls at night`
+          },
+          {
+            headline: `Why body temperature falls at night`,
+            text: `The body’s circadian system helps lower core temperature in the evening, partly by increasing blood flow near the skin so heat can escape. The drop is linked with the biological preparation for sleep. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why your muscles go quiet during REM sleep`
+          },
+          {
+            headline: `Why your muscles go quiet during REM sleep`,
+            text: `During REM sleep, brainstem circuits strongly reduce signals to many skeletal muscles. This atonia helps keep most dream movements from being acted out, while breathing and eye muscles continue working. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why some people talk in their sleep`
+          },
+          {
+            headline: `Why some people talk in their sleep`,
+            text: `Sleep talking can occur during different sleep stages when parts of speech and motor systems become active without full waking. The words may be clear or nonsense, and the sleeper usually has no memory of speaking. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why morning light helps set your body clock`
+          },
+          {
+            headline: `Why morning light helps set your body clock`,
+            text: `Special light-sensitive cells in the eyes send timing information to the brain’s circadian clock. Bright morning light tends to anchor the daily cycle and helps coordinate sleepiness, alertness, hormones, and body temperature. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why paper cuts hurt so much`
+          }
+        ]
+      },
+      {
+        theme: `The Secret Life of Paper`,
+        days: [
+          {
+            headline: `Why paper cuts hurt so much`,
+            text: `Paper cuts often hit fingertips, which are packed with nerve endings. The shallow slice can leave those nerves exposed and repeatedly disturbed by movement, while the cut may be too shallow to bleed enough to quickly cover the area. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why cardboard has a wavy middle`
+          },
+          {
+            headline: `Why cardboard has a wavy middle`,
+            text: `Corrugated cardboard sandwiches a fluted paper layer between flat liners. The waves create thickness and resist bending and crushing while using far less material than a solid slab of the same thickness. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why receipts fade`
+          },
+          {
+            headline: `Why receipts fade`,
+            text: `Many receipts use thermal paper coated with chemicals that darken when heated. Over time, heat, light, oils, and friction can alter the coating, causing printed areas to fade or the background to darken. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why newspapers turn yellow`
+          },
+          {
+            headline: `Why newspapers turn yellow`,
+            text: `Paper made with lignin-rich wood pulp slowly reacts with oxygen and light. Chemical changes create compounds that absorb blue light, so the paper shifts toward yellow and brown as it ages. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why toilet paper breaks down faster than paper towels`
+          },
+          {
+            headline: `Why toilet paper breaks down faster than paper towels`,
+            text: `Toilet paper is engineered with shorter, more weakly bonded fibers so it loses strength quickly in water. Paper towels are designed to stay together while wet, which is useful for cleaning but bad for plumbing. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why money feels different from printer paper`
+          },
+          {
+            headline: `Why money feels different from printer paper`,
+            text: `U.S. paper currency is made from a cotton-and-linen blend rather than ordinary wood-pulp paper. The fibers, printing, and embedded security features give bills their distinctive feel and durability. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why folding paper makes a sharp crease`
+          },
+          {
+            headline: `Why folding paper makes a sharp crease`,
+            text: `Bending paper far enough permanently deforms and breaks some of the fiber structure along a narrow line. Once that hinge-like zone forms, the sheet prefers to bend there again. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: How monarchs reach Mexico without a map`
+          }
+        ]
+      },
+      {
+        theme: `Amazing Animal Navigation`,
+        days: [
+          {
+            headline: `How monarchs reach Mexico without a map`,
+            text: `Monarch butterflies use a time-compensated Sun compass and other environmental cues during migration. The individuals flying south have never made the trip before, so the route is an inherited navigation program rather than a remembered family road trip. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: How sea turtles return toward their birth beaches`
+          },
+          {
+            headline: `How sea turtles return toward their birth beaches`,
+            text: `Sea turtles can detect features of Earth’s magnetic field and use them as navigation cues. Evidence suggests young turtles imprint on a regional magnetic signature that later helps guide adults back toward the area where they hatched. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: How homing pigeons find home`
+          },
+          {
+            headline: `How homing pigeons find home`,
+            text: `Pigeons combine several cues, including the Sun, Earth’s magnetic field, visual landmarks, and likely odors. No single compass explains every part of their ability; navigation changes as birds learn their home region. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: How salmon find their home streams`
+          },
+          {
+            headline: `How salmon find their home streams`,
+            text: `Young salmon learn the chemical signature of their home water. Years later, adults use ocean-scale navigation cues and then an extraordinary sense of smell to locate the river and stream where they began life. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: How dung beetles navigate by the Milky Way`
+          },
+          {
+            headline: `How dung beetles navigate by the Milky Way`,
+            text: `Experiments with nocturnal dung beetles showed that the broad band of the Milky Way can help them roll dung balls in a straight direction. They are not reading constellations like sailors; they use the bright pattern as a celestial orientation cue. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: How birds sense Earth’s magnetic field`
+          },
+          {
+            headline: `How birds sense Earth’s magnetic field`,
+            text: `Many migratory birds can detect Earth’s magnetic field. Evidence points to light-dependent chemical reactions in proteins called cryptochromes in the eye as part of one magnetic compass, though researchers continue investigating the full mechanism. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: How bees give directions by dancing`
+          },
+          {
+            headline: `How bees give directions by dancing`,
+            text: `A honeybee returning from food can perform a waggle dance. The angle of the waggle run encodes direction relative to the Sun, while duration helps indicate distance, allowing nestmates to fly toward a food source they have never visited. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why keyboards use QWERTY`
+          }
+        ]
+      },
+      {
+        theme: `Who Decided THAT Was Standard?`,
+        days: [
+          {
+            headline: `Why keyboards use QWERTY`,
+            text: `QWERTY developed for nineteenth-century typewriters. Its exact design history is more complicated than the popular claim that it was simply meant to slow typists; letter-pair mechanics, telegraph use, and manufacturer choices all played roles. Standardization then made the layout hard to displace. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why a minute has 60 seconds`
+          },
+          {
+            headline: `Why a minute has 60 seconds`,
+            text: `Base-60 counting has ancient roots in Mesopotamia. Greek astronomers later used sexagesimal fractions, and those conventions flowed into timekeeping. Sixty is also convenient because it divides evenly by many small numbers. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why a day has 24 hours`
+          },
+          {
+            headline: `Why a day has 24 hours`,
+            text: `Ancient Egyptians divided daylight and nighttime into sets of hours, and later astronomy helped standardize 24 equal hours. The number is historical convention rather than a natural label written into the sky. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why the week has seven days`
+          },
+          {
+            headline: `Why the week has seven days`,
+            text: `Seven-day cycles have ancient Near Eastern roots and became tied to religious traditions and the seven classical “planets” visible to ancient observers: Sun, Moon, Mars, Mercury, Jupiter, Venus, and Saturn. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why traffic lights use red yellow and green`
+          },
+          {
+            headline: `Why traffic lights use red yellow and green`,
+            text: `Railroad signals helped establish color conventions before road traffic lights. Red was already associated with danger and stopping; green became go, and yellow provided a highly visible warning between the two states. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why much of the world uses A4 paper`
+          },
+          {
+            headline: `Why much of the world uses A4 paper`,
+            text: `The ISO A-series uses a rectangle whose sides have a ratio of 1 to the square root of 2. Cut an A4 sheet in half and the smaller sheets keep the same proportions, making scaling and copying convenient. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why railroad tracks are a standard width`
+          },
+          {
+            headline: `Why railroad tracks are a standard width`,
+            text: `Standard gauge is 4 feet 8½ inches between rails and became dominant through British railway practice and later international adoption. Competing gauges existed and still do; economics and network compatibility pushed many systems toward common standards. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why pineapple can make your mouth tingle`
+          }
+        ]
+      },
+      {
+        theme: `Food Tricks Explained`,
+        days: [
+          {
+            headline: `Why pineapple can make your mouth tingle`,
+            text: `Pineapple contains bromelain, a group of enzymes that break proteins into smaller pieces. Fresh pineapple can irritate the mouth partly because those enzymes are active while you chew; heat used in canning largely disables them. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why mint feels cold`
+          },
+          {
+            headline: `Why mint feels cold`,
+            text: `Menthol activates TRPM8 receptors in sensory nerves—the same receptors that respond to cool temperatures. Your mouth can therefore send a “cold” signal even though the mint has not actually lowered tissue temperature much. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Why chili peppers feel hot`
+          },
+          {
+            headline: `Why chili peppers feel hot`,
+            text: `Capsaicin activates TRPV1 receptors that normally respond to damaging heat and other irritation. Your mouth is not being burned by temperature; the chemical is pressing part of the nervous system’s heat-alarm button. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why sour candy makes you pucker`
+          },
+          {
+            headline: `Why sour candy makes you pucker`,
+            text: `Acids release hydrogen ions that activate sour-sensing pathways. Strong sourness also triggers saliva and protective reflexes, producing the puckered face that seems almost impossible to suppress. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why cilantro tastes like soap to some people`
+          },
+          {
+            headline: `Why cilantro tastes like soap to some people`,
+            text: `Genetic differences in odor receptors can make some people especially sensitive to aldehydes in cilantro—compounds that can also appear in soaps and other scents. Experience and culture matter too, so genes influence the reaction without completely deciding it. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why asparagus changes some people’s urine smell`
+          },
+          {
+            headline: `Why asparagus changes some people’s urine smell`,
+            text: `Digestion of asparagus produces volatile sulfur-containing compounds that can create a distinctive odor. People differ both in how strongly they produce the odor and in their genetic ability to smell some of those compounds. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why orange juice tastes awful after toothpaste`
+          },
+          {
+            headline: `Why orange juice tastes awful after toothpaste`,
+            text: `Sodium lauryl sulfate in many toothpastes suppresses sweet taste and can make bitter flavors stand out more. Orange juice then seems less sweet and much harsher until the mouth’s normal taste balance returns. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: How earthworms reshape soil`
+          }
+        ]
+      },
+      {
+        theme: `The World Under Your Feet`,
+        days: [
+          {
+            headline: `How earthworms reshape soil`,
+            text: `Earthworms swallow soil and organic material, mix layers, create burrows, and leave nutrient-rich casts. Their tunnels change aeration and water movement. Effects vary by ecosystem—some northern forests evolved without native earthworms and can be harmed by introduced species. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: What lives in a handful of healthy soil`
+          },
+          {
+            headline: `What lives in a handful of healthy soil`,
+            text: `Soil can contain bacteria, fungi, protozoa, nematodes, tiny arthropods, roots, minerals, air, and water all at once. A handful is less like inert dirt than a crowded habitat and chemical factory. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How ant colonies build underground cities`
+          },
+          {
+            headline: `How ant colonies build underground cities`,
+            text: `Ant nests can contain branching tunnels, nurseries, food areas, waste zones, and chambers placed at different depths. Workers build without a central architect, responding to local cues and one another’s activity. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why prairie roots can reach astonishing depths`
+          },
+          {
+            headline: `Why prairie roots can reach astonishing depths`,
+            text: `Prairie grasses and wildflowers invest heavily underground. Deep, dense roots help plants reach water, survive fire and grazing, hold soil, and store carbon. Much of a prairie’s living structure is hidden below the surface. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Do underground rivers really exist?`
+          },
+          {
+            headline: `Do underground rivers really exist?`,
+            text: `True underground streams and rivers form especially well in soluble rocks such as limestone, where groundwater enlarges cracks into caves. In many other places, groundwater moves slowly through pores and fractures rather than through giant open tunnels. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: How tree roots lift pavement`
+          },
+          {
+            headline: `How tree roots lift pavement`,
+            text: `Roots usually do not seek out concrete to attack it. They grow where water, oxygen, and space are available. As roots thicken beneath an already cracked or shallow pavement, their growth can push slabs upward. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: How moles move dirt without burying themselves`
+          },
+          {
+            headline: `How moles move dirt without burying themselves`,
+            text: `Moles use powerful front limbs to loosen soil and push it aside or upward into molehills. Their cylindrical bodies and backward-angled fur help them move through tight tunnels without snagging. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: How dandelion seeds stay aloft`
+          }
+        ]
+      },
+      {
+        theme: `Things That Fly Without Wings`,
+        days: [
+          {
+            headline: `How dandelion seeds stay aloft`,
+            text: `The dandelion’s parachute is a ring of fine hairs called a pappus. Air flowing through and around it creates a stable swirling vortex that helps the seed descend slowly and travel on light winds. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why maple seeds helicopter`
+          },
+          {
+            headline: `Why maple seeds helicopter`,
+            text: `A maple samara has an off-center wing. As it falls, air makes the seed autorotate, generating lift and slowing the descent. Extra time in the air gives wind more opportunity to carry it away from the parent tree. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How spiders fly on silk`
+          },
+          {
+            headline: `How spiders fly on silk`,
+            text: `Small spiders can release silk threads that catch moving air and electrical forces in the atmosphere, lifting them into a behavior called ballooning. Some travel remarkable distances without wings. What looks like a tiny quirk is really the visible end of a much bigger process. Once the reason is clear, the everyday version becomes its own little experiment you can recognize anywhere. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: How snakes glide without wings`
+          },
+          {
+            headline: `How snakes glide without wings`,
+            text: `Flying snakes launch from branches, flatten their bodies into a curved cross-section, and undulate in the air. Their shape generates aerodynamic forces that let them glide toward another tree rather than simply fall. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why tumbleweeds tumble`
+          },
+          {
+            headline: `Why tumbleweeds tumble`,
+            text: `In several tumbleweed plants, the mature aboveground body breaks away from its roots. Wind rolls the dry plant across open ground, shaking seeds loose over a wide area as it travels. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: How volcanic ash crosses oceans`
+          },
+          {
+            headline: `How volcanic ash crosses oceans`,
+            text: `Explosive eruptions can inject tiny ash particles high into the atmosphere. Strong winds can carry the finest particles hundreds or thousands of miles, affecting aviation and producing distant hazy skies. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: How Saharan dust reaches the Americas`
+          },
+          {
+            headline: `How Saharan dust reaches the Americas`,
+            text: `Winds lift enormous amounts of fine mineral dust from North Africa and carry it west across the Atlantic. The dust can reach the Caribbean and Americas, influencing air quality and delivering minerals to ecosystems. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why stop signs have eight sides`
+          }
+        ]
+      },
+      {
+        theme: `The Hidden Job of Ordinary Shapes`,
+        days: [
+          {
+            headline: `Why stop signs have eight sides`,
+            text: `The octagon makes a stop sign recognizable by shape even when the face is hard to read or seen from the back. Standardized shapes let drivers identify important signs quickly before reading every word. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why yield signs are triangles`
+          },
+          {
+            headline: `Why yield signs are triangles`,
+            text: `An inverted triangle is rare among road signs, giving yield signs a distinctive silhouette. Like the stop-sign octagon, the unique shape adds a second recognition cue beyond color and text. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why honeycomb uses hexagons`
+          },
+          {
+            headline: `Why honeycomb uses hexagons`,
+            text: `Equal hexagons tile a surface with no gaps while sharing walls efficiently. Bees begin with wax cells that can be somewhat rounded, but heat and construction forces help produce the familiar hexagonal pattern. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why eggs are shaped like eggs`
+          },
+          {
+            headline: `Why eggs are shaped like eggs`,
+            text: `Bird egg shapes vary widely. Curvature helps a shell resist loads, while shape is influenced by reproductive anatomy and evolutionary history. The popular claim that pointed eggs universally stop cliff birds from rolling away is too simple. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why many pencils are hexagonal`
+          },
+          {
+            headline: `Why many pencils are hexagonal`,
+            text: `Flat sides keep a pencil from rolling off a desk and give fingers edges to grip. Hexagonal pencils also pack efficiently and can be cut from wood slats with relatively little waste. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why free bubbles become spheres`
+          },
+          {
+            headline: `Why free bubbles become spheres`,
+            text: `Surface tension tries to minimize the area of a soap film. For a given volume, a sphere has the smallest possible surface area, so an isolated bubble naturally pulls itself toward that shape. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why stackable chips use a saddle shape`
+          },
+          {
+            headline: `Why stackable chips use a saddle shape`,
+            text: `Uniform molded potato crisps use a curved saddle-like geometry that adds stiffness and lets pieces nest efficiently in a can. The shape is formally related to a hyperbolic paraboloid. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: What “zero” means to a bee`
+          }
+        ]
+      },
+      {
+        theme: `Wait—Animals Can Do Math?`,
+        days: [
+          {
+            headline: `What “zero” means to a bee`,
+            text: `Experiments show honeybees can learn that an empty set is less than sets containing one or more items, a behavior researchers describe as a zero-like numerical concept. That does not mean a bee does written arithmetic. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How crows keep track of numbers`
+          },
+          {
+            headline: `How crows keep track of numbers`,
+            text: `Crows and related birds can distinguish quantities and perform trained number tasks. Some experiments show neurons responding selectively to different numerosities, suggesting the brain can represent “how many” without spoken number words. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Can dogs notice when one treat becomes two?`
+          },
+          {
+            headline: `Can dogs notice when one treat becomes two?`,
+            text: `Dogs can distinguish some quantity differences, especially when choices are simple or food is involved. Their performance is not human arithmetic, but it shows that judging “more versus less” is useful far beyond our species. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: How fish compare groups`
+          },
+          {
+            headline: `How fish compare groups`,
+            text: `Many fish can choose between groups based on number, which can help them join larger shoals or find more food. Accuracy usually drops as quantities become closer together. What looks like a tiny quirk is really the visible end of a much bigger process. Once the reason is clear, the everyday version becomes its own little experiment you can recognize anywhere. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: The parrot that learned number concepts`
+          },
+          {
+            headline: `The parrot that learned number concepts`,
+            text: `African grey parrot Alex, studied by Irene Pepperberg, learned spoken labels for quantities and could answer some number questions. His performance helped show that a bird brain can learn abstract concepts through intensive social training. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How monkeys compare quantities`
+          },
+          {
+            headline: `How monkeys compare quantities`,
+            text: `Monkeys can rapidly judge which of two groups contains more items and can be trained on numerical tasks. Their errors often follow ratio patterns similar to approximate number judgments in humans. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why baby chicks may map numbers in space`
+          },
+          {
+            headline: `Why baby chicks may map numbers in space`,
+            text: `Some experiments suggest newly hatched chicks associate smaller quantities with one side of space and larger quantities with the other under specific conditions. Researchers debate how broadly this maps onto the human “mental number line.” The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: The tiny world of microbes`
+          }
+        ]
+      },
+      {
+        theme: `Things We Discovered by Looking Closer`,
+        days: [
+          {
+            headline: `The tiny world of microbes`,
+            text: `Microscopes revealed bacteria, protozoa, and other organisms too small for unaided eyes. Antonie van Leeuwenhoek’s seventeenth-century observations of “animalcules” opened a living world humans had shared forever without knowing it existed. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why every fingerprint is so detailed`
+          },
+          {
+            headline: `Why every fingerprint is so detailed`,
+            text: `Friction ridges form before birth as skin grows under a mixture of genetic instructions and tiny developmental forces. Even identical twins develop different ridge details, making fingerprints highly individual. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: The hidden symmetry of snow crystals`
+          },
+          {
+            headline: `The hidden symmetry of snow crystals`,
+            text: `A snow crystal’s sixfold symmetry comes from the hexagonal arrangement of water molecules in ice. Temperature and humidity change as the crystal falls, producing branches and plates while preserving the underlying six-part structure. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: What pollen looks like under a microscope`
+          },
+          {
+            headline: `What pollen looks like under a microscope`,
+            text: `Pollen grains come in remarkable shapes with spikes, pores, grooves, and patterned walls. The tough outer coating protects the plant’s male reproductive cells and can be distinctive enough to help identify plant groups. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: How compound eyes are built`
+          },
+          {
+            headline: `How compound eyes are built`,
+            text: `An insect compound eye contains many repeating visual units called ommatidia. Each samples a small part of the scene. Together they provide wide fields of view and excellent motion detection, though not the same detailed image a human eye forms. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: The tiny hooks on a cat’s tongue`
+          },
+          {
+            headline: `The tiny hooks on a cat’s tongue`,
+            text: `A cat’s tongue is covered with backward-facing keratin spines called papillae. Many are hollow-tipped and help move saliva deep into fur during grooming while also scraping meat from surfaces. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: How microscopic structures create shimmering color`
+          },
+          {
+            headline: `How microscopic structures create shimmering color`,
+            text: `Some butterfly wings, beetle shells, and bird feathers get brilliant color not mainly from pigments but from microscopic structures that interfere with light. Change the viewing angle and the reflected wavelengths change, creating iridescence. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work.`,
+            teaser: `Tomorrow: Why pipes bang`
+          }
+        ]
+      },
+      {
+        theme: `Why Does My House Do That?`,
+        days: [
+          {
+            headline: `Why pipes bang`,
+            text: `A sudden valve closure can stop moving water quickly, creating a pressure wave called water hammer. The wave travels through plumbing and can make pipes jump or bang against supports. What looks like a tiny quirk is really the visible end of a much bigger process. Once the reason is clear, the everyday version becomes its own little experiment you can recognize anywhere. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why floorboards creak`
+          },
+          {
+            headline: `Why floorboards creak`,
+            text: `Wood changes slightly with humidity and load. As boards, nails, joists, or subfloor pieces rub and then slip against one another, the sudden motion creates squeaks and creaks. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why windows rattle in wind`
+          },
+          {
+            headline: `Why windows rattle in wind`,
+            text: `Wind creates changing pressure on a window. If glass, sash, trim, or hardware has a little play, those pressure changes can make parts vibrate against one another. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why doors stick in humid weather`
+          },
+          {
+            headline: `Why doors stick in humid weather`,
+            text: `Wood absorbs moisture from humid air and swells across the grain. A door that fit perfectly in dry weather can become just wide enough to rub the frame during a damp season. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why doorknobs can zap you in winter`
+          },
+          {
+            headline: `Why doorknobs can zap you in winter`,
+            text: `Walking across carpet can transfer electric charge between materials. Dry winter air lets charge remain on your body more easily. Touching a conductor such as a metal doorknob gives the charge a sudden path to equalize, creating a tiny spark. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why dust gathers under furniture`
+          },
+          {
+            headline: `Why dust gathers under furniture`,
+            text: `Air currents carry dust until particles settle. Under furniture there is less foot traffic to stir them back up, while airflow around edges can deliver lint, fibers, skin flakes, and other particles into sheltered zones. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: What causes that first furnace smell of the season`
+          },
+          {
+            headline: `What causes that first furnace smell of the season`,
+            text: `Dust can settle on heat exchangers and other warm surfaces during months of disuse. When the furnace starts, that dust heats and produces a temporary burnt-dust odor. Persistent or electrical smells are a different matter and deserve attention. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: Birds that sleep while flying`
+          }
+        ]
+      },
+      {
+        theme: `The Weird Ways Animals Sleep`,
+        days: [
+          {
+            headline: `Birds that sleep while flying`,
+            text: `Great frigatebirds have been recorded sleeping briefly during long flights, sometimes with one brain hemisphere showing sleep-like activity. They sleep far less in the air than on land, showing that flight and sleep can overlap without becoming effortless. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Why sea otters raft together while resting`
+          },
+          {
+            headline: `Why sea otters raft together while resting`,
+            text: `Sea otters often gather in floating groups called rafts. They may hold paws or wrap themselves in kelp, which helps keep individuals from drifting apart while they rest on moving water. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: How horses can doze standing up`
+          },
+          {
+            headline: `How horses can doze standing up`,
+            text: `A horse’s stay apparatus lets ligaments and tendons stabilize parts of the legs with relatively little muscular effort. Horses can doze standing, though they still need to lie down for enough REM sleep. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why giraffes sleep so little`
+          },
+          {
+            headline: `Why giraffes sleep so little`,
+            text: `Wild giraffes often sleep in short bouts and spend relatively little total time asleep compared with many mammals. Remaining alert matters when lying down and getting back up makes such a tall animal vulnerable. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: Why bats hang upside down`
+          },
+          {
+            headline: `Why bats hang upside down`,
+            text: `Many bats can lock their toes around a perch using body weight and tendon mechanics, so hanging requires little effort. Dropping from a high perch also gives them room to open their wings and begin flying. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: Why sperm whales sometimes sleep upright`
+          },
+          {
+            headline: `Why sperm whales sometimes sleep upright`,
+            text: `Sperm whales have been observed resting nearly vertical near the surface in groups. Studies suggest these quiet drifting periods are sleep, creating the surreal sight of giant whales standing like pillars underwater. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: How walruses rest in the water`
+          },
+          {
+            headline: `How walruses rest in the water`,
+            text: `Walruses can sleep floating, resting on ice, or on land. Inflatable throat pouches in males can help provide buoyancy, and walruses may alternate active periods with very long rests. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why @ has so many names`
+          }
+        ]
+      },
+      {
+        theme: `Where Did That Symbol Come From?`,
+        days: [
+          {
+            headline: `Why @ has so many names`,
+            text: `The @ symbol existed in commerce before email, often meaning “at the rate of.” Ray Tomlinson chose it for network email addresses in 1971 because it was uncommon in names and neatly meant user “at” host computer. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: How & became one symbol`
+          },
+          {
+            headline: `How & became one symbol`,
+            text: `The ampersand grew from a handwritten ligature joining the Latin letters e and t in “et,” meaning “and.” Centuries of fast writing turned two letters into the looping symbol we recognize today. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: How # became hashtag`
+          },
+          {
+            headline: `How # became hashtag`,
+            text: `The # symbol had older uses including number sign and pound sign. On social media, users began placing it before words to label and group conversations; Twitter’s adoption made “hashtag” a global term. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Who designed the peace symbol`
+          },
+          {
+            headline: `Who designed the peace symbol`,
+            text: `Gerald Holtom designed the nuclear-disarmament symbol in Britain in 1958. Its lines combine semaphore positions for the letters N and D inside a circle, though Holtom also described personal symbolism in the figure. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why the power button is a broken circle`
+          },
+          {
+            headline: `Why the power button is a broken circle`,
+            text: `The common power symbol combines the binary-style symbols 1 and 0, historically used to indicate on and off. The vertical line entering a broken circle became a compact international control icon. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: How the recycling symbol was created`
+          },
+          {
+            headline: `How the recycling symbol was created`,
+            text: `Gary Anderson, a college student, designed the three chasing arrows for a 1970 contest connected with recycled paperboard. The loop suggests a continuing cycle of collection, processing, and reuse. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why a heart shape looks nothing like a real heart`
+          },
+          {
+            headline: `Why a heart shape looks nothing like a real heart`,
+            text: `The familiar heart symbol developed gradually in art and manuscripts and was associated with love long before modern anatomy was understood. No single origin story is proven; its power comes from centuries of cultural repetition. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why Roman concrete can last so long`
+          }
+        ]
+      },
+      {
+        theme: `Ingenious Ideas Before Electricity`,
+        days: [
+          {
+            headline: `Why Roman concrete can last so long`,
+            text: `Some Roman marine concrete used volcanic ash and lime in mixtures that reacted with seawater and formed durable minerals over time. Not every Roman structure is indestructible, but certain recipes behaved very differently from modern Portland-cement concrete. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: How aqueducts moved water without pumps`
+          },
+          {
+            headline: `How aqueducts moved water without pumps`,
+            text: `Roman aqueducts used carefully surveyed gentle slopes so gravity kept water moving. Bridges are the dramatic parts, but much of an aqueduct could run underground or along terrain with only a small drop over long distances. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: How ancient ice houses made summer cold possible`
+          },
+          {
+            headline: `How ancient ice houses made summer cold possible`,
+            text: `People in several ancient cultures stored winter ice or used evaporative and nighttime cooling in insulated structures. Thick walls, shade, drainage, and underground spaces slowed heat from reaching stored ice. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: How windmills turned wind into work`
+          },
+          {
+            headline: `How windmills turned wind into work`,
+            text: `Wind pushing blades creates rotation that can be transferred through shafts and gears. Long before electrical turbines, windmills used that motion to grind grain, pump water, and power machinery. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: How water wheels powered machines`
+          },
+          {
+            headline: `How water wheels powered machines`,
+            text: `Flowing or falling water pushes paddles or buckets on a wheel. The rotating shaft can drive millstones, hammers, saws, and other machinery, turning a river’s continuous motion into mechanical work. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: How mechanical clocks kept time`
+          },
+          {
+            headline: `How mechanical clocks kept time`,
+            text: `Early mechanical clocks used an escapement that releases a gear train in controlled steps instead of letting a weight unwind all at once. Later pendulums made the timing far more regular. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: How Romans heated floors from below`
+          },
+          {
+            headline: `How Romans heated floors from below`,
+            text: `In a hypocaust system, a raised floor stood on small supports while hot air from a furnace moved through the space underneath and sometimes through wall flues. The room was heated without a modern radiator. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How beavers engineer wetlands`
+          }
+        ]
+      },
+      {
+        theme: `Animals That Build`,
+        days: [
+          {
+            headline: `How beavers engineer wetlands`,
+            text: `Beavers pile branches, mud, and vegetation across flowing water. Their dams slow streams, raise water levels, and can create ponds and wetlands that change habitat for many other species. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: How weaverbirds knot nests`
+          },
+          {
+            headline: `How weaverbirds knot nests`,
+            text: `Weaverbirds use grass strips and plant fibers, looping and weaving them around branches and one another. Some species build remarkably complex hanging nests using only beak and feet. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why spider webs do not simply fall apart`
+          },
+          {
+            headline: `Why spider webs do not simply fall apart`,
+            text: `Orb webs combine different silks: strong frame and radial lines carry loads, while capture spirals can stretch and absorb energy. Damage often stays local because the network distributes forces through many paths. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: The pufferfish that draws giant sand circles`
+          },
+          {
+            headline: `The pufferfish that draws giant sand circles`,
+            text: `Male white-spotted pufferfish build large geometric circles on the seafloor by swimming and shaping sand into ridges. Females inspect the structures, which are part of courtship and also influence where eggs are laid. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: How prairie dogs build towns`
+          },
+          {
+            headline: `How prairie dogs build towns`,
+            text: `Prairie dog colonies can contain extensive burrow networks with multiple entrances and chambers. The mounds improve visibility and airflow, while social groups occupy neighboring territories within the larger colony. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why bowerbirds decorate`
+          },
+          {
+            headline: `Why bowerbirds decorate`,
+            text: `Male bowerbirds build and decorate display structures called bowers with colorful objects. Females inspect the construction and displays when choosing mates. The bower is a stage, not usually the nest where chicks are raised. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: How leafcutter ants farm fungus`
+          },
+          {
+            headline: `How leafcutter ants farm fungus`,
+            text: `Leafcutter ants do not mainly eat the leaves they carry. Workers cut vegetation to feed a cultivated fungus inside the nest, then eat specialized fungal growth. The colony weeds, fertilizes, and protects its underground crop. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: How pumping your legs makes a swing go higher`
+          }
+        ]
+      },
+      {
+        theme: `The Science of Fun`,
+        days: [
+          {
+            headline: `How pumping your legs makes a swing go higher`,
+            text: `By changing body position at the right points in the swing cycle, you shift your center of mass and add energy to the motion. Good timing makes each pass slightly larger without anyone pushing from behind. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why roller-coaster cars stay on the track`
+          },
+          {
+            headline: `Why roller-coaster cars stay on the track`,
+            text: `Modern coaster wheel assemblies often grip the rail from above, below, and the side. Up-stop wheels help prevent the car from lifting away from the track during hills and inversions. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why a flying disc stays in the air`
+          },
+          {
+            headline: `Why a flying disc stays in the air`,
+            text: `A spinning disc meets the air at an angle and creates lift while its rotation provides gyroscopic stability. Without enough spin, small tilts grow quickly and the disc tumbles. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why a spinning top resists falling`
+          },
+          {
+            headline: `Why a spinning top resists falling`,
+            text: `A spinning top has angular momentum. Gravity still creates a torque, but instead of simply tipping over, the top’s axis often moves around in a slower motion called precession. Friction eventually drains energy and the top falls. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: How a yo-yo comes back`
+          },
+          {
+            headline: `How a yo-yo comes back`,
+            text: `A yo-yo descends as its string unwinds, converting gravitational energy into rotation. With the right axle and string setup, a tug changes the forces so the string winds back around the axle and lifts the yo-yo. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Why a hula hoop stays up`
+          },
+          {
+            headline: `Why a hula hoop stays up`,
+            text: `Your hips do not simply spin in a circle with the hoop. Timed forward-back or side-to-side pushes add energy whenever the hoop contacts your body, replacing energy lost to gravity and friction. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look.`,
+            teaser: `Tomorrow: Why trampolines throw you upward`
+          },
+          {
+            headline: `Why trampolines throw you upward`,
+            text: `A trampoline mat and its springs stretch as you land, storing elastic energy. As they return toward their original shape, they push you upward. Your muscles can add even more energy by timing your body movements. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: How ancient Greeks estimated Earth’s size`
+          }
+        ]
+      },
+      {
+        theme: `How Did People Figure THAT Out?`,
+        days: [
+          {
+            headline: `How ancient Greeks estimated Earth’s size`,
+            text: `Eratosthenes compared the Sun’s angle at two Egyptian cities around the summer solstice and combined the angle difference with the distance between them. From a pair of shadows, he produced a remarkably good estimate of Earth’s circumference. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: How sailors finally solved longitude`
+          },
+          {
+            headline: `How sailors finally solved longitude`,
+            text: `Latitude can be estimated from the sky, but longitude requires knowing the time difference between a reference location and local solar time. Accurate marine chronometers made it possible for ships to carry reference time across oceans. It is the kind of detail that can hide in plain sight for years. Once you know what is happening, the next ordinary encounter becomes a tiny demonstration of science or history instead of background scenery. The surprising part is not that the effect is rare—it is that we see versions of it all the time without asking what is doing the work. Knowing the reason makes an ordinary moment much more interesting.`,
+            teaser: `Tomorrow: How doctors learned germs spread disease`
+          },
+          {
+            headline: `How doctors learned germs spread disease`,
+            text: `Evidence accumulated through many discoveries: Semmelweis linked handwashing with fewer childbed-fever deaths, Pasteur demonstrated microbial processes, and Koch connected particular microbes with particular diseases. Germ theory emerged from converging experiments, not one sudden revelation. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: How scientists learned Earth is ancient`
+          },
+          {
+            headline: `How scientists learned Earth is ancient`,
+            text: `Geology showed layers, erosion, and fossils requiring immense time. Radioactivity later provided clocks inside minerals: known decay rates let scientists date ancient rocks and meteorites, establishing an Earth about 4.54 billion years old. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How people measured the speed of light`
+          },
+          {
+            headline: `How people measured the speed of light`,
+            text: `Ole Rømer noticed that eclipses of Jupiter’s moon Io appeared early or late depending on Earth’s changing distance from Jupiter. He realized light took time to cross the extra distance, providing the first quantitative evidence that light has a finite speed. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: How fingerprints became identification tools`
+          },
+          {
+            headline: `How fingerprints became identification tools`,
+            text: `Nineteenth-century researchers and police systems showed that ridge patterns are highly individual and persist through life. Classification systems made prints searchable, turning a biological detail into a practical identification method. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting. It is a reminder that useful design and natural behavior often look obvious only after we understand them. Before that, the clue can sit in front of us for years without attracting a second thought. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time.`,
+            teaser: `Tomorrow: How scientists discovered continents move`
+          },
+          {
+            headline: `How scientists discovered continents move`,
+            text: `Alfred Wegener assembled evidence that continents fit together and shared fossils and geology, but he lacked a convincing mechanism. Decades later, seafloor mapping, magnetic stripes, and plate tectonics supplied the moving machinery his idea needed. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again.`,
+            teaser: `Tomorrow: How tardigrades survive extreme drying`
+          }
+        ]
+      },
+      {
+        theme: `Nature’s Best Survival Tricks`,
+        days: [
+          {
+            headline: `How tardigrades survive extreme drying`,
+            text: `Some tardigrades enter a dried, contracted state called a tun. Metabolism falls dramatically, and protective molecules help stabilize cells. In that state certain species can survive conditions that would quickly kill them while active. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: How camels conserve water`
+          },
+          {
+            headline: `How camels conserve water`,
+            text: `Camels tolerate large changes in body temperature, produce concentrated urine and dry feces, and have blood cells adapted to dehydration. Their humps store fat, not water; that fat is an energy reserve. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple. That gap between what we see and what is really happening is exactly where everyday curiosity gets interesting.`,
+            teaser: `Tomorrow: Fish with natural antifreeze`
+          },
+          {
+            headline: `Fish with natural antifreeze`,
+            text: `Some polar fish make antifreeze proteins or glycoproteins that bind to tiny ice crystals and inhibit their growth. This lets body fluids remain liquid in seawater cold enough to freeze ordinary fish blood. Nothing about the everyday object announces all of that hidden work. That is what makes it such a good curiosity: a familiar sight turns out to have a much better story underneath it. You do not need a laboratory to spot the result; it is sitting in the ordinary world. The science or history is hidden, but once explained, the familiar thing suddenly becomes worth a second look.`,
+            teaser: `Tomorrow: Beetles that drink fog`
+          },
+          {
+            headline: `Beetles that drink fog`,
+            text: `Some desert beetles collect tiny droplets from fog on their bodies and let water run toward the mouth. The exact surface mechanisms vary by species and are more complex than the famous simple “bumps collect water” story. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Plants that seem to come back from the dead`
+          },
+          {
+            headline: `Plants that seem to come back from the dead`,
+            text: `Resurrection plants can dry until they look dead, then resume normal activity after water returns. They protect membranes and proteins with sugars, antioxidants, and tightly controlled shutdown processes. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why Arctic foxes change coats`
+          },
+          {
+            headline: `Why Arctic foxes change coats`,
+            text: `Many Arctic foxes grow thick white winter fur and a thinner brown or gray summer coat. Seasonal daylight and hormones trigger molting, matching insulation and camouflage to a landscape that changes dramatically. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: How mangroves deal with salt`
+          },
+          {
+            headline: `How mangroves deal with salt`,
+            text: `Mangrove species use several strategies: roots can exclude much of the salt entering with water, leaves may excrete salt through glands, and plants can store salt in tissues that are later shed. That small detail is easy to ignore until somebody asks the right question. After that, it becomes one of those facts you may notice every time the same everyday situation appears again. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Do mirrors really reverse left and right?`
+          }
+        ]
+      },
+      {
+        theme: `Seven Questions You Never Thought to Ask`,
+        days: [
+          {
+            headline: `Do mirrors really reverse left and right?`,
+            text: `A mirror reverses the direction perpendicular to its surface: front and back. It does not selectively swap left and right. We imagine turning ourselves around to face the reflected person, and that mental rotation creates the familiar left-right impression. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why doesn’t glue stick inside the bottle?`
+          },
+          {
+            headline: `Why doesn’t glue stick inside the bottle?`,
+            text: `Many glues need something from the environment before they set—water evaporating, moisture entering, or two components mixing. A closed bottle limits that trigger, so the adhesive can remain liquid until exposed during use. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why can you see the Moon in daytime?`
+          },
+          {
+            headline: `Why can you see the Moon in daytime?`,
+            text: `The Moon reflects sunlight and is above the horizon during daylight for roughly half of each month’s cycle. When its position and brightness beat the blue sky’s glare, it is perfectly visible before sunset or after sunrise. The effect feels simple because it is familiar, not because the explanation is simple.`,
+            teaser: `Tomorrow: Why does a shower curtain move inward?`
+          },
+          {
+            headline: `Why does a shower curtain move inward?`,
+            text: `Moving warm air, spray-driven airflow, and pressure differences inside a shower can pull a light curtain inward. The exact airflow is complicated, but the curtain is responding to moving air—not being mysteriously attracted to water. The next time you see it, there is a little more to notice than there was before. An ordinary object or event has been quietly carrying that story the whole time. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why does a straw look bent in water?`
+          },
+          {
+            headline: `Why does a straw look bent in water?`,
+            text: `Light changes speed and direction when it passes between water and air. Rays from the submerged part of the straw are refracted before reaching your eyes, so that part appears shifted from its true position. That is a lot of hidden engineering, biology, or history packed into something most people barely notice. The familiar world gets stranger—in a good way—the closer you look. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why does a spoon reflection flip your face?`
+          },
+          {
+            headline: `Why does a spoon reflection flip your face?`,
+            text: `The inside of a spoon is a concave mirror. When your face is farther away than the mirror’s focal distance, reflected rays cross before reaching your eyes, forming an upside-down real image. Move close enough and the image becomes upright and magnified. That is a lot of hidden engineering, biology, or history packed into something most people barely notice.`,
+            teaser: `Tomorrow: Why can you hear surf before you can see the ocean`
+          },
+          {
+            headline: `Why can you hear surf before you can see the ocean`,
+            text: `Sound can bend around obstacles and travel through openings more easily than visible light, which mostly travels in straight lines. Hills, dunes, or buildings may block your view while the low roar of many breaking waves still reaches you. What looks like a tiny quirk is really the visible end of a much bigger process.`,
+            teaser: `Tomorrow: Why Does Popcorn Explode?`
+          }
+        ]
+      },
+
 ];
 module.exports = {
   jokes,
