@@ -271,3 +271,35 @@
     width: 100%;
   }
 }
+.qr-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.qr-detail-header h2 {
+  margin-bottom: 4px;
+}
+
+.qr-detail-header p {
+  margin-top: 0;
+}
+
+.qr-analytics-controls input[type="date"] {
+  display: block;
+  min-width: 170px;
+  padding: 9px;
+  margin-top: 4px;
+}
+
+.qr-business-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}

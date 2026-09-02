@@ -292,16 +292,92 @@
           <th>Edition</th>
           <th>QR Placement</th>
           <th>Total Scans</th>
-          <th>Last 30 Days</th>
-          <th>Last Scan</th>
+<th>Last 30 Days</th>
+<th>Yesterday</th>
+<th>Today</th>
+<th>Last Scan</th>
         </tr>
       </thead>
 
       <tbody id="qrAnalyticsTableBody">
         <tr>
-          <td colspan="6">Loading QR analytics...</td>
+          <td colspan="8">Loading QR analytics...</td>
         </tr>
       </tbody>
+    </table>
+  </div>
+</section>
+<section
+  id="qrAnalyticsDetailSection"
+  class="qr-analytics-section"
+  style="display:none;"
+>
+  <div class="qr-detail-header">
+    <div>
+      <h2 id="qrDetailBusinessName">QR Scan Detail</h2>
+      <p id="qrDetailMeta"></p>
+    </div>
+
+    <button type="button" id="closeQrDetail">
+      Close
+    </button>
+  </div>
+
+  <div class="qr-analytics-controls">
+    <label>
+      Start Date
+      <input type="date" id="qrDetailStartDate">
+    </label>
+
+    <label>
+      End Date
+      <input type="date" id="qrDetailEndDate">
+    </label>
+
+    <button type="button" id="applyQrDetailRange">
+      Apply Date Range
+    </button>
+
+    <button type="button" id="clearQrDetailRange">
+      Clear Range
+    </button>
+  </div>
+
+  <div class="qr-summary-grid">
+    <div class="qr-summary-card">
+      <span class="qr-summary-label">
+        Scans in Selected Range
+      </span>
+      <strong id="qrDetailTotalScans">0</strong>
+    </div>
+  </div>
+
+  <h3>Daily Totals</h3>
+
+  <div class="qr-analytics-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Scans</th>
+        </tr>
+      </thead>
+
+      <tbody id="qrDetailDailyBody"></tbody>
+    </table>
+  </div>
+
+  <h3>Individual Scan Times</h3>
+
+  <div class="qr-analytics-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Date / Time</th>
+        </tr>
+      </thead>
+
+      <tbody id="qrDetailScansBody"></tbody>
     </table>
   </div>
 </section>

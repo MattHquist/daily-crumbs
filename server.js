@@ -1299,12 +1299,19 @@ if (!isOwner) {
     const now = new Date();
 
     const startOfToday = new Date(
-      now.getFullYear(),
-      now.getMonth(),
-      now.getDate()
-    );
+  now.getFullYear(),
+  now.getMonth(),
+  now.getDate()
+);
 
-    const sevenDaysAgo = new Date(startOfToday);
+const startOfTomorrow = new Date(startOfToday);
+startOfTomorrow.setDate(startOfTomorrow.getDate() + 1);
+
+const startOfYesterday = new Date(startOfToday);
+startOfYesterday.setDate(startOfYesterday.getDate() - 1);
+
+const sevenDaysAgo = new Date(startOfToday);
+sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 6);
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 6);
 
     const thirtyDaysAgo = new Date(startOfToday);
@@ -1350,7 +1357,15 @@ if (!isOwner) {
               .map(scan => scan.scanDate)
               .sort((a, b) => b - a)[0]
           : null;
+      const todayScans = matchingScans.filter(scan =>
+  scan.scanDate >= startOfToday &&
+  scan.scanDate < startOfTomorrow
+).length;
 
+const yesterdayScans = matchingScans.filter(scan =>
+  scan.scanDate >= startOfYesterday &&
+  scan.scanDate < startOfToday
+).length;
       return {
         locationId: location.id,
         businessName: location.business_name || '',
@@ -1364,6 +1379,8 @@ if (!isOwner) {
         last30Days: matchingScans.filter(scan =>
           scan.scanDate >= thirtyDaysAgo
         ).length,
+        todayScans,
+yesterdayScans,
         lastScan: latestScan
           ? latestScan.toISOString()
           : null
@@ -1390,6 +1407,258 @@ if (!isOwner) {
     return send(res, 500, {
       success: false,
       error: 'Could not load QR analytics'
+    });
+  }
+}
+if (
+  u.pathname === '/api/qr-analytics-detail' &&
+  req.method === 'GET'
+) {
+  try {
+    const authHeader = req.headers.authorization || '';
+
+    if (!authHeader.startsWith('Bearer ')) {
+      return send(res, 401, {
+        success: false,
+        error: 'Authentication required'
+      });
+    }
+
+    const accessToken = authHeader.slice(7);
+
+    const secretKey = process.env.SUPABASE_SECRET_KEY;
+    const supabaseUrl = process.env.SUPABASE_URL;
+
+    const userResponse = await fetch(
+      `${supabaseUrl}/auth/v1/user`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${accessToken}`
+        }
+      }
+    );
+
+    if (!userResponse.ok) {
+      return send(res, 401, {
+        success: false,
+        error: 'Invalid session'
+      });
+    }
+
+    const user = await userResponse.json();
+
+    const profileResponse = await fetch(
+      `${supabaseUrl}/rest/v1/profiles` +
+      `?select=id,role,active` +
+      `&id=eq.${encodeURIComponent(user.id)}` +
+      `&limit=1`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    const profiles = await profileResponse.json();
+    const profile = profiles[0];
+
+    if (!profile || profile.active === false) {
+      return send(res, 403, {
+        success: false,
+        error: 'Access denied'
+      });
+    }
+
+    const isOwner = profile.role === 'owner';
+
+    const locationId =
+      (u.searchParams.get('location_id') || '').trim();
+
+    const start =
+      (u.searchParams.get('start') || '').trim();
+
+    const end =
+      (u.searchParams.get('end') || '').trim();
+
+    if (!locationId) {
+      return send(res, 400, {
+        success: false,
+        error: 'Location is required'
+      });
+    }
+
+    const locationResponse = await fetch(
+      `${supabaseUrl}/rest/v1/locations` +
+      `?select=id,business_name,edition_id,qr_slug,qr_placement,editions(name)` +
+      `&id=eq.${encodeURIComponent(locationId)}` +
+      `&limit=1`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    if (!locationResponse.ok) {
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load location'
+      });
+    }
+
+    const locationRows = await locationResponse.json();
+    const location = locationRows[0];
+
+    if (!location) {
+      return send(res, 404, {
+        success: false,
+        error: 'Location not found'
+      });
+    }
+
+    if (!isOwner) {
+      const assignmentsResponse = await fetch(
+        `${supabaseUrl}/rest/v1/user_editions` +
+        `?select=edition_id` +
+        `&user_id=eq.${encodeURIComponent(user.id)}`,
+        {
+          headers: {
+            apikey: secretKey,
+            Authorization: `Bearer ${secretKey}`
+          }
+        }
+      );
+
+      const assignments = await assignmentsResponse.json();
+
+      const allowedEditionIds = new Set(
+        (assignments || [])
+          .map(item => item.edition_id)
+          .filter(Boolean)
+      );
+
+      if (!allowedEditionIds.has(location.edition_id)) {
+        return send(res, 403, {
+          success: false,
+          error: 'You do not have access to this location'
+        });
+      }
+    }
+
+    let scansUrl =
+      `${supabaseUrl}/rest/v1/qr_scans` +
+      `?select=id,location_id,edition_id,qr_slug,scanned_at` +
+      `&order=scanned_at.desc`;
+
+    const scansResponse = await fetch(
+      scansUrl,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    if (!scansResponse.ok) {
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load scans'
+      });
+    }
+
+    let scans = await scansResponse.json();
+
+    scans = (scans || []).filter(scan =>
+      scan.location_id === location.id ||
+      (
+        !scan.location_id &&
+        scan.qr_slug === location.qr_slug
+      )
+    );
+
+    let startDate = null;
+    let endDate = null;
+
+    if (start) {
+      startDate = new Date(`${start}T00:00:00`);
+    }
+
+    if (end) {
+      endDate = new Date(`${end}T23:59:59.999`);
+    }
+
+    const filteredScans = scans.filter(scan => {
+      const scanDate = new Date(scan.scanned_at);
+
+      if (startDate && scanDate < startDate) {
+        return false;
+      }
+
+      if (endDate && scanDate > endDate) {
+        return false;
+      }
+
+      return true;
+    });
+
+    const dailyCountsMap = new Map();
+
+    filteredScans.forEach(scan => {
+      const date = new Date(scan.scanned_at);
+      const dayKey = [
+        date.getFullYear(),
+        String(date.getMonth() + 1).padStart(2, '0'),
+        String(date.getDate()).padStart(2, '0')
+      ].join('-');
+
+      dailyCountsMap.set(
+        dayKey,
+        (dailyCountsMap.get(dayKey) || 0) + 1
+      );
+    });
+
+    const dailyCounts = Array.from(
+      dailyCountsMap.entries()
+    )
+      .map(([date, count]) => ({
+        date,
+        count
+      }))
+      .sort((a, b) =>
+        b.date.localeCompare(a.date)
+      );
+
+    return send(res, 200, {
+      success: true,
+      location: {
+        id: location.id,
+        businessName: location.business_name || '',
+        editionId: location.edition_id || '',
+        editionName: location.editions?.name || '',
+        qrSlug: location.qr_slug || '',
+        qrPlacement: location.qr_placement || ''
+      },
+      selectedRange: {
+        start: start || null,
+        end: end || null
+      },
+      totalScans: filteredScans.length,
+      dailyCounts,
+      scans: filteredScans.map(scan => ({
+        id: scan.id,
+        scannedAt: scan.scanned_at
+      }))
+    });
+  } catch (error) {
+    console.error('QR analytics detail failed:', error);
+
+    return send(res, 500, {
+      success: false,
+      error: 'Could not load QR scan detail'
     });
   }
 }

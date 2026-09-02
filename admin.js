@@ -1490,7 +1490,7 @@ if (managerEditionSelect && editionSettingsSelect) {
 // ------------------------------------------------------
 
 let qrAnalyticsLoadedEditions = false;
-
+let qrAnalyticsSelectedLocationId = null;
 function formatQrAnalyticsDate(value) {
   if (!value) return 'Never';
 
@@ -1617,10 +1617,14 @@ async function loadQrAnalytics() {
       tableBody.innerHTML = rows.map(row => `
         <tr>
           <td>
-            <strong>
-              ${escapeQrAnalyticsHtml(row.businessName)}
-            </strong>
-          </td>
+  <button
+    type="button"
+    class="qr-business-link"
+    data-location-id="${escapeQrAnalyticsHtml(row.locationId)}"
+  >
+    ${escapeQrAnalyticsHtml(row.businessName)}
+  </button>
+</td>
 
           <td>
             ${escapeQrAnalyticsHtml(row.editionName)}
@@ -1637,14 +1641,22 @@ async function loadQrAnalytics() {
           </td>
 
           <td>
-            ${Number(row.last30Days || 0).toLocaleString()}
-          </td>
+  ${Number(row.last30Days || 0).toLocaleString()}
+</td>
 
-          <td>
-            ${escapeQrAnalyticsHtml(
-              formatQrAnalyticsDate(row.lastScan)
-            )}
-          </td>
+<td>
+  ${Number(row.yesterdayScans || 0).toLocaleString()}
+</td>
+
+<td>
+  ${Number(row.todayScans || 0).toLocaleString()}
+</td>
+
+<td>
+  ${escapeQrAnalyticsHtml(
+    formatQrAnalyticsDate(row.lastScan)
+  )}
+</td>
         </tr>
       `).join('');
     }
@@ -1699,6 +1711,161 @@ document.addEventListener(
   initializeQrAnalytics,
   { once: true }
 );
+async function loadQrAnalyticsDetail(locationId) {
+  const context = window.adminUserContext;
+
+  if (!context?.accessToken || !locationId) {
+    return;
+  }
+
+  qrAnalyticsSelectedLocationId = locationId;
+
+  const detailSection =
+    document.getElementById('qrAnalyticsDetailSection');
+
+  const startInput =
+    document.getElementById('qrDetailStartDate');
+
+  const endInput =
+    document.getElementById('qrDetailEndDate');
+
+  let url =
+    `/api/qr-analytics-detail?location_id=${encodeURIComponent(locationId)}`;
+
+  if (startInput?.value) {
+    url += `&start=${encodeURIComponent(startInput.value)}`;
+  }
+
+  if (endInput?.value) {
+    url += `&end=${encodeURIComponent(endInput.value)}`;
+  }
+
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${context.accessToken}`
+    }
+  });
+
+  const data = await response.json();
+
+  if (!response.ok || !data.success) {
+    alert(data.error || 'Could not load QR scan detail');
+    return;
+  }
+
+  document.getElementById('qrDetailBusinessName').textContent =
+    data.location.businessName || 'QR Scan Detail';
+
+  document.getElementById('qrDetailMeta').textContent =
+    [
+      data.location.editionName,
+      data.location.qrPlacement
+    ]
+      .filter(Boolean)
+      .join(' • ');
+
+  document.getElementById('qrDetailTotalScans').textContent =
+    Number(data.totalScans || 0).toLocaleString();
+
+  const dailyBody =
+    document.getElementById('qrDetailDailyBody');
+
+  dailyBody.innerHTML =
+    (data.dailyCounts || []).length
+      ? data.dailyCounts.map(item => `
+          <tr>
+            <td>${escapeQrAnalyticsHtml(item.date)}</td>
+            <td>${Number(item.count || 0).toLocaleString()}</td>
+          </tr>
+        `).join('')
+      : `
+          <tr>
+            <td colspan="2">
+              No scans in this date range.
+            </td>
+          </tr>
+        `;
+
+  const scansBody =
+    document.getElementById('qrDetailScansBody');
+
+  scansBody.innerHTML =
+    (data.scans || []).length
+      ? data.scans.map(scan => `
+          <tr>
+            <td>
+              ${escapeQrAnalyticsHtml(
+                formatQrAnalyticsDate(scan.scannedAt)
+              )}
+            </td>
+          </tr>
+        `).join('')
+      : `
+          <tr>
+            <td>No scans in this date range.</td>
+          </tr>
+        `;
+
+  detailSection.style.display = 'block';
+
+  detailSection.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+}
+
+document.addEventListener('click', event => {
+  const businessButton =
+    event.target.closest('.qr-business-link');
+
+  if (businessButton) {
+    loadQrAnalyticsDetail(
+      businessButton.dataset.locationId
+    );
+  }
+});
+
+document
+  .getElementById('applyQrDetailRange')
+  ?.addEventListener('click', () => {
+    if (qrAnalyticsSelectedLocationId) {
+      loadQrAnalyticsDetail(
+        qrAnalyticsSelectedLocationId
+      );
+    }
+  });
+
+document
+  .getElementById('clearQrDetailRange')
+  ?.addEventListener('click', () => {
+    const startInput =
+      document.getElementById('qrDetailStartDate');
+
+    const endInput =
+      document.getElementById('qrDetailEndDate');
+
+    if (startInput) startInput.value = '';
+    if (endInput) endInput.value = '';
+
+    if (qrAnalyticsSelectedLocationId) {
+      loadQrAnalyticsDetail(
+        qrAnalyticsSelectedLocationId
+      );
+    }
+  });
+
+document
+  .getElementById('closeQrDetail')
+  ?.addEventListener('click', () => {
+    const detailSection =
+      document.getElementById('qrAnalyticsDetailSection');
+
+    if (detailSection) {
+      detailSection.style.display = 'none';
+    }
+
+    qrAnalyticsSelectedLocationId = null;
+  });
 
 if (window.adminUserContext) {
   initializeQrAnalytics();
