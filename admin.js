@@ -1825,38 +1825,52 @@ document.addEventListener('click', event => {
   }
 });
 
-document
-  .getElementById('applyQrDetailRange')
-  ?.addEventListener('click', () => {
+document.addEventListener('click', event => {
+  const businessButton =
+    event.target.closest('.qr-business-link');
+
+  if (businessButton) {
+    loadQrAnalyticsDetail(
+      businessButton.dataset.locationId
+    );
+    return;
+  }
+
+  if (event.target.closest('#applyQrDetailRange')) {
     if (qrAnalyticsSelectedLocationId) {
       loadQrAnalyticsDetail(
         qrAnalyticsSelectedLocationId
       );
     }
-  });
 
-document
-  .getElementById('clearQrDetailRange')
-  ?.addEventListener('click', () => {
+    return;
+  }
+
+  if (event.target.closest('#clearQrDetailRange')) {
     const startInput =
       document.getElementById('qrDetailStartDate');
 
     const endInput =
       document.getElementById('qrDetailEndDate');
 
-    if (startInput) startInput.value = '';
-    if (endInput) endInput.value = '';
+    if (startInput) {
+      startInput.value = '';
+    }
+
+    if (endInput) {
+      endInput.value = '';
+    }
 
     if (qrAnalyticsSelectedLocationId) {
       loadQrAnalyticsDetail(
         qrAnalyticsSelectedLocationId
       );
     }
-  });
 
-document
-  .getElementById('closeQrDetail')
-  ?.addEventListener('click', () => {
+    return;
+  }
+
+  if (event.target.closest('#closeQrDetail')) {
     const detailSection =
       document.getElementById('qrAnalyticsDetailSection');
 
@@ -1865,7 +1879,8 @@ document
     }
 
     qrAnalyticsSelectedLocationId = null;
-  });
+  }
+});
 
 if (window.adminUserContext) {
   initializeQrAnalytics();
