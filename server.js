@@ -1031,6 +1031,369 @@ if (
   });
 }
 if (
+  u.pathname === '/api/qr-analytics' &&
+  req.method === 'GET'
+) {
+  try {
+    const authHeader = req.headers.authorization || '';
+
+    if (!authHeader.startsWith('Bearer ')) {
+      return send(res, 401, {
+        success: false,
+        error: 'Authentication required'
+      });
+    }
+
+    const accessToken = authHeader.slice(7);
+
+    const secretKey = process.env.SUPABASE_SECRET_KEY;
+    const supabaseUrl = process.env.SUPABASE_URL;
+
+    // Verify the logged-in Supabase user.
+    const userResponse = await fetch(
+      `${supabaseUrl}/auth/v1/user`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${accessToken}`
+        }
+      }
+    );
+
+    if (!userResponse.ok) {
+      return send(res, 401, {
+        success: false,
+        error: 'Invalid session'
+      });
+    }
+
+    const user = await userResponse.json();
+
+    // Load the user's Daily Crumbs profile.
+    const profileResponse = await fetch(
+      `${supabaseUrl}/rest/v1/profiles` +
+      `?select=id,full_name,role,active` +
+      `&id=eq.${encodeURIComponent(user.id)}` +
+      `&limit=1`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    if (!profileResponse.ok) {
+      const errorText = await profileResponse.text();
+      console.error(
+        'QR analytics profile lookup failed:',
+        profileResponse.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load user profile'
+      });
+    }
+
+    const profiles = await profileResponse.json();
+    const profile = profiles[0];
+
+    if (!profile || profile.active === false) {
+      return send(res, 403, {
+        success: false,
+        error: 'Access denied'
+      });
+    }
+
+    const isOwner = profile.role === 'owner';
+
+    // Determine which editions this user may see.
+    let allowedEditionIds = [];
+
+    if (!isOwner) {
+      const assignmentsResponse = await fetch(
+        `${supabaseUrl}/rest/v1/user_editions` +
+        `?select=edition_id` +
+        `&user_id=eq.${encodeURIComponent(user.id)}`,
+        {
+          headers: {
+            apikey: secretKey,
+            Authorization: `Bearer ${secretKey}`
+          }
+        }
+      );
+
+      if (!assignmentsResponse.ok) {
+        const errorText = await assignmentsResponse.text();
+
+        console.error(
+          'QR analytics edition assignment lookup failed:',
+          assignmentsResponse.status,
+          errorText
+        );
+
+        return send(res, 500, {
+          success: false,
+          error: 'Could not load edition permissions'
+        });
+      }
+
+      const assignments = await assignmentsResponse.json();
+
+      allowedEditionIds = (assignments || [])
+        .map(item => item.edition_id)
+        .filter(Boolean);
+    }
+
+    // Load editions.
+    const editionsResponse = await fetch(
+      `${supabaseUrl}/rest/v1/editions` +
+      `?select=id,name,slug` +
+      `&order=name.asc`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    if (!editionsResponse.ok) {
+      const errorText = await editionsResponse.text();
+
+      console.error(
+        'QR analytics editions lookup failed:',
+        editionsResponse.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load editions'
+      });
+    }
+
+    let editions = await editionsResponse.json();
+
+    if (!isOwner) {
+      editions = (editions || []).filter(edition =>
+        allowedEditionIds.includes(edition.id)
+      );
+    }
+
+    const requestedEditionId =
+      (u.searchParams.get('edition_id') || '').trim();
+
+    if (
+      requestedEditionId &&
+      !isOwner &&
+      !allowedEditionIds.includes(requestedEditionId)
+    ) {
+      return send(res, 403, {
+        success: false,
+        error: 'You do not have access to this edition'
+      });
+    }
+
+    // Load participating locations.
+    let locationsUrl =
+      `${supabaseUrl}/rest/v1/locations` +
+      `?select=id,business_name,qr_slug,qr_placement,edition_id,active`;
+
+    if (requestedEditionId) {
+      locationsUrl +=
+        `&edition_id=eq.${encodeURIComponent(requestedEditionId)}`;
+    }
+
+    const locationsResponse = await fetch(
+      locationsUrl,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    if (!locationsResponse.ok) {
+      const errorText = await locationsResponse.text();
+
+      console.error(
+        'QR analytics locations lookup failed:',
+        locationsResponse.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load locations'
+      });
+    }
+
+    let locations = await locationsResponse.json();
+
+    if (!isOwner) {
+      locations = (locations || []).filter(location =>
+        allowedEditionIds.includes(location.edition_id)
+      );
+    }
+
+    // Load scan history.
+    let scansUrl =
+      `${supabaseUrl}/rest/v1/qr_scans` +
+      `?select=id,location_id,edition_id,qr_slug,scanned_at` +
+      `&order=scanned_at.desc`;
+
+
+    const scansResponse = await fetch(
+      scansUrl,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    if (!scansResponse.ok) {
+      const errorText = await scansResponse.text();
+
+      console.error(
+        'QR analytics scans lookup failed:',
+        scansResponse.status,
+        errorText
+      );
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not load QR scans'
+      });
+    }
+
+    let scans = await scansResponse.json();
+
+    const allowedLocationIds = new Set(
+  (locations || []).map(location => location.id).filter(Boolean)
+);
+
+const allowedQrSlugs = new Set(
+  (locations || []).map(location => location.qr_slug).filter(Boolean)
+);
+
+if (!isOwner) {
+  scans = (scans || []).filter(scan => {
+    if (scan.location_id) {
+      return allowedLocationIds.has(scan.location_id);
+    }
+
+    if (scan.qr_slug) {
+      return allowedQrSlugs.has(scan.qr_slug);
+    }
+
+    return false;
+  });
+}
+
+    const now = new Date();
+
+    const startOfToday = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate()
+    );
+
+    const sevenDaysAgo = new Date(startOfToday);
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 6);
+
+    const thirtyDaysAgo = new Date(startOfToday);
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 29);
+
+    const parsedScans = (scans || []).map(scan => ({
+      ...scan,
+      scanDate: new Date(scan.scanned_at)
+    }));
+
+    const summary = {
+      total: parsedScans.length,
+      today: parsedScans.filter(scan =>
+        scan.scanDate >= startOfToday
+      ).length,
+      last7Days: parsedScans.filter(scan =>
+        scan.scanDate >= sevenDaysAgo
+      ).length,
+      last30Days: parsedScans.filter(scan =>
+        scan.scanDate >= thirtyDaysAgo
+      ).length
+    };
+
+    const editionNameById = new Map(
+      (editions || []).map(edition => [
+        edition.id,
+        edition.name
+      ])
+    );
+
+    const rows = (locations || []).map(location => {
+      const matchingScans = parsedScans.filter(scan =>
+        scan.location_id === location.id ||
+        (
+          !scan.location_id &&
+          scan.qr_slug === location.qr_slug
+        )
+      );
+
+      const latestScan =
+        matchingScans.length > 0
+          ? matchingScans
+              .map(scan => scan.scanDate)
+              .sort((a, b) => b - a)[0]
+          : null;
+
+      return {
+        locationId: location.id,
+        businessName: location.business_name || '',
+        editionId: location.edition_id || '',
+        editionName:
+          editionNameById.get(location.edition_id) || '',
+        qrSlug: location.qr_slug || '',
+        qrPlacement: location.qr_placement || '',
+        active: location.active !== false,
+        totalScans: matchingScans.length,
+        last30Days: matchingScans.filter(scan =>
+          scan.scanDate >= thirtyDaysAgo
+        ).length,
+        lastScan: latestScan
+          ? latestScan.toISOString()
+          : null
+      };
+    });
+
+    rows.sort((a, b) =>
+      b.totalScans - a.totalScans ||
+      a.businessName.localeCompare(b.businessName)
+    );
+
+    return send(res, 200, {
+      success: true,
+      role: profile.role,
+      isOwner,
+      editions,
+      selectedEditionId: requestedEditionId || null,
+      summary,
+      rows
+    });
+  } catch (error) {
+    console.error('QR analytics failed:', error);
+
+    return send(res, 500, {
+      success: false,
+      error: 'Could not load QR analytics'
+    });
+  }
+}
+if (
   u.pathname === '/api/edition-managers' &&
   req.method === 'GET'
 ) {

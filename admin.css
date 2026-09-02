@@ -158,3 +158,116 @@
     grid-template-columns: 1fr;
   }
 }
+/* QR Code Analytics */
+
+.qr-analytics-section {
+  margin: 28px 0;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #d8d1c5;
+  border-radius: 12px;
+}
+
+.qr-analytics-section h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.qr-analytics-description {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.qr-analytics-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.qr-analytics-controls label {
+  font-weight: 700;
+}
+
+.qr-analytics-controls select {
+  min-width: 220px;
+  padding: 10px;
+}
+
+.qr-analytics-controls button {
+  padding: 10px 16px;
+}
+
+.qr-analytics-status {
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.qr-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.qr-summary-card {
+  padding: 16px;
+  border: 1px solid #d8d1c5;
+  border-radius: 8px;
+  background: #f8f5ef;
+}
+
+.qr-summary-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.qr-summary-card strong {
+  font-size: 1.8rem;
+}
+
+.qr-analytics-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#qrAnalyticsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#qrAnalyticsTable th,
+#qrAnalyticsTable td {
+  padding: 11px 10px;
+  border-bottom: 1px solid #ddd6ca;
+  text-align: left;
+  vertical-align: top;
+}
+
+#qrAnalyticsTable th {
+  white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+  .qr-summary-grid {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .qr-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-analytics-controls {
+    align-items: stretch;
+  }
+
+  .qr-analytics-controls select,
+  .qr-analytics-controls button {
+    width: 100%;
+  }
+}

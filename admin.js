@@ -1485,3 +1485,221 @@ if (managerEditionSelect && editionSettingsSelect) {
   await loadEditionManagers();
 }
 });
+// ------------------------------------------------------
+// QR CODE ANALYTICS
+// ------------------------------------------------------
+
+let qrAnalyticsLoadedEditions = false;
+
+function formatQrAnalyticsDate(value) {
+  if (!value) return 'Never';
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return 'Never';
+  }
+
+  return date.toLocaleString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit'
+  });
+}
+
+function escapeQrAnalyticsHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+async function loadQrAnalytics() {
+  const context = window.adminUserContext;
+
+  if (!context || !context.accessToken) {
+    return;
+  }
+
+  const editionFilter =
+    document.getElementById('qrAnalyticsEditionFilter');
+
+  const tableBody =
+    document.getElementById('qrAnalyticsTableBody');
+
+  const status =
+    document.getElementById('qrAnalyticsStatus');
+
+  if (!editionFilter || !tableBody) {
+    return;
+  }
+
+  const selectedEditionId = editionFilter.value || '';
+
+  status.textContent = 'Loading QR analytics...';
+
+  try {
+    let url = '/api/qr-analytics';
+
+    if (selectedEditionId) {
+      url +=
+        `?edition_id=${encodeURIComponent(selectedEditionId)}`;
+    }
+
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${context.accessToken}`
+      }
+    });
+
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      throw new Error(
+        data.error || 'Could not load QR analytics'
+      );
+    }
+
+    // Populate the edition dropdown the first time.
+    if (!qrAnalyticsLoadedEditions) {
+      editionFilter.innerHTML = '';
+
+      const allOption = document.createElement('option');
+      allOption.value = '';
+
+      allOption.textContent =
+        data.isOwner
+          ? 'All Editions'
+          : 'All My Editions';
+
+      editionFilter.appendChild(allOption);
+
+      (data.editions || []).forEach(edition => {
+        const option = document.createElement('option');
+
+        option.value = edition.id;
+        option.textContent =
+          edition.name || edition.slug || 'Edition';
+
+        editionFilter.appendChild(option);
+      });
+
+      qrAnalyticsLoadedEditions = true;
+    }
+
+    document.getElementById('qrTotalScans').textContent =
+      Number(data.summary?.total || 0).toLocaleString();
+
+    document.getElementById('qrTodayScans').textContent =
+      Number(data.summary?.today || 0).toLocaleString();
+
+    document.getElementById('qrSevenDayScans').textContent =
+      Number(data.summary?.last7Days || 0).toLocaleString();
+
+    document.getElementById('qrThirtyDayScans').textContent =
+      Number(data.summary?.last30Days || 0).toLocaleString();
+
+    const rows = data.rows || [];
+
+    if (!rows.length) {
+      tableBody.innerHTML = `
+        <tr>
+          <td colspan="6">
+            No QR scan data is available for this edition yet.
+          </td>
+        </tr>
+      `;
+    } else {
+      tableBody.innerHTML = rows.map(row => `
+        <tr>
+          <td>
+            <strong>
+              ${escapeQrAnalyticsHtml(row.businessName)}
+            </strong>
+          </td>
+
+          <td>
+            ${escapeQrAnalyticsHtml(row.editionName)}
+          </td>
+
+          <td>
+            ${escapeQrAnalyticsHtml(
+              row.qrPlacement || 'Not specified'
+            )}
+          </td>
+
+          <td>
+            ${Number(row.totalScans || 0).toLocaleString()}
+          </td>
+
+          <td>
+            ${Number(row.last30Days || 0).toLocaleString()}
+          </td>
+
+          <td>
+            ${escapeQrAnalyticsHtml(
+              formatQrAnalyticsDate(row.lastScan)
+            )}
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    status.textContent =
+      data.isOwner
+        ? 'Showing analytics for your selected edition.'
+        : 'Showing analytics only for editions assigned to you.';
+
+  } catch (error) {
+    console.error('QR analytics load failed:', error);
+
+    status.textContent =
+      error.message || 'Could not load QR analytics.';
+
+    tableBody.innerHTML = `
+      <tr>
+        <td colspan="6">
+          QR analytics could not be loaded.
+        </td>
+      </tr>
+    `;
+  }
+}
+
+function initializeQrAnalytics() {
+  const editionFilter =
+    document.getElementById('qrAnalyticsEditionFilter');
+
+  const refreshButton =
+    document.getElementById('refreshQrAnalytics');
+
+  if (!editionFilter) {
+    return;
+  }
+
+  editionFilter.addEventListener('change', () => {
+    loadQrAnalytics();
+  });
+
+  if (refreshButton) {
+    refreshButton.addEventListener('click', () => {
+      loadQrAnalytics();
+    });
+  }
+
+  loadQrAnalytics();
+}
+
+document.addEventListener(
+  'adminContextReady',
+  initializeQrAnalytics,
+  { once: true }
+);
+
+if (window.adminUserContext) {
+  initializeQrAnalytics();
+}
