@@ -737,6 +737,7 @@ const dailyIndex = (dayOfYear - 1) % 365;
   const joke = jokes[dailyIndex];
   const verse = verses[idx(date,'v',verses.length)];
   const devotionalVerse = await getDailyDevotional(date, verse);
+  console.log('NATIONAL DAY DEBUG:', date, 'KEY:', String(date).slice(5));
   const national = await getNationalDays(date);
   const famousBirthdays = await getFamousBirthdays(date);
   const usHistory = await getUSHistory(date);
