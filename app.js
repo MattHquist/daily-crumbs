@@ -114,7 +114,7 @@ quizOptions.querySelectorAll('button').forEach(button => {
     const selectedChoice = button.dataset.choice;
     const selectedAnswer = button.dataset.answer;
 
-    const correctIndex = c.quiz.options.indexOf(c.quiz.answe);
+    const correctIndex = c.quiz.options.indexOf(c.quiz.a);
     const correctChoice = ['A', 'B', 'C', 'D'][correctIndex];
 
     const dateKey = key;
@@ -193,7 +193,7 @@ quizOptions.querySelectorAll('button').forEach(button => {
 });
 {
   const correctIndex = c.quiz.options.indexOf(c.quiz.a);
-  const correctChoice = ['A', 'B', 'C', 'D'][correctIndex];
+const correctChoice = ['A', 'B', 'C', 'D'][correctIndex];
 
   const quizId = `${key}::${c.quiz.q}`;
   const localVoteKey = `daily-crumbs-quiz-${quizId}`;
