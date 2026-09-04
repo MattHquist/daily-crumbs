@@ -65,6 +65,7 @@ if (
     `There are only ${Math.max(0, maxSpots - otherActiveSpots)} spots available.`
   );
   return;
+}
 const id = $('editId').value;
 
 const response = await fetch(
