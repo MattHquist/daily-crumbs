@@ -65,7 +65,36 @@ if (
     `There are only ${Math.max(0, maxSpots - otherActiveSpots)} spots available.`
   );
   return;
-}const id=$('editId').value;await fetch(id?`/api/ads/${id}`:'/api/ads',{method:id?'PUT':'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});reset();$('filterCity').value=payload.city;load()}
+const id = $('editId').value;
+
+const response = await fetch(
+  id ? `/api/ads/${id}` : '/api/ads',
+  {
+    method: id ? 'PUT' : 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  }
+);
+
+const result = await response.json();
+
+if (!response.ok) {
+  alert(result.error || 'Could not save advertiser.');
+  return;
+}
+
+alert(
+  id
+    ? `${payload.business} was updated successfully.`
+    : `${payload.business} was added successfully.`
+);
+
+reset();
+$('filterCity').value = payload.city;
+load();
+}
 function reset(){$('form').reset();$('creativePlan').value='standard';$('editId').value='';$('city').value = $('filterCity').value || '';$('startDate').value=iso(today);$('endDate').value=iso(end);$('active').checked=true;currentImage=''}
 $('cancelEdit').onclick=reset;$('refresh').onclick=load;load();
 let editingLocationId = null;
