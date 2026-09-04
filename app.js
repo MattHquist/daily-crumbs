@@ -39,6 +39,40 @@ trackQrScan();
 async function loadContent(){
  const d=new Date(); const key=[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');
  const c=await fetch(`/api/content?date=${key}`).then(r=>r.json());
+ const wordOfTheDay = document.getElementById('wordOfTheDay');
+const wordPronunciation = document.getElementById('wordPronunciation');
+const wordPartOfSpeech = document.getElementById('wordPartOfSpeech');
+const wordDefinition = document.getElementById('wordDefinition');
+const wordExample = document.getElementById('wordExample');
+const wordRevealBtn = document.getElementById('wordRevealBtn');
+const wordRevealContent = document.getElementById('wordRevealContent');
+if (c.word) {
+  wordOfTheDay.textContent = c.word.word || '';
+  wordPronunciation.textContent = c.word.pronunciation || '';
+
+  wordPartOfSpeech.textContent = c.word.partOfSpeech
+    ? `${c.word.partOfSpeech} — `
+    : '';
+
+  wordDefinition.textContent = c.word.definition || '';
+  wordExample.textContent = c.word.example || '';
+}
+if (wordRevealBtn && wordRevealContent) {
+  wordRevealBtn.addEventListener('click', () => {
+    const isHidden = wordRevealContent.hidden;
+
+    wordRevealContent.hidden = !isHidden;
+
+    wordRevealBtn.textContent = isHidden
+      ? 'Hide Meaning'
+      : 'Reveal Meaning';
+
+    wordRevealBtn.setAttribute(
+      'aria-expanded',
+      String(isHidden)
+    );
+  });
+}
  const nationalTodayLink = document.getElementById('nationalTodayLink');
 
 if (nationalTodayLink) {
@@ -192,6 +226,7 @@ quizOptions.querySelectorAll('button').forEach(button => {
   };
 });
 {
+
   const correctIndex = c.quiz.options.indexOf(c.quiz.a);
 const correctChoice = ['A', 'B', 'C', 'D'][correctIndex];
 
@@ -339,20 +374,21 @@ function renderAds() {
 }
 function renderMobileAd() {
   const paidSlots = [
-    document.getElementById('mobileAd'),
-    document.getElementById('mobileAd2'),
-    document.getElementById('mobileAd3'),
-    document.getElementById('mobileAd4'),
-    document.getElementById('mobileAd5'),
-    document.getElementById('mobileAd6')
-  ].filter(Boolean);
+  document.getElementById('mobileAd'),
+  document.getElementById('mobileAd2'),
+  document.getElementById('mobileAd3'),
+  document.getElementById('mobileAd4'),
+  document.getElementById('wordAd'),
+  document.getElementById('mobileAd5'),
+  document.getElementById('mobileAd6')
+].filter(Boolean);
 
   const ctaSlot = document.getElementById('mobileAdCta');
 
   if (!paidSlots.length) return;
 
   // Build a weighted pool, but choose unique advertisers
-  // for the six visible mobile positions.
+  // for the seven visible mobile positions.
   const weightedPool = weighted(activeAds);
   const selected = [];
   const usedIds = new Set();

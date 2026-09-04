@@ -3184,7 +3184,7 @@ So when you look away from the Sun, much of the light reaching your eyes from al
 Near sunset, sunlight has to travel through much more atmosphere before reaching you. Much of the blue light gets scattered away along that longer trip, leaving more reds and oranges to reach your eyes.
 
 A blue afternoon sky and a fiery red sunset are actually two versions of the same trick.`,
-        teaser: `Tomorrow: A failed glue experiment becomes one of the world's most useful little office supplies.`
+        
       }
     ]
   },
@@ -5570,6 +5570,2567 @@ A mechanism can begin by solving one very specialized problem, then be adapted u
       },
 
 ];
+// Daily Crumbs — 365 Word of the Day library
+// Paste this block into content/daily-content.js just above module.exports.
+
+const wordOfTheDay = [
+  {
+    word: "Bumfuzzle",
+    pronunciation: "bum-FUZZ-ul",
+    partOfSpeech: "verb",
+    definition: "To confuse or bewilder.",
+    example: "The self-checkout machine bumfuzzled Gary so thoroughly that he somehow paid twice and still forgot the bananas."
+  },
+  {
+    word: "Callipygian",
+    pronunciation: "kal-uh-PIJ-ee-un",
+    partOfSpeech: "adjective",
+    definition: "Having well-shaped or attractive buttocks.",
+    example: "Calling the statue callipygian was technically accurate, though it did make the museum tour suddenly more interesting."
+  },
+  {
+    word: "Fudgel",
+    pronunciation: "FUJ-ul",
+    partOfSpeech: "verb",
+    definition: "To pretend to be working when you are actually doing nothing.",
+    example: "Maya fudged—no, fudgelled—through the meeting by staring intensely at a spreadsheet she had not changed since Tuesday."
+  },
+  {
+    word: "Groak",
+    pronunciation: "GROHK",
+    partOfSpeech: "verb",
+    definition: "To stare silently at someone who is eating in hopes of being offered some.",
+    example: "The dog groaked at my sandwich until guilt became the most expensive condiment on the table."
+  },
+  {
+    word: "Apricity",
+    pronunciation: "uh-PRIS-ih-tee",
+    partOfSpeech: "noun",
+    definition: "The warmth of the sun in winter.",
+    example: "We enjoyed the apricity on the porch until the wind reminded us that winter still held the deed."
+  },
+  {
+    word: "Quockerwodger",
+    pronunciation: "KWOK-er-wod-jer",
+    partOfSpeech: "noun",
+    definition: "A wooden puppet; figuratively, a person controlled by another.",
+    example: "After agreeing to curtains, throw pillows, and a decorative ladder with no purpose, Ben suspected he had become a quockerwodger."
+  },
+  {
+    word: "Nudiustertian",
+    pronunciation: "noo-dee-us-TER-shun",
+    partOfSpeech: "adjective",
+    definition: "Relating to the day before yesterday.",
+    example: "My nudiustertian promise to start exercising has already been replaced by today's promise to start Monday."
+  },
+  {
+    word: "Agelast",
+    pronunciation: "AJ-uh-last",
+    partOfSpeech: "noun",
+    definition: "A person who never laughs.",
+    example: "Our new manager may be an agelast; even the printer jamming during the efficiency seminar got nothing."
+  },
+  {
+    word: "Biblioklept",
+    pronunciation: "BIB-lee-oh-klept",
+    partOfSpeech: "noun",
+    definition: "A person who steals books.",
+    example: "I stopped lending novels to Trevor after realizing the alleged slow reader was actually a biblioklept."
+  },
+  {
+    word: "Crapulous",
+    pronunciation: "KRAP-yuh-lus",
+    partOfSpeech: "adjective",
+    definition: "Feeling ill from excessive eating or drinking.",
+    example: "After the buffet, I felt so crapulous that even the dessert menu seemed judgmental."
+  },
+  {
+    word: "Amphigory",
+    pronunciation: "AM-fi-gor-ee",
+    partOfSpeech: "noun",
+    definition: "A piece of writing or verse that is intentionally nonsensical.",
+    example: "The birthday card's amphigory mentioned a moonlit turnip, three accountants, and absolutely nothing about my birthday."
+  },
+  {
+    word: "Erinaceous",
+    pronunciation: "er-ih-NAY-shus",
+    partOfSpeech: "adjective",
+    definition: "Relating to or resembling a hedgehog.",
+    example: "My erinaceous hairstyle suggested I had either discovered a new hair product or slept through three alarms."
+  },
+  {
+    word: "Formication",
+    pronunciation: "for-mih-KAY-shun",
+    partOfSpeech: "noun",
+    definition: "A sensation like insects crawling on or under the skin.",
+    example: "My foot woke from being asleep with enough formication to convince me it had secretly joined an ant colony."
+  },
+  {
+    word: "Festinate",
+    pronunciation: "FES-tih-nayt",
+    partOfSpeech: "verb",
+    definition: "To hurry or hasten.",
+    example: "We had to festinate toward the gate after Dad announced that airport arrival times were merely suggestions."
+  },
+  {
+    word: "Hircine",
+    pronunciation: "HER-sine",
+    partOfSpeech: "adjective",
+    definition: "Goatlike, especially in smell or appearance.",
+    example: "After three days of camping without a shower, our group had developed a distinctly hircine atmosphere."
+  },
+  {
+    word: "Impignorate",
+    pronunciation: "im-PIG-nuh-rayt",
+    partOfSpeech: "verb",
+    definition: "To pawn or pledge something as security.",
+    example: "I nearly had to impignorate my toaster after seeing what the mechanic charged for a ten-minute repair."
+  },
+  {
+    word: "Jentacular",
+    pronunciation: "jen-TAK-yuh-ler",
+    partOfSpeech: "adjective",
+    definition: "Relating to breakfast or something eaten immediately after waking.",
+    example: "My jentacular ambitions involved eggs and toast; my alarm clock reduced them to a granola bar in traffic."
+  },
+  {
+    word: "Gardyloo",
+    pronunciation: "gar-dee-LOO",
+    partOfSpeech: "interjection",
+    definition: "A warning cry once shouted before dirty water was thrown from an upper window.",
+    example: "The historical guide yelled 'Gardyloo!' before describing the old custom, and everyone instinctively stepped away from the building."
+  },
+  {
+    word: "Kench",
+    pronunciation: "KENCH",
+    partOfSpeech: "verb",
+    definition: "To laugh loudly.",
+    example: "Aunt Rita kenched so loudly at the wedding toast that the microphone briefly seemed unnecessary."
+  },
+  {
+    word: "Mumpsimus",
+    pronunciation: "MUMP-sih-mus",
+    partOfSpeech: "noun",
+    definition: "A stubborn attachment to an error or old habit despite correction.",
+    example: "Grandpa's insistence that every remote control needed a firm slap was pure mumpsimus, but somehow it kept working."
+  },
+  {
+    word: "Noctivagant",
+    pronunciation: "nok-TIV-uh-gunt",
+    partOfSpeech: "adjective",
+    definition: "Wandering or active at night.",
+    example: "My noctivagant teenager appeared in the kitchen at 2 a.m. looking for cereal and answers about the Wi-Fi."
+  },
+  {
+    word: "Opsimath",
+    pronunciation: "OP-sih-math",
+    partOfSpeech: "noun",
+    definition: "A person who begins learning or studying late in life.",
+    example: "At seventy-two, June became an opsimath and learned guitar, mostly to annoy the neighbors with better technique."
+  },
+  {
+    word: "Latibulate",
+    pronunciation: "lah-TIB-yuh-layt",
+    partOfSpeech: "verb",
+    definition: "To hide oneself away, especially in a corner or secluded place.",
+    example: "I latibulated behind the garage until the neighbor stopped looking for volunteers to help move a piano."
+  },
+  {
+    word: "Quidnunc",
+    pronunciation: "KWID-nunk",
+    partOfSpeech: "noun",
+    definition: "A person who is constantly curious about gossip or other people's affairs.",
+    example: "Our office quidnunc knew about the engagement before the couple had finished deciding whether they were engaged."
+  },
+  {
+    word: "Runcation",
+    pronunciation: "run-KAY-shun",
+    partOfSpeech: "noun",
+    definition: "The act of weeding or clearing unwanted growth.",
+    example: "My Saturday runcation lasted ten minutes before I decided the weeds deserved a chance to express themselves."
+  },
+  {
+    word: "Sialoquent",
+    pronunciation: "sy-AL-oh-kwent",
+    partOfSpeech: "adjective",
+    definition: "Spraying saliva while speaking.",
+    example: "The front row learned quickly that the passionate lecturer was also remarkably sialoquent."
+  },
+  {
+    word: "Tittynope",
+    pronunciation: "TIT-ee-nohp",
+    partOfSpeech: "noun",
+    definition: "A small leftover amount of food or drink.",
+    example: "There was one tittynope of coffee left in the pot, just enough to start an office feud."
+  },
+  {
+    word: "Ultracrepidarian",
+    pronunciation: "ul-truh-krep-ih-DAIR-ee-un",
+    partOfSpeech: "noun",
+    definition: "A person who gives opinions beyond their knowledge or expertise.",
+    example: "Every family has an ultracrepidarian who can fix your taxes, diagnose your car, and coach the national team from the couch."
+  },
+  {
+    word: "Velleity",
+    pronunciation: "veh-LEE-ih-tee",
+    partOfSpeech: "noun",
+    definition: "A weak wish or inclination not strong enough to lead to action.",
+    example: "My desire to organize the garage remains a velleity that grows strongest while I am nowhere near the garage."
+  },
+  {
+    word: "Wamble",
+    pronunciation: "WOM-bul",
+    partOfSpeech: "verb",
+    definition: "To feel nauseated or have the stomach churn.",
+    example: "My stomach began to wamble when the roller coaster operator said, 'We think we fixed it.'"
+  },
+  {
+    word: "Xertz",
+    pronunciation: "ZERTS",
+    partOfSpeech: "verb",
+    definition: "To gulp something down quickly or greedily.",
+    example: "I xertzed my coffee so fast that my tongue filed a formal complaint."
+  },
+  {
+    word: "Yex",
+    pronunciation: "YEKS",
+    partOfSpeech: "verb",
+    definition: "To hiccup or belch.",
+    example: "I tried to give a dignified toast at the wedding but yexed halfway through the bride's name."
+  },
+  {
+    word: "Zugzwang",
+    pronunciation: "TSOOK-tsvahng",
+    partOfSpeech: "noun",
+    definition: "A situation in which every possible move makes matters worse.",
+    example: "Choosing which child gets the last cookie is parental zugzwang with chocolate chips."
+  },
+  {
+    word: "Abibliophobia",
+    pronunciation: "ay-bib-lee-oh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "The fear of running out of things to read.",
+    example: "My abibliophobia explains why I packed six books for a two-day trip and only one pair of socks."
+  },
+  {
+    word: "Accismus",
+    pronunciation: "ak-SIZ-mus",
+    partOfSpeech: "noun",
+    definition: "Pretended indifference to something one actually wants.",
+    example: "Her 'Oh, I don't need the last brownie' was pure accismus, and everyone at the table knew it."
+  },
+  {
+    word: "Acnestis",
+    pronunciation: "ak-NEE-stis",
+    partOfSpeech: "noun",
+    definition: "The part of the back between the shoulder blades and lower back that is hard to scratch.",
+    example: "The acnestis is nature's way of making you appreciate doorframes."
+  },
+  {
+    word: "Adoxography",
+    pronunciation: "ad-ok-SOG-ruh-fee",
+    partOfSpeech: "noun",
+    definition: "Fine writing about a trivial or insignificant subject.",
+    example: "My three-paragraph review of the office stapler was an impressive piece of adoxography."
+  },
+  {
+    word: "Ambisinister",
+    pronunciation: "am-bih-SIN-ih-ster",
+    partOfSpeech: "adjective",
+    definition: "Clumsy or awkward with both hands.",
+    example: "I am ambisinister enough to drop the jar with my left hand and fail to catch it with my right."
+  },
+  {
+    word: "Anatidaephobia",
+    pronunciation: "an-uh-TID-ee-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "A humorous supposed fear that a duck is watching you.",
+    example: "My anatidaephobia seemed silly until I noticed the same mallard outside three different coffee shops."
+  },
+  {
+    word: "Anecdoche",
+    pronunciation: "AN-ek-dohk",
+    partOfSpeech: "noun",
+    definition: "A conversation in which everyone talks but nobody listens.",
+    example: "Thanksgiving dinner became an anecdoche the moment three people started explaining the same recipe at once."
+  },
+  {
+    word: "Anopisthograph",
+    pronunciation: "an-oh-PIS-thuh-graf",
+    partOfSpeech: "noun",
+    definition: "A manuscript or document written on only one side of the page.",
+    example: "The printer produced an anopisthograph, which is a scholarly way of saying it ignored my duplex setting."
+  },
+  {
+    word: "Antimacassar",
+    pronunciation: "an-tih-muh-KAS-er",
+    partOfSpeech: "noun",
+    definition: "A protective cloth placed over the back or arms of a chair.",
+    example: "Grandma's antimacassar protected the recliner from everything except Grandpa's salsa."
+  },
+  {
+    word: "Apodyopsis",
+    pronunciation: "ap-oh-dee-OP-sis",
+    partOfSpeech: "noun",
+    definition: "The act of mentally undressing someone.",
+    example: "His attempt at subtle apodyopsis failed when he walked directly into a coat rack."
+  },
+  {
+    word: "Batrachomyomachy",
+    pronunciation: "bat-rak-oh-my-OM-uh-kee",
+    partOfSpeech: "noun",
+    definition: "A petty or trivial quarrel.",
+    example: "The office batrachomyomachy over the thermostat ended only when someone hid the controls."
+  },
+  {
+    word: "Borborygmus",
+    pronunciation: "bor-buh-RIG-mus",
+    partOfSpeech: "noun",
+    definition: "A rumbling or gurgling noise made by the stomach or intestines.",
+    example: "My borborygmus answered the lunch invitation before I could."
+  },
+  {
+    word: "Brannigan",
+    pronunciation: "BRAN-ih-gun",
+    partOfSpeech: "noun",
+    definition: "A noisy quarrel or brawl.",
+    example: "A brannigan nearly erupted when the board-game rules were interpreted by someone who had clearly never read them."
+  },
+  {
+    word: "Brontide",
+    pronunciation: "BRON-tyde",
+    partOfSpeech: "noun",
+    definition: "A low rumbling sound like distant thunder.",
+    example: "The mysterious brontide turned out not to be a storm but Uncle Ray asleep in the recliner."
+  },
+  {
+    word: "Cachinnate",
+    pronunciation: "KAK-ih-nayt",
+    partOfSpeech: "verb",
+    definition: "To laugh loudly or immoderately.",
+    example: "She cachinnated so hard at the typo that the meeting had to pause for recovery."
+  },
+  {
+    word: "Macilent",
+    pronunciation: "MASS-ih-lent",
+    partOfSpeech: "adjective",
+    definition: "Very thin or lean.",
+    example: "After shedding its winter fluff, the dog looked so macilent that we wondered whether half of him had been fur."
+  },
+  {
+    word: "Chrestomathy",
+    pronunciation: "kres-TOM-uh-thee",
+    partOfSpeech: "noun",
+    definition: "A collection of selected literary passages, often for learning a language.",
+    example: "My bathroom magazine rack has accidentally become a chrestomathy of recipes, travel tips, and articles from 2019."
+  },
+  {
+    word: "Clinomania",
+    pronunciation: "kly-noh-MAY-nee-uh",
+    partOfSpeech: "noun",
+    definition: "An excessive desire to stay in bed.",
+    example: "Monday triggered such clinomania that my alarm clock began to feel like a personal enemy."
+  },
+  {
+    word: "Cockalorum",
+    pronunciation: "kok-uh-LOR-um",
+    partOfSpeech: "noun",
+    definition: "A boastful, self-important little person.",
+    example: "The new committee cockalorum introduced himself by listing achievements nobody had asked about."
+  },
+  {
+    word: "Collywobbles",
+    pronunciation: "KOL-ee-wob-ulz",
+    partOfSpeech: "noun",
+    definition: "Stomach pain or nervous butterflies.",
+    example: "I got the collywobbles when the dentist said, 'Well, that's interesting.'"
+  },
+  {
+    word: "Contumelious",
+    pronunciation: "kon-too-MEE-lee-us",
+    partOfSpeech: "adjective",
+    definition: "Scornfully insulting or humiliating.",
+    example: "The cat gave me a contumelious stare after I served the wrong flavor of food."
+  },
+  {
+    word: "Curglaff",
+    pronunciation: "KER-glaff",
+    partOfSpeech: "noun",
+    definition: "The shock felt when plunging into cold water.",
+    example: "My cheerful cannonball became a curglaff followed by several words unsuitable for the family pool."
+  },
+  {
+    word: "Dactylion",
+    pronunciation: "dak-TIL-ee-on",
+    partOfSpeech: "noun",
+    definition: "The tip of the middle finger.",
+    example: "I injured my dactylion opening a cereal box, which was not the heroic story I had hoped to tell."
+  },
+  {
+    word: "Deipnosophist",
+    pronunciation: "dype-NOS-uh-fist",
+    partOfSpeech: "noun",
+    definition: "A person skilled at dinner-table conversation.",
+    example: "Our deipnosophist kept dinner lively until dessert, when everyone discovered he had also eaten the last slice of pie."
+  },
+  {
+    word: "Doodle-sack",
+    pronunciation: "DOO-dul-sak",
+    partOfSpeech: "noun",
+    definition: "An old informal name for the bagpipes.",
+    example: "The neighbor practiced his doodle-sack at sunrise, ensuring the entire block became culturally enriched at once."
+  },
+  {
+    word: "Dysania",
+    pronunciation: "dih-SAY-nee-uh",
+    partOfSpeech: "noun",
+    definition: "Extreme difficulty getting out of bed in the morning.",
+    example: "My dysania vanished instantly when I remembered it was Saturday."
+  },
+  {
+    word: "Eccedentesiast",
+    pronunciation: "ek-see-den-TEE-zee-ast",
+    partOfSpeech: "noun",
+    definition: "A person who hides pain or unhappiness behind a smile.",
+    example: "The party clown was an eccedentesiast, smiling bravely while a toddler repeatedly kicked his shin."
+  },
+  {
+    word: "Embrangle",
+    pronunciation: "em-BRANG-gul",
+    partOfSpeech: "verb",
+    definition: "To confuse, entangle, or involve in difficulty.",
+    example: "The new password rules embrangled me until my login looked like a ransom note."
+  },
+  {
+    word: "Epibreren",
+    pronunciation: "ep-ih-BREE-ren",
+    partOfSpeech: "noun",
+    definition: "A person who borrows an umbrella and fails to return it.",
+    example: "The office epibreren has six umbrellas by his desk and somehow claims to own none of them."
+  },
+  {
+    word: "Eructation",
+    pronunciation: "ee-ruk-TAY-shun",
+    partOfSpeech: "noun",
+    definition: "A belch.",
+    example: "His eructation arrived precisely during the moment of silence, demonstrating impeccable comic timing."
+  },
+  {
+    word: "Exsibilation",
+    pronunciation: "ek-sib-ih-LAY-shun",
+    partOfSpeech: "noun",
+    definition: "The act of hissing someone off a stage or showing disapproval by hissing.",
+    example: "The magician's failed rabbit trick nearly earned an exsibilation from a surprisingly demanding birthday crowd."
+  },
+  {
+    word: "Fard",
+    pronunciation: "FARD",
+    partOfSpeech: "verb",
+    definition: "To apply cosmetics to the face.",
+    example: "I watched my sister fard with professional precision while I still couldn't apply sunscreen without missing an ear."
+  },
+  {
+    word: "Finifugal",
+    pronunciation: "fy-NIF-yuh-gul",
+    partOfSpeech: "adjective",
+    definition: "Avoiding or disliking endings or finishing things.",
+    example: "My finifugal approach to home improvement has produced seven projects that are each ninety-eight percent done."
+  },
+  {
+    word: "Fletcherism",
+    pronunciation: "FLETCH-er-iz-um",
+    partOfSpeech: "noun",
+    definition: "The practice of chewing food extremely thoroughly before swallowing.",
+    example: "Dad's brief experiment with Fletcherism turned a sandwich into a forty-minute commitment."
+  },
+  {
+    word: "Fribbler",
+    pronunciation: "FRIB-ler",
+    partOfSpeech: "noun",
+    definition: "A frivolous or trifling person, especially one who avoids commitment.",
+    example: "The fribbler dated three people, joined four gyms, and still couldn't decide on a pizza topping."
+  },
+  {
+    word: "Fustilarian",
+    pronunciation: "fus-tih-LAIR-ee-un",
+    partOfSpeech: "noun",
+    definition: "A low, slovenly, or contemptible person.",
+    example: "After leaving his cart sideways across two parking spaces, the fustilarian strolled away without a backward glance."
+  },
+  {
+    word: "Gabelle",
+    pronunciation: "guh-BEL",
+    partOfSpeech: "noun",
+    definition: "A tax, especially the historic French tax on salt.",
+    example: "When the movie theater charged extra for seasoning, I accused them of reviving the gabelle."
+  },
+  {
+    word: "Gallimaufry",
+    pronunciation: "gal-ih-MAW-free",
+    partOfSpeech: "noun",
+    definition: "A confused mixture or jumble of things.",
+    example: "The junk drawer is a gallimaufry of batteries, coupons, mystery keys, and one tiny screwdriver nobody remembers buying."
+  },
+  {
+    word: "Gongoozler",
+    pronunciation: "gon-GOOZ-ler",
+    partOfSpeech: "noun",
+    definition: "A person who idly watches activity, especially on canals or waterways.",
+    example: "I became a construction-site gongoozler, contributing nothing except occasional nods of expertise."
+  },
+  {
+    word: "Griffonage",
+    pronunciation: "grif-uh-NAHZH",
+    partOfSpeech: "noun",
+    definition: "Illegible handwriting.",
+    example: "The doctor's griffonage was so advanced that the pharmacist briefly considered calling an archaeologist."
+  },
+  {
+    word: "Hapaxanthous",
+    pronunciation: "hap-ak-SAN-thus",
+    partOfSpeech: "adjective",
+    definition: "Flowering only once before dying.",
+    example: "My hapaxanthous houseplant finally bloomed, apparently as a dramatic farewell."
+  },
+  {
+    word: "Hebetude",
+    pronunciation: "HEB-ih-tood",
+    partOfSpeech: "noun",
+    definition: "Mental dullness or lethargy.",
+    example: "The 3 p.m. meeting produced a collective hebetude broken only by the arrival of cookies."
+  },
+  {
+    word: "Hobbledehoy",
+    pronunciation: "HOB-ul-dee-hoy",
+    partOfSpeech: "noun",
+    definition: "An awkward or clumsy youth.",
+    example: "At fourteen I was a hobbledehoy composed mostly of elbows, sneakers, and apologies."
+  },
+  {
+    word: "Humdudgeon",
+    pronunciation: "hum-DUJ-un",
+    partOfSpeech: "noun",
+    definition: "An imaginary illness or needless complaint.",
+    example: "His mysterious Monday humdudgeon disappeared the instant someone mentioned free concert tickets."
+  },
+  {
+    word: "Hurkle-durkle",
+    pronunciation: "HER-kul-DER-kul",
+    partOfSpeech: "verb",
+    definition: "To lounge in bed long after it is time to get up.",
+    example: "I planned to wake early, but hurkle-durkled until breakfast became lunch."
+  },
+  {
+    word: "Illecebrous",
+    pronunciation: "il-LESS-uh-brus",
+    partOfSpeech: "adjective",
+    definition: "Attractive, alluring, or enticing.",
+    example: "The bakery window was so illecebrous that my diet quietly crossed the street without me."
+  },
+  {
+    word: "Inaniloquent",
+    pronunciation: "in-an-IL-oh-kwent",
+    partOfSpeech: "adjective",
+    definition: "Speaking foolishly or saying empty things.",
+    example: "After ten minutes of inaniloquent small talk, we had discussed the weather from every possible angle."
+  },
+  {
+    word: "Jargogle",
+    pronunciation: "jar-GOG-ul",
+    partOfSpeech: "verb",
+    definition: "To confuse or jumble.",
+    example: "Trying to assemble furniture from picture-only instructions jargoggled my brain and produced a suspiciously spare screw."
+  },
+  {
+    word: "Kenspeckle",
+    pronunciation: "KEN-spek-ul",
+    partOfSpeech: "adjective",
+    definition: "Easily recognizable or conspicuous.",
+    example: "His neon hat made him kenspeckle enough to locate from three aisles away."
+  },
+  {
+    word: "Lalochezia",
+    pronunciation: "lal-oh-KEE-zee-uh",
+    partOfSpeech: "noun",
+    definition: "Emotional relief gained by using vulgar language.",
+    example: "Stepping barefoot on a toy produced immediate lalochezia and a vocabulary lesson for the dog."
+  },
+  {
+    word: "Lethologica",
+    pronunciation: "leth-oh-LOJ-ih-kuh",
+    partOfSpeech: "noun",
+    definition: "The inability to remember the particular word you want.",
+    example: "I suffered lethologica while trying to explain lethologica, which felt unnecessarily personal."
+  },
+  {
+    word: "Logomisia",
+    pronunciation: "log-oh-MIZ-ee-uh",
+    partOfSpeech: "noun",
+    definition: "A strong dislike of a particular word.",
+    example: "Her logomisia for 'moist' was so intense that even the weather forecast became dangerous."
+  },
+  {
+    word: "Meldrop",
+    pronunciation: "MEL-drop",
+    partOfSpeech: "noun",
+    definition: "A drop of mucus hanging from the nose.",
+    example: "The toddler's meldrop remained undefeated through three tissues and one family photograph."
+  },
+  {
+    word: "Misodoctakleidist",
+    pronunciation: "miz-oh-dok-tuh-KLY-dist",
+    partOfSpeech: "noun",
+    definition: "A person who hates practicing the piano.",
+    example: "Our little misodoctakleidist discovered that scales become much more interesting when played with one finger and maximum force."
+  },
+  {
+    word: "Mumpsimous",
+    pronunciation: "MUMP-sih-mus",
+    partOfSpeech: "adjective",
+    definition: "Stubbornly adhering to an old error or custom.",
+    example: "His mumpsimous refusal to use GPS meant every road trip included a scenic tour of somewhere unintended."
+  },
+  {
+    word: "Nidorosity",
+    pronunciation: "ny-dor-OSS-ih-tee",
+    partOfSpeech: "noun",
+    definition: "A smell resembling burned or overcooked animal food.",
+    example: "The kitchen's nidorosity announced the forgotten burgers before the smoke alarm did."
+  },
+  {
+    word: "Novercal",
+    pronunciation: "noh-VER-kul",
+    partOfSpeech: "adjective",
+    definition: "Relating to or characteristic of a stepmother.",
+    example: "The fairy tale's novercal villainy seemed unfair to every perfectly nice stepmother in the audience."
+  },
+  {
+    word: "Obelus",
+    pronunciation: "OB-uh-lus",
+    partOfSpeech: "noun",
+    definition: "A dagger-shaped mark used in writing or printing to indicate a doubtful passage.",
+    example: "I wanted an obelus beside 'serves eight' because the casserole barely served four hungry adults."
+  },
+  {
+    word: "Octothorpe",
+    pronunciation: "OK-tuh-thorp",
+    partOfSpeech: "noun",
+    definition: "The symbol #, commonly called the hash or pound sign.",
+    example: "Grandpa called the octothorpe a pound sign, my niece called it a hashtag, and dinner somehow became a generational summit."
+  },
+  {
+    word: "Omphaloskepsis",
+    pronunciation: "om-fuh-loh-SKEP-sis",
+    partOfSpeech: "noun",
+    definition: "Contemplation of one's navel; excessive self-absorption.",
+    example: "His annual performance review became forty minutes of omphaloskepsis and two minutes of actual reviewing."
+  },
+  {
+    word: "Overmorrow",
+    pronunciation: "oh-ver-MOR-oh",
+    partOfSpeech: "noun",
+    definition: "The day after tomorrow.",
+    example: "I'll clean the garage overmorrow, which sounds much more responsible than saying 'not today or tomorrow.'"
+  },
+  {
+    word: "Pandiculation",
+    pronunciation: "pan-dik-yuh-LAY-shun",
+    partOfSpeech: "noun",
+    definition: "The act of stretching and yawning, especially after waking.",
+    example: "My morning pandiculation was so dramatic the cat assumed I was attempting yoga."
+  },
+  {
+    word: "Perendinate",
+    pronunciation: "puh-REN-dih-nayt",
+    partOfSpeech: "verb",
+    definition: "To postpone until the day after tomorrow.",
+    example: "I perendinated the dentist appointment, proving procrastination once had a much classier vocabulary."
+  },
+  {
+    word: "Philodox",
+    pronunciation: "FIL-uh-doks",
+    partOfSpeech: "noun",
+    definition: "A person who loves their own opinions.",
+    example: "The family philodox didn't need to win the argument; he merely needed everyone else to stop talking."
+  },
+  {
+    word: "Pogonotrophy",
+    pronunciation: "poh-guh-NOT-ruh-fee",
+    partOfSpeech: "noun",
+    definition: "The act or practice of growing a beard.",
+    example: "His winter pogonotrophy began as insulation and ended with strangers asking if he played banjo."
+  },
+  {
+    word: "Psithurism",
+    pronunciation: "SITH-yuh-riz-um",
+    partOfSpeech: "noun",
+    definition: "The sound of wind rustling through leaves.",
+    example: "I sat outside enjoying the psithurism until a leaf landed directly in my coffee."
+  },
+  {
+    word: "Quomodocunquize",
+    pronunciation: "kwoh-moh-doh-KUN-kwyze",
+    partOfSpeech: "verb",
+    definition: "To make money by any possible means.",
+    example: "The kids quomodocunquized all summer, charging for lemonade, dog walking, and information about where Dad hid the snacks."
+  },
+  {
+    word: "Rantallion",
+    pronunciation: "ran-TAL-ee-un",
+    partOfSpeech: "noun",
+    definition: "A person whose scrotum hangs lower than the penis.",
+    example: "The anatomy textbook used 'rantallion' clinically; the class of twelve-year-olds did not."
+  },
+  {
+    word: "Resistentialism",
+    pronunciation: "ree-zis-TEN-shul-iz-um",
+    partOfSpeech: "noun",
+    definition: "The humorous belief that inanimate objects are hostile to humans.",
+    example: "After the printer jammed, the zipper broke, and the cart pulled left, resistentialism began to seem less like a joke."
+  },
+  {
+    word: "Rhinotillexomania",
+    pronunciation: "ry-noh-til-ek-soh-MAY-nee-uh",
+    partOfSpeech: "noun",
+    definition: "A compulsive habit of picking one's nose.",
+    example: "The driver's rhinotillexomania became everybody's business at the red light."
+  },
+  {
+    word: "Scurryfunge",
+    pronunciation: "SKUR-ee-funj",
+    partOfSpeech: "verb",
+    definition: "To rush around cleaning when unexpected guests are about to arrive.",
+    example: "We scurryfunged for twelve minutes and then told our guests the laundry mountain was an art installation."
+  },
+  {
+    word: "Slubberdegullion",
+    pronunciation: "slub-er-dee-GUL-yun",
+    partOfSpeech: "noun",
+    definition: "A dirty, slovenly, or worthless person.",
+    example: "The slubberdegullion left nacho fingerprints on the remote and denied everything."
+  },
+  {
+    word: "Snirtle",
+    pronunciation: "SNER-tul",
+    partOfSpeech: "verb",
+    definition: "To suppress a laugh, especially by snorting.",
+    example: "I snirtled during the serious presentation when the speaker's autocorrect changed 'public relations' to 'pubic relations.'"
+  },
+  {
+    word: "Welkin",
+    pronunciation: "WEL-kin",
+    partOfSpeech: "noun",
+    definition: "The sky or heavens.",
+    example: "The fireworks lit the welkin while the dog filed a formal complaint from beneath the bed."
+  },
+  {
+    word: "Spanghew",
+    pronunciation: "SPANG-hyoo",
+    partOfSpeech: "verb",
+    definition: "To throw or cause something to leap violently into the air.",
+    example: "The loose rake spanghewed the garden glove over the fence with surprising athleticism."
+  },
+  {
+    word: "Tarantism",
+    pronunciation: "TAR-un-tiz-um",
+    partOfSpeech: "noun",
+    definition: "An uncontrollable urge to dance, historically associated with a tarantula bite.",
+    example: "The wedding DJ inspired enough tarantism that even Uncle Phil abandoned his chair."
+  },
+  {
+    word: "Taradiddle",
+    pronunciation: "tar-uh-DID-ul",
+    partOfSpeech: "noun",
+    definition: "A petty lie or pretentious bit of nonsense.",
+    example: "His claim that the fish was 'at least four feet long' was a taradiddle unsupported by both physics and the photograph."
+  },
+  {
+    word: "Uhtceare",
+    pronunciation: "oot-KEE-ar-uh",
+    partOfSpeech: "noun",
+    definition: "Anxiety experienced before dawn when lying awake worrying.",
+    example: "At 4:17 a.m., my uhtceare covered taxes, the roof, and whether penguins have knees."
+  },
+  {
+    word: "Unasinous",
+    pronunciation: "yoo-NAS-ih-nus",
+    partOfSpeech: "adjective",
+    definition: "Equally stupid or foolish.",
+    example: "The two unasinous plans were to fix the leak with tape or simply move the bucket forever."
+  },
+  {
+    word: "Vagitus",
+    pronunciation: "vuh-JY-tus",
+    partOfSpeech: "noun",
+    definition: "The cry of a newborn baby.",
+    example: "The baby's vagitus announced her arrival and immediately established who would be setting the household schedule."
+  },
+  {
+    word: "Vellichor",
+    pronunciation: "VEL-ih-kor",
+    partOfSpeech: "noun",
+    definition: "The wistful atmosphere or appeal of old bookshops.",
+    example: "The vellichor of the used bookstore convinced me I needed three novels and apparently an atlas from 1987."
+  },
+  {
+    word: "Widdiful",
+    pronunciation: "WID-ih-ful",
+    partOfSpeech: "adjective",
+    definition: "Deserving to be hanged; wicked or troublesome.",
+    example: "The squirrel's widdiful habit of emptying the bird feeder had turned Grandma into a surprisingly committed strategist."
+  },
+  {
+    word: "Witzelsucht",
+    pronunciation: "VIT-sel-zookt",
+    partOfSpeech: "noun",
+    definition: "A tendency to make excessive jokes or puns.",
+    example: "Dad's witzelsucht reached critical levels when the electrician arrived and he asked whether business was 'shocking.'"
+  },
+  {
+    word: "Yarborough",
+    pronunciation: "YAR-bur-oh",
+    partOfSpeech: "noun",
+    definition: "A bridge hand containing no card higher than a nine.",
+    example: "I was dealt a yarborough, which is card-game terminology for 'enjoy watching everyone else have fun.'"
+  },
+  {
+    word: "Zenzizenzizenzic",
+    pronunciation: "zen-zee-zen-zee-ZEN-zik",
+    partOfSpeech: "noun",
+    definition: "The eighth power of a number.",
+    example: "I learned zenzizenzizenzic and immediately became overqualified for every calculation I planned to do that day."
+  },
+  {
+    word: "Abderian",
+    pronunciation: "ab-DEER-ee-un",
+    partOfSpeech: "adjective",
+    definition: "Given to excessive or foolish laughter.",
+    example: "My abderian response to the squeaky chair ensured nobody heard the next five minutes of the lecture."
+  },
+  {
+    word: "Abligurition",
+    pronunciation: "ab-lig-yuh-RISH-un",
+    partOfSpeech: "noun",
+    definition: "Lavish spending on food and drink.",
+    example: "Our vacation budget survived airfare but was destroyed by three days of abligurition."
+  },
+  {
+    word: "Absquatulate",
+    pronunciation: "ab-SKWAH-chuh-layt",
+    partOfSpeech: "verb",
+    definition: "To leave abruptly or make off with something.",
+    example: "The dog absquatulated with my sandwich and has shown absolutely no remorse."
+  },
+  {
+    word: "Adumbrate",
+    pronunciation: "AD-um-brayt",
+    partOfSpeech: "verb",
+    definition: "To outline faintly or foreshadow.",
+    example: "The empty coffee pot adumbrated a morning of poor decisions."
+  },
+  {
+    word: "Alabandical",
+    pronunciation: "al-uh-BAN-dih-kul",
+    partOfSpeech: "adjective",
+    definition: "Barbarous, stupefied, or silly.",
+    example: "My alabandical attempt to repair the faucet involved a wrench, duct tape, and eventually a plumber."
+  },
+  {
+    word: "Alektorophobia",
+    pronunciation: "uh-lek-tor-oh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "An intense fear of chickens.",
+    example: "His alektorophobia made the petting zoo considerably more adventurous than advertised."
+  },
+  {
+    word: "Allodoxaphobia",
+    pronunciation: "al-oh-dok-suh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "A fear of other people's opinions.",
+    example: "Social media would be a difficult career choice for anyone with allodoxaphobia."
+  },
+  {
+    word: "Amatorculist",
+    pronunciation: "am-uh-TOR-kyuh-list",
+    partOfSpeech: "noun",
+    definition: "A petty or insignificant lover.",
+    example: "The romance novel's supposed heartthrob turned out to be an amatorculist who texted 'u up?' at midnight."
+  },
+  {
+    word: "Anacampserote",
+    pronunciation: "an-uh-kamp-SER-oh-tee",
+    partOfSpeech: "noun",
+    definition: "Something believed to restore lost love.",
+    example: "He treated homemade lasagna as an anacampserote, and frankly his chances improved."
+  },
+  {
+    word: "Anhedonia",
+    pronunciation: "an-hee-DOH-nee-uh",
+    partOfSpeech: "noun",
+    definition: "An inability to feel pleasure.",
+    example: "The broken ice-cream machine produced a brief and very specific anhedonia in everyone who had already ordered cones."
+  },
+  {
+    word: "Anserine",
+    pronunciation: "AN-ser-ine",
+    partOfSpeech: "adjective",
+    definition: "Gooselike; also foolish or silly.",
+    example: "His anserine strut across the icy parking lot ended exactly as the security camera predicted."
+  },
+  {
+    word: "Antediluvian",
+    pronunciation: "an-tee-dih-LOO-vee-un",
+    partOfSpeech: "adjective",
+    definition: "Extremely old-fashioned or ancient.",
+    example: "The motel's antediluvian alarm clock had actual bells and enough volume to wake neighboring counties."
+  },
+  {
+    word: "Apanthropy",
+    pronunciation: "uh-PAN-thruh-pee",
+    partOfSpeech: "noun",
+    definition: "A desire to withdraw from people and society.",
+    example: "After hosting twelve relatives for a weekend, I developed a powerful apanthropy and considered befriending a cave."
+  },
+  {
+    word: "Apopemptic",
+    pronunciation: "ap-oh-PEMP-tik",
+    partOfSpeech: "adjective",
+    definition: "Relating to departure or farewell.",
+    example: "His apopemptic speech lasted so long that two people left before he finished saying goodbye."
+  },
+  {
+    word: "Autolatry",
+    pronunciation: "aw-TOL-uh-tree",
+    partOfSpeech: "noun",
+    definition: "Excessive admiration or worship of oneself.",
+    example: "His autolatry was obvious from a photo gallery containing eighty-seven selfies and one picture of his dog."
+  },
+  {
+    word: "Bafflegab",
+    pronunciation: "BAF-ul-gab",
+    partOfSpeech: "noun",
+    definition: "Confusing or pretentious language, especially official jargon.",
+    example: "The insurance letter contained enough bafflegab to make 'we need your signature' occupy three pages."
+  },
+  {
+    word: "Bedizen",
+    pronunciation: "bih-DY-zun",
+    partOfSpeech: "verb",
+    definition: "To dress or decorate in a gaudy manner.",
+    example: "We bedizened the living room for the party until even the houseplants looked embarrassed."
+  },
+  {
+    word: "Bescumber",
+    pronunciation: "bih-SKUM-ber",
+    partOfSpeech: "verb",
+    definition: "To spray or soil with excrement.",
+    example: "The pigeon bescumbered my freshly washed car with the confidence of a professional critic."
+  },
+  {
+    word: "Blatteroon",
+    pronunciation: "BLAT-er-oon",
+    partOfSpeech: "noun",
+    definition: "A person who talks constantly or foolishly.",
+    example: "The airplane blatteroon explained cryptocurrency to a trapped audience from takeoff to landing."
+  },
+  {
+    word: "Emacity",
+    pronunciation: "ee-MASS-ih-tee",
+    partOfSpeech: "noun",
+    definition: "A fondness for buying things.",
+    example: "My emacity is why I entered the store for toothpaste and left with a lamp, two mugs, and no toothpaste."
+  },
+  {
+    word: "Boustrophedon",
+    pronunciation: "boo-struh-FEE-don",
+    partOfSpeech: "noun",
+    definition: "Writing in alternating directions from line to line.",
+    example: "My grocery list accidentally became boustrophedon after I turned the paper around halfway through."
+  },
+  {
+    word: "Famble",
+    pronunciation: "FAM-bul",
+    partOfSpeech: "verb",
+    definition: "To fumble or handle something clumsily.",
+    example: "I fambled with the hotel key card until the person inside politely explained that my room was across the hall."
+  },
+  {
+    word: "Brabble",
+    pronunciation: "BRAB-ul",
+    partOfSpeech: "verb",
+    definition: "To argue noisily about something trivial.",
+    example: "We brabbled for ten minutes over whose turn it was to choose a movie and then watched nothing."
+  },
+  {
+    word: "Brobdingnagian",
+    pronunciation: "brob-ding-NAG-ee-un",
+    partOfSpeech: "adjective",
+    definition: "Enormous; gigantic.",
+    example: "The restaurant served a Brobdingnagian pancake that required both syrup and a zoning permit."
+  },
+  {
+    word: "Cacoethes",
+    pronunciation: "kak-oh-EE-theez",
+    partOfSpeech: "noun",
+    definition: "An irresistible urge or bad habit.",
+    example: "My cacoethes for checking the fridge every twenty minutes has yet to make new food appear."
+  },
+  {
+    word: "Cacography",
+    pronunciation: "kuh-KOG-ruh-fee",
+    partOfSpeech: "noun",
+    definition: "Bad handwriting or poor spelling.",
+    example: "My grocery-list cacography turned 'beans' into something that looked like 'bears,' which changed the shopping trip considerably."
+  },
+  {
+    word: "Cacozelia",
+    pronunciation: "kak-oh-ZEE-lee-uh",
+    partOfSpeech: "noun",
+    definition: "Bad style caused by strained attempts to sound impressive.",
+    example: "His email's cacozelia transformed 'please call me' into a paragraph involving synergistic telephonic engagement."
+  },
+  {
+    word: "Cavil",
+    pronunciation: "KAV-ul",
+    partOfSpeech: "verb",
+    definition: "To make petty or unnecessary objections.",
+    example: "She cavilled about the table settings until someone reminded her we were eating pizza from boxes."
+  },
+  {
+    word: "Chirotonsor",
+    pronunciation: "ky-roh-TON-ser",
+    partOfSpeech: "noun",
+    definition: "A barber or hairdresser.",
+    example: "My chirotonsor asked whether I wanted 'something bold,' and I foolishly answered before asking what bold meant."
+  },
+  {
+    word: "Circumbendibus",
+    pronunciation: "ser-kum-BEN-dih-bus",
+    partOfSpeech: "noun",
+    definition: "A roundabout way of speaking or doing something.",
+    example: "Dad's directions took a circumbendibus through three landmarks, a childhood memory, and a gas station that closed in 1996."
+  },
+  {
+    word: "Cockaigne",
+    pronunciation: "kok-AYN",
+    partOfSpeech: "noun",
+    definition: "An imaginary land of luxury, idleness, and plenty.",
+    example: "To a teenager, Cockaigne is apparently a house with unlimited Wi-Fi and no chores."
+  },
+  {
+    word: "Concupiscible",
+    pronunciation: "kon-KYOO-pih-suh-bul",
+    partOfSpeech: "adjective",
+    definition: "Desirable or capable of arousing strong desire.",
+    example: "The last doughnut became intensely concupiscible the moment someone else reached for it."
+  },
+  {
+    word: "Confusticate",
+    pronunciation: "kon-FUS-tih-kayt",
+    partOfSpeech: "verb",
+    definition: "To confuse, perplex, or bewilder.",
+    example: "The new parking app confusticated me until paying a meter felt like applying for a mortgage."
+  },
+  {
+    word: "Coprolalia",
+    pronunciation: "kop-roh-LAY-lee-uh",
+    partOfSpeech: "noun",
+    definition: "Involuntary or excessive use of obscene language.",
+    example: "The broken garbage disposal inspired a temporary bout of coprolalia from an otherwise mild-mannered uncle."
+  },
+  {
+    word: "Corybantic",
+    pronunciation: "kor-ih-BAN-tik",
+    partOfSpeech: "adjective",
+    definition: "Wild, frenzied, or ecstatic.",
+    example: "The kids became corybantic when someone whispered that the hotel had a pool."
+  },
+  {
+    word: "Crambazzled",
+    pronunciation: "kram-BAZ-uld",
+    partOfSpeech: "adjective",
+    definition: "Prematurely aged or worn out, especially by excess.",
+    example: "After assembling the trampoline without instructions, I felt thoroughly crambazzled and approximately ninety-three."
+  },
+  {
+    word: "Crapehanger",
+    pronunciation: "KRAYP-hang-er",
+    partOfSpeech: "noun",
+    definition: "A gloomy pessimist who expects the worst.",
+    example: "Our resident crapehanger brought an umbrella to the picnic and a backup umbrella in case the first umbrella failed."
+  },
+  {
+    word: "Dactylonomy",
+    pronunciation: "dak-tih-LON-uh-mee",
+    partOfSpeech: "noun",
+    definition: "The practice of counting on one's fingers.",
+    example: "My mental arithmetic became dactylonomy the instant someone asked me to split the restaurant bill six ways."
+  },
+  {
+    word: "Dandiprat",
+    pronunciation: "DAN-dee-prat",
+    partOfSpeech: "noun",
+    definition: "A small or insignificant person; a young urchin.",
+    example: "The dandiprat marched into the kitchen demanding a second cookie as though negotiating an international treaty."
+  },
+  {
+    word: "Deasil",
+    pronunciation: "DEE-zul",
+    partOfSpeech: "adverb",
+    definition: "Clockwise; in the direction of the sun's apparent course.",
+    example: "Turn the lid deasil, I said, instantly making opening a pickle jar sound like ancient magic."
+  },
+  {
+    word: "Deliquesce",
+    pronunciation: "del-ih-KWESS",
+    partOfSpeech: "verb",
+    definition: "To dissolve or melt away by absorbing moisture.",
+    example: "The cotton candy deliquesced in the humidity before the child could finish deciding which side to bite."
+  },
+  {
+    word: "Demonomania",
+    pronunciation: "dee-muh-noh-MAY-nee-uh",
+    partOfSpeech: "noun",
+    definition: "A delusion of being possessed by evil spirits.",
+    example: "Before blaming demonomania, we unplugged the talking toy and discovered its batteries were simply dying."
+  },
+  {
+    word: "Dipsomania",
+    pronunciation: "dip-soh-MAY-nee-uh",
+    partOfSpeech: "noun",
+    definition: "An uncontrollable craving for alcoholic drink.",
+    example: "The old medical text called it dipsomania; the bartender simply called Tuesday 'two-for-one night.'"
+  },
+  {
+    word: "Merrythought",
+    pronunciation: "MER-ee-thawt",
+    partOfSpeech: "noun",
+    definition: "An old-fashioned name for a bird's wishbone.",
+    example: "The children fought over the merrythought as if snapping a chicken bone were a legally binding path to wealth."
+  },
+  {
+    word: "Dorp",
+    pronunciation: "DORP",
+    partOfSpeech: "noun",
+    definition: "A small town or village.",
+    example: "We stopped in a quiet dorp where the diner knew we were visitors before we had closed the car doors."
+  },
+  {
+    word: "Dyslogia",
+    pronunciation: "dis-LOH-jee-uh",
+    partOfSpeech: "noun",
+    definition: "An inability to express ideas clearly in speech.",
+    example: "My dyslogia peaked when I tried to explain why I had put the milk in the cupboard."
+  },
+  {
+    word: "Eellogofusciouhipoppokunurious",
+    pronunciation: "ee-loh-goh-fus-see-oh-hy-pop-oh-kyoo-NOR-ee-us",
+    partOfSpeech: "adjective",
+    definition: "Very good or fine; an extravagant old slang term of praise.",
+    example: "The pie was so eellogofusciouhipoppokunurious that nobody objected when I took a second piece for 'quality control.'"
+  },
+  {
+    word: "Eleutheromania",
+    pronunciation: "el-yoo-ther-oh-MAY-nee-uh",
+    partOfSpeech: "noun",
+    definition: "An intense desire for freedom.",
+    example: "The toddler's eleutheromania became obvious the moment the stroller buckle clicked."
+  },
+  {
+    word: "Expergefactor",
+    pronunciation: "eks-PER-jee-fak-ter",
+    partOfSpeech: "noun",
+    definition: "Something that wakes a person up.",
+    example: "The smoke alarm was an extremely effective expergefactor, though its customer-service skills were terrible."
+  },
+  {
+    word: "Ergophobia",
+    pronunciation: "er-goh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "An abnormal fear or aversion to work.",
+    example: "My sudden ergophobia every Friday afternoon has never been formally diagnosed."
+  },
+  {
+    word: "Esurient",
+    pronunciation: "ih-SOOR-ee-unt",
+    partOfSpeech: "adjective",
+    definition: "Hungry or greedy.",
+    example: "The esurient teenager opened the refrigerator five minutes after eating dinner and asked when we were having dinner."
+  },
+  {
+    word: "Exonumia",
+    pronunciation: "ek-soh-NOO-mee-uh",
+    partOfSpeech: "noun",
+    definition: "Collectible objects resembling coins but not used as currency, such as tokens or medals.",
+    example: "Grandpa's exonumia collection included arcade tokens from places that had closed before I was born."
+  },
+  {
+    word: "Fanfaronade",
+    pronunciation: "fan-fair-uh-NAYD",
+    partOfSpeech: "noun",
+    definition: "Boastful talk or swaggering behavior.",
+    example: "His fanfaronade about grilling ended when he asked which side of the spatula to use."
+  },
+  {
+    word: "Ferinous",
+    pronunciation: "FER-ih-nus",
+    partOfSpeech: "adjective",
+    definition: "Wild or untamed; resembling a wild animal.",
+    example: "After three hours at the indoor playground, the children's ferinous energy had spread to the adults."
+  },
+  {
+    word: "Floccinaucinihilipilification",
+    pronunciation: "flok-sih-naw-sih-ny-hil-ih-pil-ih-fih-KAY-shun",
+    partOfSpeech: "noun",
+    definition: "The act of judging something to be worthless.",
+    example: "My floccinaucinihilipilification of the mystery cable lasted until I discovered it powered the router."
+  },
+  {
+    word: "Foudroyant",
+    pronunciation: "foo-DROY-unt",
+    partOfSpeech: "adjective",
+    definition: "Sudden and overwhelming in effect; striking like lightning.",
+    example: "Her foudroyant glare ended the food fight before the mashed potato completed its flight."
+  },
+  {
+    word: "Fremdschämen",
+    pronunciation: "FREMT-shay-men",
+    partOfSpeech: "noun",
+    definition: "Embarrassment felt on behalf of someone else.",
+    example: "I experienced intense Fremdschämen while Dad explained the internet to the internet technician."
+  },
+  {
+    word: "Funambulist",
+    pronunciation: "fyoo-NAM-byuh-list",
+    partOfSpeech: "noun",
+    definition: "A tightrope walker.",
+    example: "Carrying three coffees across an icy sidewalk turned me into an unwilling funambulist."
+  },
+  {
+    word: "Gadabout",
+    pronunciation: "GAD-uh-bowt",
+    partOfSpeech: "noun",
+    definition: "A person who goes from place to place seeking amusement or social activity.",
+    example: "Our retired neighbor became such a gadabout that his houseplants started leaving him voicemail."
+  },
+  {
+    word: "Gargalesthesia",
+    pronunciation: "gar-gal-es-THEE-zee-uh",
+    partOfSpeech: "noun",
+    definition: "The sensation of being tickled.",
+    example: "The toddler's gargalesthesia was so intense that putting on socks became a contact sport."
+  },
+  {
+    word: "Gelasin",
+    pronunciation: "JEL-uh-sin",
+    partOfSpeech: "noun",
+    definition: "A dimple in the cheek that appears when smiling.",
+    example: "His gelasin was charming enough to get him forgiven for eating the last cookie, but only once."
+  },
+  {
+    word: "Glabella",
+    pronunciation: "gluh-BEL-uh",
+    partOfSpeech: "noun",
+    definition: "The smooth area of forehead between the eyebrows.",
+    example: "I bumped my glabella on the cabinet door and immediately learned both a new word and several old ones."
+  },
+  {
+    word: "Gleek",
+    pronunciation: "GLEEK",
+    partOfSpeech: "verb",
+    definition: "To squirt saliva from beneath the tongue.",
+    example: "The seventh-grader discovered he could gleek and instantly became the least popular person at the lunch table."
+  },
+  {
+    word: "Gnathonic",
+    pronunciation: "nuh-THON-ik",
+    partOfSpeech: "adjective",
+    definition: "Fawning or excessively flattering.",
+    example: "His gnathonic praise of the boss's tie ended shortly after he realized it belonged to the intern."
+  },
+  {
+    word: "Grimalkin",
+    pronunciation: "grih-MAWL-kin",
+    partOfSpeech: "noun",
+    definition: "An old female cat; sometimes any cat.",
+    example: "The household grimalkin accepted our new sofa only after covering it with enough fur to claim ownership."
+  },
+  {
+    word: "Hippopotomonstrosesquipedaliophobia",
+    pronunciation: "hip-oh-pot-oh-mon-stroh-ses-kwip-uh-day-lee-oh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "A humorous name for the fear of long words.",
+    example: "Naming the fear of long words hippopotomonstrosesquipedaliophobia feels less like medicine and more like bullying."
+  },
+  {
+    word: "Hodiernal",
+    pronunciation: "hoh-dee-ER-nul",
+    partOfSpeech: "adjective",
+    definition: "Relating to the present day.",
+    example: "My hodiernal goals are modest: answer the emails and avoid creating any new emergencies."
+  },
+  {
+    word: "Hyemation",
+    pronunciation: "hy-eh-MAY-shun",
+    partOfSpeech: "noun",
+    definition: "The act of passing the winter in a particular place; wintering.",
+    example: "My preferred hyemation involves a blanket, a fireplace, and no reason whatsoever to scrape a windshield."
+  },
+  {
+    word: "Ignivomous",
+    pronunciation: "ig-NIV-uh-mus",
+    partOfSpeech: "adjective",
+    definition: "Vomiting or spewing fire.",
+    example: "The ignivomous dragon looked impressive until someone pointed out the curtains were highly flammable."
+  },
+  {
+    word: "Impecunious",
+    pronunciation: "im-pih-KYOO-nee-us",
+    partOfSpeech: "adjective",
+    definition: "Having little or no money.",
+    example: "I became temporarily impecunious after discovering that 'market price' is restaurant code for 'don't ask.'"
+  },
+  {
+    word: "Infracaninophile",
+    pronunciation: "in-fruh-kuh-NIN-oh-file",
+    partOfSpeech: "noun",
+    definition: "A person who supports the underdog.",
+    example: "As a lifelong infracaninophile, I picked the last-place team and immediately regretted my principles."
+  },
+  {
+    word: "Bellytimber",
+    pronunciation: "BEL-ee-tim-ber",
+    partOfSpeech: "noun",
+    definition: "Food; provisions for the stomach.",
+    example: "After six hours on the road, the family demanded bellytimber before anyone was willing to discuss another scenic overlook."
+  },
+  {
+    word: "Jocoserious",
+    pronunciation: "joh-koh-SEER-ee-us",
+    partOfSpeech: "adjective",
+    definition: "Combining joking and seriousness.",
+    example: "His jocoserious warning—'touch my fries and update your will'—was delivered with unsettling eye contact."
+  },
+  {
+    word: "Kakorrhaphiophobia",
+    pronunciation: "kak-or-raf-ee-oh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "An abnormal fear of failure or defeat.",
+    example: "My kakorrhaphiophobia is why I only play board games against children who cannot yet read the rules."
+  },
+  {
+    word: "Kummerspeck",
+    pronunciation: "KOOM-er-shpek",
+    partOfSpeech: "noun",
+    definition: "Weight gained from emotional overeating; literally 'grief bacon.'",
+    example: "After breakup week, my Kummerspeck could be traced directly to three pizzas and a family-size cheesecake."
+  },
+  {
+    word: "Elucubrate",
+    pronunciation: "ee-LOO-kyuh-brayt",
+    partOfSpeech: "verb",
+    definition: "To work out or compose something through careful study.",
+    example: "I elucubrated a twelve-point vacation budget that collapsed the moment someone suggested ice cream."
+  },
+  {
+    word: "Lanspresado",
+    pronunciation: "lanz-pruh-SAH-doh",
+    partOfSpeech: "noun",
+    definition: "A person who arrives with little money and expects others to pay.",
+    example: "Our lanspresado ordered appetizers for the table and then discovered, with theatrical surprise, that he had forgotten his wallet."
+  },
+  {
+    word: "Leptosome",
+    pronunciation: "LEP-tuh-sohm",
+    partOfSpeech: "noun",
+    definition: "A person with a slender, narrow body build.",
+    example: "The leptosome tried on my winter coat and disappeared so completely we nearly hung him in the closet."
+  },
+  {
+    word: "Lickspigot",
+    pronunciation: "LIK-spig-ut",
+    partOfSpeech: "noun",
+    definition: "A contemptible, fawning person; a sycophant.",
+    example: "The office lickspigot laughed at the boss's joke three seconds before the punchline."
+  },
+  {
+    word: "Lucubration",
+    pronunciation: "loo-kyoo-BRAY-shun",
+    partOfSpeech: "noun",
+    definition: "Study or writing done late at night.",
+    example: "My midnight lucubration produced four good paragraphs and an online order for a waffle maker."
+  },
+  {
+    word: "Maffick",
+    pronunciation: "MAF-ik",
+    partOfSpeech: "verb",
+    definition: "To celebrate boisterously and publicly.",
+    example: "When the team finally won, the fans mafficked so loudly that even the parking meters seemed excited."
+  },
+  {
+    word: "Maledicent",
+    pronunciation: "muh-LED-ih-sent",
+    partOfSpeech: "adjective",
+    definition: "Speaking ill of others; slanderous.",
+    example: "The maledicent parrot had learned exactly three phrases, all apparently from a very unhappy marriage."
+  },
+  {
+    word: "Mendaciloquent",
+    pronunciation: "men-DAS-ih-loh-kwent",
+    partOfSpeech: "adjective",
+    definition: "Speaking falsely or habitually lying.",
+    example: "The mendaciloquent fisherman described a trout large enough to require its own zip code."
+  },
+  {
+    word: "Meretricious",
+    pronunciation: "mer-ih-TRISH-us",
+    partOfSpeech: "adjective",
+    definition: "Flashy or attractive in a cheap, false, or insincere way.",
+    example: "The meretricious watch looked expensive until the second hand fell off during dinner."
+  },
+  {
+    word: "Gobemouche",
+    pronunciation: "GOB-moosh",
+    partOfSpeech: "noun",
+    definition: "A gullible person who readily believes what they hear.",
+    example: "The office gobemouche believed the copier needed to be fed a test page every Friday for good luck."
+  },
+  {
+    word: "Illywhacker",
+    pronunciation: "IL-ee-wak-er",
+    partOfSpeech: "noun",
+    definition: "A trickster, swindler, or confidence artist.",
+    example: "The carnival illywhacker promised the game was easy, which explained why my ten-dollar stuffed bear cost forty-eight dollars."
+  },
+  {
+    word: "Mugwump",
+    pronunciation: "MUG-wump",
+    partOfSpeech: "noun",
+    definition: "A person who remains aloof or independent, especially in politics or disputes.",
+    example: "During the family argument over pineapple on pizza, Dad became a mugwump and quietly ate both kinds."
+  },
+  {
+    word: "Nescience",
+    pronunciation: "NESH-ee-ents",
+    partOfSpeech: "noun",
+    definition: "Lack of knowledge or awareness.",
+    example: "My nescience about plumbing lasted until water began coming through the light fixture."
+  },
+  {
+    word: "Ninnyhammer",
+    pronunciation: "NIN-ee-ham-er",
+    partOfSpeech: "noun",
+    definition: "A foolish or silly person.",
+    example: "I felt like a ninnyhammer after searching for my glasses while wearing them."
+  },
+  {
+    word: "Nocent",
+    pronunciation: "NOH-sent",
+    partOfSpeech: "adjective",
+    definition: "Harmful, guilty, or responsible for wrongdoing.",
+    example: "The dog looked innocent, but the shredded cushion and feather-covered muzzle were strongly nocent evidence."
+  },
+  {
+    word: "Nugacity",
+    pronunciation: "noo-GAS-ih-tee",
+    partOfSpeech: "noun",
+    definition: "Triviality, foolishness, or something of little importance.",
+    example: "The meeting spent forty minutes on nugacity and three minutes on the actual budget."
+  },
+  {
+    word: "Obambulate",
+    pronunciation: "oh-BAM-byuh-layt",
+    partOfSpeech: "verb",
+    definition: "To walk about or wander.",
+    example: "I obambulated through the hardware store for half an hour before admitting I had forgotten what I came for."
+  },
+  {
+    word: "Obdormition",
+    pronunciation: "ob-dor-MISH-un",
+    partOfSpeech: "noun",
+    definition: "Numbness in a limb caused by pressure; a limb 'falling asleep.'",
+    example: "My leg's obdormition ended with a thousand imaginary needles and one very real coffee spill."
+  },
+  {
+    word: "Oligopsony",
+    pronunciation: "ol-ih-GOP-suh-nee",
+    partOfSpeech: "noun",
+    definition: "A market in which there are only a few buyers.",
+    example: "The farmers faced an oligopsony, while I faced one grocery store and an avocado priced like jewelry."
+  },
+  {
+    word: "Onychophagy",
+    pronunciation: "on-ih-KOF-uh-jee",
+    partOfSpeech: "noun",
+    definition: "The habit of biting one's fingernails.",
+    example: "His onychophagy intensified during the game until halftime left him with nothing useful to chew."
+  },
+  {
+    word: "Oscitancy",
+    pronunciation: "OS-ih-tan-see",
+    partOfSpeech: "noun",
+    definition: "Drowsiness or the act of yawning; inattentiveness.",
+    example: "The lecture produced such oscitancy that the professor began taking the yawns personally."
+  },
+  {
+    word: "Palpebrate",
+    pronunciation: "PAL-puh-brayt",
+    partOfSpeech: "verb",
+    definition: "To blink or wink.",
+    example: "I palpebrated repeatedly at the bill, but unfortunately the total remained the same."
+  },
+  {
+    word: "Paraprosdokian",
+    pronunciation: "par-uh-proz-DOH-kee-un",
+    partOfSpeech: "noun",
+    definition: "A figure of speech in which the ending unexpectedly changes the meaning of the beginning.",
+    example: "He loved paraprosdokians: 'I had a wonderful evening, but this wasn't it.'"
+  },
+  {
+    word: "Jobbernowl",
+    pronunciation: "JOB-er-nowl",
+    partOfSpeech: "noun",
+    definition: "A foolish or stupid person.",
+    example: "I felt like a complete jobbernowl after searching for my glasses while they were sitting on my face."
+  },
+  {
+    word: "Lucubrate",
+    pronunciation: "LOO-kyuh-brayt",
+    partOfSpeech: "verb",
+    definition: "To study or write late into the night.",
+    example: "She lucubrated until 2 a.m., fueled by coffee and the increasingly unrealistic belief that tomorrow would be productive."
+  },
+  {
+    word: "Peristeronic",
+    pronunciation: "per-is-ter-ON-ik",
+    partOfSpeech: "adjective",
+    definition: "Relating to pigeons.",
+    example: "The park bench developed a peristeronic problem the moment I opened a bag of chips."
+  },
+  {
+    word: "Philoprogenitive",
+    pronunciation: "fil-oh-proh-JEN-ih-tiv",
+    partOfSpeech: "adjective",
+    definition: "Having or expressing great affection for children or offspring.",
+    example: "The philoprogenitive duck marched twelve ducklings across the road while traffic collectively accepted defeat."
+  },
+  {
+    word: "Phosphenes",
+    pronunciation: "FOS-feenz",
+    partOfSpeech: "noun",
+    definition: "Spots or flashes of light seen without light actually entering the eye.",
+    example: "Rubbing my eyes produced phosphenes and the realization that adulthood has very cheap special effects."
+  },
+  {
+    word: "Pilgarlic",
+    pronunciation: "pil-GAR-lik",
+    partOfSpeech: "noun",
+    definition: "A bald-headed or pitiable person.",
+    example: "After the barber's enthusiastic mistake, I emerged a temporary pilgarlic with a very breezy scalp."
+  },
+  {
+    word: "Pluviophile",
+    pronunciation: "PLOO-vee-oh-file",
+    partOfSpeech: "noun",
+    definition: "A person who loves rain or rainy weather.",
+    example: "The pluviophile opened the curtains with delight while everyone else searched for the umbrella."
+  },
+  {
+    word: "Numbles",
+    pronunciation: "NUM-bulz",
+    partOfSpeech: "noun",
+    definition: "The edible internal organs of an animal, especially a deer.",
+    example: "Grandpa called the numbles a delicacy, which did not improve their approval rating among the grandchildren."
+  },
+  {
+    word: "Proditomania",
+    pronunciation: "proh-dit-oh-MAY-nee-uh",
+    partOfSpeech: "noun",
+    definition: "The belief or fear that everyone around you is a traitor.",
+    example: "Board-game night triggered proditomania when my own spouse traded properties with the enemy."
+  },
+  {
+    word: "Prosopagnosia",
+    pronunciation: "pros-oh-pag-NOH-zee-uh",
+    partOfSpeech: "noun",
+    definition: "Difficulty recognizing familiar faces.",
+    example: "My mild social confusion felt like prosopagnosia when three coworkers arrived wearing identical holiday sweaters."
+  },
+  {
+    word: "Pusillanimous",
+    pronunciation: "pyoo-sih-LAN-ih-mus",
+    partOfSpeech: "adjective",
+    definition: "Showing a lack of courage; timid.",
+    example: "My pusillanimous approach to the spider involved a bowl, a magazine, and calling someone from another room."
+  },
+  {
+    word: "Quaquaversal",
+    pronunciation: "kway-kwuh-VER-sul",
+    partOfSpeech: "adjective",
+    definition: "Sloping downward in every direction from a central point.",
+    example: "The quaquaversal frosting slid off the cake so evenly that failure almost looked intentional."
+  },
+  {
+    word: "Quincunx",
+    pronunciation: "KWIN-kunks",
+    partOfSpeech: "noun",
+    definition: "An arrangement of five objects with four at the corners and one in the center.",
+    example: "The cookies formed a perfect quincunx until I ate the middle one for geometric research."
+  },
+  {
+    word: "Quocker",
+    pronunciation: "KWOK-er",
+    partOfSpeech: "noun",
+    definition: "A person who makes a noise like a duck; an odd or foolish person.",
+    example: "The office quocker discovered one convincing duck impression and refused to retire it."
+  },
+  {
+    word: "Ramekin",
+    pronunciation: "RAM-ih-kin",
+    partOfSpeech: "noun",
+    definition: "A small dish used for baking or serving individual portions.",
+    example: "The waiter called it a ramekin; I called it a suspiciously tiny container for macaroni and cheese."
+  },
+  {
+    word: "Ratoon",
+    pronunciation: "ruh-TOON",
+    partOfSpeech: "noun",
+    definition: "A new shoot growing from the base or roots of a harvested plant.",
+    example: "The stubborn ratoon returned after mowing, proving the plant had a stronger five-year plan than I did."
+  },
+  {
+    word: "Rhabarbarate",
+    pronunciation: "ruh-BAR-buh-rayt",
+    partOfSpeech: "verb",
+    definition: "To make a low indistinct murmuring sound, like a crowd.",
+    example: "The audience rhabarbarated while the microphone failed and the speaker tapped it with increasing optimism."
+  },
+  {
+    word: "Opsigamy",
+    pronunciation: "op-SIG-uh-mee",
+    partOfSpeech: "noun",
+    definition: "Marriage late in life.",
+    example: "Their opsigamy proved romance has no expiration date, although both agreed the wedding registry did not need another toaster."
+  },
+  {
+    word: "Roorback",
+    pronunciation: "ROOR-bak",
+    partOfSpeech: "noun",
+    definition: "A false or defamatory story spread for political purposes.",
+    example: "The neighborhood roorback claimed the new bakery was secretly replacing butter with mashed potatoes; sales increased anyway."
+  },
+  {
+    word: "Salmagundi",
+    pronunciation: "sal-muh-GUN-dee",
+    partOfSpeech: "noun",
+    definition: "A miscellaneous mixture or collection of things.",
+    example: "Dinner became a salmagundi of leftovers after nobody could agree what counted as a complete meal."
+  },
+  {
+    word: "Sciamachy",
+    pronunciation: "sy-AM-uh-kee",
+    partOfSpeech: "noun",
+    definition: "A fight with an imaginary enemy; argument against a phantom opponent.",
+    example: "My shower sciamachy produced a devastating rebuttal to an argument nobody had actually made."
+  },
+  {
+    word: "Sesquipedalian",
+    pronunciation: "ses-kwih-puh-DAY-lee-un",
+    partOfSpeech: "adjective",
+    definition: "Given to using long words; characterized by long words.",
+    example: "His sesquipedalian apology took so long that we forgot what he had done."
+  },
+  {
+    word: "Shivviness",
+    pronunciation: "SHIV-ee-ness",
+    partOfSpeech: "noun",
+    definition: "The uncomfortable feeling of wearing new underwear.",
+    example: "My shivviness made the first hour in the new suit considerably less dignified than the photos suggest."
+  },
+  {
+    word: "Skeuomorph",
+    pronunciation: "SKYOO-uh-morf",
+    partOfSpeech: "noun",
+    definition: "A design feature that imitates the appearance of an older, familiar object.",
+    example: "The fake stitching on the calendar app is a skeuomorph reminding us that software once wanted to dress like stationery."
+  },
+  {
+    word: "Quagswag",
+    pronunciation: "KWAG-swag",
+    partOfSpeech: "verb",
+    definition: "To shake or move back and forth.",
+    example: "The overloaded washing machine quagswagged across the laundry room like it had somewhere important to be."
+  },
+  {
+    word: "Smellfungus",
+    pronunciation: "SMEL-fung-us",
+    partOfSpeech: "noun",
+    definition: "A habitual faultfinder or gloomy complainer.",
+    example: "The vacation smellfungus disliked the beach because it was sandy, the ocean because it was wet, and lunch because it arrived."
+  },
+  {
+    word: "Snickersnee",
+    pronunciation: "SNIK-er-snee",
+    partOfSpeech: "noun",
+    definition: "A large knife; historically, a fight with knives.",
+    example: "The chef called it a snickersnee, which made chopping onions sound unnecessarily adventurous."
+  },
+  {
+    word: "Sphallolalia",
+    pronunciation: "sfal-oh-LAY-lee-uh",
+    partOfSpeech: "noun",
+    definition: "Flirtatious talk that leads nowhere or is misleading.",
+    example: "His sphallolalia promised moonlight dinners but somehow never survived past 'we should hang out sometime.'"
+  },
+  {
+    word: "Steatopygous",
+    pronunciation: "stee-at-oh-PY-gus",
+    partOfSpeech: "adjective",
+    definition: "Having prominent buttocks.",
+    example: "The steatopygous cartoon bear required a surprisingly wide chair at the animation studio."
+  },
+  {
+    word: "Struthious",
+    pronunciation: "STROO-thee-us",
+    partOfSpeech: "adjective",
+    definition: "Relating to or resembling an ostrich.",
+    example: "His struthious approach to bad news consisted of ignoring every email marked 'urgent.'"
+  },
+  {
+    word: "Tatterdemalion",
+    pronunciation: "tat-er-dee-MAY-lee-un",
+    partOfSpeech: "noun",
+    definition: "A person dressed in ragged or shabby clothes.",
+    example: "After painting the garage, I looked like a tatterdemalion who had lost a fight with a bucket of beige."
+  },
+  {
+    word: "Thalassophile",
+    pronunciation: "thuh-LAS-oh-file",
+    partOfSpeech: "noun",
+    definition: "A person who loves the sea.",
+    example: "The thalassophile booked an ocean-view room and spent most of the vacation staring happily at water."
+  },
+  {
+    word: "Tintinnabulation",
+    pronunciation: "tin-tin-ab-yuh-LAY-shun",
+    partOfSpeech: "noun",
+    definition: "A ringing or tinkling sound, especially of bells.",
+    example: "The cat's collar produced enough tintinnabulation at 3 a.m. to suggest a tiny parade was crossing the bedroom."
+  },
+  {
+    word: "Rakefire",
+    pronunciation: "RAYK-fire",
+    partOfSpeech: "noun",
+    definition: "A guest who stays so late that the host must rake the fire to keep it going.",
+    example: "By midnight, our rakefire was still telling vacation stories while we silently began putting the chairs on the tables."
+  },
+  {
+    word: "Ulotrichous",
+    pronunciation: "yoo-LOT-rih-kus",
+    partOfSpeech: "adjective",
+    definition: "Having tightly curled or woolly hair.",
+    example: "Humidity made my hair so ulotrichous that it entered the room several seconds before I did."
+  },
+  {
+    word: "Umbriferous",
+    pronunciation: "um-BRIF-er-us",
+    partOfSpeech: "adjective",
+    definition: "Providing or bearing shade.",
+    example: "We claimed the most umbriferous tree in the park and defended it like beachfront property."
+  },
+  {
+    word: "Vilipend",
+    pronunciation: "VIL-ih-pend",
+    partOfSpeech: "verb",
+    definition: "To regard or treat as worthless or contemptible.",
+    example: "Do not vilipend the junk drawer; one day that mystery screw will become critically important."
+  },
+  {
+    word: "Widdershins",
+    pronunciation: "WID-er-shinz",
+    partOfSpeech: "adverb",
+    definition: "In a counterclockwise direction.",
+    example: "I turned the lid widdershins and opened the jar, which sounded far more magical than 'lefty-loosey.'"
+  },
+  {
+    word: "Winklepicker",
+    pronunciation: "WINK-ul-pik-er",
+    partOfSpeech: "noun",
+    definition: "A shoe or boot with a very long pointed toe.",
+    example: "His winklepickers entered the elevator a full second before the rest of him."
+  },
+  {
+    word: "Woofits",
+    pronunciation: "WOO-fits",
+    partOfSpeech: "noun",
+    definition: "A feeling of unwellness or depression, especially after excess.",
+    example: "Sunday morning brought a severe case of the woofits and a solemn promise never to order the extra-spicy wings again."
+  },
+  {
+    word: "Xenodochy",
+    pronunciation: "zen-OD-uh-kee",
+    partOfSpeech: "noun",
+    definition: "Hospitality or kindness toward strangers.",
+    example: "Our host's xenodochy included fresh towels, homemade pie, and a Wi-Fi password printed in fourteen-point type."
+  },
+  {
+    word: "Yclept",
+    pronunciation: "ee-KLEPT",
+    partOfSpeech: "adjective",
+    definition: "Named or called.",
+    example: "A sandwich yclept 'The Inferno' should have been enough warning, but apparently I enjoy learning through pain."
+  },
+  {
+    word: "Zarf",
+    pronunciation: "ZARF",
+    partOfSpeech: "noun",
+    definition: "A holder or sleeve for a cup without a handle.",
+    example: "I forgot the zarf and spent the next five minutes passing my coffee from hand to hand like a tiny furnace."
+  },
+  {
+    word: "Verjuice",
+    pronunciation: "VER-joos",
+    partOfSpeech: "noun",
+    definition: "A sour juice made from unripe grapes or other acidic fruit and used in cooking.",
+    example: "The chef added verjuice to the sauce; I tasted it straight and discovered why nobody serves it by the glass."
+  },
+  {
+    word: "Abecedarian",
+    pronunciation: "ay-bee-see-DAIR-ee-un",
+    partOfSpeech: "noun",
+    definition: "A beginner learning the alphabet or basic elements of a subject.",
+    example: "As an abecedarian gardener, I planted six herbs and confidently identified two of them."
+  },
+  {
+    word: "Aegrotat",
+    pronunciation: "EE-groh-tat",
+    partOfSpeech: "noun",
+    definition: "A certificate excusing a student from an examination because of illness.",
+    example: "My teenage self would have regarded an aegrotat as the golden ticket of academic paperwork."
+  },
+  {
+    word: "Agastopia",
+    pronunciation: "ag-uh-STOH-pee-uh",
+    partOfSpeech: "noun",
+    definition: "Admiration or fascination with a particular part of someone's body.",
+    example: "His agastopia for dimples made every toothpaste commercial unexpectedly compelling."
+  },
+  {
+    word: "Agerasia",
+    pronunciation: "aj-er-AY-zee-uh",
+    partOfSpeech: "noun",
+    definition: "The quality of appearing younger than one's age.",
+    example: "Her agerasia was impressive until she revealed that the secret was excellent lighting and refusing to discuss birthdays."
+  },
+  {
+    word: "Ailurophile",
+    pronunciation: "eye-LOOR-oh-file",
+    partOfSpeech: "noun",
+    definition: "A person who loves cats.",
+    example: "The ailurophile went to the shelter for 'just a look' and came home needing three new litter boxes."
+  },
+  {
+    word: "Altiloquent",
+    pronunciation: "al-TIL-oh-kwent",
+    partOfSpeech: "adjective",
+    definition: "Speaking in a lofty, pompous, or grand style.",
+    example: "The altiloquent waiter described ketchup as 'a tomato reduction,' and somehow I paid extra for it."
+  },
+  {
+    word: "Anemophilous",
+    pronunciation: "an-uh-MOF-ih-lus",
+    partOfSpeech: "adjective",
+    definition: "Pollinated by wind.",
+    example: "The anemophilous trees began spring reproduction, and my sinuses filed an immediate objection."
+  },
+  {
+    word: "Anfractuous",
+    pronunciation: "an-FRAK-choo-us",
+    partOfSpeech: "adjective",
+    definition: "Full of twists and turns; winding.",
+    example: "The anfractuous road was scenic, beautiful, and a terrible place to discover the child gets carsick."
+  },
+  {
+    word: "Apricate",
+    pronunciation: "AP-rih-kayt",
+    partOfSpeech: "verb",
+    definition: "To bask in the sun.",
+    example: "The cat apricated in the window with the smug confidence of someone who has never paid a heating bill."
+  },
+  {
+    word: "Borborygmic",
+    pronunciation: "bor-buh-RIG-mik",
+    partOfSpeech: "adjective",
+    definition: "Relating to stomach rumbling.",
+    example: "The silence before lunch became awkwardly borborygmic when my stomach contributed percussion."
+  },
+  {
+    word: "Cacodemomania",
+    pronunciation: "kak-oh-dee-moh-MAY-nee-uh",
+    partOfSpeech: "noun",
+    definition: "The delusion that one is possessed by an evil spirit.",
+    example: "My laptop's behavior suggested cacodemomania, though the technician insisted it was just thirty-seven browser tabs."
+  },
+  {
+    word: "Cenosillicaphobia",
+    pronunciation: "sen-oh-sil-ih-kuh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "A humorous supposed fear of an empty glass.",
+    example: "At the reunion, Uncle Dave displayed acute cenosillicaphobia and kept his lemonade under constant supervision."
+  },
+  {
+    word: "Chionophile",
+    pronunciation: "KY-oh-noh-file",
+    partOfSpeech: "noun",
+    definition: "A person or organism that thrives in or loves snow.",
+    example: "The chionophile saw twelve inches in the forecast and reacted the way normal people react to winning concert tickets."
+  },
+  {
+    word: "Chrematophobia",
+    pronunciation: "kreh-mat-oh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "An abnormal fear of money or spending it.",
+    example: "His chrematophobia vanished mysteriously whenever someone else offered to pay."
+  },
+  {
+    word: "Dromomania",
+    pronunciation: "droh-moh-MAY-nee-uh",
+    partOfSpeech: "noun",
+    definition: "An uncontrollable urge to wander or travel.",
+    example: "Her dromomania turned a quick weekend getaway into a spreadsheet containing seventeen possible airports."
+  },
+  {
+    word: "Epeolatry",
+    pronunciation: "ep-ee-OL-uh-tree",
+    partOfSpeech: "noun",
+    definition: "The worship or intense admiration of words.",
+    example: "Word of the Day may cause mild epeolatry, but at least it takes up less shelf space than collecting encyclopedias."
+  },
+  {
+    word: "Ergasiomania",
+    pronunciation: "er-gay-see-oh-MAY-nee-uh",
+    partOfSpeech: "noun",
+    definition: "An excessive desire to work; workaholism.",
+    example: "His ergasiomania was so severe that he answered emails during the surprise party thrown to make him stop answering emails."
+  },
+  {
+    word: "Facinorous",
+    pronunciation: "fuh-SIN-er-us",
+    partOfSpeech: "adjective",
+    definition: "Extremely wicked or villainous.",
+    example: "Whoever microwaved fish in the office kitchen committed a facinorous act against lunchtime civilization."
+  },
+  {
+    word: "Famelicose",
+    pronunciation: "fuh-MEL-ih-kohs",
+    partOfSpeech: "adjective",
+    definition: "Constantly or ravenously hungry.",
+    example: "The famelicose teenager treated a fully stocked refrigerator as a light appetizer."
+  },
+  {
+    word: "Gongorism",
+    pronunciation: "GON-guh-riz-um",
+    partOfSpeech: "noun",
+    definition: "An elaborate, ornate, and affected style of writing or speech.",
+    example: "The restaurant menu's gongorism described fries as 'golden batons of hand-cut potato.'"
+  },
+  {
+    word: "Gulosity",
+    pronunciation: "gyoo-LOSS-ih-tee",
+    partOfSpeech: "noun",
+    definition: "Excessive appetite or gluttony.",
+    example: "My gulosity convinced me the appetizer sampler was technically a single appetizer."
+  },
+  {
+    word: "Hippocras",
+    pronunciation: "HIP-uh-kras",
+    partOfSpeech: "noun",
+    definition: "A spiced wine drink popular in medieval Europe.",
+    example: "We served hippocras at the costume party and immediately learned that medieval people were serious about cinnamon."
+  },
+  {
+    word: "Hylomania",
+    pronunciation: "hy-loh-MAY-nee-uh",
+    partOfSpeech: "noun",
+    definition: "An excessive tendency toward materialism or acquiring possessions.",
+    example: "My hylomania is limited mostly to kitchen gadgets that promise to solve problems I did not previously have."
+  },
+  {
+    word: "Iatrophobia",
+    pronunciation: "eye-at-roh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "An abnormal fear of doctors or medical care.",
+    example: "My iatrophobia improves dramatically when the appointment ends with 'everything looks fine.'"
+  },
+  {
+    word: "Jumentous",
+    pronunciation: "joo-MEN-tus",
+    partOfSpeech: "adjective",
+    definition: "Smelling like a horse or stable.",
+    example: "After mowing in August heat, I returned home distinctly jumentous and was greeted from a safe distance."
+  },
+  {
+    word: "Kalon",
+    pronunciation: "KAL-on",
+    partOfSpeech: "noun",
+    definition: "Ideal beauty that is more than merely physical; beauty of moral worth.",
+    example: "Her kalon was evident when she returned the lost wallet before noticing it contained concert tickets."
+  },
+  {
+    word: "Lachanophobia",
+    pronunciation: "lak-an-oh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "An abnormal fear of vegetables.",
+    example: "The child's sudden lachanophobia appeared precisely when broccoli arrived and vanished when dessert did."
+  },
+  {
+    word: "Myrmecophilous",
+    pronunciation: "mer-muh-KOF-ih-lus",
+    partOfSpeech: "adjective",
+    definition: "Living in association with or attracted to ants.",
+    example: "The picnic became accidentally myrmecophilous after someone dropped an entire cupcake beside the blanket."
+  },
+  {
+    word: "Nebbish",
+    pronunciation: "NEB-ish",
+    partOfSpeech: "noun",
+    definition: "A timid, ineffectual, or insignificant person.",
+    example: "The office nebbish finally complained about the broken chair, then apologized to the chair."
+  },
+  {
+    word: "Nychthemeron",
+    pronunciation: "nik-THEM-er-on",
+    partOfSpeech: "noun",
+    definition: "A full period of twenty-four consecutive hours.",
+    example: "The baby managed to sleep for four hours in an entire nychthemeron and considered this generous."
+  },
+  {
+    word: "Obganiate",
+    pronunciation: "ob-GAN-ee-ayt",
+    partOfSpeech: "verb",
+    definition: "To irritate by constantly repeating the same request or complaint.",
+    example: "The children obganiated me about ice cream until resistance became more exhausting than surrender."
+  },
+  {
+    word: "Oneirodynia",
+    pronunciation: "oh-ny-roh-DIN-ee-uh",
+    partOfSpeech: "noun",
+    definition: "Disturbed or unpleasant dreaming; nightmares.",
+    example: "My oneirodynia involved arriving at work without pants and somehow still being late for a meeting."
+  },
+  {
+    word: "Ophryon",
+    pronunciation: "OF-ree-on",
+    partOfSpeech: "noun",
+    definition: "The point between the eyebrows just above the bridge of the nose.",
+    example: "I smacked my ophryon on the cupboard and briefly saw both stars and the value of closing cabinet doors."
+  },
+  {
+    word: "Paralian",
+    pronunciation: "puh-RAY-lee-un",
+    partOfSpeech: "noun",
+    definition: "A person who lives by or near the sea.",
+    example: "The paralian considered our inland lake 'cute,' which nearly ended the friendship."
+  },
+  {
+    word: "Pentheraphobia",
+    pronunciation: "pen-ther-uh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "An abnormal fear or dislike of one's mother-in-law.",
+    example: "His alleged pentheraphobia disappeared whenever his mother-in-law arrived carrying homemade pie."
+  },
+  {
+    word: "Philocalist",
+    pronunciation: "fil-OK-uh-list",
+    partOfSpeech: "noun",
+    definition: "A lover of beauty or beautiful things.",
+    example: "The philocalist spent twenty minutes arranging flowers and thirty seconds hiding the junk mail behind them."
+  },
+  {
+    word: "Pogonophobia",
+    pronunciation: "poh-gon-oh-FOH-bee-uh",
+    partOfSpeech: "noun",
+    definition: "An abnormal fear of beards.",
+    example: "The mall Santa triggered unexpected pogonophobia in a toddler who had been enthusiastic until the beard moved."
+  },
+  {
+    word: "Qualtagh",
+    pronunciation: "KWAL-tahg",
+    partOfSpeech: "noun",
+    definition: "The first person one meets after leaving home, especially on New Year's Day.",
+    example: "My New Year's qualtagh was the neighbor taking out trash in slippers, which felt appropriately realistic."
+  },
+  {
+    word: "Xenial",
+    pronunciation: "ZEE-nee-ul",
+    partOfSpeech: "adjective",
+    definition: "Hospitable or friendly toward guests or strangers.",
+    example: "Our xenial host offered snacks, slippers, and the Wi-Fi password before we had even taken off our coats."
+  },
+  {
+    word: "Recumbentibus",
+    pronunciation: "ree-kum-BEN-tih-bus",
+    partOfSpeech: "noun",
+    definition: "A knockout blow or decisive argument.",
+    example: "Her recumbentibus in the thermostat debate was simply showing everyone the electric bill."
+  },
+  {
+    word: "Rhopalic",
+    pronunciation: "roh-PAL-ik",
+    partOfSpeech: "adjective",
+    definition: "Having each successive word or unit longer than the one before.",
+    example: "My rhopalic grocery reminder grew from 'eggs' to 'please remember the extra-large dishwasher tablets.'"
+  },
+  {
+    word: "Scaramouch",
+    pronunciation: "SKAIR-uh-moosh",
+    partOfSpeech: "noun",
+    definition: "A boastful but cowardly person; a stock comic rogue.",
+    example: "The playground scaramouch bragged about climbing the tallest slide, then requested an adult escort down."
+  },
+  {
+    word: "Scripturient",
+    pronunciation: "SKRIP-choor-ee-unt",
+    partOfSpeech: "adjective",
+    definition: "Having a strong desire to write.",
+    example: "I became scripturient at midnight, which is why my best ideas live in notes titled things like 'sandwich business???'"
+  },
+  {
+    word: "Solivagant",
+    pronunciation: "soh-LIV-uh-gunt",
+    partOfSpeech: "adjective",
+    definition: "Wandering alone.",
+    example: "The solivagant traveler enjoyed the quiet until realizing nobody else could take the photo."
+  },
+  {
+    word: "Soporose",
+    pronunciation: "SOP-uh-rohs",
+    partOfSpeech: "adjective",
+    definition: "Sleepy or drowsy.",
+    example: "The warm conference room made everyone soporose enough to regard the fire drill as a refreshing activity."
+  },
+  {
+    word: "Spuddle",
+    pronunciation: "SPUD-ul",
+    partOfSpeech: "verb",
+    definition: "To work ineffectively or fuss about without accomplishing much.",
+    example: "I spuddled in the garage all afternoon and proudly relocated the same box three times."
+  },
+  {
+    word: "Squiz",
+    pronunciation: "SKWIZ",
+    partOfSpeech: "noun",
+    definition: "A quick look or glance.",
+    example: "Take a squiz at the instructions before we discover another creative use for the leftover bolts."
+  },
+  {
+    word: "Stelify",
+    pronunciation: "STEL-ih-fy",
+    partOfSpeech: "verb",
+    definition: "To turn into or place among the stars; to glorify as stellar.",
+    example: "My grandmother stelified every drawing I made, including one that was clearly just a brown scribble."
+  },
+  {
+    word: "Tergiversate",
+    pronunciation: "ter-JIV-er-sayt",
+    partOfSpeech: "verb",
+    definition: "To evade, equivocate, or repeatedly change one's position.",
+    example: "Asked who ate the cake, the children tergiversated until frosting evidence appeared on a cheek."
+  },
+  {
+    word: "Throttlebottom",
+    pronunciation: "THROT-ul-bot-um",
+    partOfSpeech: "noun",
+    definition: "A harmless, inept, or insignificant person in public office or authority.",
+    example: "The committee's throttlebottom misplaced the agenda, forgot the vote, and still adjourned with impressive confidence."
+  },
+  {
+    word: "Zizz",
+    pronunciation: "ZIZ",
+    partOfSpeech: "noun",
+    definition: "A short sleep or nap.",
+    example: "I planned a ten-minute zizz on the couch and woke up two hours later under a blanket with no idea what year it was."
+  },
+  {
+    word: "Ultroneous",
+    pronunciation: "ul-TROH-nee-us",
+    partOfSpeech: "adjective",
+    definition: "Done voluntarily or spontaneously.",
+    example: "My ultroneous offer to wash the dishes shocked the family enough that they checked whether I needed money."
+  },
+  {
+    word: "Vapulation",
+    pronunciation: "vap-yuh-LAY-shun",
+    partOfSpeech: "noun",
+    definition: "A beating or flogging; a severe verbal attack.",
+    example: "My fantasy football team received such vapulation that even the app's projected score seemed embarrassed."
+  },
+  {
+    word: "Verbigerate",
+    pronunciation: "ver-BIJ-er-ayt",
+    partOfSpeech: "verb",
+    definition: "To repeat the same word or phrase over and over.",
+    example: "The toddler verbigerated 'why' until philosophy itself asked for a break."
+  },
+  {
+    word: "Wamblecropt",
+    pronunciation: "WOM-bul-kropt",
+    partOfSpeech: "adjective",
+    definition: "Sick at the stomach; nauseated.",
+    example: "One spin on the carnival ride left me wamblecropt and deeply respectful of stationary benches."
+  },
+  {
+    word: "Weltschmerz",
+    pronunciation: "VELT-shmerts",
+    partOfSpeech: "noun",
+    definition: "Melancholy caused by the gap between how the world is and how one wishes it were.",
+    example: "My Weltschmerz peaked when the 'easy-open' package required scissors, pliers, and emotional support."
+  },
+  {
+    word: "Xanthodont",
+    pronunciation: "ZAN-thuh-dont",
+    partOfSpeech: "adjective",
+    definition: "Having yellow teeth.",
+    example: "The cartoon pirate's xanthodont grin suggested flossing was not part of life at sea."
+  },
+  {
+    word: "Yonderly",
+    pronunciation: "YON-der-lee",
+    partOfSpeech: "adjective",
+    definition: "Mentally or emotionally distant; absent-minded.",
+    example: "I was so yonderly that I put the cereal in the refrigerator and spent ten minutes looking for my phone while holding it."
+  },
+  {
+    word: "Zoilist",
+    pronunciation: "ZOH-ih-list",
+    partOfSpeech: "noun",
+    definition: "A harsh or envious critic.",
+    example: "The neighborhood zoilist reviewed the children's lemonade stand as though Michelin stars were at stake."
+  },
+  {
+    word: "Abditory",
+    pronunciation: "AB-dih-tor-ee",
+    partOfSpeech: "noun",
+    definition: "A hiding place or concealed storage space.",
+    example: "My secret snack abditory remained secure until the children learned to read."
+  },
+  {
+    word: "Advesperate",
+    pronunciation: "ad-VES-per-ayt",
+    partOfSpeech: "verb",
+    definition: "To become evening or grow dark.",
+    example: "As the sky advesperated, the mosquitoes clocked in for the night shift."
+  },
+  {
+    word: "Fopdoodle",
+    pronunciation: "FOP-doo-dul",
+    partOfSpeech: "noun",
+    definition: "A foolish or insignificant person.",
+    example: "The fopdoodle spent twenty minutes explaining how to load the dishwasher, then put the wooden cutting board on the bottom rack."
+  },
+  {
+    word: "Aposiopesis",
+    pronunciation: "ap-oh-sy-oh-PEE-sis",
+    partOfSpeech: "noun",
+    definition: "A sudden breaking off in speech, as if unable or unwilling to continue.",
+    example: "Mom's aposiopesis—'If you bring one more frog into this house, I swear...'—was more effective than a complete sentence."
+  },
+  {
+    word: "Atrabilious",
+    pronunciation: "at-ruh-BIL-ee-us",
+    partOfSpeech: "adjective",
+    definition: "Gloomy, irritable, or bad-tempered.",
+    example: "The atrabilious cashier softened immediately when a toddler handed her a sticker."
+  },
+  {
+    word: "Borborygm",
+    pronunciation: "bor-buh-RIG-um",
+    partOfSpeech: "noun",
+    definition: "A rumbling noise from the stomach or intestines.",
+    example: "My borborygm interrupted the meditation session with the confidence of a tuba solo."
+  },
+  {
+    word: "Cacafuego",
+    pronunciation: "kak-uh-FWAY-goh",
+    partOfSpeech: "noun",
+    definition: "A swaggering braggart or boastful person.",
+    example: "The office cacafuego claimed he could fix any computer, then asked where the power button was."
+  },
+  {
+    word: "Celerity",
+    pronunciation: "suh-LAIR-ih-tee",
+    partOfSpeech: "noun",
+    definition: "Swiftness or speed.",
+    example: "I moved with remarkable celerity when someone shouted that the ice-cream truck was leaving."
+  },
+  {
+    word: "Chrysophilist",
+    pronunciation: "kris-OF-ih-list",
+    partOfSpeech: "noun",
+    definition: "A lover of gold.",
+    example: "The chrysophilist chose a phone case so shiny that nearby drivers could use it as a signal mirror."
+  },
+  {
+    word: "Matutolypea",
+    pronunciation: "mat-yoo-toh-LIP-ee-uh",
+    partOfSpeech: "noun",
+    definition: "A bad mood or irritability experienced in the morning.",
+    example: "My matutolypea lasts exactly until the first sip of coffee, after which I become legally approachable."
+  },
+  {
+    word: "Eutrapely",
+    pronunciation: "yoo-TRAP-uh-lee",
+    partOfSpeech: "noun",
+    definition: "Pleasantness in conversation; witty and appropriate humor.",
+    example: "Her eutrapely saved the awkward dinner by turning the burned roast into the evening's best joke."
+  },
+  {
+    word: "Famelic",
+    pronunciation: "fuh-MEL-ik",
+    partOfSpeech: "adjective",
+    definition: "Hungry; famished.",
+    example: "By noon I was famelic enough to consider the emergency granola bar under the car seat."
+  },
+  {
+    word: "Gorgonize",
+    pronunciation: "GOR-guh-nyze",
+    partOfSpeech: "verb",
+    definition: "To petrify, stun, or overwhelm with a look.",
+    example: "One gorgonizing glance from the teacher returned thirty noisy students to complete silence."
+  },
+  {
+    word: "Hippocrepiform",
+    pronunciation: "hip-oh-KREP-ih-form",
+    partOfSpeech: "adjective",
+    definition: "Shaped like a horseshoe.",
+    example: "The baker called the pastry hippocrepiform; I called it conveniently shaped for holding extra icing."
+  },
+  {
+    word: "Ignoscency",
+    pronunciation: "ig-NOS-en-see",
+    partOfSpeech: "noun",
+    definition: "Forgiveness or pardon.",
+    example: "I requested ignoscency after shrinking the sweater, but the evidence was now wearing the dog."
+  },
+  {
+    word: "Jactitation",
+    pronunciation: "jak-tih-TAY-shun",
+    partOfSpeech: "noun",
+    definition: "Restless tossing or bodily movement.",
+    example: "My nighttime jactitation turned the fitted sheet into modern sculpture by morning."
+  },
+  {
+    word: "Kakopygous",
+    pronunciation: "kak-oh-PY-gus",
+    partOfSpeech: "adjective",
+    definition: "Having unattractive buttocks.",
+    example: "The ancient sculptor was brutally honest enough to make even the villain kakopygous."
+  },
+  {
+    word: "Lentiginous",
+    pronunciation: "len-TIJ-ih-nus",
+    partOfSpeech: "adjective",
+    definition: "Freckled or marked with small spots.",
+    example: "After summer vacation, my lentiginous nose looked like someone had sprinkled cinnamon across it."
+  },
+  {
+    word: "Mucid",
+    pronunciation: "MYOO-sid",
+    partOfSpeech: "adjective",
+    definition: "Moldy, musty, or slimy.",
+    example: "The forgotten container in the back of the fridge had become so mucid that nobody volunteered to identify its original contents."
+  },
+  {
+    word: "Nephelococcygia",
+    pronunciation: "nef-uh-loh-kok-SIJ-ee-uh",
+    partOfSpeech: "noun",
+    definition: "Cloud-cuckoo-land; fanciful dreaming or an imaginary ideal place.",
+    example: "My plan to retire at forty with a beach house and no bills currently resides in nephelococcygia."
+  },
+  {
+    word: "Obnubilate",
+    pronunciation: "ob-NOO-bih-layt",
+    partOfSpeech: "verb",
+    definition: "To cloud, obscure, or darken.",
+    example: "The steam obnubilated the bathroom mirror just as I was deciding whether the haircut was a mistake."
+  },
+  {
+    word: "Pauciloquent",
+    pronunciation: "paw-SIL-oh-kwent",
+    partOfSpeech: "adjective",
+    definition: "Using few words; brief in speech.",
+    example: "The pauciloquent mechanic examined the engine, said 'bad,' and somehow communicated everything I feared."
+  },
+  {
+    word: "Quiddity",
+    pronunciation: "KWID-ih-tee",
+    partOfSpeech: "noun",
+    definition: "The essential nature of a thing; also a subtle distinction or quibble.",
+    example: "The quiddity of camping is apparently spending money to live temporarily without plumbing."
+  },
+  {
+    word: "Kakidrosis",
+    pronunciation: "kak-ih-DROH-sis",
+    partOfSpeech: "noun",
+    definition: "Unpleasant-smelling perspiration.",
+    example: "After mowing the lawn in August, my kakidrosis entered the room several seconds before I did."
+  },
+  {
+    word: "Sardoodledom",
+    pronunciation: "sar-DOO-dul-dum",
+    partOfSpeech: "noun",
+    definition: "Drama that is mechanically contrived or excessively melodramatic.",
+    example: "The soap opera reached peak sardoodledom when the missing twin returned during a wedding held in a hospital."
+  },
+  {
+    word: "Snudge",
+    pronunciation: "SNUJ",
+    partOfSpeech: "verb",
+    definition: "To move about in a miserly or furtive way; to lie snug and quiet.",
+    example: "I snudged past the sleeping dog with the last cookie, but the wrapper betrayed me."
+  },
+  {
+    word: "Tachyphagia",
+    pronunciation: "tak-ih-FAY-jee-uh",
+    partOfSpeech: "noun",
+    definition: "Abnormally rapid eating.",
+    example: "My tachyphagia at lunch was impressive until the hiccups demanded a rematch."
+  },
+  {
+    word: "Ucalegon",
+    pronunciation: "yoo-KAL-ih-gon",
+    partOfSpeech: "noun",
+    definition: "A neighbor whose house is on fire; by extension, a nearby danger.",
+    example: "The smoke alarm made me check for an ucalegon before discovering the real threat was my own toast."
+  },
+  {
+    word: "Vilipendency",
+    pronunciation: "vil-ih-PEN-den-see",
+    partOfSpeech: "noun",
+    definition: "The act or habit of treating something with contempt.",
+    example: "My vilipendency toward decorative pillows ended when I discovered they make excellent nap equipment."
+  },
+  {
+    word: "Whiffler",
+    pronunciation: "WIF-ler",
+    partOfSpeech: "noun",
+    definition: "A person who changes opinions or shifts direction frequently.",
+    example: "The committee whiffler supported the plan, opposed it, and then praised the compromise he had voted against."
+  },
+  {
+    word: "Xylophagous",
+    pronunciation: "zy-LOF-uh-gus",
+    partOfSpeech: "adjective",
+    definition: "Feeding on or eating wood.",
+    example: "The xylophagous termites treated our porch like an all-you-can-eat buffet."
+  },
+  {
+    word: "Yestreen",
+    pronunciation: "yes-TREEN",
+    partOfSpeech: "noun/adverb",
+    definition: "Last evening or last night.",
+    example: "Yestreen I promised to go to bed early, then watched six videos about restoring antique toasters."
+  },
+  {
+    word: "Zetetic",
+    pronunciation: "zeh-TET-ik",
+    partOfSpeech: "adjective",
+    definition: "Proceeding by inquiry or investigation; skeptical and searching.",
+    example: "My zetetic approach to the missing cookies involved crumbs, fingerprints, and one suspiciously quiet child."
+  },
+  {
+    word: "Niddering",
+    pronunciation: "NID-er-ing",
+    partOfSpeech: "noun",
+    definition: "A coward or contemptible person.",
+    example: "The niddering volunteered everyone else to investigate the strange noise in the basement while he guarded the couch."
+  },
+  {
+    word: "Brumous",
+    pronunciation: "BROO-mus",
+    partOfSpeech: "adjective",
+    definition: "Foggy, misty, or wintry.",
+    example: "The brumous morning made the neighborhood look mysterious until the garbage truck backed up with its usual enthusiasm."
+  },
+  {
+    word: "Crapulence",
+    pronunciation: "KRAP-yuh-lents",
+    partOfSpeech: "noun",
+    definition: "Sickness or discomfort caused by excessive eating or drinking.",
+    example: "Holiday crapulence arrived right after I said, 'It's only one more slice of pie.'"
+  },
+  {
+    word: "Deliquium",
+    pronunciation: "dih-LIK-wee-um",
+    partOfSpeech: "noun",
+    definition: "A fainting fit or loss of consciousness; also a melting away.",
+    example: "The price of the concert tickets nearly induced a deliquium before the service fees finished the job."
+  },
+  {
+    word: "Ecdysiast",
+    pronunciation: "ek-DIZ-ee-ast",
+    partOfSpeech: "noun",
+    definition: "A striptease performer.",
+    example: "The crossword clue was 'ecdysiast,' which made Grandma's breakfast puzzle unexpectedly educational."
+  },
+  {
+    word: "Flapdoodle",
+    pronunciation: "FLAP-doo-dul",
+    partOfSpeech: "noun",
+    definition: "Nonsense; foolish talk.",
+    example: "The salesman's promise that the gadget would 'change breakfast forever' was flapdoodle, but I bought it anyway."
+  },
+  {
+    word: "Gobbemouche",
+    pronunciation: "GOB-muh-moosh",
+    partOfSpeech: "noun",
+    definition: "A gullible person who believes everything they hear.",
+    example: "The family gobbemouche forwarded a message claiming onions could charge a cell phone."
+  },
+  {
+    word: "Heterophemize",
+    pronunciation: "het-er-oh-FEE-myze",
+    partOfSpeech: "verb",
+    definition: "To say something different from what one intended to say.",
+    example: "I heterophemized during the toast and congratulated the couple on their 'long and exhausting marriage.'"
+  },
+  {
+    word: "Ipsedixitism",
+    pronunciation: "ip-see-DIK-sih-tiz-um",
+    partOfSpeech: "noun",
+    definition: "The habit of making unsupported assertions simply on one's own authority.",
+    example: "Dad's ipsedixitism peaked with 'because I said so,' still undefeated in household debate."
+  },
+  {
+    word: "Jabbernowl",
+    pronunciation: "JAB-er-nowl",
+    partOfSpeech: "noun",
+    definition: "A foolish or stupid person.",
+    example: "I felt like a jabbernowl after spending ten minutes pushing a door clearly marked PULL."
+  },
+  {
+    word: "Kleptoparasite",
+    pronunciation: "klep-toh-PAR-uh-site",
+    partOfSpeech: "noun",
+    definition: "An animal that steals food or prey from another.",
+    example: "My dog became a kleptoparasite the instant the toddler dropped half a grilled cheese."
+  },
+  {
+    word: "Ludibrious",
+    pronunciation: "loo-DIB-ree-us",
+    partOfSpeech: "adjective",
+    definition: "Mocking, scornful, or derisive.",
+    example: "The cat's ludibrious expression suggested my attempt at assembling the bookshelf had not impressed her."
+  },
+  {
+    word: "Mulligrubs",
+    pronunciation: "MUL-ih-grubz",
+    partOfSpeech: "noun",
+    definition: "A fit of low spirits, sulkiness, or vague discomfort.",
+    example: "I had the mulligrubs all afternoon until someone mentioned tacos, which remain an underfunded branch of medicine."
+  },
+];
+
 module.exports = {
   jokes,
   facts,
@@ -5579,5 +8140,6 @@ module.exports = {
   quizzes,
   curiosityWeeks,
   curiosityPreview,
-  wouldYouRather
+  wouldYouRather,
+  wordOfTheDay
 };

@@ -14,7 +14,8 @@ const {
   quizzes,
   curiosityWeeks,
   curiosityPreview,
-  wouldYouRather
+  wouldYouRather,
+  wordOfTheDay
 } = dailyContent;
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -744,7 +745,7 @@ const dailyIndex = (dayOfYear - 1) % 365;
   const wyr = wouldYouRather[dailyIndex];
 const riddle = riddles[dailyIndex];
 const tip = dailyTips[dailyIndex];
-
+const word = wordOfTheDay[dailyIndex];
 const previewCuriosity = {
   '2026-08-28': curiosityPreview[0], // Friday - Glass
   '2026-08-29': curiosityPreview[1], // Saturday - Rubber
@@ -794,6 +795,7 @@ fact: facts[dailyIndex],
 icebreaker: questions[dailyIndex],
 topic,
 national,
+word,
 famousBirthdays,
 usHistory,
 quiz,

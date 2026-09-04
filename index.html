@@ -37,7 +37,43 @@
 </a>
   </div>
 </article>
-  <article class="card">
+<article class="card word-card">
+  <div class="kicker">WORD OF THE DAY</div>
+
+  <h2 id="wordOfTheDay"></h2>
+
+  <div
+    class="word-pronunciation"
+    id="wordPronunciation"
+  ></div>
+
+  <button
+    class="reveal"
+    id="wordRevealBtn"
+    type="button"
+    aria-expanded="false"
+  >
+    Reveal Meaning
+  </button>
+
+  <div
+    id="wordRevealContent"
+    class="word-reveal-content"
+    hidden
+  >
+    <p>
+      <strong id="wordPartOfSpeech"></strong>
+      <span id="wordDefinition"></span>
+    </p>
+
+    <p class="word-example">
+      <strong>In a sentence:</strong>
+      <span id="wordExample"></span>
+    </p>
+  </div>
+</article>
+<div id="wordAd" class="mobile-ad"></div>
+  <article class="card"> 
   <div class="kicker">FAMOUS BIRTHDAYS</div>
   <div id="famousBirthdays"></div>
 </article>
