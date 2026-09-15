@@ -2801,7 +2801,14 @@ if (u.pathname === '/api/leads' && req.method === 'GET') {
           `ads/${city}`,
           ad.id
         );
+        const { error: updateError } = await supabase
+  .from('ads')
+  .update({ image: uploaded.publicUrl })
+  .eq('id', ad.id);
 
+if (updateError) {
+  throw updateError;
+}
         results.push({
           id: ad.id,
           business: ad.business,
@@ -2842,7 +2849,7 @@ if (u.pathname === '/api/ads' && req.method === 'GET') {
 
     const { data, error } = await supabase
       .from('ads')
-      .select('id, city, business, headline, url, start_date, end_date, spots, active, creative_plan, created_at')
+      .select('id, city, business, headline, url, start_date, end_date, spots, active, image, creative_plan, created_at')
       .eq('city', city)
       .order('created_at', { ascending: true });
 
@@ -2858,7 +2865,7 @@ if (u.pathname === '/api/ads' && req.method === 'GET') {
   endDate: ad.end_date || '',
   spots: ad.spots || 1,
   active: ad.active !== false,
-  image: `${process.env.SUPABASE_URL}/storage/v1/object/public/${MEDIA_BUCKET}/ads/${city}/${ad.id}.png`,
+  image: ad.image || '',
   creativePlan: ad.creative_plan || 'standard'
 }));
 
