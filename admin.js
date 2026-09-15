@@ -108,18 +108,18 @@ if (locationForm) {
 
     const logoFile = document.getElementById('locationLogo').files[0];
 
-    let logo = '';
+let logo = '';
 
-    if (logoFile) {
-      logo = await new Promise((resolve, reject) => {
-        const reader = new FileReader();
 
-        reader.onload = () => resolve(reader.result);
-        reader.onerror = reject;
+if (logoFile) {
+  const reader = new FileReader();
 
-        reader.readAsDataURL(logoFile);
-      });
-    }
+  logo = await new Promise((resolve, reject) => {
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(logoFile);
+  });
+}
 
     const location = {
       name: document.getElementById('locationName').value.trim(),

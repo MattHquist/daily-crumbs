@@ -3,6 +3,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const sharp = require('sharp');
 const { createClient } = require('@supabase/supabase-js');
 const dailyContent = require('./content/daily-content');
 const {
@@ -21,7 +22,103 @@ const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SECRET_KEY
 );
+const MEDIA_BUCKET = 'daily-crumbs-media';
 
+function dataUrlToBuffer(dataUrl) {
+  if (!dataUrl || typeof dataUrl !== 'string') return null;
+
+  const match = dataUrl.match(/^data:(image\/(?:jpeg|png|webp));base64,(.+)$/);
+
+  if (!match) return null;
+
+  return {
+    contentType: match[1],
+    buffer: Buffer.from(match[2], 'base64')
+  };
+}
+function imageExtension(contentType) {
+  if (contentType === 'image/jpeg') return 'jpg';
+  if (contentType === 'image/png') return 'png';
+  if (contentType === 'image/webp') return 'webp';
+  return null;
+}
+
+async function uploadBase64Image(dataUrl, folder, fileName) {
+  const image = dataUrlToBuffer(dataUrl);
+
+  if (!image) {
+    throw new Error('Invalid or unsupported image data');
+  }
+
+  const originalExtension = imageExtension(image.contentType);
+
+  if (!originalExtension) {
+    throw new Error(`Unsupported image type: ${image.contentType}`);
+  }
+
+  const safeFileName = String(fileName)
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+  if (!safeFileName) {
+    throw new Error('A valid file name is required');
+  }
+
+  let uploadBuffer = image.buffer;
+  let uploadContentType = image.contentType;
+  let extension = originalExtension;
+
+  // Optimize unusually large images before putting them in Storage.
+  // Smaller images are uploaded unchanged.
+  const OPTIMIZE_ABOVE = 1.8 * 1024 * 1024;
+
+  if (image.buffer.length > OPTIMIZE_ABOVE) {
+    uploadBuffer = await sharp(image.buffer)
+      .rotate()
+      .resize({
+        width: 1600,
+        height: 1600,
+        fit: 'inside',
+        withoutEnlargement: true
+      })
+      .webp({
+        quality: 82,
+        effort: 4
+      })
+      .toBuffer();
+
+    uploadContentType = 'image/webp';
+    extension = 'webp';
+  }
+
+  const storagePath = `${folder}/${safeFileName}.${extension}`;
+
+  const { error } = await supabase.storage
+    .from(MEDIA_BUCKET)
+    .upload(storagePath, uploadBuffer, {
+      contentType: uploadContentType,
+      upsert: true
+    });
+
+  if (error) {
+    throw error;
+  }
+
+  const { data } = supabase.storage
+    .from(MEDIA_BUCKET)
+    .getPublicUrl(storagePath);
+
+  if (!data?.publicUrl) {
+    throw new Error('Could not create public Storage URL');
+  }
+
+  return {
+    publicUrl: data.publicUrl,
+    storagePath
+  };
+}
 const PORT = process.env.PORT || 3000;
 const ROOT = __dirname;
 const DATA = path.join(ROOT, 'data.json');
@@ -943,6 +1040,79 @@ if (!scanResponse.ok) {
 
   res.end(fs.readFileSync(file));
   return;
+}
+if (u.pathname === '/api/migrate-location-logos' && req.method === 'POST') {
+  try {
+    const { data: locations, error } = await supabase
+      .from('locations')
+      .select('id, business_name, logo_url, edition_id');
+
+    if (error) throw error;
+
+    const results = [];
+
+    for (const location of locations || []) {
+      if (!location.logo_url || !location.logo_url.startsWith('data:image/')) {
+        results.push({
+          id: location.id,
+          business: location.business_name,
+          status: 'skipped',
+          reason: 'No Base64 logo'
+        });
+        continue;
+      }
+
+      try {
+        const uploaded = await uploadBase64Image(
+          location.logo_url,
+          'locations/fergusfalls',
+          location.id
+        );
+        const { error: updateError } = await supabase
+  .from('locations')
+  .update({
+    logo_url: uploaded.publicUrl,
+    updated_at: new Date().toISOString()
+  })
+  .eq('id', location.id);
+
+if (updateError) {
+  throw updateError;
+}
+        results.push({
+          id: location.id,
+          business: location.business_name,
+          status: 'uploaded',
+          storagePath: uploaded.storagePath,
+          publicUrl: uploaded.publicUrl
+        });
+      } catch (uploadError) {
+        results.push({
+          id: location.id,
+          business: location.business_name,
+          status: 'failed',
+          error: uploadError.message
+        });
+      }
+    }
+
+    return send(res, 200, {
+      success: true,
+      total: results.length,
+      uploaded: results.filter(r => r.status === 'uploaded').length,
+      skipped: results.filter(r => r.status === 'skipped').length,
+      failed: results.filter(r => r.status === 'failed').length,
+      results
+    });
+
+  } catch (error) {
+    console.error('Location logo migration failed:', error);
+
+    return send(res, 500, {
+      success: false,
+      error: error.message || 'Could not migrate location logos'
+    });
+  }
 }
   if (u.pathname === '/api/locations' && req.method === 'GET') {
   try {
@@ -2167,7 +2337,19 @@ const qrSlug = location.name
         error: 'Edition not found'
       });
     }
+    let logoUrl = location.logo || null;
 
+if (location.logo && location.logo.startsWith('data:image/')) {
+  const locationId = crypto.randomUUID();
+
+  const uploaded = await uploadBase64Image(
+    location.logo,
+    `locations/${edition.slug}`,
+    locationId
+  );
+
+  logoUrl = uploaded.publicUrl;
+}
     const { data, error } = await supabase
       .from('locations')
       .insert({
@@ -2179,7 +2361,7 @@ const qrSlug = location.name
         contact_name: location.contact || null,
         contact_info: location.contactInfo || null,
         qr_placement: location.qrPlacement || null,
-        logo_url: location.logo || null,
+        logo_url: logoUrl,
         notes: location.notes || null,
         active: location.active !== false,
         date_joined: new Date().toISOString().slice(0, 10)
@@ -2586,14 +2768,81 @@ if (u.pathname === '/api/leads' && req.method === 'GET') {
 
   return send(res, 200, data || []);
 }
-  
+  if (u.pathname === '/api/migrate-ad-images' && req.method === 'POST') {
+  try {
+    const { data: ads, error } = await supabase
+  .from('ads')
+  .select('id, city, business, image')
+  .eq('city', 'fergusfalls');
+
+    if (error) throw error;
+
+    const results = [];
+
+    for (const ad of ads || []) {
+      if (!ad.image || !ad.image.startsWith('data:image/')) {
+        results.push({
+          id: ad.id,
+          business: ad.business,
+          status: 'skipped',
+          reason: 'No Base64 image'
+        });
+        continue;
+      }
+
+      const city = (ad.city || 'fergusfalls')
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9_-]+/g, '-');
+
+      try {
+        const uploaded = await uploadBase64Image(
+          ad.image,
+          `ads/${city}`,
+          ad.id
+        );
+
+        results.push({
+          id: ad.id,
+          business: ad.business,
+          status: 'uploaded',
+          storagePath: uploaded.storagePath,
+          publicUrl: uploaded.publicUrl
+        });
+      } catch (uploadError) {
+        results.push({
+          id: ad.id,
+          business: ad.business,
+          status: 'failed',
+          error: uploadError.message
+        });
+      }
+    }
+
+    return send(res, 200, {
+      success: true,
+      total: results.length,
+      uploaded: results.filter(r => r.status === 'uploaded').length,
+      skipped: results.filter(r => r.status === 'skipped').length,
+      failed: results.filter(r => r.status === 'failed').length,
+      results
+    });
+  } catch (error) {
+    console.error('Ad image migration failed:', error);
+
+    return send(res, 500, {
+      success: false,
+      error: error.message || 'Could not migrate advertiser images'
+    });
+  }
+}
 if (u.pathname === '/api/ads' && req.method === 'GET') {
   try {
     const city = (u.searchParams.get('city') || 'fergusfalls').toLowerCase();
 
     const { data, error } = await supabase
       .from('ads')
-      .select('*')
+      .select('id, city, business, headline, url, start_date, end_date, spots, active, creative_plan, created_at')
       .eq('city', city)
       .order('created_at', { ascending: true });
 
@@ -2609,7 +2858,7 @@ if (u.pathname === '/api/ads' && req.method === 'GET') {
   endDate: ad.end_date || '',
   spots: ad.spots || 1,
   active: ad.active !== false,
-  image: ad.image || '',
+  image: `${process.env.SUPABASE_URL}/storage/v1/object/public/${MEDIA_BUCKET}/ads/${city}/${ad.id}.png`,
   creativePlan: ad.creative_plan || 'standard'
 }));
 
