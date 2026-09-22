@@ -832,15 +832,15 @@ const dayOfYear = Math.floor(
 );
 
 const dailyIndex = (dayOfYear - 1) % 365;
-  const joke = jokes[dailyIndex];
+  const joke = jokes[dailyIndex % jokes.length];
   const verse = verses[idx(date,'v',verses.length)];
   const devotionalVerse = await getDailyDevotional(date, verse);
   const national = await getNationalDays(date);
   const famousBirthdays = await getFamousBirthdays(date);
   const usHistory = await getUSHistory(date);
-  const quiz = quizzes[dailyIndex];
-  const wyr = wouldYouRather[dailyIndex];
-const riddle = riddles[dailyIndex];
+  const quiz = quizzes[dailyIndex % quizzes.length];
+const wyr = wouldYouRather[dailyIndex % wouldYouRather.length];
+const riddle = riddles[dailyIndex % riddles.length];
 const tip = dailyTips[dailyIndex];
 const word = wordOfTheDay[dailyIndex];
 const previewCuriosity = {
