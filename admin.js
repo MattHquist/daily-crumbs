@@ -132,6 +132,8 @@ async function loadLocationEditions() {
   }
 }
 async function loadAvailablePlCodes() {
+ 
+  
   const editionInput = document.getElementById('locationEdition');
   const plSelect = document.getElementById('locationPlCode');
 
@@ -152,11 +154,16 @@ async function loadAvailablePlCodes() {
       throw new Error('Could not load locations');
     }
 
-    const available = locations
-      .filter(location =>
-        location.edition === edition &&
-        location.status === 'inventory'
-      )
+    const normalizeEdition = value =>
+  (value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '');
+
+const available = locations
+  .filter(location =>
+    normalizeEdition(location.edition) === normalizeEdition(edition) &&
+    location.status === 'inventory'
+  )
       .sort((a, b) =>
         (a.plCode || '').localeCompare(b.plCode || '', undefined, {
           numeric: true
@@ -184,7 +191,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     editionInput.addEventListener('change', loadAvailablePlCodes);
   }
 
-  loadAvailablePlCodes();
+  await loadAvailablePlCodes();
 
   if (locationForm) {
   locationForm.addEventListener('submit', async (e) => {

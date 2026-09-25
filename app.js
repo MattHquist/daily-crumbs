@@ -595,7 +595,10 @@ async function loadParticipatingLocations() {
     const response = await fetch('/api/locations');
     const locations = await response.json();
 
-    const activeLocations = (locations || []).filter(location => location.active);
+    const activeLocations = (locations || []).filter(location =>
+  location.active &&
+  (location.edition || '').trim().toLowerCase() === cityName.trim().toLowerCase()
+);
 
     const locationCards = activeLocations.map(location => `
       <a
