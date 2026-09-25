@@ -1,15 +1,46 @@
-const slug=(location.pathname.split('/').filter(Boolean)[0]||'fergusfalls').toLowerCase();
-const titleCase=s=>s.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
-const cityName=slug==='fergusfalls'?'Fergus Falls':titleCase(slug);
-document.getElementById('edition').textContent=`${cityName} Edition`;
+const pathSlug = (location.pathname.split('/').filter(Boolean)[0] || 'fergusfalls').toLowerCase();
+const titleCase = s => s.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/[-_]/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+
+let slug = pathSlug;
+let cityName = slug === 'fergusfalls' ? 'Fergus Falls' : titleCase(slug);
+
+async function resolveEditionFromPLCode() {
+  if (!pathSlug.startsWith('pl-')) {
+    document.getElementById('edition').textContent = `${cityName} Edition`;
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      `/api/location-by-pl/${encodeURIComponent(pathSlug.toUpperCase())}`
+    );
+
+    if (!response.ok) {
+      throw new Error('PL Code lookup failed');
+    }
+
+    const data = await response.json();
+
+    slug = data.edition.slug;
+    cityName = data.edition.name;
+
+    document.getElementById('edition').textContent = `${cityName} Edition`;
+  } catch (error) {
+    console.error('Could not resolve PL Code:', error);
+    document.getElementById('edition').textContent = 'Daily Crumbs Edition';
+  }
+}
 document.getElementById('cityFooter').textContent=`• ${cityName}`;
 const fmt=new Intl.DateTimeFormat('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
 document.getElementById('today').textContent=fmt.format(new Date());
 async function trackQrScan() {
   const params = new URLSearchParams(window.location.search);
-  const qrSlug = params.get('loc');
 
-  if (!qrSlug) return;
+const qrSlug = pathSlug.startsWith('pl-')
+  ? pathSlug
+  : params.get('loc');
+
+if (!qrSlug) return;
 
   const scanKey = `dailycrumbs-scan-${qrSlug}-${new Date().toISOString().slice(0, 10)}`;
 
@@ -641,9 +672,17 @@ function scroll() {
 
   requestAnimationFrame(scroll);
 }
-loadContent();
-loadAds();
-loadParticipatingLocations();
+async function startDailyCrumbs() {
+  await resolveEditionFromPLCode();
+
+  document.getElementById('cityFooter').textContent = `• ${cityName}`;
+
+  await loadContent();
+  await loadAds();
+  await loadParticipatingLocations();
+}
+
+startDailyCrumbs();
 setInterval(() => {
   renderAds();
   renderMobileAd();

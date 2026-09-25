@@ -922,6 +922,99 @@ if (u.pathname === '/') {
   res.end();
   return;
 }
+  // Resolve a PL Code to its participating location and Edition
+  if (
+    req.method === 'GET' &&
+    u.pathname.startsWith('/api/location-by-pl/')
+  ) {
+    try {
+      const plCode = decodeURIComponent(
+        u.pathname.split('/').filter(Boolean).pop()
+      ).toUpperCase();
+
+      const secretKey = process.env.SUPABASE_SECRET_KEY;
+      const supabaseUrl = process.env.SUPABASE_URL;
+
+      const locationResponse = await fetch(
+        `${supabaseUrl}/rest/v1/locations` +
+        `?select=id,business_name,pl_code,edition_id,status,active` +
+        `&pl_code=eq.${encodeURIComponent(plCode)}` +
+        `&limit=1`,
+        {
+          headers: {
+            apikey: secretKey,
+            Authorization: `Bearer ${secretKey}`
+          }
+        }
+      );
+
+      if (!locationResponse.ok) {
+        throw new Error(await locationResponse.text());
+      }
+
+      const locations = await locationResponse.json();
+      const location = locations[0];
+
+      if (!location) {
+        return send(res, 404, {
+          success: false,
+          error: 'PL Code not found'
+        });
+      }
+
+      const editionResponse = await fetch(
+        `${supabaseUrl}/rest/v1/editions` +
+        `?select=id,name,slug` +
+        `&id=eq.${encodeURIComponent(location.edition_id)}` +
+        `&limit=1`,
+        {
+          headers: {
+            apikey: secretKey,
+            Authorization: `Bearer ${secretKey}`
+          }
+        }
+      );
+
+      if (!editionResponse.ok) {
+        throw new Error(await editionResponse.text());
+      }
+
+      const editions = await editionResponse.json();
+      const edition = editions[0];
+
+      if (!edition) {
+        return send(res, 404, {
+          success: false,
+          error: 'Edition not found'
+        });
+      }
+
+      return send(res, 200, {
+        success: true,
+        location: {
+          id: location.id,
+          name: location.business_name,
+          plCode: location.pl_code,
+          status: location.status,
+          active: location.active
+        },
+        edition: {
+          id: edition.id,
+          name: edition.name,
+          slug: edition.slug
+        }
+      });
+
+    } catch (error) {
+      console.error('PL Code lookup failed:', error);
+
+      return send(res, 500, {
+        success: false,
+        error: 'Could not resolve PL Code'
+      });
+    }
+  }
+
   // Track restaurant-specific QR scans
 if (
   req.method === 'POST' &&
@@ -1120,7 +1213,7 @@ if (updateError) {
 const supabaseUrl = process.env.SUPABASE_URL;
 
 const response = await fetch(
-  `${supabaseUrl}/rest/v1/locations?select=id,business_name,address,website_url,contact_name,contact_info,qr_placement,logo_url,notes,date_joined,last_checked,active,editions(name)&order=business_name.asc`,
+  `${supabaseUrl}/rest/v1/locations?select=id,business_name,address,website_url,contact_name,contact_info,qr_placement,logo_url,notes,date_joined,last_checked,active,edition_id,editions(name,slug),pl_code,status&order=business_name.asc`,
   {
     headers: {
       apikey: secretKey
@@ -1140,6 +1233,8 @@ const data = await response.json();
     const locations = (data || []).map(location => ({
       id: location.id,
       name: location.business_name,
+      plCode: location.pl_code || '',
+status: location.status || '',
       edition: location.editions?.name || '',
       address: location.address || '',
       url: location.website_url || '',
@@ -2351,31 +2446,34 @@ if (location.logo && location.logo.startsWith('data:image/')) {
   logoUrl = uploaded.publicUrl;
 }
     const { data, error } = await supabase
-      .from('locations')
-      .insert({
-        edition_id: edition.id,
-        business_name: location.name.trim(),
-        qr_slug: qrSlug,
-        address: location.address || null,
-        website_url: location.url || null,
-        contact_name: location.contact || null,
-        contact_info: location.contactInfo || null,
-        qr_placement: location.qrPlacement || null,
-        logo_url: logoUrl,
-        notes: location.notes || null,
-        active: location.active !== false,
-        date_joined: new Date().toISOString().slice(0, 10)
-      })
-      .select()
-      .single();
+  .from('locations')
+  .update({
+    business_name: location.name.trim(),
+    address: location.address || null,
+    website_url: location.url || null,
+    contact_name: location.contact || null,
+    contact_info: location.contactInfo || null,
+    qr_placement: location.qrPlacement || null,
+    logo_url: logoUrl,
+    notes: location.notes || null,
+    active: location.active !== false,
+    status: 'active',
+    date_joined: new Date().toISOString().slice(0, 10)
+  })
+  .eq('edition_id', edition.id)
+  .eq('pl_code', location.plCode)
+  .eq('status', 'inventory')
+  .select()
+  .single();
 
     if (error) {
-      console.error('Supabase location insert failed:', error.message);
-      return send(res, 500, {
-        success: false,
-        error: 'Could not add participating location'
-      });
-    }
+  console.error('Supabase PL Code claim failed:', error.message);
+
+  return send(res, 400, {
+    success: false,
+    error: `Could not claim PL Code ${location.plCode}. It may already be assigned or does not belong to the selected Edition.`
+  });
+}
 
     return send(res, 201, {
       success: true,

@@ -99,10 +99,94 @@ load();
 function reset(){$('form').reset();$('creativePlan').value='standard';$('editId').value='';$('city').value = $('filterCity').value || '';$('startDate').value=iso(today);$('endDate').value=iso(end);$('active').checked=true;currentImage=''}
 $('cancelEdit').onclick=reset;$('refresh').onclick=load;load();
 let editingLocationId = null;
-document.addEventListener('DOMContentLoaded', () => {
-const locationForm = document.getElementById('locationForm');
+async function loadLocationEditions() {
+  const editionSelect = document.getElementById('locationEdition');
 
-if (locationForm) {
+  if (!editionSelect) return;
+
+  editionSelect.innerHTML =
+    '<option value="">Select Edition...</option>';
+
+  try {
+    const response = await fetch('/api/editions');
+    const editions = await response.json();
+
+    if (!response.ok) {
+      throw new Error('Could not load Editions');
+    }
+
+    editions
+      .filter(edition => edition.active !== false)
+      .sort((a, b) =>
+        (a.name || '').localeCompare(b.name || '')
+      )
+      .forEach(edition => {
+        const option = document.createElement('option');
+        option.value = edition.name;
+        option.textContent = edition.name;
+        editionSelect.appendChild(option);
+      });
+
+  } catch (error) {
+    console.error('Could not load location Editions:', error);
+  }
+}
+async function loadAvailablePlCodes() {
+  const editionInput = document.getElementById('locationEdition');
+  const plSelect = document.getElementById('locationPlCode');
+
+  if (!editionInput || !plSelect) return;
+
+  const edition = editionInput.value.trim();
+
+  plSelect.innerHTML =
+    '<option value="">Select available PL...</option>';
+
+  if (!edition) return;
+
+  try {
+    const response = await fetch('/api/locations');
+    const locations = await response.json();
+
+    if (!response.ok) {
+      throw new Error('Could not load locations');
+    }
+
+    const available = locations
+      .filter(location =>
+        location.edition === edition &&
+        location.status === 'inventory'
+      )
+      .sort((a, b) =>
+        (a.plCode || '').localeCompare(b.plCode || '', undefined, {
+          numeric: true
+        })
+      );
+
+    available.forEach(location => {
+      const option = document.createElement('option');
+      option.value = location.plCode;
+      option.textContent = location.plCode;
+      plSelect.appendChild(option);
+    });
+
+  } catch (error) {
+    console.error('Could not load available PL codes:', error);
+  }
+}
+document.addEventListener('DOMContentLoaded', async () => {
+  const locationForm = document.getElementById('locationForm');
+  const editionInput = document.getElementById('locationEdition');
+
+  await loadLocationEditions();
+
+  if (editionInput) {
+    editionInput.addEventListener('change', loadAvailablePlCodes);
+  }
+
+  loadAvailablePlCodes();
+
+  if (locationForm) {
   locationForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -124,6 +208,7 @@ if (logoFile) {
     const location = {
       name: document.getElementById('locationName').value.trim(),
       edition: document.getElementById('locationEdition').value.trim(),
+      plCode: document.getElementById('locationPlCode').value,
       address: document.getElementById('locationAddress').value.trim(),
       url: document.getElementById('locationUrl').value.trim(),
       contact: document.getElementById('locationContact').value.trim(),
@@ -133,7 +218,10 @@ if (logoFile) {
       notes: document.getElementById('locationNotes').value.trim(),
       active: document.getElementById('locationActive').checked
     };
-
+if (!editingLocationId && !location.plCode) {
+  alert('Please select a PL Code.');
+  return;
+}
     try {
       const url = editingLocationId
   ? `/api/locations/${editingLocationId}`
@@ -349,21 +437,8 @@ async function loadLocationsReport() {
   try {
     const response = await fetch('/api/locations');
     const locations = await response.json();
-const normalizeEdition = value =>
-  (value || '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]/g, '');
-
-const selectedEditionSlug =
-  document.getElementById('editionSettingsSelect')?.value || '';
-
-const filteredLocations = selectedEditionSlug
-  ? locations.filter(
-      location =>
-        normalizeEdition(location.edition) ===
-        normalizeEdition(selectedEditionSlug)
-    )
-  : locations;
+    
+const filteredLocations = locations;
 
 
     tbody.innerHTML = '';
@@ -386,7 +461,7 @@ const filteredLocations = selectedEditionSlug
     <td>${location.qrPlacement || ''}</td>
     <td>${location.dateJoined || ''}</td>
     <td>${location.lastChecked || 'Not yet'}</td>
-    <td>${location.active ? 'Active' : 'Inactive'}</td>
+    <td data-active="${location.active ? 'true' : 'false'}">${location.active ? 'Active' : 'Inactive'}</td>
     <td>
       <button
         type="button"
@@ -582,7 +657,10 @@ function filterLocationsReport() {
     // 6 Actions
 
     const lastChecked = cells[4]?.textContent.trim().toLowerCase() || '';
-    const rowStatus = cells[5]?.textContent.trim().toLowerCase() || '';
+    const rowStatus =
+  cells[5]?.dataset.active === 'true'
+    ? 'active'
+    : 'inactive';
 
     const matchesSearch =
       !search || rowText.includes(search);
