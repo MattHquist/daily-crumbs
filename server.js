@@ -128,6 +128,38 @@ function writeData(data){ fs.writeFileSync(DATA, JSON.stringify(data,null,2)); }
 function send(res,status,body,type='application/json'){ res.writeHead(status,{'Content-Type':type,'Cache-Control':'no-store'}); res.end(type.includes('json')?JSON.stringify(body):body); }
 function body(req){ return new Promise((resolve,reject)=>{ let d=''; req.on('data',c=>{d+=c; if(d.length>8e6) reject(new Error('too large'));}); req.on('end',()=>{ try{resolve(d?JSON.parse(d):{});}catch(e){reject(e);} }); }); }
 function safeFile(p){ const full=path.normalize(path.join(ROOT,p)); return full.startsWith(ROOT)?full:null; }
+async function fetchAllQrScans(supabaseUrl, secretKey) {
+  const pageSize = 1000;
+  const scans = [];
+
+  for (let offset = 0; ; offset += pageSize) {
+    const response = await fetch(
+      `${supabaseUrl}/rest/v1/qr_scans` +
+      `?select=id,location_id,edition_id,qr_slug,scanned_at` +
+      `&order=scanned_at.desc,id.asc` +
+      `&limit=${pageSize}&offset=${offset}`,
+      {
+        headers: {
+          apikey: secretKey,
+          Authorization: `Bearer ${secretKey}`
+        }
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        `QR scans request failed: ${response.status} ${await response.text()}`
+      );
+    }
+
+    const page = await response.json();
+    scans.push(...page);
+
+    if (page.length < pageSize) {
+      return scans;
+    }
+  }
+}
 
 const verses = [
   [
@@ -1506,39 +1538,18 @@ if (
       );
     }
 
-    // Load scan history.
-    let scansUrl =
-      `${supabaseUrl}/rest/v1/qr_scans` +
-      `?select=id,location_id,edition_id,qr_slug,scanned_at` +
-      `&order=scanned_at.desc`;
-
-
-    const scansResponse = await fetch(
-      scansUrl,
-      {
-        headers: {
-          apikey: secretKey,
-          Authorization: `Bearer ${secretKey}`
-        }
-      }
-    );
-
-    if (!scansResponse.ok) {
-      const errorText = await scansResponse.text();
-
-      console.error(
-        'QR analytics scans lookup failed:',
-        scansResponse.status,
-        errorText
-      );
+    // Load all scan history in pages to avoid PostgREST's row limit.
+    let scans;
+    try {
+      scans = await fetchAllQrScans(supabaseUrl, secretKey);
+    } catch (error) {
+      console.error('QR analytics scans lookup failed:', error.message);
 
       return send(res, 500, {
         success: false,
         error: 'Could not load QR scans'
       });
     }
-
-    let scans = await scansResponse.json();
 
     const allowedLocationIds = new Set(
   (locations || []).map(location => location.id).filter(Boolean)
@@ -1814,29 +1825,17 @@ if (
       }
     }
 
-    let scansUrl =
-      `${supabaseUrl}/rest/v1/qr_scans` +
-      `?select=id,location_id,edition_id,qr_slug,scanned_at` +
-      `&order=scanned_at.desc`;
+    let scans;
+    try {
+      scans = await fetchAllQrScans(supabaseUrl, secretKey);
+    } catch (error) {
+      console.error('QR analytics detail scans lookup failed:', error.message);
 
-    const scansResponse = await fetch(
-      scansUrl,
-      {
-        headers: {
-          apikey: secretKey,
-          Authorization: `Bearer ${secretKey}`
-        }
-      }
-    );
-
-    if (!scansResponse.ok) {
       return send(res, 500, {
         success: false,
         error: 'Could not load scans'
       });
     }
-
-    let scans = await scansResponse.json();
 
     scans = (scans || []).filter(scan =>
       scan.location_id === location.id ||
