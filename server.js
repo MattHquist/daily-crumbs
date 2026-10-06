@@ -1559,7 +1559,25 @@ const allowedQrSlugs = new Set(
   (locations || []).map(location => location.qr_slug).filter(Boolean)
 );
 
-if (!isOwner) {
+if (requestedEditionId) {
+  scans = (scans || []).filter(scan => {
+    // Preferred method for newer scans.
+    if (scan.edition_id) {
+      return scan.edition_id === requestedEditionId;
+    }
+
+    // Fallback for older scans that predate edition_id.
+    if (scan.location_id) {
+      return allowedLocationIds.has(scan.location_id);
+    }
+
+    if (scan.qr_slug) {
+      return allowedQrSlugs.has(scan.qr_slug);
+    }
+
+    return false;
+  });
+} else if (!isOwner) {
   scans = (scans || []).filter(scan => {
     if (scan.location_id) {
       return allowedLocationIds.has(scan.location_id);
